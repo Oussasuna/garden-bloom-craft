@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navItems = [
-  { name: "For Universities", href: "/academia" },
+  { name: "For Universities", href: "/academia", internal: true },
   {
     name: "Features",
     href: "#",
@@ -37,7 +38,7 @@ const navItems = [
     ],
     bottomItem: { name: "FirstResume Ambassador Program (Coming soon)", href: "#" },
   },
-  { name: "Pricing", href: "#" },
+  { name: "Pricing", href: "/pricing", internal: true },
   {
     name: "Join our communities",
     href: "#",
