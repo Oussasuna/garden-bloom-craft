@@ -1,33 +1,62 @@
-import FeaturePageLayout from "@/components/FeaturePageLayout";
+import React from "react";
+import Navbar from "@/components/sections/Navbar";
+import Footer from "@/components/sections/Footer";
+
+function PillButton({ children, href = "https://app.firstresume.ai", outline = false }: { children: React.ReactNode; href?: string; outline?: boolean }) {
+  return <a href={href} className={outline ? "inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-full font-semibold text-[15px] hover:bg-white hover:text-[#1a1a1a] transition-colors" : "inline-flex items-center bg-[#1a1a1a] text-white px-8 py-3.5 rounded-full font-semibold text-[15px] hover:bg-[#333] transition-colors"}>{children}</a>;
+}
+function CheckItem({ children }: { children: React.ReactNode }) {
+  return (<div className="flex items-start gap-3"><svg className="w-5 h-5 mt-0.5 text-[#1a1a1a] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M9 12l2 2 4-4" /></svg><span className="text-[#555] text-[15px] leading-relaxed">{children}</span></div>);
+}
 
 export default function DynamicEmailsPage() {
   return (
-    <FeaturePageLayout
-      badge="Outreach"
-      badgeColor="#0099FF"
-      title="Dynamic AI outreach emails that get responses"
-      subtitle="Generate hyper-personalized outreach emails for networking, cold outreach, and follow-ups. Each email is tailored to the company, role, and recipient."
-      heroImage="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6881eedc2d46abe5ce23d39a_20250724_FR_demo_interview.png"
-      heroImageAlt="Dynamic emails interface"
-      summaryText="Stop sending the same generic email to every recruiter. Our AI crafts personalized emails that reference the specific company, role, and your unique background."
-      features={[
-        { number: "01", text: "Personalized cold outreach emails" },
-        { number: "02", text: "Follow-up email sequences" },
-        { number: "03", text: "Thank you notes after interviews" },
-        { number: "04", text: "Networking introduction emails" },
-      ]}
-      featureCardTitle="Emails that sound like you wrote them"
-      featureCardText="Our AI analyzes the company, role, and your background to write emails that feel genuine and personal — because getting noticed is half the battle."
-      benefits={[
-        { icon: "📧", title: "Higher Response Rates", description: "Personalized outreach emails get 5x more responses than generic templates." },
-        { icon: "🤖", title: "AI-Personalized", description: "Each email references specific company details, job requirements, and your experience." },
-        { icon: "⚡", title: "Ready in Seconds", description: "Generate a compelling outreach email for any opportunity in under 30 seconds." },
-      ]}
-      relatedFeatures={[
-        { name: "Email Finder", href: "/features/email-finder" },
-        { name: "AI Cover Letter Generator", href: "/features/ai-cover-letter-generator" },
-        { name: "AI CV Builder", href: "/features/ai-cv-builder" },
-      ]}
-    />
+    <div className="bg-[#F5F7FA] min-h-screen">
+      <Navbar />
+      <div className="pt-[100px]">
+        <section className="max-w-[900px] mx-auto px-6 text-center pb-8">
+          <h1 className="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] leading-[1.12] mb-6">Use Free Personalized Email Templates for Sending Resumes &amp; Cover Letters to Companies for a Job Offer</h1>
+          <p className="text-[#555] text-[16px] md:text-[18px] max-w-[720px] mx-auto mb-8 leading-relaxed">Which are the best email templates for sending resumes and cover letters? FirstResume collects new job opportunities and creates fully personalised emails.</p>
+          <PillButton>Get Started Free &nbsp;→</PillButton>
+        </section>
+        <section className="max-w-[600px] mx-auto px-6 pb-4">
+          <div className="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-[#e5e5e5] overflow-hidden">
+            <div className="p-6 space-y-4">
+              <div><label className="text-[13px] font-semibold text-[#333] block mb-1">Email subject</label><div className="border border-[#ddd] rounded-lg px-4 py-2.5 text-[14px] text-[#333]">Opportunities</div></div>
+              <div><label className="text-[13px] font-semibold text-[#333] block mb-1">Email body</label><div className="border border-[#ddd] rounded-lg px-4 py-3 text-[13px] text-[#444] leading-relaxed whitespace-pre-line min-h-[240px]">{`Hello,\nI checked your website and social profiles recently and I came across your job posting regarding the {{JOB_TITLE}} at {{JOB_LOCATION}}.\n\nI am interested in applying my knowledge in a real project in {{COMPANY_NAME}}.\n\nThanks,\n{{USER_FIRSTNAME}} {{USER_LASTNAME}}`}</div></div>
+              <button className="bg-[#2563eb] text-white px-6 py-2.5 rounded-lg font-semibold text-[14px] hover:bg-[#1d4ed8] transition-colors">Save</button>
+            </div>
+          </div>
+        </section>
+        <section className="bg-gradient-to-r from-[#d6dfe8] to-[#b8c5d3] py-6 mt-6"><p className="max-w-[800px] mx-auto text-center text-[#333] text-[15px] font-medium px-6">Use variables to create fully personalised emails, approaching every company with a different email.</p></section>
+        <section className="max-w-[1100px] mx-auto px-6 py-16">
+          <div className="flex flex-col lg:flex-row gap-12">
+            <div className="flex-1 space-y-5">
+              <h2 className="text-[28px] md:text-[32px] font-extrabold text-[#1a1a1a] leading-tight">How Email Templates Can Help You Get Closer To Your Dream Job</h2>
+              <div className="space-y-4 pt-2">
+                <CheckItem>Using our pre-made and tested templates you start getting responses from companies</CheckItem>
+                <CheckItem>You can send fully personalised emails using our email variables like {"{{ this }}"}</CheckItem>
+                <CheckItem>In your dashboard your can track email open ratio, and optimize your emails.</CheckItem>
+              </div>
+              <div className="pt-2"><PillButton>Start today</PillButton></div>
+            </div>
+            <div className="flex-1 flex gap-4">
+              <div className="flex-1 bg-white rounded-xl p-6 shadow-sm border border-[#e5e5e5] flex flex-col">
+                <div className="w-10 h-10 rounded-lg bg-[#E8EDF2] flex items-center justify-center mb-4"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#555" strokeWidth={2}><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+                <h4 className="font-bold text-[15px] text-[#1a1a1a] mb-2">Send daily emails</h4>
+                <p className="text-[#666] text-[13px] leading-relaxed">FirstResume collects jobs and finds the email of the company automatically.</p>
+              </div>
+              <div className="flex-1 flex flex-col gap-4">
+                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#e5e5e5] flex-1"><h4 className="font-bold text-[14px] text-[#1a1a1a] mb-1">Stand out between candidates</h4><p className="text-[#666] text-[12px] leading-relaxed">Keep track of all the important KPIs.</p></div>
+                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#e5e5e5] flex-1"><h4 className="font-bold text-[14px] text-[#1a1a1a] mb-1">Write unique emails</h4><p className="text-[#666] text-[12px] leading-relaxed">Fully optimize your writing, testing various email templates.</p></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-[#1a1a1a] py-16"><div className="max-w-[700px] mx-auto text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-white mb-4">Still Not Convinced? Test Your Job Closing Rate With A Free Trial!</h2><p className="text-[#aaa] text-[15px] mb-8 leading-relaxed">FirstResume users get in average 50% more interviews.</p><PillButton outline>Get Started Free</PillButton><p className="text-[#888] text-[13px] mt-4">No credit card required</p></div></section>
+        <section className="bg-[#F0F2F5] py-16 text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-[#1a1a1a] mb-6">FirstResume Helps You Find A Job Faster</h2><PillButton>Get Started Now</PillButton></section>
+      </div>
+      <Footer />
+    </div>
   );
 }
