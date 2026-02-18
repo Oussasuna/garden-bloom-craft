@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const navItems = [
   { name: "For Universities", href: "/academia", internal: true },
@@ -8,22 +8,22 @@ const navItems = [
     name: "Features",
     href: "#",
     dropdown: [
-      { name: "Auto Apply", href: "#" },
-      { name: "One Click Apply", href: "#" },
-      { name: "Job Application Tracker", href: "#" },
-      { name: "Dynamic Emails", href: "#" },
-      { name: "CV Improvements", href: "#" },
-      { name: "Exclude Companies", href: "#" },
-      { name: "Job Posting Aggregator", href: "#" },
-      { name: "Job Matching", href: "#" },
-      { name: "Job Filtering", href: "#" },
-      { name: "Email Finder", href: "#" },
-      { name: "LinkedIn Apply Extension", href: "#" },
-      { name: "AI Question Answering", href: "#" },
-      { name: "AI CV Checker", href: "#" },
-      { name: "AI CV Builder", href: "#" },
-      { name: "AI Cover Letter Generator", href: "#" },
-      { name: "AI Mock Interview", href: "#" },
+      { name: "Auto Apply", href: "/features/auto-apply" },
+      { name: "One Click Apply", href: "/features/one-click-apply" },
+      { name: "Job Application Tracker", href: "/features/job-application-tracker" },
+      { name: "Dynamic Emails", href: "/features/dynamic-emails" },
+      { name: "CV Improvements", href: "/features/cv-improvements" },
+      { name: "Exclude Companies", href: "/features/exclude-companies" },
+      { name: "Job Posting Aggregator", href: "/features/job-aggregator" },
+      { name: "Job Matching", href: "/features/job-matching" },
+      { name: "Job Filtering", href: "/features/job-filtering" },
+      { name: "Email Finder", href: "/features/email-finder" },
+      { name: "LinkedIn Apply Extension", href: "/features/linkedin-auto-apply" },
+      { name: "AI Question Answering", href: "/features/ai-question-answering" },
+      { name: "AI CV Checker", href: "/features/ai-cv-checker" },
+      { name: "AI CV Builder", href: "/features/ai-cv-builder" },
+      { name: "AI Cover Letter Generator", href: "/features/ai-cover-letter-generator" },
+      { name: "AI Mock Interview", href: "/features/ai-mock-interview" },
     ],
   },
   {
@@ -31,10 +31,10 @@ const navItems = [
     href: "#",
     isResources: true,
     dropdown: [
-      { name: "About", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Contact Us", href: "#" },
-      { name: "Discounts", href: "#" },
+      { name: "About", href: "/about" },
+      { name: "Blog", href: "/blog" },
+      { name: "Contact Us", href: "/contact" },
+      { name: "Discounts", href: "/discounts" },
     ],
     bottomItem: { name: "FirstResume Ambassador Program (Coming soon)", href: "#" },
   },
@@ -103,26 +103,26 @@ const Navbar = () => {
                         <div>
                           <div className="grid grid-cols-2 gap-0">
                             {item.dropdown.map((sub, sIdx) => (
-                              <a key={sIdx} href={sub.href} className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-black rounded-xl transition-colors whitespace-nowrap">
+                              <Link key={sIdx} to={sub.href} className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-black rounded-xl transition-colors whitespace-nowrap">
                                 {sub.name}
-                              </a>
+                              </Link>
                             ))}
                           </div>
                           {item.bottomItem && (
                             <>
                               <div className="border-t border-gray-100 mx-2" />
-                              <a href={item.bottomItem.href} className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-black rounded-xl transition-colors whitespace-nowrap">
+                              <span className="block px-4 py-3 text-[14px] text-gray-400 rounded-xl whitespace-nowrap cursor-default">
                                 {item.bottomItem.name}
-                              </a>
+                              </span>
                             </>
                           )}
                         </div>
                       ) : (
                         <div className={(item.dropdown?.length ?? 0) > 6 ? 'grid grid-cols-2 gap-0' : ''}>
                           {item.dropdown.map((sub, sIdx) => (
-                            <a key={sIdx} href={sub.href} className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-black rounded-xl transition-colors whitespace-nowrap">
+                            <Link key={sIdx} to={sub.href} className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-black rounded-xl transition-colors whitespace-nowrap">
                               {sub.name}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       )}
@@ -130,9 +130,9 @@ const Navbar = () => {
                   </div>
                 </div>
               ) : (
-                <a href={item.href} className="px-3 py-1.5 text-[14px] font-medium transition-colors rounded-md hover:bg-black/5 text-[#333333]">
+                <Link to={item.href} className="px-3 py-1.5 text-[14px] font-medium transition-colors rounded-md hover:bg-black/5 text-[#333333]">
                   {item.name}
-                </a>
+                </Link>
               )}
             </div>
           ))}
@@ -161,7 +161,7 @@ const Navbar = () => {
                 {item.dropdown && !item.isSocial && (
                   <div className="pl-4 flex flex-col space-y-2 mt-2">
                     {item.dropdown.map((sub, sIdx) => (
-                      <a key={sIdx} href={sub.href} className="text-[14px] text-gray-600 py-1">{sub.name}</a>
+                      <Link key={sIdx} to={sub.href} className="text-[14px] text-gray-600 py-1" onClick={() => setMobileMenuOpen(false)}>{sub.name}</Link>
                     ))}
                     {item.bottomItem && (
                       <a href={item.bottomItem.href} className="text-[14px] text-gray-600 py-1">{item.bottomItem.name}</a>
