@@ -1,4 +1,7 @@
+import React from "react";
 import { Rocket } from "lucide-react";
+import Navbar from "@/components/sections/Navbar";
+import Footer from "@/components/sections/Footer";
 
 export default function AutoApplyPage() {
   const steps = [
@@ -10,6 +13,7 @@ export default function AutoApplyPage() {
 
   return (
     <div className="bg-white min-h-screen">
+      <Navbar />
       <section className="relative pt-[120px] pb-0 overflow-hidden bg-white">
         <div className="max-w-[1200px] mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center text-center max-w-[1000px] mx-auto mb-[60px]">
@@ -35,7 +39,6 @@ export default function AutoApplyPage() {
           </div>
         </div>
       </section>
-
       <section className="py-[100px] bg-white overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-[30px]">
@@ -68,13 +71,11 @@ export default function AutoApplyPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-white">
         <div className="max-w-[1200px] mx-auto px-6 py-[100px]">
           <h2 className="text-[36px] md:text-[42px] font-bold leading-[1.2] text-black tracking-[-0.02em] max-w-[800px] mx-auto text-center">Check How Our Auto Apply Bot Works</h2>
         </div>
       </section>
-
       {steps.map((step, i) => (
         <section key={i} className="py-[100px] bg-white">
           <div className="max-w-[1200px] mx-auto px-6">
@@ -95,7 +96,6 @@ export default function AutoApplyPage() {
           </div>
         </section>
       ))}
-
       <section className="bg-black py-[80px] lg:py-[100px]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
@@ -104,7 +104,6 @@ export default function AutoApplyPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
           <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-10 leading-tight tracking-[-0.02em]">FirstResume Helps You Find A Job Faster</h2>
@@ -114,6 +113,7 @@ export default function AutoApplyPage() {
           </a>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
