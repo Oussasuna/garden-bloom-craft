@@ -53,19 +53,19 @@ const AiAgentFeatures = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center">
-          <img
-            src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67d92b140562f386df7fd462_FR%20Graphics%20(2).avif"
-            alt="Person at desk illustration"
-            className="w-[200px] h-auto mb-8"
-          />
-          <a href="https://app.firstresume.ai" className="bg-black text-white text-[16px] font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all">
-            Experience the magic
-          </a>
-        </div>
+        
+
+
+
+
+
+
+
+
+
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AiAgentFeatures;
