@@ -12,7 +12,7 @@ const ValueProps = () => {
               <img
 
                 alt="Cartoon-style illustration of diverse smiling faces"
-                className="w-full h-auto object-fill" src="/lovable-uploads/5f234f58-4211-48ea-b216-0f506717e9d4.png" />
+                className="w-full h-auto object-contain" src="/lovable-uploads/ccc2bee9-1a0f-4558-a51c-568c6250f36f.png" />
 
             </div>
           </div>
