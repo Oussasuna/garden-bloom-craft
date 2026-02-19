@@ -64,7 +64,7 @@ const HeroSection = () => {
           Users landed roles at
         </p>
         <div className="overflow-hidden" style={{ maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)' }}>
-          <InfiniteSlider gap={80} duration={30} durationOnHover={8}>
+          <InfiniteSlider gap={60} duration={30} durationOnHover={60}>
             {companyLogos.map((logo, i) => (
               <img key={i} src={logo.src} alt={logo.alt} className="h-[28px] w-auto opacity-60 grayscale" />
             ))}
