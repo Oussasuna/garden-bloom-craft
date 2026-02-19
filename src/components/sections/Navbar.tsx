@@ -140,7 +140,7 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <a href="https://app.firstresume.ai" className="bg-[#111111] text-white px-6 py-3 rounded-full text-[14px] font-semibold hover:opacity-90 transition-opacity">
+          <a className="bg-[#111111] text-white px-6 py-3 rounded-full text-[14px] font-semibold hover:opacity-90 transition-opacity" href="">
             Get Started
           </a>
         </div>
