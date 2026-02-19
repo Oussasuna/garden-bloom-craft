@@ -17,10 +17,10 @@ const TrustedBy: React.FC = () => {
         <div className="text-center mb-10 md:mb-12 text-[14px] text-[#666666] font-medium tracking-[0.05em]">
           Trusted around the world
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-8 md:gap-x-12 md:gap-y-10">
+        <div className="flex flex-nowrap justify-center items-center gap-10 overflow-hidden">
           {TRUSTED_LOGOS.map((logo, index) => (
-            <div key={index} className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
-              <img src={logo.src} alt={logo.alt} className="h-[48px] w-auto object-contain" />
+            <div key={index} className="flex-shrink-0 flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
+              <img src={logo.src} alt={logo.alt} className="h-[40px] w-auto object-contain" />
             </div>
           ))}
         </div>
