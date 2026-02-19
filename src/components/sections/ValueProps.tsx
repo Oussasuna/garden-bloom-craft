@@ -12,7 +12,7 @@ const ValueProps = () => {
               <img
                 alt="Cartoon-style illustration of diverse smiling faces"
                 className="object-contain"
-                style={{ width: '500px', height: '500px' }}
+                style={{ width: '700px', height: '700px' }}
                 src="/lovable-uploads/ccc2bee9-1a0f-4558-a51c-568c6250f36f.png"
               />
             </div>
