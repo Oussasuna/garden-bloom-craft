@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, LogOut, User } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
 
 const navItems = [
 { name: "For Universities", href: "/academia", internal: true },
@@ -54,6 +55,8 @@ const navItems = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { user, signOut } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -138,11 +141,26 @@ const Navbar = () => {
           )}
         </nav>
 
-        {/* CTA Button */}
-        <div className="hidden lg:block">
-          <a className="bg-[#111111] text-white px-6 py-3 rounded-full text-[14px] font-semibold hover:opacity-90 transition-opacity" href="">
-            Get Started
-          </a>
+        {/* CTA / User Button */}
+        <div className="hidden lg:flex items-center gap-3">
+          {user ? (
+            <>
+              <span className="text-[14px] font-medium text-[#333] truncate max-w-[150px]">
+                {user.user_metadata?.display_name || user.email}
+              </span>
+              <button
+                onClick={signOut}
+                className="flex items-center gap-1.5 text-[14px] font-medium text-[#555] hover:text-black transition-colors"
+              >
+                <LogOut size={16} />
+                Log out
+              </button>
+            </>
+          ) : (
+            <Link to="/auth" className="bg-[#111111] text-white px-6 py-3 rounded-full text-[14px] font-semibold hover:opacity-90 transition-opacity">
+              Get Started
+            </Link>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -179,9 +197,15 @@ const Navbar = () => {
             }
               </div>
           )}
-            <a href="https://app.firstresume.ai" className="bg-[#111111] text-white w-full py-4 rounded-xl text-center font-bold text-[16px]">
-              Get Started
-            </a>
+            {user ? (
+              <button onClick={() => { signOut(); setMobileMenuOpen(false); }} className="bg-[#111111] text-white w-full py-4 rounded-xl text-center font-bold text-[16px]">
+                Log out
+              </button>
+            ) : (
+              <Link to="/auth" onClick={() => setMobileMenuOpen(false)} className="bg-[#111111] text-white w-full py-4 rounded-xl text-center font-bold text-[16px] block">
+                Get Started
+              </Link>
+            )}
           </div>
         </div>
       }
