@@ -46,7 +46,7 @@ const HeroSection = () => {
                 loop
                 muted
                 playsInline
-                className="w-full max-w-[550px] h-auto rounded-sm opacity-100 object-cover"
+                className="w-full max-w-[550px] h-auto rounded-sm opacity-100 object-cover border-0 outline-none"
                 src={heroVideo}
               />
             </div>
