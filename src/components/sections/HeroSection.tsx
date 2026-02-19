@@ -42,7 +42,7 @@ const HeroSection = () => {
             <div className="flex-1 flex justify-center md:justify-end">
               <img
                 alt="FirstResume hero graphic showing AI resume builder interface"
-                className="w-full max-w-[550px] h-auto rounded-lg"
+                className="w-full max-w-[5000px] h-auto rounded-sm shadow opacity-100 object-fill"
                 src="/lovable-uploads/1e83fb01-ecfc-42ff-8c21-e2f70e3ee278.png" />
 
             </div>
