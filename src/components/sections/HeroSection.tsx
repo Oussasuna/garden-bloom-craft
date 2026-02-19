@@ -41,14 +41,17 @@ const HeroSection = () => {
 
             {/* Right column - Image */}
             <div className="flex-1 flex justify-center md:justify-end">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full max-w-[550px] h-auto rounded-sm opacity-100 object-cover border-0 outline-none"
-                src={heroVideo}
-              />
+              <div className="w-full max-w-[550px] overflow-hidden">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto object-cover scale-[1.15] origin-center"
+                  style={{ border: 'none', outline: 'none', background: 'transparent' }}
+                  src={heroVideo}
+                />
+              </div>
             </div>
           </div>
         </div>
