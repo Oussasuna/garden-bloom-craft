@@ -1,4 +1,5 @@
 import React from 'react';
+import heroVideo from '@/assets/hero-video.mp4';
 
 const companyLogos = [
 { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cd4eb7cfa9918e11c_21.avif", alt: "Company logo" },
@@ -40,11 +41,14 @@ const HeroSection = () => {
 
             {/* Right column - Image */}
             <div className="flex-1 flex justify-center md:justify-end">
-              <img
-                alt="FirstResume hero graphic showing AI resume builder interface"
-                className="w-full max-w-[5000px] h-auto rounded-sm shadow opacity-100 object-fill" src="/lovable-uploads/49f38eb4-4812-4b33-81fb-86f58d97ea27.png" />
-
-
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full max-w-[550px] h-auto rounded-sm shadow opacity-100 object-cover"
+                src={heroVideo}
+              />
             </div>
           </div>
         </div>
