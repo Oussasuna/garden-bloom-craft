@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { AuthProvider } from "./contexts/AuthContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PricingPage from "./pages/Pricing";
@@ -12,6 +13,8 @@ import BlogPage from "./pages/Blog";
 import ContactPage from "./pages/Contact";
 import DiscountsPage from "./pages/Discounts";
 import AcademiaPage from "./pages/Academia";
+import AuthPage from "./pages/Auth";
+import ResetPasswordPage from "./pages/ResetPassword";
 // Feature pages
 import AutoApplyPage from "./pages/features/AutoApply";
 import OneClickApplyPage from "./pages/features/OneClickApply";
@@ -38,39 +41,43 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
+        <AuthProvider>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/auth" element={<AuthPage />} />
+            <Route path="/reset-password" element={<ResetPasswordPage />} />
 
-          {/* Resource pages */}
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/discounts" element={<DiscountsPage />} />
-          <Route path="/academia" element={<AcademiaPage />} />
+            {/* Resource pages */}
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/discounts" element={<DiscountsPage />} />
+            <Route path="/academia" element={<AcademiaPage />} />
 
-          {/* Feature pages */}
-          <Route path="/features/auto-apply" element={<AutoApplyPage />} />
-          <Route path="/features/one-click-apply" element={<OneClickApplyPage />} />
-          <Route path="/features/job-application-tracker" element={<JobTrackerPage />} />
-          <Route path="/features/dynamic-emails" element={<DynamicEmailsPage />} />
-          <Route path="/features/cv-improvements" element={<CvImprovementsPage />} />
-          <Route path="/features/exclude-companies" element={<ExcludeCompaniesPage />} />
-          <Route path="/features/job-aggregator" element={<JobAggregatorPage />} />
-          <Route path="/features/job-matching" element={<JobMatchingPage />} />
-          <Route path="/features/job-filtering" element={<JobFilteringPage />} />
-          <Route path="/features/email-finder" element={<EmailFinderPage />} />
-          <Route path="/features/linkedin-auto-apply" element={<LinkedInAutoApplyPage />} />
-          <Route path="/features/ai-question-answering" element={<AiQuestionAnsweringPage />} />
-          <Route path="/features/ai-cv-checker" element={<AiCvCheckerPage />} />
-          <Route path="/features/ai-cv-builder" element={<AiCvBuilderPage />} />
-          <Route path="/features/ai-cover-letter-generator" element={<AiCoverLetterPage />} />
-          <Route path="/features/ai-mock-interview" element={<AiMockInterviewPage />} />
+            {/* Feature pages */}
+            <Route path="/features/auto-apply" element={<AutoApplyPage />} />
+            <Route path="/features/one-click-apply" element={<OneClickApplyPage />} />
+            <Route path="/features/job-application-tracker" element={<JobTrackerPage />} />
+            <Route path="/features/dynamic-emails" element={<DynamicEmailsPage />} />
+            <Route path="/features/cv-improvements" element={<CvImprovementsPage />} />
+            <Route path="/features/exclude-companies" element={<ExcludeCompaniesPage />} />
+            <Route path="/features/job-aggregator" element={<JobAggregatorPage />} />
+            <Route path="/features/job-matching" element={<JobMatchingPage />} />
+            <Route path="/features/job-filtering" element={<JobFilteringPage />} />
+            <Route path="/features/email-finder" element={<EmailFinderPage />} />
+            <Route path="/features/linkedin-auto-apply" element={<LinkedInAutoApplyPage />} />
+            <Route path="/features/ai-question-answering" element={<AiQuestionAnsweringPage />} />
+            <Route path="/features/ai-cv-checker" element={<AiCvCheckerPage />} />
+            <Route path="/features/ai-cv-builder" element={<AiCvBuilderPage />} />
+            <Route path="/features/ai-cover-letter-generator" element={<AiCoverLetterPage />} />
+            <Route path="/features/ai-mock-interview" element={<AiMockInterviewPage />} />
 
-          {/* Catch-all */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            {/* Catch-all */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
