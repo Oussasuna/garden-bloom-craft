@@ -7,13 +7,13 @@ const ValueProps = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
 
           {/* Illustration Column */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-[420px]">
+          <div className="w-full lg:w-1/2 flex items-stretch">
+            <div className="relative w-full h-full">
               <img
-
                 alt="Cartoon-style illustration of diverse smiling faces"
-                className="w-full h-auto object-contain" src="/lovable-uploads/ccc2bee9-1a0f-4558-a51c-568c6250f36f.png" />
-
+                className="w-full h-full object-contain"
+                src="/lovable-uploads/ccc2bee9-1a0f-4558-a51c-568c6250f36f.png"
+              />
             </div>
           </div>
 
