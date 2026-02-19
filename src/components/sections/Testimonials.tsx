@@ -15,8 +15,8 @@ const Testimonials = () => {
             <img
               src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6731ded82cf0cde8f25b019e_FirstResume%20glossary%20Graphics%20wide.avif"
               alt="Diverse group of young people reading"
-              className="object-contain w-[422px] h-auto"
-            />
+              className="object-contain w-[422px] h-auto" />
+
           </div>
         </div>
 
@@ -36,8 +36,8 @@ const Testimonials = () => {
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/68de3ca77db09da719256750_CUHK%20MBA%20logo.png"
                 alt="CUHK MBA Programme"
-                className="h-[40px] w-auto object-contain opacity-80"
-              />
+                className="h-[40px] w-auto object-contain opacity-80" />
+
             </div>
           </div>
 
@@ -68,26 +68,26 @@ const Testimonials = () => {
         {/* Statistics Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[
-            { value: '562,192', label: 'Users' },
-            { value: '4.9/5', label: 'Rating' },
-            { value: '39', label: 'Countries' },
-            { value: '625,000+', label: 'Job applications' },
-          ].map((stat) => (
-            <div key={stat.label} className="bg-[#f9f9f7] py-8 rounded-[12px] text-center border border-[#e5e5e5]">
+          { value: '562,192', label: 'Users' },
+          { value: '4.9/5', label: 'Rating' },
+          { value: '39', label: 'Countries' },
+          { value: '625,000+', label: 'Job applications' }].
+          map((stat) =>
+          <div key={stat.label} className="bg-[#f9f9f7] py-8 rounded-[12px] text-center border border-[#e5e5e5]">
               <div className="text-[32px] font-extrabold text-[#1a1a1a] leading-none mb-1">{stat.value}</div>
               <div className="text-[14px] text-[#666666] font-medium uppercase tracking-wider">{stat.label}</div>
             </div>
-          ))}
+          )}
         </div>
 
         <div className="flex justify-center">
-          <a href="https://app.firstresume.ai" className="bg-[#1a1a1a] text-white px-8 py-4 rounded-full text-[16px] font-bold hover:scale-105 transition-transform duration-200">
-            See for yourself
-          </a>
+          
+
+
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Testimonials;
