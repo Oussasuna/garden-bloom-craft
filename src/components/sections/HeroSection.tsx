@@ -26,7 +26,7 @@ const HeroSection = () => {
                 Land your dream job with AI that automates your entire job search.
               </h1>
               <p className="text-[16px] md:text-[18px] text-[#666666] leading-[1.6] max-w-[700px] mb-8">
-                JobexCV automates your entire job search — from building the perfect resume to applying to top companies worldwide.
+                JobexCV automates your entire job search  from building the perfect resume to applying to top companies worldwide.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
                 <a href="https://app.firstresume.ai" className="bg-[#111111] text-white px-8 py-4 rounded-full font-semibold text-[16px] hover:opacity-90 transition-opacity">
@@ -43,8 +43,8 @@ const HeroSection = () => {
               <img
                 alt="FirstResume hero graphic showing AI resume builder interface"
                 className="w-full max-w-[550px] h-auto rounded-lg"
-                src="/lovable-uploads/1e83fb01-ecfc-42ff-8c21-e2f70e3ee278.png"
-              />
+                src="/lovable-uploads/1e83fb01-ecfc-42ff-8c21-e2f70e3ee278.png" />
+
             </div>
           </div>
         </div>
