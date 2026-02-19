@@ -7,7 +7,6 @@ export default function AboutPage() {
     <div className="bg-white min-h-screen">
       <Navbar />
 
-      {/* Hero */}
       <section className="pt-[120px] pb-[80px] text-center">
         <div className="max-w-[800px] mx-auto px-6">
           <p className="text-[#0099ff] text-[14px] font-semibold uppercase tracking-wide mb-4">About Us</p>
@@ -15,7 +14,7 @@ export default function AboutPage() {
             We're making the job hunt fair for everyone.
           </h1>
           <p className="text-[18px] text-[#666666] leading-[1.7]">
-            FirstResume was built by a team of engineers, designers, and career experts who believed the job application process was broken. We set out to fix it with AI.
+            JobExCV was built by a team of engineers, designers, and career experts who believed the job application process was broken. We set out to fix it with AI.
           </p>
         </div>
       </section>
@@ -47,16 +46,16 @@ export default function AboutPage() {
                 Level the playing field for every job seeker
               </h2>
               <p className="text-[17px] text-[#555555] leading-[1.7] mb-6">
-                Job hunting has always favored those with connections, insider knowledge, or the time to craft perfect applications. We're changing that. With FirstResume, every job seeker has access to the same AI-powered tools that give them the best possible chance of success.
+                Job hunting has always favored those with connections, insider knowledge, or the time to craft perfect applications. We're changing that. With JobExCV, every job seeker has access to the same AI-powered tools that give them the best possible chance of success.
               </p>
               <p className="text-[17px] text-[#555555] leading-[1.7]">
-                We started with a simple question: why does applying for jobs still feel like a 1990s experience when every other industry has been transformed by technology? FirstResume is our answer.
+                We started with a simple question: why does applying for jobs still feel like a 1990s experience when every other industry has been transformed by technology? JobExCV is our answer.
               </p>
             </div>
             <div className="flex-1">
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67d92b140562f386df7fd462_FR%20Graphics%20(2).avif"
-                alt="FirstResume team illustration"
+                alt="JobExCV team illustration"
                 className="w-full max-w-[400px] mx-auto h-auto"
               />
             </div>
@@ -96,7 +95,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-[22px] font-extrabold text-black mb-1">Dr. Sabrina Su</h3>
               <p className="text-[14px] text-[#666] mb-3">The Education University of Hong Kong</p>
-              <p className="text-[15px] text-[#555] leading-[1.6]">Dr. Sabrina Su holds a PhD in social work and applied psychology, with expertise in career research, generative AI, and youth research. She advises FirstResume on ensuring our approach aligns with contemporary research.</p>
+              <p className="text-[15px] text-[#555] leading-[1.6]">Dr. Sabrina Su holds a PhD in social work and applied psychology, with expertise in career research, generative AI, and youth research. She advises JobExCV on ensuring our approach aligns with contemporary research.</p>
             </div>
           </div>
         </div>

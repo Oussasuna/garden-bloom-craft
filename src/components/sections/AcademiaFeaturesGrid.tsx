@@ -1,8 +1,8 @@
 import React from 'react';
 
 const features = [
-  { title: 'AI auto add job', description: 'Tell AI the job you want to apply to (or search on FirstResume), AI does the rest.', image: 'https://cdn.prod.website-files.com/67065b18171e78a558433e90/6909cee02cee4c3dfd8d0d18_Untitled%20presentation%20(2).png' },
-  { title: 'Auto job summarisation', description: 'FirstResume automatically extracts all the important information.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d5264f87b6914e1e9be1_20251104_20Firstresume_20-17.png' },
+  { title: 'AI auto add job', description: 'Tell AI the job you want to apply to (or search on JobExCV), AI does the rest.', image: 'https://cdn.prod.website-files.com/67065b18171e78a558433e90/6909cee02cee4c3dfd8d0d18_Untitled%20presentation%20(2).png' },
+  { title: 'Auto job summarisation', description: 'JobExCV automatically extracts all the important information.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d5264f87b6914e1e9be1_20251104_20Firstresume_20-17.png' },
   { title: 'Compatibility analysis', description: 'Analyzes how compatible you are with the job and how to improve.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d5265d40fb17708d679d_20251104_20Firstresume_20-18.png' },
   { title: 'AI resume builder', description: 'AI edits your resume with perfect keywords tailored to the job.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d526fca6afd2195fb75f_20251104_20Firstresume_20-19.png' },
   { title: 'Cover letter generator', description: 'Personalised cover letter based on your profile and the job you are applying to.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909dc9c3e873d32dae9fd3f_20251104_20Firstresume_20-20.png' },
@@ -27,7 +27,7 @@ export default function AcademiaFeaturesGrid() {
             Everything your students need to succeed.
           </h2>
           <p className="text-[#666666] text-[18px] md:text-[20px] leading-[1.6] max-w-[800px]">
-            FirstResume supercharges your students' career success with industry know-hows and end-to-end automations for every step on their job hunt journey, from search to offer.
+            JobExCV supercharges your students' career success with industry know-hows and end-to-end automations for every step on their job hunt journey, from search to offer.
           </p>
         </div>
 

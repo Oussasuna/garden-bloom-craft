@@ -39,7 +39,7 @@ const navItems = [
   { name: "Contact Us", href: "/contact" },
   { name: "Discounts", href: "/discounts" }],
 
-  bottomItem: { name: "FirstResume Ambassador Program (Coming soon)", href: "#" }
+  bottomItem: { name: "JobExCV Ambassador Program (Coming soon)", href: "#" }
 },
 { name: "Pricing", href: "/pricing", internal: true },
 {
@@ -47,8 +47,8 @@ const navItems = [
   href: "#",
   isSocial: true,
   dropdown: [
-  { name: "Twitter", href: "https://x.com/firstresumeai", icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/67174bb23e82a55c540728a0_twitter-2.avif" },
-  { name: "Instagram", href: "https://www.instagram.com/firstresume_ai/", icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/67174bc389304f4be072fe4e_instagram-3.avif" },
+  { name: "Twitter", href: "https://x.com/jobexcvai", icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/67174bb23e82a55c540728a0_twitter-2.avif" },
+  { name: "Instagram", href: "https://www.instagram.com/jobexcv_ai/", icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/67174bc389304f4be072fe4e_instagram-3.avif" },
   { name: "Discord", href: "https://discord.gg/FXkNtWPG3B", icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/67174bb2c0a7cbe6e618638e_discord-4.avif" }]
 
 }];
@@ -82,7 +82,7 @@ const Navbar = () => {
         <a href="/" className="flex-shrink-0">
           <img
 
-            alt="FirstResume logo"
+            alt="JobExCV logo"
             className="h-[43px] w-auto object-contain rounded-xl" src="/lovable-uploads/f78ef4c0-77ab-4a45-8304-3d8b9b369e18.png" />
 
         </a>

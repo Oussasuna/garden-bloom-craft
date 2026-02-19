@@ -10,7 +10,7 @@ const PreFooterCTA = () => {
 
         <div className="mb-16">
           <a
-            href="https://app.firstresume.ai"
+            href="https://app.jobexcv.ai"
             className="inline-flex items-center justify-center bg-[#111111] text-white px-8 py-3 rounded-full font-semibold text-base transition-all duration-200 hover:opacity-90 active:scale-95 shadow-sm"
           >
             Get Started Now
@@ -22,7 +22,7 @@ const PreFooterCTA = () => {
             <div className="relative w-full aspect-[1000/600] rounded-t-[20px] md:rounded-t-[32px] overflow-hidden bg-white border border-[#e5e7eb]">
               <img
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909cee02cee4c3dfd8d0d18_Untitled_20presentation_2-16.png"
-                alt="FirstResume Application Dashboard Showcase"
+                alt="JobExCV Application Dashboard Showcase"
                 className="w-full h-full object-cover object-top"
               />
             </div>

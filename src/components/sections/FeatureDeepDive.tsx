@@ -96,7 +96,7 @@ export default function FeatureDeepDive() {
                       </li>
                     ))}
                   </ul>
-                  <a href="https://app.firstresume.ai" className="inline-block bg-black text-white text-[15px] font-semibold px-7 py-3.5 rounded-full hover:opacity-90 transition-all">
+                  <a href="https://app.jobexcv.ai" className="inline-block bg-black text-white text-[15px] font-semibold px-7 py-3.5 rounded-full hover:opacity-90 transition-all">
                     {feature.cta}
                   </a>
                 </div>

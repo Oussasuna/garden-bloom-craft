@@ -10,7 +10,7 @@ const Footer = () => {
         </h2>
         <div className="flex justify-center mb-12">
           <a
-            href="https://app.firstresume.ai"
+            href="https://app.jobexcv.ai"
             className="bg-[#1a1a1a] text-white px-8 py-[14px] rounded-full font-semibold text-[16px] hover:opacity-90 transition-all">
 
             Get Started Now
@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="max-w-[1000px] mx-auto overflow-hidden rounded-t-[32px] border-x-[12px] border-t-[12px] border-[#9bc4e8] shadow-soft">
           <img
             src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/679237bfb1d8e6c708170e72_landing%20page%20at%20the%20end.avif"
-            alt="FirstResume App Interface"
+            alt="JobExCV App Interface"
             className="w-full h-auto block" />
 
         </div>
@@ -32,7 +32,7 @@ const Footer = () => {
             <a href="/" className="inline-block mb-8">
               <img
 
-                alt="FirstResume Logo"
+                alt="JobExCV Logo"
                 className="h-[43px] w-auto" src="/lovable-uploads/efeafb61-03a7-4f01-b0b4-a6768f4b41b7.png" />
 
             </a>
@@ -67,7 +67,7 @@ const Footer = () => {
 
       <div className="w-full border-t border-[#e5e5e5] py-6 text-center">
         <p className="text-[#666666] text-[12px]">
-          Made by FirstResume with ❤️ | Copyright © 2024 FirstResume
+          Made by JobExCV with ❤️ | Copyright © 2024 JobExCV
         </p>
       </div>
     </footer>);

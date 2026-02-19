@@ -3,18 +3,18 @@ import React, { useState } from 'react';
 const faqItems = [
   {
     question: "Why do I need tailored job applications? Isn't one general resume enough?",
-    answer: `Tailored job applications are crucial in today's competitive job market for several reasons:\n\n1. Stand out from the crowd: Generic resumes often get lost in the sea of applications.\n2. Beat Applicant Tracking Systems (ATS): Many companies use ATS to screen resumes.\n3. Show genuine interest: Customizing your application demonstrates that you've taken the time to understand the role.\n4. Address specific requirements: Each job has unique requirements.\n5. Increase interview chances: Tailored applications are more likely to impress recruiters.\n\nFirstResumeAI makes this crucial tailoring process quick and effortless.`,
+    answer: `Tailored job applications are crucial in today's competitive job market for several reasons:\n\n1. Stand out from the crowd: Generic resumes often get lost in the sea of applications.\n2. Beat Applicant Tracking Systems (ATS): Many companies use ATS to screen resumes.\n3. Show genuine interest: Customizing your application demonstrates that you've taken the time to understand the role.\n4. Address specific requirements: Each job has unique requirements.\n5. Increase interview chances: Tailored applications are more likely to impress recruiters.\n\nJobExCV AI makes this crucial tailoring process quick and effortless.`,
   },
   {
     question: "Is it cheating? Will my employer know?",
-    answer: `No, using FirstResume is not cheating at all. It's a tool to help you present your true skills and experiences in the best possible light.\n\n1. We don't add false information: All content on your resume remains factual.\n2. It's about presentation, not fabrication.\n3. Tailored, not altered: We tailor your existing information to each job application.\n4. Industry-standard practice: Using tools to improve your resume is a common practice.\n\nRemember, FirstResume is about empowering you to showcase your true potential effectively.`,
+    answer: `No, using JobExCV is not cheating at all. It's a tool to help you present your true skills and experiences in the best possible light.\n\n1. We don't add false information: All content on your resume remains factual.\n2. It's about presentation, not fabrication.\n3. Tailored, not altered: We tailor your existing information to each job application.\n4. Industry-standard practice: Using tools to improve your resume is a common practice.\n\nRemember, JobExCV is about empowering you to showcase your true potential effectively.`,
   },
   {
-    question: "Can I use FirstResume for different industries or job types?",
+    question: "Can I use JobExCV for different industries or job types?",
     answer: "Yes, our AI is designed to optimize your resume for various industries and job types. It adapts to the specific requirements of each job description you input, whether you're applying for tech, finance, healthcare, marketing, or any other field.",
   },
   {
-    question: "How does FirstResumeAI ensure my resume is ATS-friendly?",
+    question: "How does JobExCV AI ensure my resume is ATS-friendly?",
     answer: "Our AI optimizes your resume by using industry-standard formatting, appropriate keywords from the job description, and a clean, easy-to-read layout that ATS systems can easily parse.",
   },
   {
@@ -27,7 +27,7 @@ const faqItems = [
   },
   {
     question: "Can I save different versions of my resume for future use?",
-    answer: "Yes, FirstResumeAI allows you to save multiple versions of your tailored resumes for future use.",
+    answer: "Yes, JobExCV AI allows you to save multiple versions of your tailored resumes for future use.",
   },
   {
     question: "Can I edit the AI-generated documents?",
@@ -35,7 +35,7 @@ const faqItems = [
   },
   {
     question: "How can I write my own resume?",
-    answer: "To write your own resume, start by choosing a clean, professional format. With FirstResume, you can upload your existing resume and our AI will help optimize it for each specific job application.",
+    answer: "To write your own resume, start by choosing a clean, professional format. With JobExCV, you can upload your existing resume and our AI will help optimize it for each specific job application.",
   },
   {
     question: "What is the CV meaning?",

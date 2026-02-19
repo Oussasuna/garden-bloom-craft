@@ -19,7 +19,7 @@ export default function AcademiaTestimonial() {
           </p>
 
           <h2 className="text-white font-bold text-[30px] md:text-[42px] leading-[1.2] mb-12 md:mb-16 text-balance">
-            "We partner with FirstResume because they are the most seamless CV polishing tool in the market empowered by AI."
+            "We partner with JobExCV because they are the most seamless CV polishing tool in the market empowered by AI."
           </h2>
 
           <div className="flex flex-col md:flex-row items-center gap-4">

@@ -30,14 +30,14 @@ export default function FeaturesGrid() {
               </div>
               <h3 className="text-[18px] font-bold leading-[1.3] text-[#1a1a1a] mb-2">{feature.title}</h3>
               <p className="text-[#666666] text-[15px] leading-[1.5] mb-4">{feature.description}</p>
-              <a href="https://app.firstresume.ai" className="text-[#0099ff] text-[14px] font-semibold hover:underline">
+              <a href="https://app.jobexcv.ai" className="text-[#0099ff] text-[14px] font-semibold hover:underline">
                 Learn more
               </a>
             </div>
           ))}
         </div>
         <div className="mt-16 flex justify-center">
-          <a href="https://app.firstresume.ai" className="inline-flex items-center justify-center bg-[#111111] text-white px-8 py-[14px] rounded-full font-semibold text-[16px] transition-opacity hover:opacity-90">
+          <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-[#111111] text-white px-8 py-[14px] rounded-full font-semibold text-[16px] transition-opacity hover:opacity-90">
             Get Started Today
           </a>
         </div>

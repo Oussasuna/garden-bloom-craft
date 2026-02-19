@@ -26,13 +26,13 @@ const BenefitsGrid = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
           <div className="flex flex-col justify-start">
             <p className="text-[#00a3ff] text-[14px] font-bold mb-4 tracking-normal">
-              Why use FirstResume?
+              Why use JobExCV?
             </p>
             <h2 className="text-[32px] md:text-[42px] leading-[1.2] font-bold text-black mb-6 max-w-[500px]">
               Maximise student employability. Minimise career service workload.
             </h2>
             <p className="text-[#666666] text-[16px] md:text-[18px] leading-[1.6] max-w-[540px] mb-10">
-              With how competitive the job market is nowadays, landing a job is no longer just about who you are, but also how you apply. FirstResume assists your career service team by providing high quality opportunities and applications automations for students 24/7.
+              With how competitive the job market is nowadays, landing a job is no longer just about who you are, but also how you apply. JobExCV assists your career service team by providing high quality opportunities and applications automations for students 24/7.
             </p>
             <div className="hidden lg:block pt-4">
               <a
