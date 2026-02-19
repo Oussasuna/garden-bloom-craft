@@ -10,10 +10,10 @@ const ValueProps = () => {
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[420px]">
               <img
-                src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67d92b140562f386df7fd462_FR%20Graphics%20(2).avif"
+
                 alt="Cartoon-style illustration of diverse smiling faces"
-                className="w-full h-auto object-contain"
-              />
+                className="w-full h-auto object-fill" src="/lovable-uploads/5f234f58-4211-48ea-b216-0f506717e9d4.png" />
+
             </div>
           </div>
 
@@ -25,8 +25,8 @@ const ValueProps = () => {
                   <img
                     src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6707642926c2f09fcad827ca_8.svg"
                     alt="Sparkle icon"
-                    className="h-9 w-auto"
-                  />
+                    className="h-9 w-auto" />
+
                 </div>
                 <h2 className="text-[22px] md:text-[28px] font-bold leading-[1.3] text-black tracking-tight">
                   Struggling with job hunt? We use AI maximise your job application success rate and minimise the time and effort you need to spend doing it.
@@ -52,8 +52,8 @@ const ValueProps = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ValueProps;
