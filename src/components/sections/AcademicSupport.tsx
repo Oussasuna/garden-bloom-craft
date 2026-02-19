@@ -12,7 +12,7 @@ const AcademicSupport: React.FC = () => {
             Built alongside an academic researcher.
           </h2>
           <p className="text-[#666666] text-[18px] md:text-[20px] leading-[1.6] max-w-[800px]">
-            FirstResume makes sure its AI-driven approach to career development aligns with contemporary research on professional advancement and educational technology, with every feature designed with youth development in mind.
+            JobExCV makes sure its AI-driven approach to career development aligns with contemporary research on professional advancement and educational technology, with every feature designed with youth development in mind.
           </p>
         </div>
 

@@ -16,7 +16,7 @@ const discounts = [
     title: "University License",
     badge: "Contact for Pricing",
     badgeColor: "#0099FF",
-    description: "We partner with universities to give students free or discounted access to FirstResume as part of their career services. Contact us to learn more.",
+    description: "We partner with universities to give students free or discounted access to JobExCV as part of their career services. Contact us to learn more.",
     cta: "Contact Us",
   },
   {
@@ -65,7 +65,7 @@ export default function DiscountsPage() {
               </div>
               <h3 className="text-[22px] font-bold text-black mb-3">{d.title}</h3>
               <p className="text-[15px] text-[#666666] leading-[1.6] mb-8 flex-grow">{d.description}</p>
-              <a href="https://app.firstresume.ai" className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold text-[14px] text-center hover:opacity-90 transition-all">
+              <a href="https://app.jobexcv.ai" className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold text-[14px] text-center hover:opacity-90 transition-all">
                 {d.cta}
               </a>
             </div>
@@ -76,7 +76,7 @@ export default function DiscountsPage() {
       <section className="py-[60px] bg-[#f8f7f5] border-t border-[#e5e7eb] text-center">
         <div className="max-w-[600px] mx-auto px-6">
           <h2 className="text-[28px] font-extrabold text-black mb-4">Don't see your situation?</h2>
-          <p className="text-[16px] text-[#666] mb-6">Reach out to us directly. We'll do our best to make FirstResume accessible for you.</p>
+          <p className="text-[16px] text-[#666] mb-6">Reach out to us directly. We'll do our best to make JobExCV accessible for you.</p>
           <a href="/contact" className="inline-block border border-black text-black px-6 py-3 rounded-full font-semibold text-[14px] hover:bg-black hover:text-white transition-all">
             Contact Us
           </a>

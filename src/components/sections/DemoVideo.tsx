@@ -9,7 +9,7 @@ const DemoVideo = () => {
             <iframe
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/cBSt6MmDXXY?rel=0&controls=1&autoplay=0&mute=1&start=0"
-              title="Introducing Firstresume - The AI Job Hunt Agent"
+              title="Introducing JobExCV - The AI Job Hunt Agent"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

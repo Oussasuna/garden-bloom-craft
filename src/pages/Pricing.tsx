@@ -99,7 +99,7 @@ export default function PricingPage() {
                 </div>
                 <p className={`text-[14px] mb-8 ${plan.highlight ? 'text-white/70' : 'text-[#666666]'}`}>{plan.description}</p>
                 <a
-                  href="https://app.firstresume.ai"
+                  href="https://app.jobexcv.ai"
                   className={`block w-full text-center py-3.5 rounded-full font-semibold text-[15px] transition-all mb-8 ${plan.ctaStyle}`}
                 >
                   {plan.cta}

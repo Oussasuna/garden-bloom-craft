@@ -121,7 +121,6 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm animate-in fade-in duration-200"
     >
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-[460px] mx-4 p-8 animate-in slide-in-from-bottom-4 zoom-in-95 duration-300">
-        {/* Close */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
@@ -129,14 +128,13 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
           <X size={20} />
         </button>
 
-        {/* Illustration */}
         <div className="flex justify-center mb-4">
           <TeamIllustration />
         </div>
 
         {isUniversityMode ? (
           <div className="flex flex-col items-center">
-            <h2 className="text-2xl font-bold text-[#0f0f0f] mb-1">FirstResume Academia</h2>
+            <h2 className="text-2xl font-bold text-[#0f0f0f] mb-1">JobExCV Academia</h2>
             <p className="text-[15px] text-gray-500 mb-6">Sign in and supercharge your career.</p>
 
             <select
@@ -172,8 +170,8 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
             </h2>
             <p className="text-[15px] text-gray-500 mb-6">
               {mode === "signup"
-                ? "Join FirstResume and supercharge your career."
-                : "Sign in to FirstResume and supercharge your career."}
+                ? "Join JobExCV and supercharge your career."
+                : "Sign in to JobExCV and supercharge your career."}
             </p>
 
             {mode === "signin" ? (
@@ -222,7 +220,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
             )}
 
             <p className="text-[12px] text-gray-400 mt-3 mb-4 text-center leading-relaxed">
-              By continuing, you agree to FirstResume's{" "}
+              By continuing, you agree to JobExCV's{" "}
               <a href="#" className="underline">Terms of Service</a> and acknowledge you've read our{" "}
               <a href="#" className="underline">Privacy Policy</a>.
             </p>
@@ -243,7 +241,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
             </button>
 
             <p className="text-[15px] text-gray-700 mt-4 mb-4">
-              {mode === "signup" ? "Already have an account? " : "New to FirstResume? "}
+              {mode === "signup" ? "Already have an account? " : "New to JobExCV? "}
               <button
                 onClick={() => setMode(mode === "signup" ? "signin" : "signup")}
                 className="font-bold text-[#0f0f0f] hover:underline"

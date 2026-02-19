@@ -10,19 +10,19 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    text: "We partner with FirstResume because they are the most seamless CV polishing tool in the market empowered by AI.",
+    text: "We partner with JobExCV because they are the most seamless CV polishing tool in the market empowered by AI.",
     image: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/68de3ca77db09da719256750_CUHK%20MBA%20logo.png",
     name: "CUHK MBA Programme",
     role: "University Partner",
   },
   {
-    text: "Tried chatgpt for weeks and got zero interviews... FirstResume got me 3 callbacks in the first month?? actually sounds like me and takes 2 mins. worth every $$",
+    text: "Tried chatgpt for weeks and got zero interviews... JobExCV got me 3 callbacks in the first month?? actually sounds like me and takes 2 mins. worth every $$",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
     name: "Sarah",
     role: "Product Manager @ Google",
   },
   {
-    text: "Been using FirstResume for the past month and wow... applied to 40 jobs already and got 4 interviews! Usually I'd spend forever tweaking each resume but this does it so much better than I could.",
+    text: "Been using JobExCV for the past month and wow... applied to 40 jobs already and got 4 interviews! Usually I'd spend forever tweaking each resume but this does it so much better than I could.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150",
     name: "Michael",
     role: "Business Analyst @ PwC",
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     role: "Software Engineer @ Meta",
   },
   {
-    text: "As a career changer, FirstResume helped me highlight transferable skills I didn't even know I had. Landed 5 interviews in my first week.",
+    text: "As a career changer, JobExCV helped me highlight transferable skills I didn't even know I had. Landed 5 interviews in my first week.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150",
     name: "James Wilson",
     role: "Data Analyst @ Deloitte",
@@ -46,7 +46,7 @@ const testimonials: Testimonial[] = [
     role: "Marketing Manager @ HubSpot",
   },
   {
-    text: "FirstResume's job matching algorithm is spot on. Every recommendation felt like it was handpicked for my profile.",
+    text: "JobExCV's job matching algorithm is spot on. Every recommendation felt like it was handpicked for my profile.",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150&h=150",
     name: "Lisa Park",
     role: "UX Designer @ Airbnb",
@@ -58,7 +58,7 @@ const testimonials: Testimonial[] = [
     role: "Finance Associate @ JPMorgan",
   },
   {
-    text: "From resume building to interview prep, FirstResume is the complete package. Couldn't have landed my role without it.",
+    text: "From resume building to interview prep, JobExCV is the complete package. Couldn't have landed my role without it.",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150",
     name: "Rachel Thompson",
     role: "Consultant @ McKinsey",
@@ -131,7 +131,7 @@ export function TestimonialsSection() {
           What our users say
         </h2>
         <p className="text-[16px] text-[#666666] max-w-[600px] mx-auto">
-          Discover how thousands of job seekers streamline their applications with FirstResume.
+          Discover how thousands of job seekers streamline their applications with JobExCV.
         </p>
       </div>
 

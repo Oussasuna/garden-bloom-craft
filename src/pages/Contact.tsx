@@ -25,9 +25,9 @@ export default function ContactPage() {
               </p>
               <div className="space-y-6">
                 {[
-                  { icon: "📧", label: "Email", value: "hello@firstresume.ai" },
+                  { icon: "📧", label: "Email", value: "hello@jobexcv.ai" },
                   { icon: "💬", label: "Discord", value: "discord.gg/FXkNtWPG3B" },
-                  { icon: "🐦", label: "Twitter", value: "@firstresumeai" },
+                  { icon: "🐦", label: "Twitter", value: "@jobexcvai" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-[#f8f9fa] rounded-full flex items-center justify-center text-xl">
