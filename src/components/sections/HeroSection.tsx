@@ -1,15 +1,15 @@
 import React from 'react';
 
 const companyLogos = [
-  { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cd4eb7cfa9918e11c_21.avif", alt: "Company logo" },
-  { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068b4638397708f6c5a0_20.avif", alt: "Company logo" },
-  { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c54d454dde3645a61_16.avif", alt: "Company logo" },
-  { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cd06a7d714fa435ef_19.avif", alt: "Company logo" },
-  { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c6660edcb3f6dc1bb_10.avif", alt: "Company logo" },
-  { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c6dd97695b9d4e4ed_11.avif", alt: "Company logo" },
-  { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068bffe98b5b3e0667eb_6.avif", alt: "Company logo" },
-  { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c992d152ad6435da8_5.avif", alt: "Company logo" },
-];
+{ src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cd4eb7cfa9918e11c_21.avif", alt: "Company logo" },
+{ src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068b4638397708f6c5a0_20.avif", alt: "Company logo" },
+{ src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c54d454dde3645a61_16.avif", alt: "Company logo" },
+{ src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cd06a7d714fa435ef_19.avif", alt: "Company logo" },
+{ src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c6660edcb3f6dc1bb_10.avif", alt: "Company logo" },
+{ src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c6dd97695b9d4e4ed_11.avif", alt: "Company logo" },
+{ src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068bffe98b5b3e0667eb_6.avif", alt: "Company logo" },
+{ src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c992d152ad6435da8_5.avif", alt: "Company logo" }];
+
 
 const HeroSection = () => {
   return (
@@ -39,10 +39,10 @@ const HeroSection = () => {
       {/* Hero Image */}
       <div className="flex justify-center px-6 pb-8">
         <img
-          src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6847ec8aac8917cb3e155e77_FR%20Hero%20graphics%20with%20decorations.png"
+
           alt="FirstResume hero graphic showing AI resume builder interface"
-          className="w-full max-w-[900px] h-auto"
-        />
+          className="w-full max-w-[900px] h-auto" src="/lovable-uploads/1e83fb01-ecfc-42ff-8c21-e2f70e3ee278.png" />
+
       </div>
 
       {/* Company logos bar */}
@@ -53,15 +53,15 @@ const HeroSection = () => {
               Users landed roles at
             </span>
             <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 opacity-60 grayscale max-w-[900px]">
-              {companyLogos.map((logo, i) => (
-                <img key={i} src={logo.src} alt={logo.alt} className="h-[28px] w-auto" />
-              ))}
+              {companyLogos.map((logo, i) =>
+              <img key={i} src={logo.src} alt={logo.alt} className="h-[28px] w-auto" />
+              )}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
