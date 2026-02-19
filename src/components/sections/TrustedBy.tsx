@@ -1,4 +1,5 @@
 import React from 'react';
+import { InfiniteSlider } from '@/components/ui/infinite-slider';
 
 const TRUSTED_LOGOS = [
   { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c6a308945356266ed_14.avif", alt: "HKSTP logo" },
@@ -12,18 +13,24 @@ const TRUSTED_LOGOS = [
 
 const TrustedBy: React.FC = () => {
   return (
-    <section className="py-12 md:py-20 bg-white">
-      <div className="container mx-auto px-6 max-w-[1200px]">
-        <div className="text-center mb-10 md:mb-12 text-[14px] text-[#666666] font-medium tracking-[0.05em]">
-          Trusted around the world
-        </div>
-        <div className="flex flex-nowrap justify-center items-center gap-10 overflow-hidden">
+    <section className="py-10 w-full bg-white">
+      <p className="text-center text-[14px] text-[#666666] font-medium tracking-[0.05em] mb-6">
+        Trusted around the world
+      </p>
+      <div
+        className="overflow-hidden"
+        style={{ maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)' }}
+      >
+        <InfiniteSlider gap={60} duration={30} durationOnHover={60}>
           {TRUSTED_LOGOS.map((logo, index) => (
-            <div key={index} className="flex-shrink-0 flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
-              <img src={logo.src} alt={logo.alt} className="h-[40px] w-auto object-contain" />
-            </div>
+            <img
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              className="h-[45px] w-auto flex-shrink-0 object-contain"
+            />
           ))}
-        </div>
+        </InfiniteSlider>
       </div>
     </section>
   );
