@@ -15,34 +15,39 @@ const HeroSection = () => {
   return (
     <section className="bg-white overflow-hidden">
       <div className="pt-[120px] pb-[40px] md:pt-[140px] md:pb-[60px]">
-        <div className="container mx-auto px-6 flex flex-col items-center text-center max-w-[900px]">
-          <p className="text-[#00A3FF] font-bold text-[14px] mb-6 tracking-tight">
-            #1 AI Career Tool for GenZ
-          </p>
-          <h1 className="text-[36px] md:text-[56px] font-[800] leading-[1.1] text-black mb-6 tracking-[-0.02em]">#1 AI Powered Career Platform
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Left column - Text */}
+            <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+              <p className="text-[#00A3FF] font-bold text-[14px] mb-6 tracking-tight">
+                #1 AI Career Tool for GenZ
+              </p>
+              <h1 className="text-[36px] md:text-[56px] font-[800] leading-[1.1] text-black mb-6 tracking-[-0.02em]">
+                An AI resume builder that also automates entire job applications.
+              </h1>
+              <p className="text-[16px] md:text-[18px] text-[#666666] leading-[1.6] max-w-[700px] mb-8">
+                Built for GenZ. FirstResume automates your entire job hunt with AI from job matching to interview prep.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
+                <a href="https://app.firstresume.ai" className="bg-[#111111] text-white px-8 py-4 rounded-full font-semibold text-[16px] hover:opacity-90 transition-opacity">
+                  Land more interviews for free
+                </a>
+                <a href="#" className="text-[#0099ff] text-[14px] font-medium hover:underline transition-colors">
+                  Purchasing for your university? Click here
+                </a>
+              </div>
+            </div>
 
-          </h1>
-          <p className="text-[16px] md:text-[18px] text-[#666666] leading-[1.6] max-w-[700px] mb-8">Land your dream job with the power of AI
-
-          </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
-            <a href="https://app.firstresume.ai" className="bg-[#111111] text-white px-8 py-4 rounded-full font-semibold text-[16px] hover:opacity-90 transition-opacity">
-              Land more interviews for free
-            </a>
-            <a href="#" className="text-[#0099ff] text-[14px] font-medium hover:underline transition-colors">
-              Find My Dream Job Now
-            </a>
+            {/* Right column - Image */}
+            <div className="flex-1 flex justify-center md:justify-end">
+              <img
+                alt="FirstResume hero graphic showing AI resume builder interface"
+                className="w-full max-w-[550px] h-auto rounded-lg"
+                src="/lovable-uploads/1e83fb01-ecfc-42ff-8c21-e2f70e3ee278.png"
+              />
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Hero Image */}
-      <div className="flex justify-center px-6 pb-8">
-        <img
-          src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6847ec8aac8917cb3e155e77_FR%20Hero%20graphics%20with%20decorations.png"
-          alt="FirstResume hero graphic showing AI resume builder interface"
-          className="w-full max-w-[900px] h-auto" />
-
       </div>
 
       {/* Company logos bar */}
