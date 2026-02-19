@@ -2,7 +2,7 @@ import Navbar from "@/components/sections/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import DemoVideo from "@/components/sections/DemoVideo";
 import ValueProps from "@/components/sections/ValueProps";
-import TrustedBy from "@/components/sections/TrustedBy";
+
 import HowItWorks from "@/components/sections/HowItWorks";
 import Testimonials from "@/components/sections/Testimonials";
 import AiAgentFeatures from "@/components/sections/AiAgentFeatures";
@@ -20,7 +20,7 @@ const Index = () => {
       <HeroSection />
       <DemoVideo />
       <ValueProps />
-      <TrustedBy />
+      
       <HowItWorks />
       <Testimonials />
       <AiAgentFeatures />
