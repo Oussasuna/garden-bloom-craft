@@ -20,20 +20,20 @@ const HeroSection = () => {
             {/* Left column - Text */}
             <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
               <p className="text-[#00A3FF] font-bold text-[14px] mb-6 tracking-tight">
-                #1 AI Career Tool for GenZ
+                #1 AI-Powered Career Platform
               </p>
               <h1 className="text-[36px] md:text-[56px] font-[800] leading-[1.1] text-black mb-6 tracking-[-0.02em]">
-                An AI resume builder that also automates entire job applications.
+                Land your dream job with AI that automates your entire job search.
               </h1>
               <p className="text-[16px] md:text-[18px] text-[#666666] leading-[1.6] max-w-[700px] mb-8">
-                Built for GenZ. FirstResume automates your entire job hunt with AI from job matching to interview prep.
+                JobexCV automates your entire job search — from building the perfect resume to applying to top companies worldwide.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
                 <a href="https://app.firstresume.ai" className="bg-[#111111] text-white px-8 py-4 rounded-full font-semibold text-[16px] hover:opacity-90 transition-opacity">
-                  Land more interviews for free
+                  Start Getting Hired Today
                 </a>
                 <a href="#" className="text-[#0099ff] text-[14px] font-medium hover:underline transition-colors">
-                  Purchasing for your university? Click here
+                  Looking for university partnerships? Click here
                 </a>
               </div>
             </div>
