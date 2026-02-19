@@ -29,7 +29,7 @@ const HeroSection = () => {
                 JobexCV automates your entire job search  from building the perfect resume to applying to top companies worldwide.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
-                <a href="https://app.firstresume.ai" className="bg-[#111111] text-white rounded-full font-semibold text-[16px] hover:opacity-90 transition-opacity py-[18px] px-[10px] my-0 mx-0">
+                <a className="bg-[#111111] text-white rounded-full font-semibold text-[16px] hover:opacity-90 transition-opacity py-[18px] px-[10px] my-0 mx-0" href="https://preview--petal-prime.lovable.app/">
                   Start Getting Hired Today
                 </a>
                 <a href="#" className="text-[#0099ff] text-[14px] font-medium hover:underline transition-colors">
