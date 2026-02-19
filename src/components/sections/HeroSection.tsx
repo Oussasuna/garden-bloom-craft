@@ -66,7 +66,7 @@ const HeroSection = () => {
         <div className="w-full overflow-hidden" style={{ maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)' }}>
           <InfiniteSlider gap={60} duration={30} durationOnHover={60}>
             {companyLogos.map((logo, i) => (
-              <img key={i} src={logo.src} alt={logo.alt} className="h-[28px] w-auto opacity-60 grayscale" />
+              <img key={i} src={logo.src} alt={logo.alt} className="h-[28px] w-auto opacity-80" />
             ))}
           </InfiniteSlider>
         </div>
