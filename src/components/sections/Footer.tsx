@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Product</h4>
+            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Features</h4>
             <div className="flex flex-col space-y-3">
               {['AI Resume', 'AI Cover Letter', 'AI Outreach Email', 'AI Interview Prep', 'Job Application Tracker', 'AI Job Matching', 'Pricing'].map((item) =>
               <a key={item} href="#" className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">{item}</a>
