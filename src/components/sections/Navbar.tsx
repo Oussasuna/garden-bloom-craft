@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X, LogOut } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
@@ -58,6 +59,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState<"signin" | "signup">("signup");
+  const [activeNav, setActiveNav] = useState<string | null>(null);
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
 
@@ -88,9 +90,26 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-1">
           {navItems.map((item, idx) =>
-          <div key={idx} className="relative group">
+          <div key={idx} className="relative group"
+            onMouseEnter={() => setActiveNav(item.name)}
+            onMouseLeave={() => setActiveNav(null)}
+          >
+              {activeNav === item.name && (
+                <motion.div
+                  layoutId="tubelight"
+                  className="absolute inset-0 bg-gray-100 rounded-full -z-10"
+                  initial={false}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                >
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-gray-800 rounded-t-full">
+                    <div className="absolute w-12 h-6 bg-gray-400/30 rounded-full blur-md -top-2 -left-2" />
+                    <div className="absolute w-8 h-6 bg-gray-400/20 rounded-full blur-md -top-1" />
+                    <div className="absolute w-4 h-4 bg-gray-400/20 rounded-full blur-sm top-0 left-2" />
+                  </div>
+                </motion.div>
+              )}
               {item.dropdown ?
-            <div className="flex items-center px-2.5 py-1.5 cursor-pointer rounded-md hover:bg-black/5 transition-colors">
+            <div className="flex items-center px-2.5 py-1.5 cursor-pointer rounded-full transition-colors">
                   <span className="text-[14px] font-medium text-[#050505] mr-1">{item.name}</span>
                   <ChevronDown className="w-4 h-4 text-[#050505] transition-transform duration-200 group-hover:rotate-180" />
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -136,7 +155,7 @@ const Navbar = () => {
                   </div>
                 </div> :
 
-            <Link to={item.href} className="px-3 py-1.5 text-[14px] font-medium transition-colors rounded-md hover:bg-black/5 text-[#333333]">
+            <Link to={item.href} className="px-3 py-1.5 text-[14px] font-medium transition-colors rounded-full text-[#333333]">
                   {item.name}
                 </Link>
             }
