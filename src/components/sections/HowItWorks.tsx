@@ -12,7 +12,7 @@ const steps = [
     id: 'step-2',
     number: 'Step 2:',
     title: 'Find a job post',
-    description: 'Start searching for jobs anywhere you want and paste the job description in the box in FirstResume.',
+    description: 'Start searching for jobs anywhere you want and paste the job description in the box in JobexCV.',
     icon: 'https://cdn.prod.website-files.com/67065b18171e78a558433e90/67076429ed07576cd6db828e_9.svg',
   },
   {
