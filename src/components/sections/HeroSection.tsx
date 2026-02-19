@@ -1,5 +1,6 @@
 import React from 'react';
 import heroVideo from '@/assets/hero-video.mp4';
+import { InfiniteSlider } from '@/components/ui/infinite-slider';
 
 const companyLogos = [
 { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cd4eb7cfa9918e11c_21.avif", alt: "Company logo" },
@@ -59,17 +60,15 @@ const HeroSection = () => {
 
       {/* Company logos bar */}
       <div className="pb-12 border-b border-gray-100">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center">
-            <span className="text-[13px] font-medium text-[#666666]/60 mb-8 tracking-wider">
-              Users landed roles at
-            </span>
-            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 opacity-60 grayscale max-w-[900px]">
-              {companyLogos.map((logo, i) =>
-              <img key={i} src={logo.src} alt={logo.alt} className="h-[28px] w-auto" />
-              )}
-            </div>
-          </div>
+        <p className="text-center text-[13px] font-medium text-[#666666]/60 mb-8 tracking-wider">
+          Users landed roles at
+        </p>
+        <div className="overflow-hidden" style={{ maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)' }}>
+          <InfiniteSlider gap={80} duration={30} durationOnHover={8}>
+            {companyLogos.map((logo, i) => (
+              <img key={i} src={logo.src} alt={logo.alt} className="h-[28px] w-auto opacity-60 grayscale" />
+            ))}
+          </InfiniteSlider>
         </div>
       </div>
     </section>);
