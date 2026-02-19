@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { ChevronDown, Menu, X, LogOut, User } from "lucide-react";
+import { ChevronDown, Menu, X, LogOut } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
+import AuthModal from "@/components/AuthModal";
 
 const navItems = [
 { name: "For Universities", href: "/academia", internal: true },
@@ -55,6 +56,8 @@ const navItems = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [authOpen, setAuthOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<"signin" | "signup">("signup");
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
 
@@ -157,9 +160,20 @@ const Navbar = () => {
               </button>
             </>
           ) : (
-            <Link to="/auth" className="bg-[#111111] text-white px-6 py-3 rounded-full text-[14px] font-semibold hover:opacity-90 transition-opacity">
-              Get Started
-            </Link>
+            <>
+              <button
+                onClick={() => { setAuthMode("signin"); setAuthOpen(true); }}
+                className="border border-gray-300 rounded-full px-5 py-2.5 text-[14px] font-medium hover:bg-gray-50 transition-colors"
+              >
+                Login
+              </button>
+              <button
+                onClick={() => { setAuthMode("signup"); setAuthOpen(true); }}
+                className="bg-[#111111] text-white px-5 py-2.5 rounded-full text-[14px] font-semibold hover:opacity-90 transition-opacity"
+              >
+                Sign Up
+              </button>
+            </>
           )}
         </div>
 
@@ -202,13 +216,20 @@ const Navbar = () => {
                 Log out
               </button>
             ) : (
-              <Link to="/auth" onClick={() => setMobileMenuOpen(false)} className="bg-[#111111] text-white w-full py-4 rounded-xl text-center font-bold text-[16px] block">
-                Get Started
-              </Link>
+              <>
+                <button onClick={() => { setAuthMode("signin"); setAuthOpen(true); setMobileMenuOpen(false); }} className="w-full py-4 rounded-xl text-center font-bold text-[16px] border border-gray-300">
+                  Login
+                </button>
+                <button onClick={() => { setAuthMode("signup"); setAuthOpen(true); setMobileMenuOpen(false); }} className="bg-[#111111] text-white w-full py-4 rounded-xl text-center font-bold text-[16px]">
+                  Sign Up
+                </button>
+              </>
             )}
           </div>
         </div>
       }
+
+      <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} defaultMode={authMode} />
     </div>);
 
 };
