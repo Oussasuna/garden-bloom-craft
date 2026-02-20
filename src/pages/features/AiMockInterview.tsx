@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { ChevronRight } from "lucide-react";
 
 const faqItems = [
-  { question: "What is the AI Mock Interview?", answer: "The AI Mock Interview is a FirstResume feature available for every job match you receive. Whenever you find a position that matches your profile, you can start a mock interview tailored to that specific role and get instant feedback to improve your performance." },
+  { question: "What is the AI Mock Interview?", answer: "The AI Mock Interview is a JobExCV feature available for every job match you receive. Whenever you find a position that matches your profile, you can start a mock interview tailored to that specific role and get instant feedback to improve your performance." },
   { question: "How does it work?", answer: "For every job match in your dashboard, you'll see an option to launch a mock interview. You answer role-specific and behavioral questions, and the AI provides feedback on your responses." },
   { question: "Can I choose different roles or positions?", answer: "Yes! The AI Mock Interview is tailored to each job match in your dashboard. Every interview simulation is customized based on the specific role, company, and job requirements." },
   { question: "Do I get feedback instantly?", answer: "Yes, you receive instant feedback after each answer. The AI evaluates your responses and provides suggestions to help you improve your interview performance." },
-  { question: "How can I start an AI Mock Interview?", answer: "Log in to your FirstResume dashboard, find a job match that interests you, and click the Mock Interview button. It's that simple — you can practice as many times as you need." },
+  { question: "How can I start an AI Mock Interview?", answer: "Log in to your JobExCV dashboard, find a job match that interests you, and click the Mock Interview button. It's that simple — you can practice as many times as you need." },
 ];
 
 export default function AiMockInterviewPage() {
@@ -28,9 +28,9 @@ export default function AiMockInterviewPage() {
             </div>
             <h1 className="mb-6 text-[36px] md:text-[48px] lg:text-[56px] font-extrabold leading-[1.2] tracking-tight text-black">AI Mock Interview</h1>
             <p className="mx-auto mb-10 max-w-[800px] text-[16px] md:text-[18px] leading-[1.6] text-[#555]">
-              Enhance your Interview preparation with the AI Mock Interview, available directly in your FirstResume dashboard. For every job match, you can instantly launch a simulated interview tailored to the role you are applying for. Answer role-specific and behavioral questions, practice as many times as you need, and receive instant feedback to refine your skills.
+              Enhance your Interview preparation with the AI Mock Interview, available directly in your JobExCV dashboard. For every job match, you can instantly launch a simulated interview tailored to the role you are applying for. Answer role-specific and behavioral questions, practice as many times as you need, and receive instant feedback to refine your skills.
             </p>
-            <a href="https://app.firstresume.ai" className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg font-semibold text-[16px] hover:opacity-85 transition-opacity">Start today</a>
+            <a href="https://app.jobexcv.ai" className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg font-semibold text-[16px] hover:opacity-85 transition-opacity">Start today</a>
           </div>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function AiMockInterviewPage() {
           <div className="relative mb-12">
             <div className="hidden md:block absolute top-[20px] left-[15%] right-[15%] h-[1px] bg-[#e1e8ed] z-0" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative z-10">
-              {[{ num: 1, text: "Log in to your FirstResume account to access your dashboard" }, { num: 2, text: "Find the job match that interests you" }, { num: 3, text: "Start your AI Mock Interview and practice for success" }].map((step) => (
+              {[{ num: 1, text: "Log in to your JobExCV account to access your dashboard" }, { num: 2, text: "Find the job match that interests you" }, { num: 3, text: "Start your AI Mock Interview and practice for success" }].map((step) => (
                 <div key={step.num} className="flex flex-col items-center text-center">
                   <div className="w-10 h-10 bg-[#4A90E2] text-white rounded-full flex items-center justify-center font-bold text-[16px] mb-6 shadow-sm">{step.num}</div>
                   <p className="text-[15px] font-medium leading-[1.6] text-black px-4 max-w-[280px]">{step.text}</p>
@@ -50,7 +50,7 @@ export default function AiMockInterviewPage() {
               ))}
             </div>
           </div>
-          <a href="https://app.firstresume.ai" className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg font-semibold text-[16px] hover:opacity-85 transition-opacity">Start today</a>
+          <a href="https://app.jobexcv.ai" className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg font-semibold text-[16px] hover:opacity-85 transition-opacity">Start today</a>
         </div>
       </section>
 
@@ -80,8 +80,8 @@ export default function AiMockInterviewPage() {
         <div className="w-[45px] h-[45px] rounded-full bg-[#97a3b3] flex items-center justify-center mx-auto mb-6">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m18 15-6-6-6 6" /></svg>
         </div>
-        <h2 className="text-[28px] md:text-[36px] font-bold text-black mb-8 leading-[1.2]">FirstResume Helps You Find A Job Faster</h2>
-        <a href="https://app.firstresume.ai" className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg font-semibold text-[16px] hover:opacity-85 transition-opacity">Get Started Now</a>
+        <h2 className="text-[28px] md:text-[36px] font-bold text-black mb-8 leading-[1.2]">JobExCV Helps You Find A Job Faster</h2>
+        <a href="https://app.jobexcv.ai" className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg font-semibold text-[16px] hover:opacity-85 transition-opacity">Get Started Now</a>
       </section>
     </div>
   );

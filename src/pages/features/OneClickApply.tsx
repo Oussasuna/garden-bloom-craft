@@ -7,7 +7,6 @@ export default function OneClickApplyPage() {
   return (
     <div className="bg-white min-h-screen">
       <Navbar />
-      {/* ─── Hero Section ─── */}
       <section className="relative pt-[120px] pb-0 overflow-hidden bg-white">
         <div className="max-w-[1200px] mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-[60px]">
@@ -25,7 +24,7 @@ export default function OneClickApplyPage() {
                     </div>
                   ))}
                 </div>
-                <a href="https://app.firstresume.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[18px] transition-all hover:opacity-90 group">
+                <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[18px] transition-all hover:opacity-90 group">
                   Get Started
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-2 transition-transform group-hover:translate-x-1"><path d="M5 12h14m-7-7 7 7-7 7" /></svg>
                 </a>
@@ -64,7 +63,7 @@ export default function OneClickApplyPage() {
               <div className="max-w-[540px]">
                 <h2 className="text-[32px] md:text-[38px] font-bold leading-[1.2] text-black mb-6 tracking-[-0.02em]">Screen Every Job And Apply With A Single Click</h2>
                 <p className="text-[18px] leading-[1.7] text-[#555555] mb-8">In a single platform you can find all the important details. You can manually apply with a single click. You can rate the job matches.</p>
-                <a href="https://app.firstresume.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] transition-all hover:opacity-90">Start today</a>
+                <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] transition-all hover:opacity-90">Start today</a>
               </div>
             </div>
           </div>
@@ -75,7 +74,7 @@ export default function OneClickApplyPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <Mail size={24} strokeWidth={2} className="text-black" />, title: "Send emails with one click", desc: "FirstResume identifies company emails and with one click you can apply. If you want to spend a little more time reviewing the job, you can do it with the 2-step process." },
+              { icon: <Mail size={24} strokeWidth={2} className="text-black" />, title: "Send emails with one click", desc: "JobExCV identifies company emails and with one click you can apply. If you want to spend a little more time reviewing the job, you can do it with the 2-step process." },
               { icon: <Star size={24} strokeWidth={2} className="text-black" />, title: "Rate your job matches", desc: "By rating job postings, you help our search algorithm find you even better matches tailored to your preferences and career goals." },
               { icon: <LayoutDashboard size={24} strokeWidth={2} className="text-black" />, title: "Organize your job search", desc: "All interesting positions from multiple job boards can be saved in our dashboard so you can evaluate them later and stay organized." },
             ].map((card, i) => (
@@ -92,17 +91,17 @@ export default function OneClickApplyPage() {
       <section className="bg-black py-[80px] lg:py-[100px]">
         <div className="max-w-[1140px] mx-auto px-6 flex flex-col items-center text-center">
           <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">Still Not Convinced? Start With A Free Account!</h2>
-          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">FirstResume users get on average 50% more interviews and save 10 hours per week.<br className="hidden md:block" />Start automating your job search today.</p>
-          <a href="https://app.firstresume.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-[32px] py-[14px] rounded-[8px] transition-colors duration-200">Start Free Trial</a>
+          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">JobExCV users get on average 50% more interviews and save 10 hours per week.<br className="hidden md:block" />Start automating your job search today.</p>
+          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-[32px] py-[14px] rounded-[8px] transition-colors duration-200">Start Free Trial</a>
           <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
         </div>
       </section>
 
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-10 leading-tight tracking-[-0.02em]">FirstResume Helps You Find A Job Faster</h2>
-          <a href="https://app.firstresume.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] transition-all hover:opacity-90 group">
-            Join the FirstResume community
+          <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-10 leading-tight tracking-[-0.02em]">JobExCV Helps You Find A Job Faster</h2>
+          <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] transition-all hover:opacity-90 group">
+            Join the JobExCV community
             <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
           </a>
         </div>

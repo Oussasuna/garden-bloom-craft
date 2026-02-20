@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const faqItems = [
-  { question: "Is it cheating? Will my employer know?", answer: "No, using FirstResume is not cheating at all. It's a tool to help you present your true skills and experiences in the best possible light. We don't add false information — all content remains factual and based on information you provide." },
-  { question: "Can I save different versions of my resume for future use?", answer: "Yes, FirstResumeAI allows you to save multiple versions of your tailored resumes. This feature enables you to quickly access and update previously created resumes for similar job applications in the future." },
+  { question: "Is it cheating? Will my employer know?", answer: "No, using JobExCV is not cheating at all. It's a tool to help you present your true skills and experiences in the best possible light. We don't add false information — all content remains factual and based on information you provide." },
+  { question: "Can I save different versions of my resume for future use?", answer: "Yes, JobExCV allows you to save multiple versions of your tailored resumes. This feature enables you to quickly access and update previously created resumes for similar job applications in the future." },
 ];
 
 const StarIcon = () => (
@@ -23,9 +23,9 @@ export default function AiCoverLetterPage() {
             Create personalized cover letter to connect with hiring managers in seconds.
           </h1>
           <p className="text-[18px] text-[#666666] leading-[1.6] max-w-[720px] mb-8">
-            The smartest AI cover letter generator that understands both you and the job. FirstResume saves you 45 minutes per cover letter while maintaining your voice.
+            The smartest AI cover letter generator that understands both you and the job. JobExCV saves you 45 minutes per cover letter while maintaining your voice.
           </p>
-          <a href="https://app.firstresume.ai" className="inline-flex items-center justify-center bg-[#141414] text-white px-8 py-4 rounded-[12px] text-[16px] font-semibold hover:opacity-90 mb-12">
+          <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-[#141414] text-white px-8 py-4 rounded-[12px] text-[16px] font-semibold hover:opacity-90 mb-12">
             Create your cover letter now
           </a>
           <div className="w-full max-w-[1040px] rounded-[12px] overflow-hidden border border-[#e5e7eb] shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
@@ -48,7 +48,7 @@ export default function AiCoverLetterPage() {
           <span className="text-[14px] font-bold text-[#0096ff] mb-4 uppercase">How it works?</span>
           <h2 className="text-[36px] md:text-[42px] font-semibold text-[#1a1b1f] leading-[1.2] text-center max-w-[800px] mb-[60px]">First prepare a resume ... Click, and BAM! There is your cover letter.</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-[48px]">
-            {[{ icon: "🔍", title: "Step 1:\nFind a job post", desc: "Start searching for jobs anywhere you want and paste the job description in the box in FirstResume." }, { icon: "📄", title: "Step 2:\nPrepare the resume", desc: "Use FirstResume to prepare a tailored resume for the job in one click." }, { icon: "✉️", title: "Step 3:\nClick ... there you go", desc: "One click, and your cover letter is ready. Feel free to manually edit it if needed." }].map((step, i) => (
+            {[{ icon: "🔍", title: "Step 1:\nFind a job post", desc: "Start searching for jobs anywhere you want and paste the job description in the box in JobExCV." }, { icon: "📄", title: "Step 2:\nPrepare the resume", desc: "Use JobExCV to prepare a tailored resume for the job in one click." }, { icon: "✉️", title: "Step 3:\nClick ... there you go", desc: "One click, and your cover letter is ready. Feel free to manually edit it if needed." }].map((step, i) => (
               <div key={i} className="flex flex-col items-center text-center p-4">
                 <div className="mb-6 text-3xl">{step.icon}</div>
                 <h3 className="text-[20px] font-bold text-[#141414] mb-4 leading-[1.3] whitespace-pre-line">{step.title}</h3>
@@ -56,7 +56,7 @@ export default function AiCoverLetterPage() {
               </div>
             ))}
           </div>
-          <a href="https://app.firstresume.ai" className="bg-[#141414] text-white px-[32px] py-[16px] text-[16px] font-semibold rounded-full hover:opacity-90">That's it! Give it a go!</a>
+          <a href="https://app.jobexcv.ai" className="bg-[#141414] text-white px-[32px] py-[16px] text-[16px] font-semibold rounded-full hover:opacity-90">That's it! Give it a go!</a>
         </div>
       </section>
 
@@ -64,7 +64,7 @@ export default function AiCoverLetterPage() {
         <div className="max-w-[1200px] mx-auto">
           <p className="text-[14px] font-bold text-[#0096ff] mb-4">What is special about us?</p>
           <h2 className="text-[36px] md:text-[42px] font-semibold leading-[1.2] mb-6 max-w-[800px] mx-auto">Our AI ensures alignment between your resume and cover letter.</h2>
-          <p className="text-[18px] leading-[1.6] text-white/80 max-w-[850px] mx-auto mb-12">While other tools generate standalone letters that might contradict your resume, FirstResume analyzes your actual resume content to create a perfectly matched narrative.</p>
+          <p className="text-[18px] leading-[1.6] text-white/80 max-w-[850px] mx-auto mb-12">While other tools generate standalone letters that might contradict your resume, JobExCV analyzes your actual resume content to create a perfectly matched narrative.</p>
           <div className="flex justify-center">
             <div className="w-full max-w-[600px] rounded-lg overflow-hidden border border-white/10 shadow-2xl">
               <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/692d73ee253c128f59ec1fb0_cover_20letter_20generato-13.png" alt="Cover Letter Generator Screenshot" className="w-full h-auto block" />
@@ -88,7 +88,7 @@ export default function AiCoverLetterPage() {
                     </li>
                   ))}
                 </ul>
-                <a href="https://app.firstresume.ai" className="inline-flex items-center justify-center bg-[#141414] text-white px-8 py-4 rounded-[12px] text-[16px] font-semibold hover:opacity-90">{block.cta}</a>
+                <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-[#141414] text-white px-8 py-4 rounded-[12px] text-[16px] font-semibold hover:opacity-90">{block.cta}</a>
               </div>
               <div className="flex-1">
                 <img src={block.img} alt={block.title} className="rounded-[12px] border border-[#E5E7EB] w-full h-auto max-w-[500px] mx-auto" />
@@ -137,8 +137,8 @@ export default function AiCoverLetterPage() {
       </section>
 
       <section className="bg-[#f0f2f5] py-[100px] text-center px-6">
-        <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-8 leading-tight">FirstResume Helps You Find A Job Faster</h2>
-        <a href="https://app.firstresume.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] hover:opacity-90">Get Started Now</a>
+        <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-8 leading-tight">JobExCV Helps You Find A Job Faster</h2>
+        <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] hover:opacity-90">Get Started Now</a>
       </section>
     </>
   );

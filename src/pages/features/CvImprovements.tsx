@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
-function PillButton({ children, href = "https://app.firstresume.ai", outline = false }: { children: React.ReactNode; href?: string; outline?: boolean }) {
+function PillButton({ children, href = "https://app.jobexcv.ai", outline = false }: { children: React.ReactNode; href?: string; outline?: boolean }) {
   return <a href={href} className={outline ? "inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-full font-semibold text-[15px] hover:bg-white hover:text-[#1a1a1a] transition-colors" : "inline-flex items-center bg-[#1a1a1a] text-white px-8 py-3.5 rounded-full font-semibold text-[15px] hover:bg-[#333] transition-colors"}>{children}</a>;
 }
 function CheckItem({ children }: { children: React.ReactNode }) {
@@ -16,7 +16,7 @@ export default function CvImprovementsPage() {
       <div className="pt-[100px]">
         <section className="max-w-[900px] mx-auto px-6 text-center pb-8">
           <h1 className="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] leading-[1.12] mb-6">Optimize your job search with statistics and feedback</h1>
-          <p className="text-[#555] text-[16px] md:text-[18px] max-w-[720px] mx-auto mb-8 leading-relaxed">FirstResume offers the most advanced job search analytics to help you optimize your job search and find a job faster</p>
+          <p className="text-[#555] text-[16px] md:text-[18px] max-w-[720px] mx-auto mb-8 leading-relaxed">JobExCV offers the most advanced job search analytics to help you optimize your job search and find a job faster</p>
           <PillButton>Get Started Free &nbsp;→</PillButton>
         </section>
         <section className="relative mt-6 mb-0">
@@ -48,13 +48,13 @@ export default function CvImprovementsPage() {
               <h2 className="text-[28px] md:text-[32px] font-extrabold text-[#1a1a1a] leading-tight">Until Now You Applied And Waited. Now It's The Time To Apply And Optimize.</h2>
               <div className="space-y-4 pt-2">
                 <CheckItem>Using our Loop statistics you can see all the important issues that causing a low rating of your CV</CheckItem>
-                <CheckItem>FirstResume uses a data-driven approach to help you optimize your CV</CheckItem>
+                <CheckItem>JobExCV uses a data-driven approach to help you optimize your CV</CheckItem>
                 <CheckItem>In our dashboard your can find all the important fixes</CheckItem>
               </div>
               <div className="pt-2"><PillButton>Start today</PillButton></div>
             </div>
             <div className="flex-1 flex gap-4">
-              <div className="flex-1 bg-white rounded-xl p-6 shadow-sm border border-[#e5e5e5] flex flex-col"><h4 className="font-bold text-[15px] text-[#1a1a1a] mb-2">Job search performance statistics</h4><p className="text-[#666] text-[13px] leading-relaxed">FirstResume identifies the critical issues of your CV that give low rating in the ATS systems.</p></div>
+              <div className="flex-1 bg-white rounded-xl p-6 shadow-sm border border-[#e5e5e5] flex flex-col"><h4 className="font-bold text-[15px] text-[#1a1a1a] mb-2">Job search performance statistics</h4><p className="text-[#666] text-[13px] leading-relaxed">JobExCV identifies the critical issues of your CV that give low rating in the ATS systems.</p></div>
               <div className="flex-1 flex flex-col gap-4">
                 <div className="bg-white rounded-xl p-5 shadow-sm border border-[#e5e5e5] flex-1"><h4 className="font-bold text-[14px] text-[#1a1a1a] mb-1">Data-driven optimizations</h4><p className="text-[#666] text-[12px] leading-relaxed">Every day you get updated stats and recommendations.</p></div>
                 <div className="bg-white rounded-xl p-5 shadow-sm border border-[#e5e5e5] flex-1"><h4 className="font-bold text-[14px] text-[#1a1a1a] mb-1">Upgrade your CV</h4><p className="text-[#666] text-[12px] leading-relaxed">Combine daily applications and CV optimization with fresh data every day.</p></div>
@@ -62,8 +62,8 @@ export default function CvImprovementsPage() {
             </div>
           </div>
         </section>
-        <section className="bg-[#1a1a1a] py-16"><div className="max-w-[700px] mx-auto text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-white mb-4">Still Not Convinced? Start With Free Account!</h2><p className="text-[#aaa] text-[15px] mb-8">FirstResume users get in average 50% more interviews.</p><PillButton outline>Get Started Free</PillButton><p className="text-[#888] text-[13px] mt-4">No credit card required</p></div></section>
-        <section className="bg-[#F0F2F5] py-16 text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-[#1a1a1a] mb-6">FirstResume Helps You Find A Job Faster</h2><PillButton>Get Started Now</PillButton></section>
+        <section className="bg-[#1a1a1a] py-16"><div className="max-w-[700px] mx-auto text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-white mb-4">Still Not Convinced? Start With Free Account!</h2><p className="text-[#aaa] text-[15px] mb-8">JobExCV users get in average 50% more interviews.</p><PillButton outline>Get Started Free</PillButton><p className="text-[#888] text-[13px] mt-4">No credit card required</p></div></section>
+        <section className="bg-[#F0F2F5] py-16 text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-[#1a1a1a] mb-6">JobExCV Helps You Find A Job Faster</h2><PillButton>Get Started Now</PillButton></section>
       </div>
       <Footer />
     </div>

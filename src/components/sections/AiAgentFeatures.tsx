@@ -11,7 +11,7 @@ const AiAgentFeatures = () => {
             An AI Job Hunt Agent.
           </h2>
           <p className="text-[#666666] text-[18px] leading-[1.6] max-w-[700px]">
-            FirstResume is the most intelligent AI in the market that automates every step of your application while giving you personalised insights to maximise your chances with minimal effort.
+            JobExCV is the most intelligent AI in the market that automates every step of your application while giving you personalised insights to maximise your chances with minimal effort.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ const AiAgentFeatures = () => {
             <div className="bg-white border border-[#E5E5E5] rounded-[12px] p-8 hover:shadow-soft transition-all duration-300">
               <h3 className="text-[22px] font-bold text-[#1A1A1A] mb-3">As Thoughtful As A Human.</h3>
               <p className="text-[#666666] text-[16px] leading-[1.6]">
-                FirstResume gives you human-level analysis and feedback, and guide that catches what you missed for perfect applications.
+                JobExCV gives you human-level analysis and feedback, and guide that catches what you missed for perfect applications.
               </p>
             </div>
             <div className="bg-white border border-[#E5E5E5] rounded-[12px] p-8 hover:shadow-soft transition-all duration-300">

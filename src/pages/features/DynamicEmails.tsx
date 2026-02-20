@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
-function PillButton({ children, href = "https://app.firstresume.ai", outline = false }: { children: React.ReactNode; href?: string; outline?: boolean }) {
+function PillButton({ children, href = "https://app.jobexcv.ai", outline = false }: { children: React.ReactNode; href?: string; outline?: boolean }) {
   return <a href={href} className={outline ? "inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-full font-semibold text-[15px] hover:bg-white hover:text-[#1a1a1a] transition-colors" : "inline-flex items-center bg-[#1a1a1a] text-white px-8 py-3.5 rounded-full font-semibold text-[15px] hover:bg-[#333] transition-colors"}>{children}</a>;
 }
 function CheckItem({ children }: { children: React.ReactNode }) {
@@ -16,7 +16,7 @@ export default function DynamicEmailsPage() {
       <div className="pt-[100px]">
         <section className="max-w-[900px] mx-auto px-6 text-center pb-8">
           <h1 className="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] leading-[1.12] mb-6">Use Free Personalized Email Templates for Sending Resumes &amp; Cover Letters to Companies for a Job Offer</h1>
-          <p className="text-[#555] text-[16px] md:text-[18px] max-w-[720px] mx-auto mb-8 leading-relaxed">Which are the best email templates for sending resumes and cover letters? FirstResume collects new job opportunities and creates fully personalised emails.</p>
+          <p className="text-[#555] text-[16px] md:text-[18px] max-w-[720px] mx-auto mb-8 leading-relaxed">Which are the best email templates for sending resumes and cover letters? JobExCV collects new job opportunities and creates fully personalised emails.</p>
           <PillButton>Get Started Free &nbsp;→</PillButton>
         </section>
         <section className="max-w-[600px] mx-auto px-6 pb-4">
@@ -44,7 +44,7 @@ export default function DynamicEmailsPage() {
               <div className="flex-1 bg-white rounded-xl p-6 shadow-sm border border-[#e5e5e5] flex flex-col">
                 <div className="w-10 h-10 rounded-lg bg-[#E8EDF2] flex items-center justify-center mb-4"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#555" strokeWidth={2}><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
                 <h4 className="font-bold text-[15px] text-[#1a1a1a] mb-2">Send daily emails</h4>
-                <p className="text-[#666] text-[13px] leading-relaxed">FirstResume collects jobs and finds the email of the company automatically.</p>
+                <p className="text-[#666] text-[13px] leading-relaxed">JobExCV collects jobs and finds the email of the company automatically.</p>
               </div>
               <div className="flex-1 flex flex-col gap-4">
                 <div className="bg-white rounded-xl p-5 shadow-sm border border-[#e5e5e5] flex-1"><h4 className="font-bold text-[14px] text-[#1a1a1a] mb-1">Stand out between candidates</h4><p className="text-[#666] text-[12px] leading-relaxed">Keep track of all the important KPIs.</p></div>
@@ -53,8 +53,8 @@ export default function DynamicEmailsPage() {
             </div>
           </div>
         </section>
-        <section className="bg-[#1a1a1a] py-16"><div className="max-w-[700px] mx-auto text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-white mb-4">Still Not Convinced? Test Your Job Closing Rate With A Free Trial!</h2><p className="text-[#aaa] text-[15px] mb-8 leading-relaxed">FirstResume users get in average 50% more interviews.</p><PillButton outline>Get Started Free</PillButton><p className="text-[#888] text-[13px] mt-4">No credit card required</p></div></section>
-        <section className="bg-[#F0F2F5] py-16 text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-[#1a1a1a] mb-6">FirstResume Helps You Find A Job Faster</h2><PillButton>Get Started Now</PillButton></section>
+        <section className="bg-[#1a1a1a] py-16"><div className="max-w-[700px] mx-auto text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-white mb-4">Still Not Convinced? Test Your Job Closing Rate With A Free Trial!</h2><p className="text-[#aaa] text-[15px] mb-8 leading-relaxed">JobExCV users get in average 50% more interviews.</p><PillButton outline>Get Started Free</PillButton><p className="text-[#888] text-[13px] mt-4">No credit card required</p></div></section>
+        <section className="bg-[#F0F2F5] py-16 text-center px-6"><h2 className="text-[28px] md:text-[36px] font-extrabold text-[#1a1a1a] mb-6">JobExCV Helps You Find A Job Faster</h2><PillButton>Get Started Now</PillButton></section>
       </div>
       <Footer />
     </div>
