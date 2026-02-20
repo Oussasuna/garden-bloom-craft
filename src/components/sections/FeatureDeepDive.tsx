@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 const features = [
   {
     id: 'ai-resume',
@@ -75,8 +75,12 @@ export default function FeatureDeepDive() {
           {features.map((feature, index) => {
             const isReversed = index % 2 !== 0;
             return (
-              <div
+              <motion.div
                 key={feature.id}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-100px' }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.15 }}
                 className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-10 md:gap-16`}
               >
                 <div className="flex-1 w-full">
@@ -96,11 +100,22 @@ export default function FeatureDeepDive() {
                       </li>
                     ))}
                   </ul>
-                  <a href="https://app.jobexcv.ai" className="inline-block bg-black text-white text-[15px] font-semibold px-7 py-3.5 rounded-full hover:opacity-90 transition-all">
+                  <motion.a
+                    href="https://app.jobexcv.ai"
+                    className="inline-block bg-black text-white text-[15px] font-semibold px-7 py-3.5 rounded-full hover:opacity-90"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2, ease: 'easeOut' }}
+                  >
                     {feature.cta}
-                  </a>
+                  </motion.a>
                 </div>
-                <div className="flex-1 w-full">
+                <motion.div
+                  className="flex-1 w-full"
+                  initial={{ opacity: 0, x: isReversed ? -60 : 60 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: '-100px' }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.15 + 0.2 }}
+                >
                   <div className="relative w-full rounded-[16px] overflow-hidden border border-[#e5e5e5] shadow-soft bg-[#f9f9f7]">
                     <img
                       src={feature.image}
@@ -108,8 +123,8 @@ export default function FeatureDeepDive() {
                       className="w-full h-auto object-cover"
                     />
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             );
           })}
         </div>
