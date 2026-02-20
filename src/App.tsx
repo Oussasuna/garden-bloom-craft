@@ -63,11 +63,11 @@ const App = () => (
             <Route path="/features/dynamic-emails" element={<DynamicEmailsPage />} />
             <Route path="/features/cv-improvements" element={<CvImprovementsPage />} />
             <Route path="/features/exclude-companies" element={<ExcludeCompaniesPage />} />
-            <Route path="/features/job-aggregator" element={<JobAggregatorPage />} />
+            <Route path="/features/job-posting-aggregator" element={<JobAggregatorPage />} />
             <Route path="/features/job-matching" element={<JobMatchingPage />} />
             <Route path="/features/job-filtering" element={<JobFilteringPage />} />
             <Route path="/features/email-finder" element={<EmailFinderPage />} />
-            <Route path="/features/linkedin-auto-apply" element={<LinkedInAutoApplyPage />} />
+            <Route path="/features/linkedin-apply-extension" element={<LinkedInAutoApplyPage />} />
             <Route path="/features/ai-question-answering" element={<AiQuestionAnsweringPage />} />
             <Route path="/features/ai-cv-checker" element={<AiCvCheckerPage />} />
             <Route path="/features/ai-cv-builder" element={<AiCvBuilderPage />} />

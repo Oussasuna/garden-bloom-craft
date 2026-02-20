@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   IconRocket,
   IconClick,
@@ -19,22 +20,22 @@ import {
 } from '@tabler/icons-react';
 
 const features = [
-  { title: 'Auto Apply', description: 'Automatically apply to hundreds of jobs with one click', icon: IconRocket },
-  { title: 'One Click Apply', description: 'Apply instantly with perfectly tailored documents', icon: IconClick },
-  { title: 'Job Application Tracker', description: 'Track all your applications in one place automatically', icon: IconListCheck },
-  { title: 'Dynamic Emails', description: 'Send personalized outreach emails to recruiters automatically', icon: IconMailForward },
-  { title: 'CV Improvements', description: 'Get AI suggestions to improve your CV for each job', icon: IconFileCheck },
-  { title: 'Exclude Companies', description: "Filter out companies you don't want to apply to", icon: IconBuildingSkyscraper },
-  { title: 'Job Posting Aggregator', description: 'Find all job postings from multiple platforms in one place', icon: IconWorldSearch },
-  { title: 'Job Matching', description: 'AI matches you with the best jobs based on your profile', icon: IconTargetArrow },
-  { title: 'Job Filtering', description: 'Filter jobs by salary, location, company size and more', icon: IconFilter },
-  { title: 'Email Finder', description: 'Find recruiter emails and contact them directly', icon: IconMailSearch },
-  { title: 'LinkedIn Apply Extension', description: 'Apply to LinkedIn jobs directly with AI assistance', icon: IconBrandLinkedin },
-  { title: 'AI Question Answering', description: 'Get AI answers to application questions instantly', icon: IconMessageChatbot },
-  { title: 'AI CV Checker', description: 'Check your CV score and get improvement suggestions', icon: IconFileAnalytics },
-  { title: 'AI CV Builder', description: 'Build a professional ATS-optimized CV from scratch', icon: IconFileCv },
-  { title: 'AI Cover Letter Generator', description: 'Generate tailored cover letters for every job', icon: IconWriting },
-  { title: 'AI Mock Interview', description: 'Practice interviews with AI and get instant feedback', icon: IconMicrophone },
+  { title: 'Auto Apply', description: 'Automatically apply to hundreds of jobs with one click', icon: IconRocket, href: '/features/auto-apply' },
+  { title: 'One Click Apply', description: 'Apply instantly with perfectly tailored documents', icon: IconClick, href: '/features/one-click-apply' },
+  { title: 'Job Application Tracker', description: 'Track all your applications in one place automatically', icon: IconListCheck, href: '/features/job-application-tracker' },
+  { title: 'Dynamic Emails', description: 'Send personalized outreach emails to recruiters automatically', icon: IconMailForward, href: '/features/dynamic-emails' },
+  { title: 'CV Improvements', description: 'Get AI suggestions to improve your CV for each job', icon: IconFileCheck, href: '/features/cv-improvements' },
+  { title: 'Exclude Companies', description: "Filter out companies you don't want to apply to", icon: IconBuildingSkyscraper, href: '/features/exclude-companies' },
+  { title: 'Job Posting Aggregator', description: 'Find all job postings from multiple platforms in one place', icon: IconWorldSearch, href: '/features/job-posting-aggregator' },
+  { title: 'Job Matching', description: 'AI matches you with the best jobs based on your profile', icon: IconTargetArrow, href: '/features/job-matching' },
+  { title: 'Job Filtering', description: 'Filter jobs by salary, location, company size and more', icon: IconFilter, href: '/features/job-filtering' },
+  { title: 'Email Finder', description: 'Find recruiter emails and contact them directly', icon: IconMailSearch, href: '/features/email-finder' },
+  { title: 'LinkedIn Apply Extension', description: 'Apply to LinkedIn jobs directly with AI assistance', icon: IconBrandLinkedin, href: '/features/linkedin-apply-extension' },
+  { title: 'AI Question Answering', description: 'Get AI answers to application questions instantly', icon: IconMessageChatbot, href: '/features/ai-question-answering' },
+  { title: 'AI CV Checker', description: 'Check your CV score and get improvement suggestions', icon: IconFileAnalytics, href: '/features/ai-cv-checker' },
+  { title: 'AI CV Builder', description: 'Build a professional ATS-optimized CV from scratch', icon: IconFileCv, href: '/features/ai-cv-builder' },
+  { title: 'AI Cover Letter Generator', description: 'Generate tailored cover letters for every job', icon: IconWriting, href: '/features/ai-cover-letter-generator' },
+  { title: 'AI Mock Interview', description: 'Practice interviews with AI and get instant feedback', icon: IconMicrophone, href: '/features/ai-mock-interview' },
 ];
 
 export default function FeaturesGrid() {
@@ -62,9 +63,9 @@ export default function FeaturesGrid() {
                   {feature.title}
                 </h3>
                 <p className="text-[#666666] text-[14px] leading-[1.5] mb-4">{feature.description}</p>
-                <a href="https://app.jobexcv.ai" className="text-[#0099ff] text-[13px] font-semibold hover:underline">
+                <Link to={feature.href} className="text-[#0099ff] text-[13px] font-semibold hover:underline">
                   Learn more
-                </a>
+                </Link>
               </div>
             );
           })}
