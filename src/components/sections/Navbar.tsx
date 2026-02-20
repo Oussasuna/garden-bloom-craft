@@ -72,7 +72,7 @@ const Navbar = () => {
   return (
     <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex justify-center items-center py-2.5 px-4 h-[74px]`}>
       <div
-        className={`flex items-center justify-between w-full max-w-[1400px] h-[64px] px-10 transition-all duration-300 rounded-[1000px] ${
+        className={`flex items-center justify-between w-full max-w-[1400px] h-[64px] px-10 transition-all duration-300 ease-in-out rounded-[1000px] ${
         scrolled ?
         "bg-white/90 backdrop-blur-md shadow-[0_2px_20px_0_rgba(0,0,0,0.1)]" :
         "bg-white/60 backdrop-blur-sm shadow-[0_2px_20px_0_rgba(0,0,0,0.1)]"}`
