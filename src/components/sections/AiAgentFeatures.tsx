@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FeaturesSectionWithHoverEffects } from '@/components/ui/feature-section-with-hover-effects';
 
 const tags = [
   { label: 'AI Resume Builder', bg: '#E8F4FD', color: '#0099FF', border: '#B8DFFB' },
@@ -91,8 +92,21 @@ const AiAgentFeatures = () => {
                 Analyzes each job and highlights your most relevant experiences that perfectly match what employers want.
               </p>
             </motion.div>
-          </div>
         </div>
+
+        <motion.div
+          className="text-center mb-10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
+          <h3 className="text-[28px] md:text-[34px] font-extrabold text-[#1A1A1A] mb-2">Everything you need</h3>
+          <p className="text-[#666666] text-[16px]">All features included</p>
+        </motion.div>
+
+        <FeaturesSectionWithHoverEffects />
+      </div>
       </div>
     </section>
   );
