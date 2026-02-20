@@ -67,7 +67,7 @@ const Footer = () => {
 
       <div className="w-full border-t border-[#e5e5e5] py-6 text-center">
         <p className="text-[#666666] text-[12px]">
-          Made by JobExCV with ❤️ | Copyright © 2024 JobExCV
+          Made by JobexCV with ❤️ | Copyright © 2026 JobexCV
         </p>
       </div>
     </footer>);
