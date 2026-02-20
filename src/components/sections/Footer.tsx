@@ -22,15 +22,10 @@ const features = [
 ];
 
 const resources = [
-  { name: "About Us", href: "/about" },
+  { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
-  { name: "Career Glossary", href: "/resources/career-glossary" },
-  { name: "Product Roadmap", href: "/resources/roadmap" },
-  { name: "Feedback", href: "/feedback" },
-  { name: "Terms & Conditions", href: "/terms" },
-  { name: "Privacy Policy", href: "/privacy" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "Discounts", href: "/discounts" },
 ];
 
 const socials = [
@@ -93,6 +88,9 @@ const Footer = () => {
                   {item.name}
                 </Link>
               ))}
+              <span className="text-[#999999] text-[14px] cursor-default">
+                JobExCV Ambassador Program (Coming soon)
+              </span>
             </div>
           </div>
 
