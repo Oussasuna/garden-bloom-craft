@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
-function PillButton({ children, href = "https://app.firstresume.ai" }: { children: React.ReactNode; href?: string }) {
+function PillButton({ children, href = "https://app.jobexcv.ai" }: { children: React.ReactNode; href?: string }) {
   return <a href={href} className="inline-flex items-center bg-[#1a1a1a] text-white px-7 py-3 rounded-full font-semibold text-[14px] hover:bg-[#333] transition-colors">{children}</a>;
 }
 function BrowserMockup({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -32,7 +32,7 @@ export default function JobTrackerPage() {
       <div className="pt-[100px]">
         <section className="max-w-[780px] mx-auto px-6 text-center pb-6">
           <h1 className="text-[32px] md:text-[44px] font-extrabold text-[#1a1a1a] leading-[1.15] mb-5 tracking-tight">Finally the best job application tracker is here to help you track your applications</h1>
-          <p className="text-[#666] text-[14px] md:text-[15px] max-w-[620px] mx-auto mb-7 leading-relaxed">FirstResume Kanban board is the best job application tracker that allows you to track all your job applications and put structure in your daily job search process.</p>
+          <p className="text-[#666] text-[14px] md:text-[15px] max-w-[620px] mx-auto mb-7 leading-relaxed">JobExCV Kanban board is the best job application tracker that allows you to track all your job applications and put structure in your daily job search process.</p>
           <PillButton>Use our job search application for free &nbsp;→</PillButton>
         </section>
         <section className="relative mt-4">
@@ -52,7 +52,7 @@ export default function JobTrackerPage() {
         </section>
         <section className="bg-[#eef0f4] py-16 text-center px-6 mt-8">
           <div className="w-12 h-12 rounded-full bg-[#c8cdd5] flex items-center justify-center mx-auto mb-5"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-white"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-          <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1a1a1a] mb-6">FirstResume Helps You Find A Job Faster</h2>
+          <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1a1a1a] mb-6">JobExCV Helps You Find A Job Faster</h2>
           <PillButton>Get Started Now</PillButton>
         </section>
       </div>

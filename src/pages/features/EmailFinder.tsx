@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
-function PillButton({ children, href = "https://app.firstresume.ai", variant = "dark" }: { children: React.ReactNode; href?: string; variant?: "dark"|"outline-black"|"outline-white" }) {
+function PillButton({ children, href = "https://app.jobexcv.ai", variant = "dark" }: { children: React.ReactNode; href?: string; variant?: "dark"|"outline-black"|"outline-white" }) {
   const base = "inline-flex items-center px-7 py-3 rounded-full font-semibold text-[14px] transition-colors";
   const styles = { dark: "bg-[#1a1a1a] text-white hover:bg-[#333]", "outline-black": "border border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white", "outline-white": "border border-white text-white hover:bg-white hover:text-[#1a1a1a]" };
   return <a href={href} className={`${base} ${styles[variant]}`}>{children}</a>;
@@ -15,7 +15,7 @@ export default function EmailFinderPage() {
       <div className="pt-[100px]">
         <section className="max-w-[900px] mx-auto px-6 text-center pb-8">
           <h1 className="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] leading-[1.12] mb-6">Find the best email to contact a company for a specific job</h1>
-          <p className="text-[#555] text-[16px] md:text-[18px] max-w-[680px] mx-auto mb-8 leading-relaxed">Trying to find the email of a recruiter for a job? For every job that matches your profile FirstResume will find the best email to contact.</p>
+          <p className="text-[#555] text-[16px] md:text-[18px] max-w-[680px] mx-auto mb-8 leading-relaxed">Trying to find the email of a recruiter for a job? For every job that matches your profile JobExCV will find the best email to contact.</p>
           <PillButton>Let's Get Started your automatic job applications! &nbsp;→</PillButton>
         </section>
         <section className="max-w-[700px] mx-auto px-6 pb-8">
@@ -37,14 +37,14 @@ export default function EmailFinderPage() {
               <PillButton variant="outline-black">Start today</PillButton>
             </div>
             <div className="flex-1 max-w-[520px] grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white border border-[#e5e7eb] rounded-xl p-6 shadow-sm md:row-span-2"><h4 className="font-bold text-[15px] text-[#1a1a1a] mb-2">Send daily emails</h4><p className="text-[#666] text-[13px] leading-relaxed">FirstResume collects jobs and finds the email of the company automatically.</p></div>
+              <div className="bg-white border border-[#e5e7eb] rounded-xl p-6 shadow-sm md:row-span-2"><h4 className="font-bold text-[15px] text-[#1a1a1a] mb-2">Send daily emails</h4><p className="text-[#666] text-[13px] leading-relaxed">JobExCV collects jobs and finds the email of the company automatically.</p></div>
               <div className="bg-white border border-[#e5e7eb] rounded-xl p-5 shadow-sm"><h4 className="font-bold text-[14px] text-[#1a1a1a] mb-1.5">Stand out between candidates</h4><p className="text-[#666] text-[12px] leading-relaxed">Keep track of all the important KPIs.</p></div>
               <div className="bg-white border border-[#e5e7eb] rounded-xl p-5 shadow-sm"><h4 className="font-bold text-[14px] text-[#1a1a1a] mb-1.5">Write unique emails</h4><p className="text-[#666] text-[12px] leading-relaxed">Fully optimize your writing, testing various email templates.</p></div>
             </div>
           </div>
         </section>
-        <section className="bg-[#1e293b] py-16 text-center px-6"><h2 className="text-[24px] md:text-[32px] font-extrabold text-white mb-4">Still Not Convinced? Start With Free Account!</h2><p className="text-[#b0bec5] text-[14px] max-w-[560px] mx-auto mb-7">FirstResume users get in average 50% more interviews.</p><PillButton variant="outline-white">Start Free Trial</PillButton><p className="text-[#94a3b8] text-[12px] mt-3">No credit card required</p></section>
-        <section className="bg-[#eef0f4] py-16 text-center px-6"><h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1a1a1a] mb-6">FirstResume Helps You Find A Job Faster</h2><PillButton>Get Started Now</PillButton></section>
+        <section className="bg-[#1e293b] py-16 text-center px-6"><h2 className="text-[24px] md:text-[32px] font-extrabold text-white mb-4">Still Not Convinced? Start With Free Account!</h2><p className="text-[#b0bec5] text-[14px] max-w-[560px] mx-auto mb-7">JobExCV users get in average 50% more interviews.</p><PillButton variant="outline-white">Start Free Trial</PillButton><p className="text-[#94a3b8] text-[12px] mt-3">No credit card required</p></section>
+        <section className="bg-[#eef0f4] py-16 text-center px-6"><h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1a1a1a] mb-6">JobExCV Helps You Find A Job Faster</h2><PillButton>Get Started Now</PillButton></section>
       </div>
       <Footer />
     </div>
