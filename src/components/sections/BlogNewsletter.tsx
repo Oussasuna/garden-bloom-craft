@@ -8,7 +8,7 @@ const BlogNewsletter = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-[#f9f9f7] p-10 rounded-[24px] border border-[#e5e5e5] flex flex-col justify-between">
             <div>
-              <span className="inline-block bg-[#22C55E] text-white text-[11px] font-bold px-3 py-1 rounded-full mb-4">
+              <span className="inline-block bg-[#0099ff] text-white text-[11px] font-bold px-3 py-1 rounded-full mb-4">
                 Get updates and career content
               </span>
               <h3 className="text-[36px] font-extrabold text-[#1a1a1a] leading-tight mb-4">Subscribe to our newsletter</h3>
