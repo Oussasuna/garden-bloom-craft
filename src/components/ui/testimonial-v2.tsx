@@ -81,6 +81,7 @@ const TestimonialsColumn = ({
   return (
     <div className={`relative overflow-hidden ${className || ''}`}>
       <motion.div
+        initial={{ translateY: '0%' }}
         animate={{ translateY: '-50%' }}
         transition={{
           duration,
@@ -88,6 +89,7 @@ const TestimonialsColumn = ({
           ease: 'linear',
           repeatType: 'loop',
         }}
+        style={{ willChange: 'transform' }}
         className="flex flex-col gap-6 pb-6"
       >
         {[...new Array(2)].map((_, index) => (
