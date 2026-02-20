@@ -21,6 +21,13 @@ const ValueProps = () => {
           <div className="w-full lg:w-1/2">
             <div className="bg-[#f8f7f5] rounded-[24px] p-8 md:p-12 shadow-sm border border-[#e5e7eb] max-w-[540px]">
               <div className="mb-10">
+                <div className="mb-4">
+                  <img
+
+                    alt="Sparkle icon"
+                    className="h-9 w-auto" src="/lovable-uploads/3a64d26f-f4c2-4810-af1a-c60ded29bf81.png" />
+
+                </div>
                 <h2 className="text-[22px] md:text-[28px] font-bold leading-[1.3] text-black tracking-tight">
                   Struggling with job hunt? We use AI maximise your job application success rate and minimise the time and effort you need to spend doing it.
                 </h2>
