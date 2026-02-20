@@ -44,6 +44,8 @@ const HeroSection = () => {
             <div className="flex-1 flex justify-center md:justify-end">
               <div className="w-full max-w-[550px] overflow-hidden">
                 <video
+                  autoPlay
+                  loop
                   muted
                   playsInline
                   className="w-full h-auto object-cover scale-[1.15] origin-center"
