@@ -24,11 +24,11 @@ export default function FeaturesGrid() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-start group">
+            <div key={index} className="flex flex-col items-start group border-l-2 border-transparent hover:border-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] transition-all duration-200 ease-out pl-4 rounded-r-lg">
               <div className="mb-4 h-[40px] flex items-center">
                 <img src={feature.icon} alt={feature.title} className="h-[36px] w-auto" />
               </div>
-              <h3 className="text-[18px] font-bold leading-[1.3] text-[#1a1a1a] mb-2">{feature.title}</h3>
+              <h3 className="text-[18px] font-bold leading-[1.3] text-[#1a1a1a] mb-2 transition-transform duration-200 ease-out group-hover:translate-x-[6px]">{feature.title}</h3>
               <p className="text-[#666666] text-[15px] leading-[1.5] mb-4">{feature.description}</p>
               <a href="https://app.jobexcv.ai" className="text-[#0099ff] text-[14px] font-semibold hover:underline">
                 Learn more
