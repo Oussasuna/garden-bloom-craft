@@ -36,8 +36,7 @@ const navItems = [
   dropdown: [
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact Us", href: "/contact" },
-  { name: "Discounts", href: "/discounts" }],
+  { name: "Contact Us", href: "/contact" }],
 
   bottomItem: { name: "JobExCV Ambassador Program (Coming soon)", href: "#" }
 },

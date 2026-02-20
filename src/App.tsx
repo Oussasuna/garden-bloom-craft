@@ -11,7 +11,7 @@ import PricingPage from "./pages/Pricing";
 import AboutPage from "./pages/About";
 import BlogPage from "./pages/Blog";
 import ContactPage from "./pages/Contact";
-import DiscountsPage from "./pages/Discounts";
+
 import AcademiaPage from "./pages/Academia";
 import AuthPage from "./pages/Auth";
 import ResetPasswordPage from "./pages/ResetPassword";
@@ -53,7 +53,7 @@ const App = () => (
             <Route path="/about" element={<AboutPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/discounts" element={<DiscountsPage />} />
+            
             <Route path="/academia" element={<AcademiaPage />} />
 
             {/* Feature pages */}

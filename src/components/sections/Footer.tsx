@@ -25,7 +25,6 @@ const resources = [
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Discounts", href: "/discounts" },
 ];
 
 const socials = [
