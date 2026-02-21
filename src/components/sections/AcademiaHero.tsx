@@ -52,7 +52,7 @@ const AcademiaHero = () => {
                   <img
 
                     alt="Career platform demo"
-                    className="w-full h-auto" src="/lovable-uploads/ca9d79d6-92dc-4d26-beb9-a54108ed1175.png" />
+                    className="w-full h-auto" src="/lovable-uploads/c912ec1f-20f0-413b-8699-54d3aec3914f.png" />
 
                 </div>
               </div>
