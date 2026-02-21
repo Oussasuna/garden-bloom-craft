@@ -1,6 +1,6 @@
 import React from 'react';
 import heroVideo from '@/assets/hero-video.mp4';
-import { InfiniteSlider } from '@/components/ui/infinite-slider';
+
 
 const companyLogos = [
 { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cd4eb7cfa9918e11c_21.avif", alt: "Company logo" },
@@ -63,12 +63,10 @@ const HeroSection = () => {
         <p className="text-center text-[13px] font-medium text-[#666666]/60 mb-8 tracking-wider">
           Users landed roles at
         </p>
-        <div className="w-full overflow-hidden" style={{ maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)' }}>
-          <InfiniteSlider gap={60} duration={30} durationOnHover={60}>
+        <div className="w-full flex justify-center gap-[60px] flex-wrap px-6">
             {companyLogos.map((logo, i) => (
               <img key={i} src={logo.src} alt={logo.alt} className="h-[28px] w-auto opacity-80 flex-shrink-0" />
             ))}
-          </InfiniteSlider>
         </div>
       </div>
     </section>);
