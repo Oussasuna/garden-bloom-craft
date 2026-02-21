@@ -35,10 +35,10 @@ const testimonials = [
 
 export default function AcademiaTestimonial() {
   return (
-    <section className="bg-white py-[80px] md:py-[120px]">
+    <section className="bg-white py-12 md:py-16">
       <p className="text-center text-sm text-blue-500 font-medium mb-2">Student Success Stories</p>
-      <h2 className="text-center text-3xl font-bold mb-4">What our students say</h2>
-      <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+      <h2 className="text-center text-3xl font-bold mb-0">What our students say</h2>
+      <AnimatedTestimonials testimonials={testimonials} autoplay={true} className="py-8" />
     </section>
   );
 }
