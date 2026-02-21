@@ -20,11 +20,11 @@ const AcademiaHero = () => {
 
               </div>
 
-              <h1 className="text-[40px] md:text-[64px] font-[800] leading-[1.1] text-black mb-8 max-w-[900px] tracking-[-0.02em]">
+              <h1 className="text-[40px] font-[800] leading-[1.1] text-black mb-8 max-w-[900px] tracking-[-0.02em] md:text-6xl font-sans">
                 AI&nbsp;Career Platform that Maximises Student Employability.
               </h1>
 
-              <p className="text-[18px] md:text-[20px] text-[#666666] leading-[1.6] max-w-[800px] mb-10">
+              <p className="text-[18px] text-[#666666] leading-[1.6] max-w-[800px] mb-10 md:text-lg">
                 Help your students with personalised career planning, global job opportunities, resume writing, job applications and interview preparation while reducing career office workload.
               </p>
 
@@ -42,7 +42,7 @@ const AcademiaHero = () => {
             <div className="md:w-[45%] flex justify-center">
               <img
                 alt="Career platform demo"
-                className="w-full md:w-[700px] md:h-[550px] object-contain" src="/lovable-uploads/a5b6357b-ff09-4a41-85d4-8ef8adbf3e29.png" />
+                className="w-full md:w-[700px] md:h-[550px] object-contain" src="/lovable-uploads/36195964-9d82-4cb6-99e9-578916726f27.png" />
 
 
             </div>
