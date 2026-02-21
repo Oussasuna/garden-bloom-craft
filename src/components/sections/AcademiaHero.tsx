@@ -1,4 +1,6 @@
 import React from "react";
+import AutoScroll from "embla-carousel-auto-scroll";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 const AcademiaHero = () => {
   return (
@@ -45,47 +47,40 @@ const AcademiaHero = () => {
         </div>
       </div>
 
-      <div className="pb-16 md:pb-24 border-b border-gray-100">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center">
-            <span className="text-[14px] font-bold text-[#666666]/60 mb-10 tracking-wider">
-              Trusted by education institutions around the world
-            </span>
-            <div className="flex flex-nowrap items-center gap-[40px] overflow-hidden opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-              <img
-                src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/68de3ca7461dc1e8e2e329b2_HKUBS_Standard_Coloured_Shield_Blue_Text_Logo.webp"
-                alt="HKU Business School"
-                className="h-[40px] w-auto flex-shrink-0" />
-
-              <img
-                src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/68de3ca77db09da719256750_CUHK%20MBA%20logo.png"
-                alt="CUHK MBA"
-                className="h-[40px] w-auto flex-shrink-0" />
-
-              <img
-                src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cec734bf960d01b47_1.avif"
-                alt="Imperial College London"
-                className="h-[40px] w-auto flex-shrink-0" />
-
-              <img
-                src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67eba18e4a1c0318c7382bc4_CityU_logo.svg.avif"
-                alt="City University"
-                className="h-[40px] w-auto flex-shrink-0" />
-
-              <img
-                src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67eba18ea4e9cb4e445dec2e_polyu-logo.avif"
-                alt="PolyU"
-                className="h-[40px] w-auto flex-shrink-0" />
-
-              <img
-                src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6909babb81d372bcb4e3eab9_GEU.png"
-                alt="University Logo"
-                className="h-[40px] w-auto flex-shrink-0" />
-
-            </div>
-          </div>
+      <section className="py-12 w-full border-b border-gray-100">
+        <p className="text-center text-[14px] font-bold text-[#666666]/60 mb-8 tracking-wider">
+          Trusted by education institutions around the world
+        </p>
+        <div className="relative mx-auto lg:max-w-5xl">
+          <Carousel
+            opts={{ loop: true }}
+            plugins={[AutoScroll({ playOnInit: true, speed: 1 })]}
+          >
+            <CarouselContent className="ml-0">
+              <CarouselItem className="basis-1/3 sm:basis-1/4 md:basis-1/5 flex items-center justify-center pl-0">
+                <img src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/68de3ca7461dc1e8e2e329b2_HKUBS_Standard_Coloured_Shield_Blue_Text_Logo.webp" alt="HKU Business School" className="h-[45px] w-auto object-contain" />
+              </CarouselItem>
+              <CarouselItem className="basis-1/3 sm:basis-1/4 md:basis-1/5 flex items-center justify-center pl-0">
+                <img src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/68de3ca77db09da719256750_CUHK%20MBA%20logo.png" alt="CUHK MBA" className="h-[45px] w-auto object-contain" />
+              </CarouselItem>
+              <CarouselItem className="basis-1/3 sm:basis-1/4 md:basis-1/5 flex items-center justify-center pl-0">
+                <img src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cec734bf960d01b47_1.avif" alt="Imperial College London" className="h-[45px] w-auto object-contain" />
+              </CarouselItem>
+              <CarouselItem className="basis-1/3 sm:basis-1/4 md:basis-1/5 flex items-center justify-center pl-0">
+                <img src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67eba18e4a1c0318c7382bc4_CityU_logo.svg.avif" alt="City University" className="h-[45px] w-auto object-contain" />
+              </CarouselItem>
+              <CarouselItem className="basis-1/3 sm:basis-1/4 md:basis-1/5 flex items-center justify-center pl-0">
+                <img src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67eba18ea4e9cb4e445dec2e_polyu-logo.avif" alt="PolyU" className="h-[45px] w-auto object-contain" />
+              </CarouselItem>
+              <CarouselItem className="basis-1/3 sm:basis-1/4 md:basis-1/5 flex items-center justify-center pl-0">
+                <img src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6909babb81d372bcb4e3eab9_GEU.png" alt="University Logo" className="h-[45px] w-auto object-contain" />
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
+          <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
         </div>
-      </div>
+      </section>
 
       <div className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-6 max-w-[1200px]">
