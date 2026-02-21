@@ -16,8 +16,8 @@ const AcademiaHero = () => {
                 <img
                   src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/690b3438daccb1d398a3d62d_Screenshot%202025-11-05%20at%207.25.34%20PM.png"
                   alt="Various student head portraits illustrated in a hand-drawn style"
-                  className="w-[311px] h-auto object-contain"
-                />
+                  className="w-[311px] h-auto object-contain" />
+
               </div>
 
               <h1 className="text-[40px] md:text-[64px] font-[800] leading-[1.1] text-black mb-8 max-w-[900px] tracking-[-0.02em]">
@@ -31,8 +31,8 @@ const AcademiaHero = () => {
               <div>
                 <a
                   href="https://forms.gle/iwthRUZE75ZYKdge8"
-                  className="bg-[#111111] text-white px-8 py-4 rounded-full font-semibold text-[16px] hover:opacity-90 transition-opacity flex items-center justify-center min-w-[160px]"
-                >
+                  className="bg-[#111111] text-white px-8 py-4 rounded-full font-semibold text-[16px] hover:opacity-90 transition-opacity flex items-center justify-center min-w-[160px]">
+
                   Contact us
                 </a>
               </div>
@@ -45,15 +45,15 @@ const AcademiaHero = () => {
                 style={{
                   boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
                   padding: '2px',
-                  background: 'linear-gradient(135deg, hsl(206 100% 70%), hsl(260 80% 70%))',
-                }}
-              >
+                  background: 'linear-gradient(135deg, hsl(206 100% 70%), hsl(260 80% 70%))'
+                }}>
+
                 <div className="rounded-[22px] overflow-hidden bg-white">
                   <img
-                    src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif"
+
                     alt="Career platform demo"
-                    className="w-full h-auto"
-                  />
+                    className="w-full h-auto" src="/lovable-uploads/ca9d79d6-92dc-4d26-beb9-a54108ed1175.png" />
+
                 </div>
               </div>
             </div>
@@ -86,8 +86,8 @@ const AcademiaHero = () => {
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67d92b140562f386df7fd462_FR%20Graphics%20(2).avif"
                 alt="Grid of diverse smiling student faces"
-                className="w-[297px] md:w-[400px] h-auto"
-              />
+                className="w-[297px] md:w-[400px] h-auto" />
+
             </div>
 
             <div className="lg:w-1/2 bg-[#F8F7F5] rounded-[24px] p-8 md:p-12 shadow-sm border border-[#E5E7EB]">
@@ -95,8 +95,8 @@ const AcademiaHero = () => {
                 <img
                   src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6707642926c2f09fcad827ca_8.svg"
                   alt="Sparkle icon"
-                  className="w-[35px] h-[35px] mr-4 mt-1"
-                />
+                  className="w-[35px] h-[35px] mr-4 mt-1" />
+
                 <h2 className="text-[24px] md:text-[28px] font-bold text-black leading-tight">
                   AI&nbsp;career partner for your students that perfects that job applications.
                 </h2>
@@ -120,8 +120,8 @@ const AcademiaHero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AcademiaHero;
