@@ -73,3 +73,13 @@ a, button, [role="button"] {
 .will-change-transform {
   will-change: transform;
 }
+
+@keyframes heroZoomPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes heroShimmer {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.05); }
+}
