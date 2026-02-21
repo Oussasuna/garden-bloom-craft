@@ -50,8 +50,8 @@ const AcademiaHero = () => {
                 <div className="rounded-[22px] overflow-hidden bg-white w-full h-full">
                   <img
                     alt="Career platform demo"
-                    className="w-full h-full object-contain border-none"
-                    src="/lovable-uploads/d3df7ed0-8495-4b32-9d96-2ce5cca1e6f9.png"
+                    className="w-full h-full object-cover border-none"
+                    src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif"
                   />
                 </div>
               </div>
