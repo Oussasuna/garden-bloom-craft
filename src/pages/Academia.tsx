@@ -4,7 +4,7 @@ import AcademiaHero from "@/components/sections/AcademiaHero";
 import DemoVideo from "@/components/sections/DemoVideo";
 import BenefitsGrid from "@/components/sections/BenefitsGrid";
 import AcademiaTestimonial from "@/components/sections/AcademiaTestimonial";
-import AcademicSupport from "@/components/sections/AcademicSupport";
+
 import AcademiaFeaturesGrid from "@/components/sections/AcademiaFeaturesGrid";
 import AdminPanel from "@/components/sections/AdminPanel";
 import GetStartedSteps from "@/components/sections/GetStartedSteps";
@@ -22,7 +22,7 @@ export default function AcademiaPage() {
         <DemoVideo />
         <BenefitsGrid />
         <AcademiaTestimonial />
-        <AcademicSupport />
+        
         <AcademiaFeaturesGrid />
         <AdminPanel />
         <GetStartedSteps />
