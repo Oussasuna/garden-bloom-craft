@@ -51,36 +51,36 @@ const AcademiaHero = () => {
             <span className="text-[14px] font-bold text-[#666666]/60 mb-10 tracking-wider">
               Trusted by education institutions around the world
             </span>
-            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500 max-w-[1100px]">
+            <div className="flex flex-nowrap items-center gap-[40px] overflow-hidden opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/68de3ca7461dc1e8e2e329b2_HKUBS_Standard_Coloured_Shield_Blue_Text_Logo.webp"
                 alt="HKU Business School"
-                className="h-[32px] w-auto" />
+                className="h-[40px] w-auto flex-shrink-0" />
 
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/68de3ca77db09da719256750_CUHK%20MBA%20logo.png"
                 alt="CUHK MBA"
-                className="h-[32px] w-auto" />
+                className="h-[40px] w-auto flex-shrink-0" />
 
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068cec734bf960d01b47_1.avif"
                 alt="Imperial College London"
-                className="h-[32px] w-auto" />
+                className="h-[40px] w-auto flex-shrink-0" />
 
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67eba18e4a1c0318c7382bc4_CityU_logo.svg.avif"
                 alt="City University"
-                className="h-[32px] w-auto" />
+                className="h-[40px] w-auto flex-shrink-0" />
 
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67eba18ea4e9cb4e445dec2e_polyu-logo.avif"
                 alt="PolyU"
-                className="h-[32px] w-auto" />
+                className="h-[40px] w-auto flex-shrink-0" />
 
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6909babb81d372bcb4e3eab9_GEU.png"
                 alt="University Logo"
-                className="h-[32px] w-auto" />
+                className="h-[40px] w-auto flex-shrink-0" />
 
             </div>
           </div>
