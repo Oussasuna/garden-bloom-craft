@@ -8,9 +8,9 @@ export default function AcademiaTestimonial() {
           <img
             src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6718cca0376447dc5a6284a9_FirstResume_pricing_graph-14.avif"
             alt="CUHK MBA Programme Testimonial Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/60 md:bg-black/50" />
+            className="w-full h-full object-cover" />
+
+          
         </div>
 
         <div className="relative z-10 flex flex-col items-center max-w-[900px]">
@@ -27,8 +27,8 @@ export default function AcademiaTestimonial() {
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/6718cca0376447dc5a6284a9_FirstResume_pricing_graphic_2.avif"
                 alt="CUHK MBA Programme"
-                className="w-12 h-12 object-cover"
-              />
+                className="w-12 h-12 object-cover" />
+
             </div>
             <h3 className="text-white text-[18px] md:text-[20px] font-bold">
               CUHK MBA Programme
@@ -36,6 +36,6 @@ export default function AcademiaTestimonial() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
