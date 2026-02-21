@@ -5,8 +5,8 @@ const AcademicSupport: React.FC = () => {
     <section className="bg-white py-[80px] md:py-[120px] px-6">
       <div className="max-w-[1200px] mx-auto">
         <div className="mb-12">
-          <p className="text-[#00A3FF] font-bold text-[14px] uppercase tracking-wider mb-4">
-            Academic support
+          <p className="text-[#00A3FF] font-bold text-[14px] uppercase tracking-wider mb-4">ACADEMIC UPPORT
+
           </p>
           <h2 className="text-[36px] md:text-[42px] font-bold text-black leading-[1.2] mb-6 tracking-tight">
             Built alongside an academic researcher.
@@ -23,8 +23,8 @@ const AcademicSupport: React.FC = () => {
                 <img
                   src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6718cca0073e157a4b183ea5_FirstResume_pricing_graph-15.avif"
                   alt="Dr. Sabrina Su"
-                  className="w-full h-full object-cover"
-                />
+                  className="w-full h-full object-cover" />
+
               </div>
             </div>
 
@@ -35,8 +35,8 @@ const AcademicSupport: React.FC = () => {
                   <img
                     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/icons/68b56c74137b14fb2c3149d3_link-1.png"
                     alt="Profile Link"
-                    className="w-3.5 h-3.5 opacity-60 hover:opacity-100 transition-opacity"
-                  />
+                    className="w-3.5 h-3.5 opacity-60 hover:opacity-100 transition-opacity" />
+
                 </a>
               </div>
 
@@ -55,8 +55,8 @@ const AcademicSupport: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AcademicSupport;
