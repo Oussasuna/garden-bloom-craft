@@ -46,7 +46,7 @@ const BenefitsGrid = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex flex-col group">
+              <div key={index} className="flex flex-col group border-l-2 border-transparent hover:border-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] transition-all duration-200 ease-out rounded-lg p-4 -ml-4">
                 <div className="w-[48px] h-[48px] mb-6 rounded-[12px] flex items-center justify-center bg-[#f8f7f5]">
                   <img
                     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/67d94440bbab7951ad321189_checked-29.avif"
@@ -54,7 +54,7 @@ const BenefitsGrid = () => {
                     className="w-6 h-6 opacity-80"
                   />
                 </div>
-                <h3 className="text-[20px] font-bold text-black mb-3 leading-[1.3]">
+                <h3 className="text-[20px] font-bold text-black mb-3 leading-[1.3] transition-transform duration-200 ease-out group-hover:translate-x-[6px]">
                   {benefit.title}
                 </h3>
                 <p className="text-[#666666] text-[15px] leading-[1.6]">
