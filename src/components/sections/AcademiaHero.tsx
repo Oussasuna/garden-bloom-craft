@@ -40,15 +40,20 @@ const AcademiaHero = () => {
 
             {/* Right column - GIF */}
             <div className="md:w-[45%] flex justify-center">
-              <div className="rounded-[16px] overflow-hidden w-full md:w-[600px] md:h-[450px]">
-                <img
-                  alt="Career platform demo"
-                  className="w-full h-full object-contain"
-                  src="/lovable-uploads/d3df7ed0-8495-4b32-9d96-2ce5cca1e6f9.png"
-                  style={{
-                    animation: 'heroZoomPulse 4s ease-in-out infinite, heroShimmer 3s ease-in-out infinite',
-                  }}
-                />
+              <div
+                className="rounded-[24px] overflow-hidden w-full md:w-[600px] md:h-[450px]"
+                style={{
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
+                  padding: '2px',
+                  background: 'linear-gradient(135deg, hsl(206 100% 70%), hsl(260 80% 70%))'
+                }}>
+                <div className="rounded-[22px] overflow-hidden bg-white w-full h-full">
+                  <img
+                    alt="Career platform demo"
+                    className="w-full h-full object-contain border-none"
+                    src="/lovable-uploads/d3df7ed0-8495-4b32-9d96-2ce5cca1e6f9.png"
+                  />
+                </div>
               </div>
             </div>
           </div>
