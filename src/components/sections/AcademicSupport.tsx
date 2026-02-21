@@ -8,9 +8,9 @@ const AcademicSupport: React.FC = () => {
           <p className="text-[#00A3FF] font-bold text-[14px] uppercase tracking-wider mb-4">ACADEMIC UPPORT
 
           </p>
-          <h2 className="text-[36px] md:text-[42px] font-bold text-black leading-[1.2] mb-6 tracking-tight">
-            Built alongside an academic researcher.
-          </h2>
+          
+
+
           
 
 
