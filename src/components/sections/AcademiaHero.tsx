@@ -37,7 +37,7 @@ const AcademiaHero = () => {
             <div className="md:w-[45%] flex justify-center">
               <img
                 alt="Career platform demo"
-                className="w-full md:w-[800px] md:h-[660px] object-contain"
+                className="w-full md:w-[1500px] md:h-[1500px] object-contain"
                 src="/lovable-uploads/a5b6357b-ff09-4a41-85d4-8ef8adbf3e29.png"
               />
             </div>
