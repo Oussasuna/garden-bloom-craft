@@ -13,10 +13,10 @@ const AcademiaHero = () => {
               </p>
 
               <div className="mb-6">
-                <img
-                  src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/690b3438daccb1d398a3d62d_Screenshot%202025-11-05%20at%207.25.34%20PM.png"
-                  alt="Various student head portraits illustrated in a hand-drawn style"
-                  className="w-[311px] h-auto object-contain" />
+                
+
+
+
 
               </div>
 
