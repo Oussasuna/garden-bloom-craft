@@ -17,7 +17,7 @@ const features = [
 
 export default function AcademiaFeaturesGrid() {
   return (
-    <section className="bg-white pt-[80px] lg:pt-[120px] pb-[40px] px-6">
+    <section className="bg-white pt-[80px] lg:pt-[120px] pb-[20px] px-6">
       <div className="max-w-[1200px] mx-auto">
         <div className="mb-[64px]">
           <span className="text-[#00A3FF] font-bold text-[14px] leading-[1.4] mb-3 block">
