@@ -1,18 +1,18 @@
 import React from 'react';
 
 const features = [
-  { title: 'Auto Apply', description: 'Tell AI the jobs you want to apply to, AI does the rest automatically.', color: 'bg-blue-50 border-blue-100' },
-  { title: 'One Click Apply', description: 'Apply instantly to any job with a perfectly tailored application in seconds.', color: 'bg-green-50 border-green-100' },
-  { title: 'Job Application Tracker', description: "All your students' job applications saved neatly in one dashboard.", color: 'bg-purple-50 border-purple-100' },
-  { title: 'Dynamic Emails', description: 'Outreach and follow-up emails personalized for every job application.', color: 'bg-yellow-50 border-yellow-100' },
-  { title: 'CV Improvements', description: 'AI edits the resume with perfect keywords tailored to each job.', color: 'bg-blue-50 border-blue-100' },
-  { title: 'Compatibility Analysis', description: 'Analyzes how compatible the student is with the job and how to improve.', color: 'bg-green-50 border-green-100' },
-  { title: 'Job Posting Aggregator', description: 'Find all job postings from multiple platforms aggregated in one place.', color: 'bg-purple-50 border-purple-100' },
-  { title: 'Job Matching', description: 'AI matches students with the best opportunities based on their profile.', color: 'bg-yellow-50 border-yellow-100' },
-  { title: 'Job Filtering', description: 'Filter jobs by salary, location, company size and requirements.', color: 'bg-blue-50 border-blue-100' },
-  { title: 'AI CV Builder', description: 'Build a professional ATS-optimized CV from scratch in one click.', color: 'bg-green-50 border-green-100' },
-  { title: 'AI Cover Letter Generator', description: 'Personalised cover letter based on student profile and the job posting.', color: 'bg-purple-50 border-purple-100' },
-  { title: 'AI Mock Interview', description: 'Job-specific interview questions that students are likely to be asked.', color: 'bg-yellow-50 border-yellow-100' },
+  { title: 'AI auto add job', description: 'Tell AI the job you want to apply to (or search on JobExCV), AI does the rest.', image: 'https://cdn.prod.website-files.com/67065b18171e78a558433e90/6909cee02cee4c3dfd8d0d18_Untitled%20presentation%20(2).png' },
+  { title: 'Auto job summarisation', description: 'JobExCV automatically extracts all the important information.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d5264f87b6914e1e9be1_20251104_20Firstresume_20-17.png' },
+  { title: 'Compatibility analysis', description: 'Analyzes how compatible you are with the job and how to improve.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d5265d40fb17708d679d_20251104_20Firstresume_20-18.png' },
+  { title: 'AI resume builder', description: 'AI edits your resume with perfect keywords tailored to the job.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d526fca6afd2195fb75f_20251104_20Firstresume_20-19.png' },
+  { title: 'Cover letter generator', description: 'Personalised cover letter based on your profile and the job you are applying to.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909dc9c3e873d32dae9fd3f_20251104_20Firstresume_20-20.png' },
+  { title: 'Outreach email writer', description: 'Outreach and follow up emails for when you apply through email.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d526c6a52d15e4ccdf95_20251104_20Firstresume_20-21.png' },
+  { title: 'AI company research', description: 'The latest news and information about the company that you are applying to.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d52640f06b58b946bbe1_20251104_20Firstresume_20-22.png' },
+  { title: 'Interview prep', description: 'Job specific interview questions that you will likely be asked.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d52639931bfc5751f988_20251104_20Firstresume_20-23.png' },
+  { title: 'Action checklist', description: 'A step-by-step guide for each stage of your job application', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d5262cee4c3dfd8faf40_20251104_20Firstresume_20-24.png' },
+  { title: 'Auto application tracker', description: 'All your job applications will be neatly saved in a dashboard.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d526fbd4396f516f9e83_20251104_20Firstresume_20-25.png' },
+  { title: 'Career pathfinder', description: 'Career Pathfinder is here to give you some ideas if you are confused.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d52657b1e1375f31a292_20251104_20Firstresume_20-26.png' },
+  { title: 'Job role explanation', description: 'AI researches details that you need to know about the job position.', image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-firstresume-ai/assets/images/6909d526a5a17d34fde5dd3c_20251104_20Firstresume_20-27.png' },
 ];
 
 export default function AcademiaFeaturesGrid() {
@@ -37,8 +37,13 @@ export default function AcademiaFeaturesGrid() {
               <h3 className="text-[18px] font-bold leading-[1.4] text-[#000000] mb-5">
                 {feature.title}
               </h3>
-              <div className={`relative mb-5 overflow-hidden rounded-[16px] border shadow-sm transition-transform duration-300 hover:scale-[1.02] ${feature.color} flex items-center justify-center aspect-[4/3]`}>
-                <span className="text-[48px] opacity-30">📊</span>
+              <div className="relative mb-5 overflow-hidden rounded-[16px] border border-[#E5E7EB] shadow-sm transition-transform duration-300 hover:scale-[1.02]">
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className="w-full h-auto object-cover"
+                  loading={index < 3 ? "eager" : "lazy"}
+                />
               </div>
               <p className="text-[#666666] text-[16px] leading-[1.5]">
                 {feature.description}
