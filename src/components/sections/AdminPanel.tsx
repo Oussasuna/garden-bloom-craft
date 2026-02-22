@@ -20,7 +20,7 @@ export default function AdminPanel() {
         }
       >
         <img
-          src="/lovable-uploads/d903d7b9-d7f5-4ae1-a604-4d61e806d388.png"
+          src="/lovable-uploads/admin-panel.jpg"
           alt="Admin Panel Dashboard"
           className="w-full h-full object-cover object-left-top"
           loading="lazy"
