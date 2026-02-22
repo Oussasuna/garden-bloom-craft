@@ -23,7 +23,7 @@ const testimonials = [
     quote: "As an international student, finding jobs was overwhelming. JobexCV simplified everything and helped me stand out to employers worldwide.",
     name: "Carlos Rivera",
     designation: "MBA Student — CityU Hong Kong",
-    src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=500&auto=format&fit=crop",
+    src: "/lovable-uploads/graduate2.png",
   },
   {
     quote: "The AI cover letter generator saved me hours every week. Each letter felt personal and perfectly matched the job description.",
