@@ -29,7 +29,7 @@ const testimonials = [
     quote: "The AI cover letter generator saved me hours every week. Each letter felt personal and perfectly matched the job description.",
     name: "Emma Thompson",
     designation: "Marketing Graduate — Hong Kong Polytechnic University",
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop",
+    src: "/lovable-uploads/graduate3.png",
   },
 ];
 
