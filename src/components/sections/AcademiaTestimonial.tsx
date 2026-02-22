@@ -17,7 +17,7 @@ const testimonials = [
     quote: "The interview preparation feature helped me practice with real questions. I felt so confident going into my interviews.",
     name: "Aisha Patel",
     designation: "Engineering Student — HKU Business School",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=500&auto=format&fit=crop",
+    src: "/lovable-uploads/graduate1.png",
   },
   {
     quote: "As an international student, finding jobs was overwhelming. JobexCV simplified everything and helped me stand out to employers worldwide.",
