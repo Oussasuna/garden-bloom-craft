@@ -5,7 +5,7 @@ const testimonials = [
     quote: "JobexCV helped me land my first job in just 2 weeks after graduation. The AI resume builder tailored my CV perfectly for each application.",
     name: "Sarah Chen",
     designation: "Computer Science Graduate — Hong Kong University",
-    src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500&auto=format&fit=crop",
+    src: "/lovable-uploads/basma-960.jpg",
   },
   {
     quote: "I applied to 50 companies in one day using the auto-apply feature. I got 8 interviews. This tool is a game changer for students.",
