@@ -87,9 +87,9 @@ const AcademiaHero = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
             <div className="lg:w-1/2 flex justify-center lg:justify-start">
               <img
-                src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67d92b140562f386df7fd462_FR%20Graphics%20(2).avif"
-                alt="Grid of diverse smiling student faces"
-                className="w-[297px] md:w-[400px] h-auto" />
+                src="/lovable-uploads/student-hero.png"
+                alt="Student with books and backpack"
+                className="w-[297px] md:w-[400px] h-auto rounded-2xl object-cover" />
 
             </div>
 
