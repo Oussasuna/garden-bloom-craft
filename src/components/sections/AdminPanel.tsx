@@ -13,8 +13,8 @@ export default function AdminPanel() {
             <h2 className="text-[32px] md:text-[42px] font-bold leading-[1.2] text-black mb-6 tracking-tight">
               Manage accounts, view analytics, and add exclusive jobs for students.
             </h2>
-            <p className="text-[#666666] text-lg leading-[1.6] max-w-3xl mx-auto">
-              While students get access to their AI career partner, your career service team gets access to an admin panel to manage admin access, view student job application status and analytics, and even able to send them exclusive jobs that your team has sourced yourself.
+            <p className="text-[#374151] text-[18px] leading-[1.7] max-w-[600px] mx-auto">
+              Your career services team gets a dedicated admin dashboard to manage student accounts, track job application progress, view engagement analytics, and post exclusive job opportunities directly to your students — all in one place.
             </p>
           </div>
         }
