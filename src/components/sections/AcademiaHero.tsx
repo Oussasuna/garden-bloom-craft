@@ -89,7 +89,7 @@ const AcademiaHero = () => {
               <img
 
                 alt="Student with books and backpack"
-                className="w-[897px] md:w-[800px] h-auto rounded-2xl object-cover" src="/lovable-uploads/450e0aae-43dd-469f-b3e1-41b61d80fe8f.jpg" />
+                className="w-[897px] md:w-[800px] h-auto rounded-2xl object-cover" src="/lovable-uploads/2ec5c125-d800-4eff-80ee-0688616c0b04.png" />
 
             </div>
 
