@@ -11,7 +11,7 @@ const testimonials = [
     quote: "I applied to 50 companies in one day using the auto-apply feature. I got 8 interviews. This tool is a game changer for students.",
     name: "Marcus Johnson",
     designation: "Business Graduate — Imperial College London",
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop",
+    src: "/lovable-uploads/graduate-male.png",
   },
   {
     quote: "The interview preparation feature helped me practice with real questions. I felt so confident going into my interviews.",
