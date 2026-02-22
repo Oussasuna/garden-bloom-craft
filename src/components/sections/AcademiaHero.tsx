@@ -54,8 +54,8 @@ const AcademiaHero = () => {
         <div className="relative mx-auto lg:max-w-5xl">
           <Carousel
             opts={{ loop: true }}
-            plugins={[AutoScroll({ playOnInit: true, speed: 1 })]}
-          >
+            plugins={[AutoScroll({ playOnInit: true, speed: 1 })]}>
+
             <CarouselContent className="ml-0">
               <CarouselItem className="basis-1/3 sm:basis-1/4 md:basis-1/5 flex items-center justify-center pl-0">
                 <img src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/68de3ca7461dc1e8e2e329b2_HKUBS_Standard_Coloured_Shield_Blue_Text_Logo.webp" alt="HKU Business School" className="h-[45px] w-auto object-contain" />
@@ -87,9 +87,9 @@ const AcademiaHero = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
             <div className="lg:w-1/2 flex justify-center lg:justify-start">
               <img
-                src="/lovable-uploads/student-hero.png"
+
                 alt="Student with books and backpack"
-                className="w-[297px] md:w-[400px] h-auto rounded-2xl object-cover" />
+                className="w-[897px] md:w-[800px] h-auto rounded-2xl object-cover" src="/lovable-uploads/450e0aae-43dd-469f-b3e1-41b61d80fe8f.jpg" />
 
             </div>
 
