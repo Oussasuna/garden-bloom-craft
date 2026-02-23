@@ -52,7 +52,7 @@ export default function AcademiaFeaturesGrid() {
           ))}
         </div>
 
-        <div className="mt-16 flex justify-center">
+        <div className="mt-16 mb-[60px] flex justify-center relative z-10">
           <a
             href="https://forms.gle/iwthRUZE75ZYKdge8"
             className="inline-flex items-center justify-center bg-[#111111] text-white px-[32px] py-[14px] rounded-full font-semibold text-[16px] transition-opacity hover:opacity-90"

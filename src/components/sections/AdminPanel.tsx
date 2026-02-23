@@ -3,7 +3,7 @@ import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 
 export default function AdminPanel() {
   return (
-    <section className="bg-white px-6">
+    <section className="bg-white px-6 mt-[80px]">
       <ContainerScroll
         titleComponent={
           <div className="max-w-4xl mx-auto text-center">
