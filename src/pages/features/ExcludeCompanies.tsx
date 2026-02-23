@@ -166,6 +166,8 @@ export default function ExcludeCompaniesPage() {
         <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1a1a1a] mb-6">JobExCV Helps You Find A Job Faster</h2>
         <PillButton>Get Started Now</PillButton>
       </section>
+      </div>
+      <Footer />
     </div>
   );
 }
