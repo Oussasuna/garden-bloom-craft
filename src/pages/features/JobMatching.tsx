@@ -64,7 +64,9 @@ function HeroJobCard() {
 
 export default function JobMatchingPage() {
   return (
-    <div className="bg-[#F5F7FA] min-h-screen pt-[100px]">
+    <div className="bg-[#F5F7FA] min-h-screen">
+      <Navbar />
+      <div className="pt-[100px]">
       <section className="flex flex-col md:flex-row min-h-[480px]">
         <div className="flex-1 bg-[#1e293b] px-8 md:px-14 py-16 flex flex-col justify-center">
           <h1 className="text-[28px] md:text-[40px] font-extrabold text-white leading-[1.15] mb-5 tracking-tight max-w-[480px]">The most advanced Job Matching Platform to help you get a job</h1>
