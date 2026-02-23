@@ -1,8 +1,11 @@
 import { List } from "lucide-react";
+import Navbar from "@/components/sections/Navbar";
+import Footer from "@/components/sections/Footer";
 
 export default function AiCvCheckerPage() {
   return (
     <div className="bg-white min-h-screen">
+      <Navbar />
       <section className="relative overflow-hidden bg-white pt-[140px] pb-0">
         <div className="max-w-[1140px] mx-auto px-4 text-center">
           <h1 className="text-[32px] md:text-[48px] font-extrabold leading-[1.15] tracking-[-0.02em] text-black mb-6 max-w-[900px] mx-auto">Best AI CV checker to improve your resume with AI</h1>
@@ -84,6 +87,7 @@ export default function AiCvCheckerPage() {
         <h2 className="text-[28px] md:text-[36px] font-bold text-black mb-8 leading-[1.2]">JobExCV Helps You Find A Job Faster</h2>
         <a href="https://app.jobexcv.ai" className="inline-flex items-center bg-black text-white px-6 py-3 rounded-[4px] font-semibold text-[15px] hover:opacity-85 transition-opacity">Get Started Now</a>
       </section>
+      <Footer />
     </div>
   );
 }
