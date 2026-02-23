@@ -2,64 +2,10 @@ import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
-function PillButton({
-  children,
-  href = "https://app.jobexcv.ai",
-  variant = "dark",
-}: {
-  children: React.ReactNode;
-  href?: string;
-  variant?: "dark" | "outline-white";
-}) {
-  const base = "inline-flex items-center px-7 py-3 rounded-full font-semibold text-[14px] transition-colors";
-  const styles = {
-    dark: "bg-[#1a1a1a] text-white hover:bg-[#333]",
-    "outline-white": "border border-white text-white hover:bg-white hover:text-[#1a1a1a]",
-  };
+function PillButton({ children, href = "https://app.jobexcv.ai", variant = "dark" }: { children: React.ReactNode; href?: string; variant?: "dark" | "outline-white" }) {
+  const base = "inline-flex items-center px-8 py-3.5 rounded-full font-semibold text-[15px] transition-colors";
+  const styles = { dark: "bg-[#1a1a1a] text-white hover:bg-[#333]", "outline-white": "border-2 border-white text-white hover:bg-white hover:text-[#1a1a1a]" };
   return <a href={href} className={`${base} ${styles[variant]}`}>{children}</a>;
-}
-
-function BrowserMockup({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return (
-    <div className={`bg-white rounded-lg shadow-[0_2px_24px_rgba(0,0,0,0.10)] border border-[#e0e4ea] overflow-hidden ${className}`}>
-      <div className="flex items-center gap-1.5 px-3 py-2 bg-[#f6f7f9] border-b border-[#e5e7eb]">
-        <span className="w-[10px] h-[10px] rounded-full bg-[#ff5f57]" />
-        <span className="w-[10px] h-[10px] rounded-full bg-[#febc2e]" />
-        <span className="w-[10px] h-[10px] rounded-full bg-[#28c840]" />
-        <div className="ml-3 flex-1 h-5 rounded bg-white border border-[#e0e4ea]" />
-      </div>
-      <div className="p-0">{children}</div>
-    </div>
-  );
-}
-
-function HeroJobCard() {
-  return (
-    <BrowserMockup className="w-full max-w-[420px]">
-      <div className="p-5 bg-white">
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-[9px] text-[#94a3b8]">jobexcv.ai/matches</span>
-          <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#dcfce7] text-[#16a34a] font-semibold">92% Match</span>
-        </div>
-        <div className="flex items-start gap-3 mb-4">
-          <div className="w-10 h-10 rounded-lg bg-[#dbeafe] flex items-center justify-center text-[14px] font-bold text-[#2563eb]">JP</div>
-          <div>
-            <p className="text-[14px] font-bold text-[#1a1a1a]">Junior Project Manager</p>
-            <p className="text-[10px] text-[#94a3b8]">TechCorp International</p>
-          </div>
-        </div>
-        <div className="space-y-2 mb-4">
-          <div className="flex items-center gap-2 text-[10px] text-[#555]"><span className="text-[#94a3b8]">Salary:</span><span className="font-medium">$55,000 - $75,000</span></div>
-          <div className="flex items-center gap-2 text-[10px] text-[#555]"><span className="text-[#94a3b8]">Location:</span><span className="font-medium">London, UK &middot; Hybrid</span></div>
-          <div className="flex items-center gap-2 text-[10px] text-[#555]"><span className="text-[#94a3b8]">Type:</span><span className="font-medium">Full-time</span></div>
-        </div>
-        <div className="flex gap-2">
-          <div className="flex-1 h-8 rounded-full bg-[#1a1a1a] flex items-center justify-center"><span className="text-white text-[10px] font-semibold">Apply Now</span></div>
-          <div className="h-8 w-8 rounded-full border border-[#e0e4ea] flex items-center justify-center"><span className="text-[12px]">&#9825;</span></div>
-        </div>
-      </div>
-    </BrowserMockup>
-  );
 }
 
 export default function JobMatchingPage() {
@@ -67,39 +13,173 @@ export default function JobMatchingPage() {
     <div className="bg-[#F5F7FA] min-h-screen">
       <Navbar />
       <div className="pt-[100px]">
-      <section className="flex flex-col md:flex-row min-h-[480px]">
-        <div className="flex-1 bg-[#1e293b] px-8 md:px-14 py-16 flex flex-col justify-center">
-          <h1 className="text-[28px] md:text-[40px] font-extrabold text-white leading-[1.15] mb-5 tracking-tight max-w-[480px]">The most advanced Job Matching Platform to help you get a job</h1>
-          <p className="text-[#b0bec5] text-[14px] md:text-[15px] max-w-[440px] mb-7 leading-relaxed">Use AI to accelerate your job search. Search and apply across all the top job platforms. With Smart job matching and AI, find your dream job. Click the button or call us for more information and pricing.</p>
-          <div className="flex items-center gap-4 flex-wrap"><PillButton>Book a call with us</PillButton></div>
-          <a href="#" className="text-[#60a5fa] text-[13px] mt-3 hover:underline">or Talk to our team</a>
-        </div>
-        <div className="flex-1 bg-white px-8 py-16 flex items-center justify-center"><HeroJobCard /></div>
-      </section>
-      <section className="max-w-[900px] mx-auto px-6 py-20 text-center">
-        <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1a1a1a] mb-4">Help Your Clients Accelerate Their Job Search</h2>
-        <p className="text-[#666] text-[14px] max-w-[620px] mx-auto mb-10 leading-relaxed">JobExCV helps Agencies for individuals and businesses find the best match. Apply to the best companies with just 30 mins of setup for free, we will even help you. Client show for free</p>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-[600px] mx-auto">
-          {[{label:"Automatically Apply",active:true},{label:"Email Templates",active:false},{label:"Resume/Cover",active:false},{label:"Job Filtering",active:false},{label:"CV Improvements tips",active:false},{label:"Multiple job searches in parallel",active:false}].map((tab) => (
-            <div key={tab.label} className={`rounded-lg px-4 py-3 text-[13px] font-medium border transition-colors ${tab.active ? "bg-[#1e293b] text-white border-[#1e293b]" : "bg-white text-[#555] border-[#e5e7eb] hover:border-[#ccc]"}`}>{tab.label}</div>
-          ))}
-        </div>
-      </section>
-      <section className="max-w-[800px] mx-auto px-6 py-16">
-        <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1a1a1a] text-center mb-10">Here Is How JobExCV For Bootcamps Works</h2>
-        <div className="space-y-6 mb-10">
-          <div className="flex gap-4"><span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#f0f1f3] flex items-center justify-center text-[13px] font-bold text-[#1a1a1a]">1</span><p className="text-[14px] text-[#555] leading-relaxed">Identify new companies that are a good match with your existing pool of candidates (CVs from your applicants). We match with 1000's of companies. From these matches you can filter and select the best for each candidate.</p></div>
-          <div className="flex gap-4"><span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#f0f1f3] flex items-center justify-center text-[13px] font-bold text-[#1a1a1a]">2</span><p className="text-[14px] text-[#555] leading-relaxed">Group your dashboard by candidate, CV template, at a company, job search, keyword level. We help you create reports for your clients and track the progress of each candidate.</p></div>
-        </div>
-        <div className="text-center"><PillButton>Book a call with us</PillButton></div>
-      </section>
-      <section className="bg-[#eef0f4] py-16 text-center px-6 mt-8">
-        <div className="w-12 h-12 rounded-full bg-[#1e293b] flex items-center justify-center mx-auto mb-5">
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-white"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" /></svg>
-        </div>
-        <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1a1a1a] mb-6">JobExCV Helps You Find A Job Faster</h2>
-        <PillButton>Get Started Now</PillButton>
-      </section>
+        {/* Hero */}
+        <section className="max-w-[900px] mx-auto px-6 text-center pb-8">
+          <h1 className="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] leading-[1.12] mb-6">
+            Aggregate Job postings from 20 job boards in one platform
+          </h1>
+          <p className="text-[#555] text-[16px] md:text-[18px] max-w-[720px] mx-auto mb-8 leading-relaxed">
+            JobExCV simplifies your job search by aggregating job postings from 20 top job boards into one powerful platform. No more switching between multiple websites—access all opportunities in one place and apply effortlessly. Whether you're a job seeker or a recruiter, JobExCV streamlines the process, saving you time and effort.
+          </p>
+          <PillButton>Get Started &nbsp;→</PillButton>
+        </section>
+
+        {/* Dashboard Preview Mockup */}
+        <section className="max-w-[750px] mx-auto px-6 pb-8">
+          <div className="bg-white rounded-xl shadow-[0_8px_40px_rgba(0,0,0,0.10)] border border-[#e0e0e0] overflow-hidden">
+            <div className="flex items-center gap-2 px-4 py-2.5 bg-[#f0f0f0] border-b border-[#ddd]">
+              <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
+              <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
+              <span className="w-3 h-3 rounded-full bg-[#28c840]" />
+              <div className="ml-3 flex-1 bg-white rounded-md h-6 flex items-center px-3">
+                <span className="text-[11px] text-[#999]">app.jobexcv.ai</span>
+              </div>
+            </div>
+            <div className="p-4 bg-[#fafbfc]">
+              <div className="flex gap-3 h-[180px]">
+                <div className="w-[140px] bg-[#1a1a2e] rounded-lg p-3 flex flex-col gap-2 shrink-0">
+                  <div className="h-5 w-20 bg-white/20 rounded" />
+                  <div className="h-4 w-24 bg-white/10 rounded" />
+                  <div className="h-4 w-16 bg-white/10 rounded" />
+                  <div className="h-4 w-28 bg-[#4f8cff]/40 rounded" />
+                  <div className="h-4 w-20 bg-white/10 rounded" />
+                </div>
+                <div className="flex-1 flex flex-col gap-2">
+                  <div className="flex gap-2">
+                    <div className="h-7 w-24 bg-[#4f8cff]/20 rounded-md" />
+                    <div className="h-7 w-20 bg-[#e8e8e8] rounded-md" />
+                    <div className="h-7 w-28 bg-[#e8e8e8] rounded-md" />
+                  </div>
+                  <div className="flex-1 grid grid-cols-3 gap-2">
+                    {[1,2,3,4,5,6].map(i => (
+                      <div key={i} className="bg-white border border-[#e5e5e5] rounded-lg p-2 flex flex-col gap-1">
+                        <div className="h-3 w-3/4 bg-[#ddd] rounded" />
+                        <div className="h-2 w-1/2 bg-[#eee] rounded" />
+                        <div className="h-2 w-2/3 bg-[#f0f0f0] rounded" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Info banner */}
+        <section className="bg-gradient-to-r from-[#d6dfe8] to-[#b8c5d3] py-6 border-y border-[#c5cdd8]">
+          <p className="text-center text-[15px] text-[#333] font-medium max-w-[700px] mx-auto px-6">
+            For every job search (loop) that you create, JobExCV will search in 20 job boards, will aggregate the job results in a single dashboard.
+          </p>
+        </section>
+
+        {/* Section title */}
+        <section className="max-w-[800px] mx-auto px-6 pt-20 pb-10">
+          <h2 className="text-[28px] md:text-[36px] font-extrabold text-[#1a1a1a] text-center">
+            See Where Each Job Comes From: 2 Easy Ways to Identify the Job Board!
+          </h2>
+        </section>
+
+        {/* Way 1: Filter and View */}
+        <section className="max-w-[1100px] mx-auto px-6 py-14">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="flex-1 space-y-5 max-w-[440px]">
+              <h3 className="text-[24px] md:text-[28px] font-extrabold text-[#1a1a1a]">Filter and View Jobs by Job Board</h3>
+              <p className="text-[#555] text-[15px] leading-relaxed">
+                In the All Matches tab on your JobExCV dashboard, you can use the filters to see jobs from specific job boards. Simply open the filters, select your preferred job board, and instantly view all matching job opportunities from that source. This helps you focus on the platforms you trust the most!
+              </p>
+              <PillButton>Start today</PillButton>
+            </div>
+            <div className="flex-1">
+              <div className="bg-white rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-[#e5e5e5] p-5 min-h-[220px]">
+                <div className="flex gap-2 mb-3">
+                  <div className="px-3 py-1.5 bg-[#f0f0f0] rounded-md text-[12px] text-[#666]">All Boards</div>
+                  <div className="px-3 py-1.5 bg-[#4f8cff]/15 border border-[#4f8cff]/30 rounded-md text-[12px] text-[#4f8cff] font-medium">LinkedIn</div>
+                  <div className="px-3 py-1.5 bg-[#f0f0f0] rounded-md text-[12px] text-[#666]">Indeed</div>
+                  <div className="px-3 py-1.5 bg-[#f0f0f0] rounded-md text-[12px] text-[#666]">Glassdoor</div>
+                </div>
+                <div className="border border-dashed border-[#ccc] rounded-lg p-3">
+                  {[1,2,3].map(i => (
+                    <div key={i} className="flex items-center gap-3 py-2 border-b border-[#f0f0f0] last:border-0">
+                      <div className="w-8 h-8 rounded bg-[#4f8cff]/10 flex items-center justify-center text-[10px] font-bold text-[#4f8cff]">in</div>
+                      <div className="flex-1">
+                        <div className="h-3 w-3/4 bg-[#ddd] rounded mb-1" />
+                        <div className="h-2 w-1/2 bg-[#eee] rounded" />
+                      </div>
+                      <div className="px-2 py-1 bg-[#e8f4ff] rounded text-[10px] text-[#4f8cff]">LinkedIn</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Way 2: Job Posting Details */}
+        <section className="max-w-[1100px] mx-auto px-6 py-14">
+          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+            <div className="flex-1 space-y-5 max-w-[440px]">
+              <h3 className="text-[24px] md:text-[28px] font-extrabold text-[#1a1a1a]">Check the Job Posting Details</h3>
+              <p className="text-[#555] text-[15px] leading-relaxed">
+                When you open a job match in JobExCV, you'll see the job board's name directly in the job details. Along with that, you can find all the important information, including the company name, job title, and full job description. This gives you full transparency on where each opportunity comes from and what it offers.
+              </p>
+              <PillButton>Start today</PillButton>
+            </div>
+            <div className="flex-1">
+              <div className="bg-white rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-[#e5e5e5] p-5 min-h-[220px]">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="h-4 w-48 bg-[#1a1a1a] rounded mb-1.5" />
+                      <div className="h-3 w-32 bg-[#ccc] rounded" />
+                    </div>
+                    <div className="px-3 py-1 bg-[#e8f4ff] rounded-full text-[11px] text-[#4f8cff] font-medium">via Indeed</div>
+                  </div>
+                  <div className="border-t border-[#f0f0f0] pt-3 space-y-2">
+                    <div className="flex gap-4">
+                      <span className="text-[11px] text-[#999] w-20">Company</span>
+                      <div className="h-3 w-28 bg-[#e8e8e8] rounded" />
+                    </div>
+                    <div className="flex gap-4">
+                      <span className="text-[11px] text-[#999] w-20">Location</span>
+                      <div className="h-3 w-36 bg-[#e8e8e8] rounded" />
+                    </div>
+                    <div className="flex gap-4">
+                      <span className="text-[11px] text-[#999] w-20">Job Board</span>
+                      <div className="h-3 w-20 bg-[#4f8cff]/20 rounded" />
+                    </div>
+                  </div>
+                  <div className="border-t border-[#f0f0f0] pt-3">
+                    <div className="h-2 w-full bg-[#f0f0f0] rounded mb-1.5" />
+                    <div className="h-2 w-5/6 bg-[#f0f0f0] rounded mb-1.5" />
+                    <div className="h-2 w-3/4 bg-[#f0f0f0] rounded" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Dark CTA */}
+        <section className="bg-[#1a1a1a] py-16">
+          <div className="max-w-[700px] mx-auto text-center px-6">
+            <h2 className="text-[28px] md:text-[36px] font-extrabold text-white mb-4">
+              Still not convinced? Start with free account!
+            </h2>
+            <p className="text-[#aaa] text-[15px] mb-8 leading-relaxed">
+              JobExCV users get in average 50% more interviews and they spend 10 hours less per week. Start automating your job search today.
+            </p>
+            <PillButton variant="outline-white">Start Free Trial</PillButton>
+            <p className="text-[#888] text-[13px] mt-4">No credit card required</p>
+          </div>
+        </section>
+
+        {/* Bottom CTA */}
+        <section className="bg-[#F0F2F5] py-16 text-center px-6">
+          <h2 className="text-[28px] md:text-[36px] font-extrabold text-[#1a1a1a] mb-6">
+            JobExCV Helps You Find A Job Faster
+          </h2>
+          <PillButton>Get Started Now</PillButton>
+        </section>
       </div>
       <Footer />
     </div>
