@@ -1,6 +1,10 @@
+import Navbar from "@/components/sections/Navbar";
+import Footer from "@/components/sections/Footer";
+
 export default function AiCvBuilderPage() {
   return (
     <div className="bg-[#F4F7F9] min-h-screen">
+      <Navbar />
       <section className="pt-[140px] pb-[60px] md:pb-[80px]">
         <div className="max-w-[1200px] mx-auto px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
