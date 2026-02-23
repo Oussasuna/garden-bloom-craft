@@ -96,14 +96,14 @@ export default function AutoApplyPage() {
           </div>
         </section>
       )}
-      <section className="bg-black py-[80px] lg:py-[100px]">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-            <h2 className="text-white text-[32px] md:text-[42px] font-bold leading-[1.2] max-w-[700px]">Join the JobExCV community. Find your job 3x faster.</h2>
-            <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-8 py-[14px] rounded-[8px] transition-all flex-shrink-0">Sign up</a>
-          </div>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
       
 
 
