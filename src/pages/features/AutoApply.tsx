@@ -5,11 +5,11 @@ import Footer from "@/components/sections/Footer";
 
 export default function AutoApplyPage() {
   const steps = [
-    { title: "Create a Loop & Access Automations", desc: "Begin by creating a new loop in JobExCV. Follow the setup process until you reach the last step, where you can access the Automations tab. This is where you'll activate the Auto Apply feature.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/autoapply1-3.webp" },
-    { title: "Loop Starts Finding Jobs", desc: "Once your loop is set up, JobExCV will begin searching for job listings that match your criteria. It analyzes multiple job boards to ensure you receive relevant opportunities tailored to your preferences.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/autoapply2-4.webp" },
-    { title: "Enable Mass Apply For More Applications", desc: "To increase automation, toggle on the Mass Apply feature in JobExCV. This allows the system to send more applications automatically, increasing your chances of getting interviews faster.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/autoapply3-5.webp" },
-    { title: "Filter & View Applied Jobs", desc: "Head to the 'All Matches' section, apply the right filters and see the jobs where JobExCV has automatically applied on your behalf.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/autoapply4-6.webp" },
-  ];
+  { title: "Create a Loop & Access Automations", desc: "Begin by creating a new loop in JobExCV. Follow the setup process until you reach the last step, where you can access the Automations tab. This is where you'll activate the Auto Apply feature.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/autoapply1-3.webp" },
+  { title: "Loop Starts Finding Jobs", desc: "Once your loop is set up, JobExCV will begin searching for job listings that match your criteria. It analyzes multiple job boards to ensure you receive relevant opportunities tailored to your preferences.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/autoapply2-4.webp" },
+  { title: "Enable Mass Apply For More Applications", desc: "To increase automation, toggle on the Mass Apply feature in JobExCV. This allows the system to send more applications automatically, increasing your chances of getting interviews faster.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/autoapply3-5.webp" },
+  { title: "Filter & View Applied Jobs", desc: "Head to the 'All Matches' section, apply the right filters and see the jobs where JobExCV has automatically applied on your behalf.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/autoapply4-6.webp" }];
+
 
   return (
     <div className="bg-white min-h-screen">
@@ -47,12 +47,12 @@ export default function AutoApplyPage() {
                 <h5 className="text-[14px] font-medium text-[#555555] mb-4">Seriously, there is no tool like JobExCV</h5>
                 <h2 className="text-[36px] md:text-[42px] font-extrabold leading-[1.2] text-black mb-10 tracking-[-0.02em]">The First End To End Job Search Automation Platform</h2>
                 <div className="space-y-0 text-black">
-                  {["Match with hundreds of jobs", "Automatically apply to jobs", "Get statistics and improve your CV"].map((text, i) => (
-                    <div key={i} className="flex items-start gap-4 py-4 border-t border-[#e2e8f0]">
+                  {["Match with hundreds of jobs", "Automatically apply to jobs", "Get statistics and improve your CV"].map((text, i) =>
+                  <div key={i} className="flex items-start gap-4 py-4 border-t border-[#e2e8f0]">
                       <span className="text-[16px] font-medium text-[#555555] underline whitespace-nowrap pt-1">0{i + 1}</span>
                       <span className="text-[18px] font-medium">{text}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
                 <div className="mt-10">
                   <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center px-8 py-[14px] border border-black rounded-[8px] font-semibold text-black transition-all hover:bg-black hover:text-white text-[16px]">Start today</a>
@@ -76,8 +76,8 @@ export default function AutoApplyPage() {
           <h2 className="text-[36px] md:text-[42px] font-bold leading-[1.2] text-black tracking-[-0.02em] max-w-[800px] mx-auto text-center">Check How Our Auto Apply Bot Works</h2>
         </div>
       </section>
-      {steps.map((step, i) => (
-        <section key={i} className="py-[100px] bg-white">
+      {steps.map((step, i) =>
+      <section key={i} className="py-[100px] bg-white">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className={`flex flex-col ${i % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-[30px]`}>
               <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
@@ -95,7 +95,7 @@ export default function AutoApplyPage() {
             </div>
           </div>
         </section>
-      ))}
+      )}
       <section className="bg-black py-[80px] lg:py-[100px]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
@@ -104,16 +104,16 @@ export default function AutoApplyPage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
-        <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-10 leading-tight tracking-[-0.02em]">JobExCV Helps You Find A Job Faster</h2>
-          <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] transition-all hover:opacity-90 group">
-            Join the JobExCV community
-            <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-          </a>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
