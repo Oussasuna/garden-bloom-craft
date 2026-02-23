@@ -87,6 +87,7 @@ export default function AiCvCheckerPage() {
         <h2 className="text-[28px] md:text-[36px] font-bold text-black mb-8 leading-[1.2]">JobExCV Helps You Find A Job Faster</h2>
         <a href="https://app.jobexcv.ai" className="inline-flex items-center bg-black text-white px-6 py-3 rounded-[4px] font-semibold text-[15px] hover:opacity-85 transition-opacity">Get Started Now</a>
       </section>
+      <Footer />
     </div>
   );
 }
