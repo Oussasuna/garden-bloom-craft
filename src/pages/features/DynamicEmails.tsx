@@ -2,93 +2,79 @@ import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
-function PillButton({ children, href = "https://app.jobexcv.ai", variant = "dark" }: { children: React.ReactNode; href?: string; variant?: "dark" | "outline-black" | "outline-white" }) {
-  const base = "inline-flex items-center px-8 py-3.5 rounded-full font-semibold text-[15px] transition-colors";
-  const styles = {
-    dark: "bg-[#1a1a1a] text-white hover:bg-[#333]",
-    "outline-black": "border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white",
-    "outline-white": "border-2 border-white text-white hover:bg-white hover:text-[#1a1a1a]",
-  };
-  return <a href={href} className={`${base} ${styles[variant]}`}>{children}</a>;
-}
-
 function CheckItem({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-start gap-3">
-      <svg className="w-5 h-5 mt-0.5 text-[#1a1a1a] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <svg className="w-5 h-5 mt-0.5 text-black flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <rect x="3" y="3" width="18" height="18" rx="3" />
         <path d="M9 12l2 2 4-4" />
       </svg>
-      <span className="text-[#555] text-[15px] leading-relaxed">{children}</span>
+      <span className="text-[#555555] text-[16px] leading-[1.6]">{children}</span>
     </div>
   );
 }
 
 export default function DynamicEmailsPage() {
   return (
-    <div className="bg-[#F5F7FA] min-h-screen">
+    <div className="bg-white min-h-screen">
       <Navbar />
-      <div className="pt-[100px]">
-        {/* Hero */}
-        <section className="max-w-[900px] mx-auto px-6 text-center pb-8">
-          <h1 className="text-[36px] md:text-[48px] font-extrabold text-[#1a1a1a] leading-[1.12] mb-6">
-            Use Free Personalized Email Templates for Sending Resumes &amp; Cover Letters to Companies for a Job Offer
-          </h1>
-          <p className="text-[#555] text-[16px] md:text-[18px] max-w-[720px] mx-auto mb-8 leading-relaxed">
-            Which are the best email templates (formats, or examples) for sending resumes and cover letters to a company offering your dream job opportunity? JobExCV collects new job opportunities and creates fully personalised emails. No effort required.
-          </p>
-          <PillButton>Let's Get Started your automatic job applications! &nbsp;→</PillButton>
-        </section>
-
-        {/* Email template mockup */}
-        <section className="max-w-[600px] mx-auto px-6 pb-4">
-          <div className="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-[#e5e5e5] overflow-hidden">
-            <div className="p-6 space-y-4">
-              <div>
-                <label className="text-[13px] font-semibold text-[#333] block mb-1">Email subject</label>
-                <div className="border border-[#ddd] rounded-lg px-4 py-2.5 text-[14px] text-[#333]">Opportunities</div>
-              </div>
-              <div>
-                <label className="text-[13px] font-semibold text-[#333] block mb-1">Email body</label>
-                <div className="border border-[#ddd] rounded-lg px-4 py-3 text-[13px] text-[#444] leading-relaxed whitespace-pre-line min-h-[240px]">
-                  {`Hello,\nI checked your website and social profiles recently and I came across your job posting regarding the {{JOB_TITLE}} at {{JOB_LOCATION}}.\n\nI am interested in applying my knowledge in a real project in {{COMPANY_NAME}}.\n\nThanks,\n{{USER_FIRSTNAME}} {{USER_LASTNAME}}`}
-                </div>
-              </div>
-              <button className="bg-[#2563eb] text-white px-6 py-2.5 rounded-lg font-semibold text-[14px] hover:bg-[#1d4ed8] transition-colors">Save</button>
-            </div>
+      <section className="relative pt-[120px] pb-0 overflow-hidden bg-white">
+        <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+          <div className="flex flex-col items-center text-center max-w-[1000px] mx-auto mb-[60px]">
+            <h1 className="text-[36px] md:text-[48px] font-extrabold text-black leading-[1.12] mb-6 tracking-[-0.02em]">
+              Use Free Personalized Email Templates for Sending Resumes &amp; Cover Letters to Companies for a Job Offer
+            </h1>
+            <p className="text-[#555555] text-[18px] max-w-[800px] mx-auto mb-10 leading-[1.6]">
+              Which are the best email templates (formats, or examples) for sending resumes and cover letters to a company offering your dream job opportunity? JobExCV collects new job opportunities and creates fully personalised emails. No effort required.
+            </p>
+            <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[18px] transition-all hover:opacity-90 group">
+              Let's Get Started your automatic job applications! &nbsp;→
+            </a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Variables banner */}
-        <section className="bg-gradient-to-r from-[#d6dfe8] to-[#b8c5d3] py-6 mt-6">
-          <div className="max-w-[800px] mx-auto text-center px-6">
-            <p className="text-[#333] text-[15px] font-medium">
+      <section className="max-w-[600px] mx-auto px-6 pb-4">
+        <div className="bg-white rounded-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-[#E2E8F0] overflow-hidden">
+          <div className="p-6 space-y-4">
+            <div>
+              <label className="text-[13px] font-semibold text-black block mb-1">Email subject</label>
+              <div className="border border-[#E2E8F0] rounded-[8px] px-4 py-2.5 text-[14px] text-black">Opportunities</div>
+            </div>
+            <div>
+              <label className="text-[13px] font-semibold text-black block mb-1">Email body</label>
+              <div className="border border-[#E2E8F0] rounded-[8px] px-4 py-3 text-[13px] text-[#555555] leading-relaxed whitespace-pre-line min-h-[240px]">
+                {`Hello,\nI checked your website and social profiles recently and I came across your job posting regarding the {{JOB_TITLE}} at {{JOB_LOCATION}}.\n\nI am interested in applying my knowledge in a real project in {{COMPANY_NAME}}.\n\nThanks,\n{{USER_FIRSTNAME}} {{USER_LASTNAME}}`}
+              </div>
+            </div>
+            <button className="bg-black text-white px-6 py-2.5 rounded-[8px] font-semibold text-[14px] hover:opacity-90 transition-all">Save</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-[60px] bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="bg-white border border-[#E2E8F0] shadow-[0_10px_30px_rgba(0,0,0,0.05)] rounded-[12px] py-10 px-6 max-w-[1000px] mx-auto text-center">
+            <p className="text-[18px] text-[#555555] max-w-[700px] mx-auto font-medium">
               Use variables to create fully personalised emails with our free automated job application templates, approaching every company with a different email.
             </p>
-            <p className="text-[#444] text-[14px] mt-1">Approaching every company with a different email.</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Social proof */}
-        <section className="max-w-[800px] mx-auto px-6 py-12 text-center">
-          <p className="text-[15px] text-[#555] mb-8">
-            Find below a response a job applicant and user of one of our free email templates received recently :)
-          </p>
-          <p className="text-[16px] font-bold text-[#1a1a1a] mt-8">Our users have super powers!</p>
-        </section>
+      <section className="max-w-[800px] mx-auto px-6 py-12 text-center">
+        <p className="text-[18px] text-[#555555] mb-8 leading-[1.6]">
+          Find below a response a job applicant and user of one of our free email templates received recently :)
+        </p>
+        <p className="text-[18px] font-bold text-black mt-8">Our users have super powers!</p>
+      </section>
 
-        {/* Auto applier CTA */}
-        <section className="max-w-[800px] mx-auto px-6 pb-8 text-center">
-          <p className="text-[18px] font-bold text-[#1a1a1a]">
-            Looking for an Automatic Job applier to auto-fill job application forms?
-          </p>
-        </section>
-
-        {/* How templates help + feature cards */}
-        <section className="max-w-[1100px] mx-auto px-6 py-16">
+      <section className="py-[100px] bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="flex-1 space-y-5">
-              <h2 className="text-[28px] md:text-[32px] font-extrabold text-[#1a1a1a] leading-tight">
+              <h5 className="text-[14px] font-medium text-[#555555] mb-4">Looking for an Automatic Job applier to auto-fill job application forms?</h5>
+              <h2 className="text-[36px] md:text-[42px] font-extrabold text-black leading-[1.2] mb-10 tracking-[-0.02em]">
                 How email templates can help you get closer to your dream job
               </h2>
               <div className="space-y-4 pt-2">
@@ -96,62 +82,65 @@ export default function DynamicEmailsPage() {
                 <CheckItem>You can send fully personalised emails using our email variables like {"{{ this }}"}</CheckItem>
                 <CheckItem>In our dashboard your can track email open ratio, and optimize your emails</CheckItem>
               </div>
-              <div className="pt-2">
-                <PillButton>Start today</PillButton>
+              <div className="mt-10">
+                <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center px-8 py-[14px] border border-black rounded-[8px] font-semibold text-black transition-all hover:bg-black hover:text-white text-[16px]">Start today</a>
               </div>
             </div>
             <div className="flex-1 flex gap-4">
-              <div className="flex-1 bg-white rounded-xl p-6 shadow-sm border border-[#e5e5e5] flex flex-col">
-                <div className="w-10 h-10 rounded-lg bg-[#E8EDF2] flex items-center justify-center mb-4">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#555" strokeWidth={2}>
+              <div className="flex-1 bg-white rounded-[12px] p-8 shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-[#E2E8F0] flex flex-col">
+                <div className="w-12 h-12 mb-6 flex items-center justify-center bg-[#F0F2F5] rounded-[10px]">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="black" strokeWidth={2}>
                     <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h4 className="font-bold text-[15px] text-[#1a1a1a] mb-2">Send daily emails</h4>
-                <p className="text-[#666] text-[13px] leading-relaxed">
+                <h4 className="font-bold text-[18px] text-black mb-2">Send daily emails</h4>
+                <p className="text-[#555555] text-[16px] leading-[1.6]">
                   JobExCV collects jobs and finds the email of the company automatically. Then using your own email template for a specific job search, JobExCV sends your email and your CV attached.
                 </p>
               </div>
               <div className="flex-1 flex flex-col gap-4">
-                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#e5e5e5] flex-1">
-                  <h4 className="font-bold text-[14px] text-[#1a1a1a] mb-1">Stand out between candidates</h4>
-                  <p className="text-[#666] text-[12px] leading-relaxed">
+                <div className="bg-white rounded-[12px] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-[#E2E8F0] flex-1">
+                  <h4 className="font-bold text-[16px] text-black mb-1">Stand out between candidates</h4>
+                  <p className="text-[#555555] text-[14px] leading-[1.6]">
                     Keep track of all the important KPIs in your organization across departments, employees, projects, and campaigns.
                   </p>
                 </div>
-                <div className="bg-white rounded-xl p-5 shadow-sm border border-[#e5e5e5] flex-1">
-                  <h4 className="font-bold text-[14px] text-[#1a1a1a] mb-1">Write unique emails</h4>
-                  <p className="text-[#666] text-[12px] leading-relaxed">
+                <div className="bg-white rounded-[12px] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-[#E2E8F0] flex-1">
+                  <h4 className="font-bold text-[16px] text-black mb-1">Write unique emails</h4>
+                  <p className="text-[#555555] text-[14px] leading-[1.6]">
                     Using JobExCV you can fully optimize your writing, testing various email templates and A/B testing them.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Dark CTA */}
-        <section className="bg-[#1a1a1a] py-16">
-          <div className="max-w-[700px] mx-auto text-center px-6">
-            <h2 className="text-[28px] md:text-[36px] font-extrabold text-white mb-4">
-              Still Not Convinced? Test your Job Closing Rate With a Free Trial of our Personalised &amp; Professional Email Templates!
-            </h2>
-            <p className="text-[#aaa] text-[15px] mb-8 leading-relaxed">
-              JobExCV users get in average 50% more interviews and they spend 10 hours less per week. Start automating your job search today.
-            </p>
-            <PillButton variant="outline-white">Start Free Trial</PillButton>
-            <p className="text-[#888] text-[13px] mt-4">No credit card required</p>
-          </div>
-        </section>
+      <section className="bg-black py-[80px] lg:py-[100px]">
+        <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
+          <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">
+            Still Not Convinced? Test your Job Closing Rate With a Free Trial of our Personalised &amp; Professional Email Templates!
+          </h2>
+          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">
+            JobExCV users get in average 50% more interviews and they spend 10 hours less per week. Start automating your job search today.
+          </p>
+          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-8 py-[14px] rounded-[8px] transition-colors">Start Free Trial</a>
+          <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
+        </div>
+      </section>
 
-        {/* Bottom CTA */}
-        <section className="bg-[#F0F2F5] py-16 text-center px-6">
-          <h2 className="text-[28px] md:text-[36px] font-extrabold text-[#1a1a1a] mb-6">
+      <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
+        <div className="max-w-[800px] mx-auto">
+          <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-10 leading-tight tracking-[-0.02em]">
             JobExCV Helps You Find A Job Faster
           </h2>
-          <PillButton>Get Started Now</PillButton>
-        </section>
-      </div>
+          <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] transition-all hover:opacity-90 group">
+            Get Started Now
+            <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+          </a>
+        </div>
+      </section>
       <Footer />
     </div>
   );

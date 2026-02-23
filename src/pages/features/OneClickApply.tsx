@@ -20,7 +20,7 @@ export default function OneClickApplyPage() {
                       <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
                       </div>
-                      <span className="text-[16px] text-[#333333] leading-[1.5]">{text}</span>
+                      <span className="text-[16px] text-black leading-[1.5]">{text}</span>
                     </div>
                   ))}
                 </div>
@@ -51,11 +51,11 @@ export default function OneClickApplyPage() {
         </div>
       </section>
 
-      <section className="py-[80px] bg-white">
+      <section className="py-[100px] bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-[60px]">
             <div className="w-full lg:w-1/2">
-              <div className="rounded-[12px] overflow-hidden border border-[#e2e8f0] shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+              <div className="rounded-[12px] overflow-hidden border border-[#E2E8F0] shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
                 <img src="https://www.loopcv.pro/assets/images/screens/manual.webp" alt="Dashboard showing job application details" className="w-full h-auto object-cover" />
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function OneClickApplyPage() {
         </div>
       </section>
 
-      <section className="py-[80px] bg-white">
+      <section className="py-[100px] bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -78,7 +78,7 @@ export default function OneClickApplyPage() {
               { icon: <Star size={24} strokeWidth={2} className="text-black" />, title: "Rate your job matches", desc: "By rating job postings, you help our search algorithm find you even better matches tailored to your preferences and career goals." },
               { icon: <LayoutDashboard size={24} strokeWidth={2} className="text-black" />, title: "Organize your job search", desc: "All interesting positions from multiple job boards can be saved in our dashboard so you can evaluate them later and stay organized." },
             ].map((card, i) => (
-              <div key={i} className="bg-white rounded-[12px] p-8 border border-[#e2e8f0] shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-shadow">
+              <div key={i} className="bg-white rounded-[12px] p-8 border border-[#E2E8F0] shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-shadow">
                 <div className="w-12 h-12 mb-6 flex items-center justify-center bg-[#F0F2F5] rounded-[10px]">{card.icon}</div>
                 <h3 className="text-[20px] font-bold text-black leading-[1.3] mb-3">{card.title}</h3>
                 <p className="text-[16px] text-[#555555] leading-[1.6]">{card.desc}</p>
