@@ -5,6 +5,7 @@ import Footer from "@/components/sections/Footer";
 export default function AiCvCheckerPage() {
   return (
     <div className="bg-white min-h-screen">
+      <Navbar />
       <section className="relative overflow-hidden bg-white pt-[140px] pb-0">
         <div className="max-w-[1140px] mx-auto px-4 text-center">
           <h1 className="text-[32px] md:text-[48px] font-extrabold leading-[1.15] tracking-[-0.02em] text-black mb-6 max-w-[900px] mx-auto">Best AI CV checker to improve your resume with AI</h1>
