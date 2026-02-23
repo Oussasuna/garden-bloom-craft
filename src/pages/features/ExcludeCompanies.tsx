@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "@/components/sections/Navbar";
+import Footer from "@/components/sections/Footer";
 
 /* ── Shared UI ── */
 function PillButton({
@@ -109,7 +111,9 @@ function EditLoopMockup() {
 
 export default function ExcludeCompaniesPage() {
   return (
-    <div className="bg-[#F5F7FA] min-h-screen pt-[100px]">
+    <div className="bg-[#F5F7FA] min-h-screen">
+      <Navbar />
+      <div className="pt-[100px]">
       <section className="bg-[#1e293b] pt-16 pb-0">
         <div className="max-w-[780px] mx-auto px-6 text-center pb-10">
           <h1 className="text-[32px] md:text-[44px] font-extrabold text-white leading-[1.15] mb-5 tracking-tight">Exclude companies from your automated job search</h1>
@@ -162,6 +166,8 @@ export default function ExcludeCompaniesPage() {
         <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1a1a1a] mb-6">JobExCV Helps You Find A Job Faster</h2>
         <PillButton>Get Started Now</PillButton>
       </section>
+      </div>
+      <Footer />
     </div>
   );
 }
