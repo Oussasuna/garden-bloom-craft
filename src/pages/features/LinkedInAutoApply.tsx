@@ -18,7 +18,7 @@ export default function LinkedInAutoApplyPage() {
           <div className="relative w-full max-w-[1000px] mx-auto">
             <div className="bg-white rounded-[12px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-[#E2E8F0] py-16 px-8 max-w-[600px] mx-auto flex items-center justify-center gap-0">
               <div className="w-[80px] h-[80px] rounded-full bg-black flex items-center justify-center flex-shrink-0"><span className="text-white text-[24px] font-extrabold">JX</span></div>
-              <div className="flex-1 max-w-[160px] relative flex items-center justify-center mx-4"><div className="w-full border-t-2 border-dashed border-[#555555]"/></div>
+              <div className="flex-1 max-w-[160px] relative flex items-center justify-center mx-4"><div className="w-full border-t-2 border-dashed border-[#555555]" /></div>
               <div className="w-[100px] h-[100px] rounded-[12px] bg-[#0077B5] flex items-center justify-center flex-shrink-0"><span className="text-white text-[48px] font-bold leading-none">in</span></div>
             </div>
           </div>
@@ -39,12 +39,12 @@ export default function LinkedInAutoApplyPage() {
               <div className="max-w-[650px]">
                 <h2 className="text-[36px] md:text-[42px] font-extrabold leading-[1.2] text-black mb-10 tracking-[-0.02em]">Elevate Your Workflow With Our LinkedIn Extension.</h2>
                 <div className="space-y-0 text-black">
-                  {["Simplify your workflow by automating this time-consuming task effortlessly.","View detailed summaries of application attempts for quick review.","Answer questions interactively, allowing the extension to fill in details."].map((text, i) => (
-                    <div key={i} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
+                  {["Simplify your workflow by automating this time-consuming task effortlessly.", "View detailed summaries of application attempts for quick review.", "Answer questions interactively, allowing the extension to fill in details."].map((text, i) =>
+                  <div key={i} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
                       <span className="text-[16px] font-medium text-[#555555] underline whitespace-nowrap pt-1">0{i + 1}</span>
                       <span className="text-[18px] font-medium">{text}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
                 <div className="mt-10">
                   <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center px-8 py-[14px] border border-black rounded-[8px] font-semibold text-black transition-all hover:bg-black hover:text-white text-[16px]">Start today</a>
@@ -86,14 +86,14 @@ export default function LinkedInAutoApplyPage() {
         </div>
       </section>
 
-      <section className="bg-black py-[80px] lg:py-[100px]">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">Still Not Convinced? Start With Free Account!</h2>
-          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">JobExCV users get in average 50% more interviews.</p>
-          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-8 py-[14px] rounded-[8px] transition-colors">Start Free Trial</a>
-          <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
 
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
@@ -105,6 +105,6 @@ export default function LinkedInAutoApplyPage() {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
