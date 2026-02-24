@@ -139,12 +139,12 @@ export default function AiCoverLetterPage() {
 
 
 
-      <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
-        <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-10 leading-tight tracking-[-0.02em]">JobExCV Helps You Find A Job Faster</h2>
-          <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] hover:opacity-90 transition-all">Get Started Now</a>
-        </div>
-      </section>
+      
+
+
+
+
+
       <Footer />
     </div>);
 
