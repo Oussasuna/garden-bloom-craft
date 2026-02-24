@@ -1,341 +1,261 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import {
+  Zap, Target, Shield, TrendingUp,
+  CheckCircle2, XCircle, ArrowRight,
+  Globe, Users, Star, Briefcase
+} from "lucide-react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
-import { Check, X, Zap, Settings, TrendingUp, Lightbulb, Eye, Heart, Target } from "lucide-react";
-import { motion } from "framer-motion";
 
-/* ─── Animated Counter ─── */
-function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
+function useCounter(end: number, started: boolean) {
   const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const started = useRef(false);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          const duration = 1600;
-          const steps = 50;
-          const increment = target / steps;
-          let current = 0;
-          const interval = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-              setCount(target);
-              clearInterval(interval);
-            } else {
-              setCount(Math.floor(current));
-            }
-          }, duration / steps);
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [target]);
-
-  return <div ref={ref}>+{count.toLocaleString()}{suffix}</div>;
+    if (!started) return;
+    let raf: number;
+    const t0 = performance.now();
+    const run = (now: number) => {
+      const p = Math.min((now - t0) / 2000, 1);
+      setCount(Math.round((1 - Math.pow(1 - p, 3)) * end));
+      if (p < 1) raf = requestAnimationFrame(run);
+    };
+    raf = requestAnimationFrame(run);
+    return () => cancelAnimationFrame(raf);
+  }, [end, started]);
+  return count;
 }
 
-/* ─── Section wrapper ─── */
-const Section = ({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) => (
-  <motion.section
-    id={id}
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-60px" }}
-    transition={{ duration: 0.6, ease: "easeOut" }}
-    className={className}
-  >
-    {children}
-  </motion.section>
-);
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i = 0) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.5, delay: i * 0.1, ease: "easeOut" as const }
+  })
+};
 
-/* ─── Data ─── */
-const stats = [
-  { value: 500000, suffix: "", label: "Daily jobs collected" },
-  { value: 3500, suffix: "", label: "Average daily interviews booked" },
-  { value: 18000, suffix: "", label: "Average company emails found" },
-  { value: 30, suffix: "+", label: "Connected platforms and job boards" },
-];
-
-const comparisonRows = [
-  "Auto-apply to jobs",
-  "AI resume optimization",
-  "Interview preparation",
-  "Application tracking",
-  "Recruiter email finder",
-  "Job matching AI",
-  "Cover letter generator",
-];
-
-const values = [
-  { icon: Lightbulb, title: "Innovation", description: "We constantly push the boundaries of AI technology to give job seekers a real edge.", num: "01" },
-  { icon: Eye, title: "Simplicity", description: "We make complex job searching simple and accessible for everyone.", num: "02" },
-  { icon: Heart, title: "Transparency", description: "No hidden fees, no surprises — just results you can count on.", num: "03" },
-  { icon: Target, title: "Impact", description: "Every feature we build helps someone land their dream job faster.", num: "04" },
-];
-
-const whyCards = [
-  { icon: Zap, title: "Job Matching", description: "Based on your CV and your job search criteria, we identify the jobs that match your profile." },
-  { icon: Settings, title: "Flexible Settings", description: "From our dashboard you can configure your job search criteria to fit your needs." },
-  { icon: TrendingUp, title: "Great Opportunities", description: "JobExCV brings more opportunities to your table with no effort required." },
-];
+function StatCard({ value, label, icon: Icon, suffix = "", started, index }: { value: number; label: string; icon: React.ElementType; suffix?: string; started: boolean; index: number }) {
+  const count = useCounter(value, started);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={started ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center"
+    >
+      <Icon className="w-5 h-5 text-gray-400 mx-auto mb-3" />
+      <div className="text-3xl md:text-4xl font-black text-black">
+        +{count.toLocaleString()}{suffix}
+      </div>
+      <div className="mt-1.5 text-xs text-gray-500 leading-tight">{label}</div>
+    </motion.div>
+  );
+}
 
 export default function AboutPage() {
+  const statsRef = useRef(null);
+  const statsIn = useInView(statsRef, { once: true, margin: "-80px" });
+  const [hovered, setHovered] = useState<number | null>(null);
+
+  const stats = [
+    { value: 500000, label: "Daily jobs collected", icon: Globe },
+    { value: 3500, label: "Daily interviews booked", icon: Users },
+    { value: 18000, label: "Company emails found", icon: Briefcase },
+    { value: 30, label: "Connected platforms", icon: Star, suffix: "+" },
+  ];
+
+  const tableRows: [string, boolean | string, boolean | string][] = [
+    ["Auto-apply to jobs", false, true],
+    ["AI resume optimization", false, true],
+    ["Interview preparation", false, true],
+    ["Application tracking", false, true],
+    ["Recruiter email finder", false, true],
+    ["Job matching AI", false, true],
+    ["Cover letter generator", false, true],
+    ["Time spent", "10+ hrs/week", "10 min/week"],
+  ];
+
+  const values = [
+    { num: "01", icon: Zap, title: "Innovation", desc: "We constantly push AI boundaries to give job seekers a real edge." },
+    { num: "02", icon: Target, title: "Simplicity", desc: "If it takes more than 3 clicks, we redesign it." },
+    { num: "03", icon: Shield, title: "Transparency", desc: "No hidden fees, no surprises. Just results you can count on." },
+    { num: "04", icon: TrendingUp, title: "Impact", desc: "Every feature we ship helps someone land their dream job." },
+  ];
+
   return (
-    <div className="bg-white min-h-screen overflow-hidden">
+    <div className="bg-white text-black font-sans antialiased min-h-screen">
       <Navbar />
 
-      {/* ── 1. HERO ── */}
-      <section className="relative pt-[140px] pb-[100px]" style={{ background: "linear-gradient(180deg, #f8fafc 0%, #f0f4ff 40%, #ffffff 100%)" }}>
-        {/* Decorative quote */}
-        <div className="absolute top-[80px] left-1/2 -translate-x-1/2 text-[320px] font-serif text-[#f0f0f0] leading-none select-none pointer-events-none" aria-hidden="true">
-          &ldquo;
-        </div>
-        <div className="relative max-w-[700px] mx-auto px-6 text-center">
-          <h1 className="text-[48px] md:text-[64px] font-black text-[#0f0f0f] leading-[1.08] tracking-[-2px] mb-10">
-            Learn more about{" "}
-            <span className="relative inline-block">
-              JobexCV
-              <motion.span
-                className="absolute bottom-0 left-0 h-[3px] bg-[#0f0f0f] rounded-full"
-                initial={{ width: "0%" }}
-                whileInView={{ width: "100%" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              />
-            </span>
-          </h1>
-          <div className="max-w-[600px] mx-auto space-y-5">
-            <p className="text-[18px] text-[#71717a] leading-[1.8]">
-              JobexCV is the first AI platform that completely automates the job search.
-            </p>
-            <p className="text-[18px] text-[#71717a] leading-[1.8]">
-              JobexCV started from our desire to help students and job seekers find jobs without spending hours searching and filling forms. We built our first solution and launched it to help thousands of people land their dream jobs faster.
-            </p>
-            <p className="text-[18px] text-[#71717a] leading-[1.8]">
-              We have a remote-only culture and we share our passion of making the job search simple for everyone.
-            </p>
-          </div>
+      {/* ── HERO ── */}
+      <section className="max-w-3xl mx-auto px-6 pt-28 pb-20 text-center">
+        <motion.p
+          variants={fadeUp} initial="hidden" animate="visible"
+          className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4"
+        >
+          About Us
+        </motion.p>
+        <motion.h1
+          variants={fadeUp} initial="hidden" animate="visible" custom={1}
+          className="text-5xl md:text-6xl font-black tracking-tight leading-[1.05] mb-6"
+        >
+          Learn more about JobexCV
+        </motion.h1>
+        <motion.div
+          variants={fadeUp} initial="hidden" animate="visible" custom={2}
+          className="space-y-4 text-gray-500 text-lg leading-relaxed"
+        >
+          <p>JobexCV is the first AI platform that completely automates the job search.</p>
+          <p>
+            We started from a simple frustration — spending hours filling forms that lead nowhere.
+            So we built a smarter way: upload your CV, set your preferences, and let AI do the rest.
+          </p>
+          <p>
+            Today we help thousands of job seekers worldwide find jobs faster, with less stress
+            and more confidence.
+          </p>
+        </motion.div>
+        <motion.a
+          variants={fadeUp} initial="hidden" animate="visible" custom={3}
+          href="https://app.jobexcv.ai"
+          whileHover={{ scale: 1.04 }}
+          whileTap={{ scale: 0.97 }}
+          className="inline-flex items-center gap-2 mt-10 bg-black text-white font-bold px-7 py-3.5 rounded-full text-sm hover:bg-gray-900 transition-colors duration-200"
+        >
+          Get started free <ArrowRight className="w-4 h-4" />
+        </motion.a>
+      </section>
+
+      <hr className="border-gray-100 max-w-5xl mx-auto" />
+
+      {/* ── STATS ── */}
+      <section ref={statsRef} className="bg-gray-50 py-20 px-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+          {stats.map((s, i) => (
+            <StatCard key={i} {...s} started={statsIn} index={i} />
+          ))}
         </div>
       </section>
 
-      {/* ── 2. STATS ── */}
-      <Section className="py-[120px] bg-[#0f0f0f]">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {stats.map((s, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.12, duration: 0.5 }}
-                className={`text-center py-8 px-4 ${i < stats.length - 1 ? "md:border-r md:border-white/10" : ""}`}
-              >
-                <div className="text-[40px] md:text-[56px] font-black text-white leading-none tracking-tight">
-                  <AnimatedCounter target={s.value} suffix={s.suffix} />
-                </div>
-                <p className="text-[13px] md:text-[14px] text-[#9ca3af] mt-4 uppercase tracking-[0.1em]">{s.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </Section>
+      <hr className="border-gray-100 max-w-5xl mx-auto" />
 
-      {/* Divider */}
-      <div className="h-px bg-[#e4e4e7]" />
-
-      {/* ── 3. WHAT WE DO BEST ── */}
-      <Section className="py-[120px]">
-        <div className="max-w-[1100px] mx-auto px-6 relative">
-          {/* Background number */}
-          <div className="absolute top-0 left-6 text-[180px] font-black text-[#f3f4f6] leading-none select-none pointer-events-none" aria-hidden="true">01</div>
-          <div className="relative flex flex-col lg:flex-row gap-0">
-            <div className="flex-1 pr-0 lg:pr-12">
-              <div className="border-l-4 border-[#3b82f6] pl-6">
-                <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#71717a] mb-4">What We Do Best</p>
-                <h2 className="text-[34px] md:text-[42px] font-extrabold text-[#0f0f0f] leading-[1.15] tracking-[-0.02em]">
-                  Getting You Closer To Your Dream Job
-                </h2>
-              </div>
-            </div>
-            {/* Vertical divider */}
-            <div className="hidden lg:block w-px bg-[#e4e4e7] mx-0" />
-            <div className="flex-1 pl-0 lg:pl-12 mt-8 lg:mt-0 space-y-5">
-              <p className="text-[16px] text-[#71717a] leading-[1.8]">
-                The only thing we want to do is bring you closer to your perfect opportunity without you having to spend your full day submitting forms and copy-pasting.
-              </p>
-              <p className="text-[16px] text-[#71717a] leading-[1.8]">
-                We are a new platform that wants to give the opportunity and the power to the job seekers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      <div className="h-px bg-[#e4e4e7]" />
-
-      {/* ── 4. COMPARISON TABLE ── */}
-      <Section className="py-[120px] bg-[#f9fafb]">
-        <div className="max-w-[960px] mx-auto px-6">
-          <h2 className="text-[34px] md:text-[42px] font-extrabold text-[#0f0f0f] text-center mb-14 tracking-[-0.02em]">
-            Why JobexCV vs Traditional Job Search
+      {/* ── WHAT WE DO ── */}
+      <section className="max-w-5xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-start">
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">What We Do Best</p>
+          <h2 className="text-4xl font-black leading-tight tracking-tight">
+            Getting You Closer To<br />Your Dream Job
           </h2>
-          <div className="overflow-x-auto rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-[#e4e4e7]">
-            <table className="w-full text-[15px]">
-              <thead>
-                <tr className="bg-[#0f0f0f]">
-                  <th className="px-7 py-5 text-left text-white font-bold rounded-tl-2xl">Feature</th>
-                  <th className="px-7 py-5 text-center text-white font-bold">Traditional Job Search</th>
-                  <th className="px-7 py-5 text-center text-white font-bold rounded-tr-2xl">JobexCV</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonRows.map((row, i) => (
-                  <tr key={i} className="group hover:bg-[#f0f0f0] transition-colors duration-200 border-b border-[#f0f0f0]">
-                    <td className="px-7 py-[18px] text-[#0f0f0f] font-semibold">{row}</td>
-                    <td className="px-7 py-[18px] text-center bg-[#fff5f5] group-hover:bg-red-100/60 transition-colors duration-200">
-                      <X size={20} className="inline text-red-500" />
-                    </td>
-                    <td className="px-7 py-[18px] text-center bg-[#f0fdf4] group-hover:bg-green-100/60 transition-colors duration-200">
-                      <Check size={20} className="inline text-green-600" />
-                    </td>
-                  </tr>
-                ))}
-                <tr className="group hover:bg-[#f0f0f0] transition-colors duration-200">
-                  <td className="px-7 py-[18px] text-[#0f0f0f] font-semibold rounded-bl-2xl">Time spent</td>
-                  <td className="px-7 py-[18px] text-center bg-[#fff5f5] group-hover:bg-red-100/60 transition-colors duration-200">
-                    <span className="font-bold text-red-600">10+ hours/week</span>
-                  </td>
-                  <td className="px-7 py-[18px] text-center bg-[#f0fdf4] group-hover:bg-green-100/60 transition-colors duration-200 rounded-br-2xl">
-                    <span className="font-bold text-green-700">10 minutes/week</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </Section>
-
-      <div className="h-px bg-[#e4e4e7]" />
-
-      {/* ── 5. WHY JOBEXCV CARDS ── */}
-      <Section className="py-[120px]">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <h2 className="text-[34px] md:text-[42px] font-extrabold text-[#0f0f0f] mb-14 tracking-[-0.02em] max-w-[600px]">
-            Check Why JobexCV Is The Best AI Job Search Platform In The Market.
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
-            {whyCards.map((c, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.12, duration: 0.5 }}
-                className="group relative bg-white rounded-2xl border border-[#e4e4e7] p-8 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 overflow-hidden"
-              >
-                {/* Bottom border fill on hover */}
-                <div className="absolute bottom-0 left-0 w-full h-[3px] bg-[#3b82f6] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <div className="w-12 h-12 rounded-xl bg-[#f4f4f5] flex items-center justify-center mb-6">
-                  <c.icon size={24} className="text-[#0f0f0f]" />
-                </div>
-                <h3 className="text-[20px] font-bold text-[#0f0f0f] mb-3">{c.title}</h3>
-                <p className="text-[15px] text-[#71717a] leading-[1.65]">{c.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      <div className="h-px bg-[#e4e4e7]" />
-
-      {/* ── 6. MISSION ── */}
-      <Section className="py-[120px] relative overflow-hidden">
-        {/* Decorative blob */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#f3f4f6] blur-3xl opacity-60 pointer-events-none" aria-hidden="true" />
-        <div className="relative max-w-[900px] mx-auto px-6">
-          <h2 className="text-[32px] md:text-[40px] font-extrabold text-[#0f0f0f] leading-[1.18] tracking-[-0.02em] mb-14 text-center max-w-[700px] mx-auto">
-            Automate Your Job Search – Focus On Preparing, Let JobexCV Find The Opportunities
-          </h2>
-          <div className="flex flex-col md:flex-row gap-0">
-            <div className="flex-1 pr-0 md:pr-10">
-              <p className="text-[16px] text-[#71717a] leading-[1.8]">
-                JobexCV is the first platform that fully automates your job search and application process. It was born from the simple frustration of spending countless hours applying to jobs manually. Since launch, we've been building and improving JobexCV with feedback from real users — starting from a small community to now thousands of job seekers using our service every day.
-              </p>
-            </div>
-            {/* Vertical divider */}
-            <div className="hidden md:block w-px bg-[#e4e4e7] mx-0" />
-            <div className="flex-1 pl-0 md:pl-10 mt-6 md:mt-0">
-              <p className="text-[16px] text-[#71717a] leading-[1.8]">
-                With just a few steps — uploading your CV and setting your job preferences — you can create an automated cycle that searches for relevant job listings, tailors your applications, and submits them daily on your behalf. JobexCV also enables you to send personalized emails to recruiters, track your job applications, and optimize your CV using AI-powered feedback. You stay focused on preparing — JobexCV takes care of the repetitive tasks.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      <div className="h-px bg-[#e4e4e7]" />
-
-      {/* ── 7. VALUES ── */}
-      <Section className="py-[120px] bg-[#f9fafb]">
-        <div className="max-w-[960px] mx-auto px-6">
-          <h2 className="text-[34px] md:text-[42px] font-extrabold text-[#0f0f0f] text-center mb-14 tracking-[-0.02em]">
-            Our Values
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-            {values.map((v, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.45 }}
-                className="relative rounded-xl p-8 border border-[#e4e4e7] border-l-4 border-l-[#0f0f0f] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                style={{ background: "linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)" }}
-              >
-                {/* Corner number */}
-                <span className="absolute top-5 right-6 text-[60px] font-black text-[#f0f0f0] leading-none select-none pointer-events-none" aria-hidden="true">
-                  {v.num}
-                </span>
-                <div className="relative">
-                  <v.icon size={40} className="text-[#0f0f0f] mb-5" strokeWidth={1.5} />
-                  <h3 className="text-[20px] font-bold text-[#0f0f0f] mb-3">{v.title}</h3>
-                  <p className="text-[15px] text-[#71717a] leading-[1.65]">{v.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* ── 8. BOTTOM CTA ── */}
-      <section className="relative py-[120px] bg-[#0f0f0f] overflow-hidden">
-        {/* Dot pattern */}
-        <div className="absolute inset-0 opacity-[0.04]" style={{
-          backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)",
-          backgroundSize: "24px 24px"
-        }} aria-hidden="true" />
+        </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative max-w-[650px] mx-auto px-6 text-center"
+          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1}
+          className="space-y-5 text-gray-500 leading-relaxed text-base pt-1"
         >
-          <h2 className="text-[40px] md:text-[48px] font-black text-white mb-10 tracking-[-0.02em] leading-[1.1]">
+          <p>
+            The only thing we want to do is bring you closer to your perfect opportunity —
+            without spending your full day submitting forms and copy-pasting.
+          </p>
+          <p>
+            We give the power back to job seekers. Start from scratch or upload your existing CV
+            and let our AI handle the heavy lifting.
+          </p>
+        </motion.div>
+      </section>
+
+      <hr className="border-gray-100 max-w-5xl mx-auto" />
+
+      {/* ── COMPARISON TABLE ── */}
+      <section className="py-24 px-6 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-10 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">The Difference</p>
+            <h2 className="text-4xl font-black tracking-tight">JobexCV vs Traditional Search</h2>
+          </motion.div>
+          <motion.div
+            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
+            className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm"
+          >
+            <div className="grid grid-cols-3 bg-black text-white text-xs font-bold uppercase tracking-wider">
+              <div className="px-6 py-4">Feature</div>
+              <div className="px-6 py-4 text-center border-l border-white/10 text-gray-400">Traditional</div>
+              <div className="px-6 py-4 text-center border-l border-white/10 text-green-400">JobexCV</div>
+            </div>
+            {tableRows.map(([feat, trad, jobex], i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                onHoverStart={() => setHovered(i)}
+                onHoverEnd={() => setHovered(null)}
+                className={`grid grid-cols-3 border-t border-gray-100 transition-colors duration-150 ${hovered === i ? "bg-gray-50" : "bg-white"}`}
+              >
+                <div className="px-6 py-4 text-sm font-medium text-gray-800">{feat}</div>
+                <div className="px-6 py-4 flex justify-center items-center border-l border-gray-100">
+                  {typeof trad === "boolean"
+                    ? <XCircle className="w-5 h-5 text-red-400" />
+                    : <span className="text-xs font-semibold text-red-500 bg-red-50 px-2.5 py-1 rounded-full">{trad}</span>}
+                </div>
+                <div className="px-6 py-4 flex justify-center items-center border-l border-gray-100 bg-green-50/40">
+                  {typeof jobex === "boolean"
+                    ? <CheckCircle2 className="w-5 h-5 text-green-500" />
+                    : <span className="text-xs font-bold text-green-700 bg-green-100 px-2.5 py-1 rounded-full">{jobex}</span>}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <hr className="border-gray-100 max-w-5xl mx-auto" />
+
+      {/* ── VALUES ── */}
+      <section className="max-w-5xl mx-auto px-6 py-24">
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12 text-center">
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">What Drives Us</p>
+          <h2 className="text-4xl font-black tracking-tight">Our Values</h2>
+        </motion.div>
+        <div className="grid md:grid-cols-2 gap-5">
+          {values.map(({ num, icon: Icon, title, desc }, i) => (
+            <motion.div
+              key={i}
+              variants={fadeUp} custom={i}
+              initial="hidden" whileInView="visible" viewport={{ once: true }}
+              whileHover={{ y: -4, boxShadow: "0 12px 32px rgba(0,0,0,0.08)" }}
+              className="group flex gap-5 bg-white border border-gray-100 rounded-2xl p-7 transition-all duration-200 cursor-default"
+            >
+              <div className="w-11 h-11 bg-black rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-200">
+                <Icon className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <p className="text-[10px] font-black uppercase tracking-widest text-gray-300 mb-1">{num}</p>
+                <h3 className="text-lg font-black text-black mb-1.5">{title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="px-6 pb-24">
+        <motion.div
+          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
+          className="max-w-3xl mx-auto bg-black rounded-3xl px-10 py-16 text-center"
+        >
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">
             JobExCV Helps You Find A Job Faster
           </h2>
-          <a
+          <p className="text-gray-400 text-base mb-8 max-w-md mx-auto leading-relaxed">
+            Join thousands of job seekers already automating their search with AI.
+          </p>
+          <motion.a
             href="https://app.jobexcv.ai"
-            className="inline-block bg-white text-[#0f0f0f] px-10 py-4 rounded-full font-bold text-[16px] hover:scale-105 transition-transform duration-300"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-2 bg-white text-black font-bold px-7 py-3.5 rounded-full text-sm hover:bg-gray-100 transition-colors duration-200"
           >
-            Join the JobExCV community →
-          </a>
+            Join the community <ArrowRight className="w-4 h-4" />
+          </motion.a>
         </motion.div>
       </section>
 
