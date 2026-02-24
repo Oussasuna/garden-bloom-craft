@@ -3,6 +3,7 @@ import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import { ContactCard } from "@/components/ui/contact-card";
 import { MailIcon, MessageCircleIcon, TwitterIcon } from "lucide-react";
+import contactHero from "@/assets/contact-hero.png";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -21,6 +22,9 @@ export default function ContactPage() {
       <Navbar />
       <section className="pt-[120px] pb-[100px]">
         <div className="max-w-5xl mx-auto px-4">
+          <div className="flex justify-center mb-10">
+            <img src={contactHero} alt="Contact Us" className="max-w-md w-full h-auto" />
+          </div>
           <ContactCard
             title="Get in touch"
             description="Have a question, feedback, or want to partner with us? We'd love to hear from you. Fill out the form and we'll get back to you within 24 hours."
