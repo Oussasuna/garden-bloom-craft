@@ -118,26 +118,26 @@ export default function AiCoverLetterPage() {
 
       </section>
 
-      <section className="bg-[#F0F2F5] py-[100px]">
-        <div className="max-w-[900px] mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-[36px] md:text-[42px] font-bold text-black leading-[1.2] tracking-[-0.02em]">Frequently Asked Questions</h2>
-          </div>
-          <div className="space-y-3">
-            {faqItems.map((item, i) =>
-            <div key={i} className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
-                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="flex w-full items-center justify-between px-6 py-5 text-left hover:bg-[#F0F2F5] transition-colors">
-                  <span className="text-[16px] font-bold text-black pr-4">{item.question}</span>
-                  <ChevronDown size={16} className={`flex-shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`} />
-                </button>
-                <div className={`overflow-hidden transition-all duration-300 ${openFaq === i ? "max-h-[500px]" : "max-h-0"}`}>
-                  <div className="border-t border-[#E2E8F0] px-6 py-5 text-[16px] leading-[1.6] text-[#555555]">{item.answer}</div>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
