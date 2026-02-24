@@ -88,14 +88,14 @@ export default function OneClickApplyPage() {
         </div>
       </section>
 
-      <section className="bg-black py-[80px] lg:py-[100px]">
-        <div className="max-w-[1140px] mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">Still Not Convinced? Start With A Free Account!</h2>
-          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">JobExCV users get on average 50% more interviews and save 10 hours per week.<br className="hidden md:block" />Start automating your job search today.</p>
-          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-[32px] py-[14px] rounded-[8px] transition-colors duration-200">Start Free Trial</a>
-          <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
 
       
 
