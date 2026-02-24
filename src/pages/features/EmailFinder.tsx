@@ -47,12 +47,12 @@ export default function EmailFinderPage() {
               <div className="max-w-[650px]">
                 <h2 className="text-[36px] md:text-[42px] font-extrabold leading-[1.2] text-black mb-10 tracking-[-0.02em]">How Email Templates Can Help You Get Closer To Your Dream Job</h2>
                 <div className="space-y-0 text-black">
-                  {["Using our pre-made and tested templates you start getting responses from companies","You can send fully personalised emails using our email variables like {{ this }}","In your dashboard your can track email open ratio, and optimize your emails."].map((text, i) => (
-                    <div key={i} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
+                  {["Using our pre-made and tested templates you start getting responses from companies", "You can send fully personalised emails using our email variables like {{ this }}", "In your dashboard your can track email open ratio, and optimize your emails."].map((text, i) =>
+                  <div key={i} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
                       <span className="text-[16px] font-medium text-[#555555] underline whitespace-nowrap pt-1">0{i + 1}</span>
                       <span className="text-[18px] font-medium">{text}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
                 <div className="mt-10">
                   <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center px-8 py-[14px] border border-black rounded-[8px] font-semibold text-black transition-all hover:bg-black hover:text-white text-[16px]">Start today</a>
@@ -79,14 +79,14 @@ export default function EmailFinderPage() {
         </div>
       </section>
 
-      <section className="bg-black py-[80px] lg:py-[100px]">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">Still Not Convinced? Start With Free Account!</h2>
-          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">JobExCV users get in average 50% more interviews.</p>
-          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-8 py-[14px] rounded-[8px] transition-colors">Start Free Trial</a>
-          <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
 
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
@@ -98,6 +98,6 @@ export default function EmailFinderPage() {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
