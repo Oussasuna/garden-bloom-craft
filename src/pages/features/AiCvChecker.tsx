@@ -98,15 +98,15 @@ export default function AiCvCheckerPage() {
 
 
 
-      <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
-        <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-10 leading-tight tracking-[-0.02em]">JobExCV Helps You Find A Job Faster</h2>
-          <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] transition-all hover:opacity-90 group">
-            Get Started Now
-            <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-          </a>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
       <Footer />
     </div>);
 
