@@ -3,36 +3,36 @@ import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Instagram, Youtube } from 'lucide-react';
 
 const features = [
-  { name: "Auto Apply", href: "/features/auto-apply" },
-  { name: "One Click Apply", href: "/features/one-click-apply" },
-  { name: "Job Application Tracker", href: "/features/job-application-tracker" },
-  { name: "Dynamic Emails", href: "/features/dynamic-emails" },
-  { name: "CV Improvements", href: "/features/cv-improvements" },
-  { name: "Exclude Companies", href: "/features/exclude-companies" },
-  { name: "Job Posting Aggregator", href: "/features/job-posting-aggregator" },
-  { name: "Job Matching", href: "/features/job-matching" },
-  { name: "Job Filtering", href: "/features/job-filtering" },
-  { name: "Email Finder", href: "/features/email-finder" },
-  { name: "LinkedIn Apply Extension", href: "/features/linkedin-apply-extension" },
-  { name: "AI Question Answering", href: "/features/ai-question-answering" },
-  { name: "AI CV Checker", href: "/features/ai-cv-checker" },
-  { name: "AI CV Builder", href: "/features/ai-cv-builder" },
-  { name: "AI Cover Letter Generator", href: "/features/ai-cover-letter-generator" },
-  { name: "AI Mock Interview", href: "/features/ai-mock-interview" },
-];
+{ name: "Auto Apply", href: "/features/auto-apply" },
+{ name: "One Click Apply", href: "/features/one-click-apply" },
+{ name: "Job Application Tracker", href: "/features/job-application-tracker" },
+{ name: "Dynamic Emails", href: "/features/dynamic-emails" },
+{ name: "CV Improvements", href: "/features/cv-improvements" },
+{ name: "Exclude Companies", href: "/features/exclude-companies" },
+{ name: "Job Posting Aggregator", href: "/features/job-posting-aggregator" },
+{ name: "Job Matching", href: "/features/job-matching" },
+{ name: "Job Filtering", href: "/features/job-filtering" },
+{ name: "Email Finder", href: "/features/email-finder" },
+{ name: "LinkedIn Apply Extension", href: "/features/linkedin-apply-extension" },
+{ name: "AI Question Answering", href: "/features/ai-question-answering" },
+{ name: "AI CV Checker", href: "/features/ai-cv-checker" },
+{ name: "AI CV Builder", href: "/features/ai-cv-builder" },
+{ name: "AI Cover Letter Generator", href: "/features/ai-cover-letter-generator" },
+{ name: "AI Mock Interview", href: "/features/ai-mock-interview" }];
+
 
 const resources = [
-  { name: "About", href: "/about" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact Us", href: "/contact" },
-];
+{ name: "About", href: "/about" },
+{ name: "Blog", href: "/blog" },
+{ name: "Contact Us", href: "/contact" }];
+
 
 const socials = [
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "Twitter/X", href: "https://twitter.com", icon: Twitter },
-  { name: "Instagram", href: "https://instagram.com", icon: Instagram },
-  { name: "YouTube", href: "https://youtube.com", icon: Youtube },
-];
+{ name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
+{ name: "Twitter/X", href: "https://twitter.com", icon: Twitter },
+{ name: "Instagram", href: "https://instagram.com", icon: Instagram },
+{ name: "YouTube", href: "https://youtube.com", icon: Youtube }];
+
 
 const Footer = () => {
   return (
@@ -49,12 +49,12 @@ const Footer = () => {
             Get Started Now
           </a>
         </div>
-        <div className="max-w-[1000px] mx-auto overflow-hidden rounded-t-[32px] border-x-[12px] border-t-[12px] border-[#9bc4e8] shadow-soft">
-          <img
-            src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/679237bfb1d8e6c708170e72_landing%20page%20at%20the%20end.avif"
-            alt="JobExCV App Interface"
-            className="w-full h-auto block" />
-        </div>
+        
+
+
+
+
+
       </section>
 
       {/* Main Footer Links */}
@@ -71,22 +71,22 @@ const Footer = () => {
           <div className="flex flex-col">
             <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Features</h4>
             <div className="flex flex-col space-y-3">
-              {features.map((item) => (
-                <Link key={item.name} to={item.href} className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
+              {features.map((item) =>
+              <Link key={item.name} to={item.href} className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
                   {item.name}
                 </Link>
-              ))}
+              )}
             </div>
           </div>
 
           <div className="flex flex-col">
             <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Resources</h4>
             <div className="flex flex-col space-y-3">
-              {resources.map((item) => (
-                <Link key={item.name} to={item.href} className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
+              {resources.map((item) =>
+              <Link key={item.name} to={item.href} className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
                   {item.name}
                 </Link>
-              ))}
+              )}
               <span className="text-[#999999] text-[14px] cursor-default">
                 JobExCV Ambassador Program (Coming soon)
               </span>
@@ -96,12 +96,12 @@ const Footer = () => {
           <div className="flex flex-col">
             <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Follow us</h4>
             <div className="flex flex-col space-y-4">
-              {socials.map((item) => (
-                <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
+              {socials.map((item) =>
+              <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
                   <item.icon size={16} />
                   {item.name}
                 </a>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -112,8 +112,8 @@ const Footer = () => {
           © 2025 JobexCV. All rights reserved.
         </p>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
