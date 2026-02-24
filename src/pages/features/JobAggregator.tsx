@@ -46,13 +46,13 @@ export default function JobAggregatorPage() {
                       <div className="h-7 w-28 bg-[#F0F2F5] rounded-md" />
                     </div>
                     <div className="flex-1 grid grid-cols-3 gap-2">
-                      {[1,2,3,4,5,6].map(i => (
-                        <div key={i} className="bg-white border border-[#E2E8F0] rounded-[8px] p-2 flex flex-col gap-1">
+                      {[1, 2, 3, 4, 5, 6].map((i) =>
+                      <div key={i} className="bg-white border border-[#E2E8F0] rounded-[8px] p-2 flex flex-col gap-1">
                           <div className="h-3 w-3/4 bg-[#E2E8F0] rounded" />
                           <div className="h-2 w-1/2 bg-[#F0F2F5] rounded" />
                           <div className="h-2 w-2/3 bg-[#F0F2F5] rounded" />
                         </div>
-                      ))}
+                      )}
                     </div>
                   </div>
                 </div>
@@ -92,8 +92,8 @@ export default function JobAggregatorPage() {
                   <div className="px-3 py-1.5 bg-[#F0F2F5] rounded-[8px] text-[12px] text-[#555555]">Glassdoor</div>
                 </div>
                 <div className="border border-dashed border-[#E2E8F0] rounded-[8px] p-3">
-                  {[1,2,3].map(i => (
-                    <div key={i} className="flex items-center gap-3 py-2 border-b border-[#F0F2F5] last:border-0">
+                  {[1, 2, 3].map((i) =>
+                  <div key={i} className="flex items-center gap-3 py-2 border-b border-[#F0F2F5] last:border-0">
                       <div className="w-8 h-8 rounded bg-[#4f8cff]/10 flex items-center justify-center text-[10px] font-bold text-[#4f8cff]">in</div>
                       <div className="flex-1">
                         <div className="h-3 w-3/4 bg-[#E2E8F0] rounded mb-1" />
@@ -101,7 +101,7 @@ export default function JobAggregatorPage() {
                       </div>
                       <div className="px-2 py-1 bg-[#e8f4ff] rounded text-[10px] text-[#4f8cff]">LinkedIn</div>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
@@ -166,18 +166,18 @@ export default function JobAggregatorPage() {
         </div>
       </section>
 
-      <section className="bg-black py-[80px] lg:py-[100px]">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">
-            Still not convinced? Start with free account!
-          </h2>
-          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">
-            JobExCV users get in average 50% more interviews and they spend 10 hours less per week. Start automating your job search today.
-          </p>
-          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-8 py-[14px] rounded-[8px] transition-colors">Start Free Trial</a>
-          <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
 
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
@@ -191,6 +191,6 @@ export default function JobAggregatorPage() {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
