@@ -27,11 +27,11 @@ export default function AiCvBuilderPage() {
       </section>
 
       {[
-        { title: "Choose Your Template", desc: "Pick from a variety of professional and modern resume templates that suit your industry and experience level.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/chooseTemplate-3.png", imgAlt: "Choose your template", reverse: false },
-        { title: "Review And Edit", desc: "Double-check your information for accuracy and clarity. Make sure everything looks great and reads smoothly.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/content-4.png", imgAlt: "Customize your content", reverse: true },
-        { title: "Download And Share", desc: "Export your resume in PDF format and start applying to jobs right away, confident that you're making a great first impression.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/download-6.png", imgAlt: "Download and share", reverse: false },
-      ].map((step, i) => (
-        <section key={i} className="py-[100px] bg-white">
+      { title: "Choose Your Template", desc: "Pick from a variety of professional and modern resume templates that suit your industry and experience level.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/chooseTemplate-3.png", imgAlt: "Choose your template", reverse: false },
+      { title: "Review And Edit", desc: "Double-check your information for accuracy and clarity. Make sure everything looks great and reads smoothly.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/content-4.png", imgAlt: "Customize your content", reverse: true },
+      { title: "Download And Share", desc: "Export your resume in PDF format and start applying to jobs right away, confident that you're making a great first impression.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/download-6.png", imgAlt: "Download and share", reverse: false }].
+      map((step, i) =>
+      <section key={i} className="py-[100px] bg-white">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className={`flex flex-col ${step.reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-[30px]`}>
               <div className={`w-full lg:w-1/2 ${step.reverse ? "lg:pl-16 order-2" : "lg:pr-10 order-2 lg:order-1"}`}>
@@ -47,18 +47,18 @@ export default function AiCvBuilderPage() {
             </div>
           </div>
         </section>
-      ))}
+      )}
 
-      <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
-        <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-10 leading-tight tracking-[-0.02em]">JobExCV Helps You Find A Job Faster</h2>
-          <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] transition-all hover:opacity-90 group">
-            Get Started Now
-            <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-          </a>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
