@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
-function CheckItem({ children }: { children: React.ReactNode }) {
+function CheckItem({ children }: {children: React.ReactNode;}) {
   return (
     <div className="flex items-start gap-3">
       <svg className="w-5 h-5 mt-0.5 text-black flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -10,8 +10,8 @@ function CheckItem({ children }: { children: React.ReactNode }) {
         <path d="M9 12l2 2 4-4" />
       </svg>
       <span className="text-[#555555] text-[16px] leading-[1.6]">{children}</span>
-    </div>
-  );
+    </div>);
+
 }
 
 export default function DynamicEmailsPage() {
@@ -117,18 +117,18 @@ export default function DynamicEmailsPage() {
         </div>
       </section>
 
-      <section className="bg-black py-[80px] lg:py-[100px]">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">
-            Still Not Convinced? Test your Job Closing Rate With a Free Trial of our Personalised &amp; Professional Email Templates!
-          </h2>
-          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">
-            JobExCV users get in average 50% more interviews and they spend 10 hours less per week. Start automating your job search today.
-          </p>
-          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-8 py-[14px] rounded-[8px] transition-colors">Start Free Trial</a>
-          <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
 
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
@@ -142,6 +142,6 @@ export default function DynamicEmailsPage() {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
