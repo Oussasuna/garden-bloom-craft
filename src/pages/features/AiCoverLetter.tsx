@@ -21,7 +21,7 @@ export default function AiCoverLetterPage() {
       <Navbar />
       <section className="relative bg-white pt-[120px] pb-[60px]">
         <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-          <span className="text-[14px] font-bold text-[#555555] mb-4">#1 AI Cover Letter Generator for GenZ</span>
+          
           <h1 className="text-[32px] md:text-[56px] font-extrabold text-black leading-[1.1] tracking-[-0.02em] max-w-[900px] mb-6">
             Create personalized cover letter to connect with hiring managers in seconds.
           </h1>
