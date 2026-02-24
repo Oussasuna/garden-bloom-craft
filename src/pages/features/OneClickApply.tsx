@@ -15,14 +15,14 @@ export default function OneClickApplyPage() {
                 <span className="inline-block text-[14px] font-semibold text-[#555555] mb-4 tracking-wide uppercase">For more senior profiles</span>
                 <h1 className="text-[40px] md:text-[48px] font-extrabold leading-[1.1] text-black mb-6 tracking-[-0.02em]">Review every job and apply with one click</h1>
                 <div className="space-y-4 mb-10">
-                  {["On a single platform, you can find all the important details", "You can manually apply with a single click", "You can rate the job matches"].map((text, i) => (
-                    <div key={i} className="flex items-start gap-3">
+                  {["On a single platform, you can find all the important details", "You can manually apply with a single click", "You can rate the job matches"].map((text, i) =>
+                  <div key={i} className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
                       </div>
                       <span className="text-[16px] text-black leading-[1.5]">{text}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
                 <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[18px] transition-all hover:opacity-90 group">
                   Get Started
@@ -74,16 +74,16 @@ export default function OneClickApplyPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <Mail size={24} strokeWidth={2} className="text-black" />, title: "Send emails with one click", desc: "JobExCV identifies company emails and with one click you can apply. If you want to spend a little more time reviewing the job, you can do it with the 2-step process." },
-              { icon: <Star size={24} strokeWidth={2} className="text-black" />, title: "Rate your job matches", desc: "By rating job postings, you help our search algorithm find you even better matches tailored to your preferences and career goals." },
-              { icon: <LayoutDashboard size={24} strokeWidth={2} className="text-black" />, title: "Organize your job search", desc: "All interesting positions from multiple job boards can be saved in our dashboard so you can evaluate them later and stay organized." },
-            ].map((card, i) => (
-              <div key={i} className="bg-white rounded-[12px] p-8 border border-[#E2E8F0] shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-shadow">
+            { icon: <Mail size={24} strokeWidth={2} className="text-black" />, title: "Send emails with one click", desc: "JobExCV identifies company emails and with one click you can apply. If you want to spend a little more time reviewing the job, you can do it with the 2-step process." },
+            { icon: <Star size={24} strokeWidth={2} className="text-black" />, title: "Rate your job matches", desc: "By rating job postings, you help our search algorithm find you even better matches tailored to your preferences and career goals." },
+            { icon: <LayoutDashboard size={24} strokeWidth={2} className="text-black" />, title: "Organize your job search", desc: "All interesting positions from multiple job boards can be saved in our dashboard so you can evaluate them later and stay organized." }].
+            map((card, i) =>
+            <div key={i} className="bg-white rounded-[12px] p-8 border border-[#E2E8F0] shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-shadow">
                 <div className="w-12 h-12 mb-6 flex items-center justify-center bg-[#F0F2F5] rounded-[10px]">{card.icon}</div>
                 <h3 className="text-[20px] font-bold text-black leading-[1.3] mb-3">{card.title}</h3>
                 <p className="text-[16px] text-[#555555] leading-[1.6]">{card.desc}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -97,16 +97,16 @@ export default function OneClickApplyPage() {
         </div>
       </section>
 
-      <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
-        <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[36px] md:text-[42px] font-bold text-black mb-10 leading-tight tracking-[-0.02em]">JobExCV Helps You Find A Job Faster</h2>
-          <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[16px] transition-all hover:opacity-90 group">
-            Join the JobExCV community
-            <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-          </a>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
