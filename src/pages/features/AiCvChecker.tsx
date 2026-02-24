@@ -35,12 +35,12 @@ export default function AiCvCheckerPage() {
               <div className="max-w-[650px]">
                 <h2 className="text-[36px] md:text-[42px] font-bold text-black leading-[1.2] mb-10 tracking-[-0.02em]">Use Our AI CV Checker For Free</h2>
                 <div className="space-y-0 text-black">
-                  {["Upload your CV in our automated AI checker", "JobExCV will scan your CV and identify if it follows best practices and if it is ATS friendly", "JobExCV will use AI to provide targeted recommendations to make it ATS friendly and get you interviews", "Set your optimized CV as default and start automating your job applications with AI"].map((text, i) => (
-                    <div key={i} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
+                  {["Upload your CV in our automated AI checker", "JobExCV will scan your CV and identify if it follows best practices and if it is ATS friendly", "JobExCV will use AI to provide targeted recommendations to make it ATS friendly and get you interviews", "Set your optimized CV as default and start automating your job applications with AI"].map((text, i) =>
+                  <div key={i} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
                       <span className="text-[16px] font-medium text-[#555555] underline whitespace-nowrap pt-1">0{i + 1}</span>
                       <span className="text-[18px] font-medium">{text}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
                 <div className="mt-10">
                   <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center px-8 py-[14px] border border-black rounded-[8px] font-semibold text-black transition-all hover:bg-black hover:text-white text-[16px]">Start today</a>
@@ -65,12 +65,12 @@ export default function AiCvCheckerPage() {
       </section>
 
       {[
-        { title: "Upload Your CV With One Click", desc: "Boost your job prospects by uploading your CV into our AI CV checker for instant, automated feedback and optimization.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/cvchecker1-3.webp", reverse: false },
-        { title: "Scan Your CV With AI", desc: "Let JobExCV AI CV checker analyze your resume, ensuring it checks best practices and is fully optimized for ATS compatibility.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/cvchecker2-4.webp", reverse: true },
-        { title: "AI Recommends, You Improve!", desc: "JobExCV AI CV checker delivers targeted recommendations to optimize your resume for ATS compatibility and boost your chances of landing interviews.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/cvchecker3-5.webp", reverse: false },
-        { title: "Set Your Optimized CV As Default", desc: "Once your CV is optimized and scores high in our AI CV checker, set it as your default and let AI streamline your job applications effortlessly!", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/cvchecker4-6.webp", reverse: true },
-      ].map((step, i) => (
-        <section key={i} className="py-[100px] bg-white">
+      { title: "Upload Your CV With One Click", desc: "Boost your job prospects by uploading your CV into our AI CV checker for instant, automated feedback and optimization.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/cvchecker1-3.webp", reverse: false },
+      { title: "Scan Your CV With AI", desc: "Let JobExCV AI CV checker analyze your resume, ensuring it checks best practices and is fully optimized for ATS compatibility.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/cvchecker2-4.webp", reverse: true },
+      { title: "AI Recommends, You Improve!", desc: "JobExCV AI CV checker delivers targeted recommendations to optimize your resume for ATS compatibility and boost your chances of landing interviews.", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/cvchecker3-5.webp", reverse: false },
+      { title: "Set Your Optimized CV As Default", desc: "Once your CV is optimized and scores high in our AI CV checker, set it as your default and let AI streamline your job applications effortlessly!", img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cede011-02d0-436d-8d5d-66ecb52fb49b-loopcv-pro/assets/images/cvchecker4-6.webp", reverse: true }].
+      map((step, i) =>
+      <section key={i} className="py-[100px] bg-white">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className={`flex flex-col ${step.reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-[30px]`}>
               <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
@@ -87,16 +87,16 @@ export default function AiCvCheckerPage() {
             </div>
           </div>
         </section>
-      ))}
+      )}
 
-      <section className="bg-black py-[80px] lg:py-[100px]">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">Still Not Convinced? Start With Free Account!</h2>
-          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">JobExCV users get in average 50% more interviews and they spend 10 hours less per week. Start automating your job search today.</p>
-          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-8 py-[14px] rounded-[8px] transition-colors">Start Free Trial</a>
-          <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
 
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
@@ -108,6 +108,6 @@ export default function AiCvCheckerPage() {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
