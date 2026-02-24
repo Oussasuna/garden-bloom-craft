@@ -220,15 +220,14 @@ export default function AboutPage() {
               key={i}
               variants={fadeUp} custom={i}
               initial="hidden" whileInView="visible" viewport={{ once: true }}
-              whileHover={{ y: -4, boxShadow: "0 12px 32px rgba(0,0,0,0.08)" }}
-              className="group flex gap-5 bg-white border border-gray-100 rounded-2xl p-7 transition-all duration-200 cursor-default"
+              className="group flex gap-5 bg-white hover:bg-blue-50 border-l-2 border-l-transparent hover:border-l-[#3b82f6] border border-gray-100 rounded-2xl p-7 transition-all duration-200 ease-out cursor-default hover:shadow-md hover:scale-[1.02]"
             >
               <div className="w-11 h-11 bg-black rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-200">
                 <Icon className="w-5 h-5 text-white" />
               </div>
               <div>
                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-300 mb-1">{num}</p>
-                <h3 className="text-lg font-black text-black mb-1.5">{title}</h3>
+                <h3 className="text-lg font-black text-black mb-1.5 transition-transform duration-200 ease-out group-hover:translate-x-1.5">{title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
               </div>
             </motion.div>
