@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
-function CheckItem({ children }: { children: React.ReactNode }) {
+function CheckItem({ children }: {children: React.ReactNode;}) {
   return (
     <div className="flex items-start gap-3">
       <svg className="w-5 h-5 mt-0.5 text-black flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -10,8 +10,8 @@ function CheckItem({ children }: { children: React.ReactNode }) {
         <path d="M9 12l2 2 4-4" />
       </svg>
       <span className="text-[#555555] text-[16px] leading-[1.6]">{children}</span>
-    </div>
-  );
+    </div>);
+
 }
 
 export default function CvImprovementsPage() {
@@ -35,13 +35,13 @@ export default function CvImprovementsPage() {
                 <button className="px-4 py-2.5 text-[13px] font-semibold text-black border-b-2 border-black">LOOP STATS</button>
               </div>
               <div className="flex flex-wrap gap-4 mb-6 text-[12px]">
-                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-full bg-[#22c55e]"/><span className="text-[#555555]">Matched job</span></div>
-                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-full bg-[#ef4444]"/><span className="text-[#555555]">Low CV score</span></div>
-                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-full bg-[#3b82f6]"/><span className="text-[#555555]">Location</span></div>
-                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-full bg-[#eab308]"/><span className="text-[#555555]">Title</span></div>
+                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-full bg-[#22c55e]" /><span className="text-[#555555]">Matched job</span></div>
+                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-full bg-[#ef4444]" /><span className="text-[#555555]">Low CV score</span></div>
+                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-full bg-[#3b82f6]" /><span className="text-[#555555]">Location</span></div>
+                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-full bg-[#eab308]" /><span className="text-[#555555]">Title</span></div>
               </div>
               <div className="flex justify-center mb-6">
-                <svg width="220" height="220" viewBox="0 0 220 220"><circle cx="110" cy="110" r="90" fill="none" stroke="#E2E8F0" strokeWidth="40"/><circle cx="110" cy="110" r="90" fill="none" stroke="#ec4899" strokeWidth="40" strokeDasharray="294 271" strokeDashoffset="0" transform="rotate(-90 110 110)"/></svg>
+                <svg width="220" height="220" viewBox="0 0 220 220"><circle cx="110" cy="110" r="90" fill="none" stroke="#E2E8F0" strokeWidth="40" /><circle cx="110" cy="110" r="90" fill="none" stroke="#ec4899" strokeWidth="40" strokeDasharray="294 271" strokeDashoffset="0" transform="rotate(-90 110 110)" /></svg>
               </div>
               <p className="text-[14px] text-[#555555] leading-relaxed mb-6">We have found <strong>1877</strong> jobs in total. We accepted <strong>260</strong> of these jobs, which are your matches.</p>
             </div>
@@ -96,14 +96,14 @@ export default function CvImprovementsPage() {
         </div>
       </section>
 
-      <section className="bg-black py-[80px] lg:py-[100px]">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">Still Not Convinced? Start With Free Account!</h2>
-          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">JobExCV users get in average 50% more interviews.</p>
-          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-8 py-[14px] rounded-[8px] transition-colors">Get Started Free</a>
-          <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
 
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
@@ -115,6 +115,6 @@ export default function CvImprovementsPage() {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
