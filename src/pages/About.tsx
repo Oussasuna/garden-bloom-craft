@@ -20,21 +20,21 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-[60px] bg-[#f8f9fa] border-y border-[#e5e7eb]">
-        <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { value: "562,192", label: "Active Users" },
-            { value: "625,000+", label: "Job Applications" },
-            { value: "39", label: "Countries" },
-            { value: "4.9/5", label: "User Rating" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <div className="text-[36px] md:text-[42px] font-extrabold text-black mb-1">{stat.value}</div>
-              <div className="text-[14px] text-[#666666] font-medium">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Mission */}
       <section className="py-[80px] md:py-[100px]">
@@ -56,8 +56,8 @@ export default function AboutPage() {
               <img
                 src="https://cdn.prod.website-files.com/67065b18171e78a558433e90/67d92b140562f386df7fd462_FR%20Graphics%20(2).avif"
                 alt="JobExCV team illustration"
-                className="w-full max-w-[400px] mx-auto h-auto"
-              />
+                className="w-full max-w-[400px] mx-auto h-auto" />
+
             </div>
           </div>
         </div>
@@ -69,16 +69,16 @@ export default function AboutPage() {
           <h2 className="text-[36px] font-extrabold text-black text-center mb-14">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: "🎯", title: "Authenticity First", description: "We never add false information. Our AI helps you present your real experience in the most compelling way." },
-              { icon: "🌍", title: "Global Accessibility", description: "Career opportunities shouldn't depend on where you went to school or who you know. We're building for everyone." },
-              { icon: "🔬", title: "Research-Backed", description: "Every feature is grounded in academic research on career development and AI ethics." },
-            ].map((v, i) => (
-              <div key={i} className="bg-white rounded-[20px] p-8 border border-[#e5e7eb]">
+            { icon: "🎯", title: "Authenticity First", description: "We never add false information. Our AI helps you present your real experience in the most compelling way." },
+            { icon: "🌍", title: "Global Accessibility", description: "Career opportunities shouldn't depend on where you went to school or who you know. We're building for everyone." },
+            { icon: "🔬", title: "Research-Backed", description: "Every feature is grounded in academic research on career development and AI ethics." }].
+            map((v, i) =>
+            <div key={i} className="bg-white rounded-[20px] p-8 border border-[#e5e7eb]">
                 <div className="text-3xl mb-4">{v.icon}</div>
                 <h3 className="text-[20px] font-bold text-black mb-3">{v.title}</h3>
                 <p className="text-[15px] text-[#666666] leading-[1.6]">{v.description}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -102,6 +102,6 @@ export default function AboutPage() {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
