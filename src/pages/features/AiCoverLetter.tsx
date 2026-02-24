@@ -63,7 +63,7 @@ export default function AiCoverLetterPage() {
         </div>
       </section>
 
-      <section className="bg-black py-[80px] lg:py-[100px] px-6 text-white text-center">
+      <section className="py-[80px] lg:py-[100px] px-6 text-white text-center bg-primary">
         <div className="max-w-[1200px] mx-auto">
           <p className="text-[14px] font-bold text-white/60 mb-4">What is special about us?</p>
           <h2 className="text-[36px] md:text-[42px] font-bold leading-[1.2] mb-6 max-w-[800px] mx-auto tracking-[-0.02em]">Our AI ensures alignment between your resume and cover letter.</h2>
