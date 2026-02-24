@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
-function BrowserMockup({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function BrowserMockup({ children, className = "" }: {children: React.ReactNode;className?: string;}) {
   return (
     <div className={`bg-white rounded-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-[#E2E8F0] overflow-hidden ${className}`}>
       <div className="flex items-center gap-1.5 px-3 py-2 bg-[#f6f7f9] border-b border-[#E2E8F0]">
@@ -12,8 +12,8 @@ function BrowserMockup({ children, className = "" }: { children: React.ReactNode
         <div className="ml-3 flex-1 h-5 rounded bg-white border border-[#E2E8F0]" />
       </div>
       <div className="p-0">{children}</div>
-    </div>
-  );
+    </div>);
+
 }
 
 function EditLoopMockup() {
@@ -25,9 +25,9 @@ function EditLoopMockup() {
             <div className="w-5 h-5 rounded bg-black" />
             <span className="text-[11px] font-bold text-black">jobexcv</span>
           </div>
-          {["All Matches", "Board", "Analytics", "Email Templates", "Settings"].map((item, i) => (
-            <div key={item} className={`text-[10px] py-1.5 px-2 rounded mb-0.5 ${i === 4 ? "bg-[#F0F2F5] font-semibold text-black" : "text-[#555555]"}`}>{item}</div>
-          ))}
+          {["All Matches", "Board", "Analytics", "Email Templates", "Settings"].map((item, i) =>
+          <div key={item} className={`text-[10px] py-1.5 px-2 rounded mb-0.5 ${i === 4 ? "bg-[#F0F2F5] font-semibold text-black" : "text-[#555555]"}`}>{item}</div>
+          )}
         </div>
         <div className="flex-1 p-5 overflow-hidden">
           <div className="flex items-center justify-between mb-5">
@@ -45,17 +45,17 @@ function EditLoopMockup() {
             <div>
               <label className="text-[10px] text-[#555555] font-medium block mb-1">Companies to not review</label>
               <div className="min-h-[32px] rounded border border-[#E2E8F0] bg-[#f9fafb] px-2 py-1 flex flex-wrap gap-1">
-                {["Acme Corp", "OldEmployer Inc"].map((c) => (
-                  <span key={c} className="text-[8px] bg-[#F0F2F5] text-black px-1.5 py-0.5 rounded font-medium">{c} &times;</span>
-                ))}
+                {["Acme Corp", "OldEmployer Inc"].map((c) =>
+                <span key={c} className="text-[8px] bg-[#F0F2F5] text-black px-1.5 py-0.5 rounded font-medium">{c} &times;</span>
+                )}
               </div>
             </div>
             <div>
               <label className="text-[10px] text-[#555555] font-medium block mb-1">Select the keywords that should be present in the job posting</label>
               <div className="min-h-[32px] rounded border border-[#E2E8F0] bg-[#f9fafb] px-2 py-1 flex flex-wrap gap-1">
-                {["React", "Frontend", "Remote"].map((k) => (
-                  <span key={k} className="text-[8px] bg-[#dbeafe] text-[#2563eb] px-1.5 py-0.5 rounded font-medium">{k} &times;</span>
-                ))}
+                {["React", "Frontend", "Remote"].map((k) =>
+                <span key={k} className="text-[8px] bg-[#dbeafe] text-[#2563eb] px-1.5 py-0.5 rounded font-medium">{k} &times;</span>
+                )}
               </div>
             </div>
             <div>
@@ -76,8 +76,8 @@ function EditLoopMockup() {
           </div>
         </div>
       </div>
-    </BrowserMockup>
-  );
+    </BrowserMockup>);
+
 }
 
 export default function ExcludeCompaniesPage() {
@@ -114,12 +114,12 @@ export default function ExcludeCompaniesPage() {
                 <h5 className="text-[14px] font-medium text-[#555555] mb-4">Advanced job search preferences</h5>
                 <h2 className="text-[36px] md:text-[42px] font-extrabold leading-[1.2] text-black mb-10 tracking-[-0.02em]">Elevate Your Workflow With Our LinkedIn Extension.</h2>
                 <div className="space-y-0 text-black">
-                  {["Simplify your workflow by automating this time-consuming task effortlessly.", "View detailed summaries of application attempts for quick review and follow-up.", "Answer questions interactively, allowing the chrome extension to fill in job application details seamlessly."].map((text, i) => (
-                    <div key={i} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
+                  {["Simplify your workflow by automating this time-consuming task effortlessly.", "View detailed summaries of application attempts for quick review and follow-up.", "Answer questions interactively, allowing the chrome extension to fill in job application details seamlessly."].map((text, i) =>
+                  <div key={i} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
                       <span className="text-[16px] font-medium text-[#555555] underline whitespace-nowrap pt-1">0{i + 1}</span>
                       <span className="text-[18px] font-medium">{text}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
                 <div className="mt-10">
                   <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center px-8 py-[14px] border border-black rounded-[8px] font-semibold text-black transition-all hover:bg-black hover:text-white text-[16px]">Start today</a>
@@ -142,14 +142,14 @@ export default function ExcludeCompaniesPage() {
         </div>
       </section>
 
-      <section className="bg-black py-[80px] lg:py-[100px]">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-[1.3] mb-6 max-w-[800px]">Still Not Convinced? Start With Free Account!</h2>
-          <p className="text-white text-[16px] md:text-[18px] leading-[1.6] mb-10 max-w-[850px] opacity-90">JobExCV users get in average 50% more interviews and they spend 10 hours less per week. Start automating your job search today.</p>
-          <a href="https://app.jobexcv.ai" className="inline-block bg-[#aab4c4] hover:bg-[#99a5b8] text-black font-semibold text-[16px] px-8 py-[14px] rounded-[8px] transition-colors">Start Free Trial</a>
-          <p className="text-white text-[14px] opacity-80 mt-6">No credit card required</p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
 
       <section className="bg-[#F0F2F5] py-[100px] text-center px-6">
         <div className="max-w-[800px] mx-auto">
@@ -161,6 +161,6 @@ export default function ExcludeCompaniesPage() {
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
