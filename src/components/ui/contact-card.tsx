@@ -28,7 +28,7 @@ export function ContactCard({
   return (
     <div
       className={cn(
-        "relative grid h-full w-full border md:grid-cols-2 lg:grid-cols-3",
+        "relative grid h-full w-full border md:grid-cols-2",
         className
       )}
       {...props}
@@ -38,7 +38,7 @@ export function ContactCard({
       <DecorIcon position="bottom-left" />
       <DecorIcon position="bottom-right" />
 
-      <div className="col-span-1 flex flex-col justify-between bg-secondary/50 lg:col-span-2 dark:bg-background">
+      <div className="col-span-1 flex flex-col justify-between bg-secondary/50 dark:bg-background">
         <div className="relative h-full space-y-4 px-4 py-8 md:p-8">
           <h1 className="font-semibold text-3xl md:text-4xl lg:text-5xl">
             {title}
@@ -56,7 +56,7 @@ export function ContactCard({
 
       <div
         className={cn(
-          "col-span-1 flex h-full w-full items-center border-t bg-card px-4 py-8 md:border-t-0 md:border-l dark:bg-card/50",
+          "col-span-1 lg:col-span-1 flex h-full w-full items-center border-t bg-card px-6 py-10 md:px-8 md:py-12 md:border-t-0 md:border-l dark:bg-card/50",
           formSectionClassName
         )}
       >
