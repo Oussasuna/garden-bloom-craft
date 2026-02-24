@@ -46,7 +46,7 @@ export function ContactCard({
           <p className="max-w-xl text-muted-foreground text-sm md:text-base lg:text-lg">
             {description}
           </p>
-          <div className="grid gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
             {contactInfo?.map((info) => (
               <ContactInfo key={info.label} {...info} />
             ))}
