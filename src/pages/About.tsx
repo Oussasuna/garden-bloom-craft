@@ -140,7 +140,7 @@ export default function AboutPage() {
       {/* ── WHAT WE DO ── */}
       <section className="max-w-5xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-start">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">What We Do Best</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">What We Do Best</p>
           <h2 className="text-4xl font-black leading-tight tracking-tight">
             Getting You Closer To<br />Your Dream Job
           </h2>
