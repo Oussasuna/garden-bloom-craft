@@ -89,7 +89,7 @@ export default function AboutPage() {
       <section className="max-w-3xl mx-auto px-6 pt-28 pb-20 text-center">
         <motion.p
           variants={fadeUp} initial="hidden" animate="visible"
-          className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4"
+          className="text-xs font-bold uppercase tracking-widest text-accent mb-4"
         >
           About Us
         </motion.p>
