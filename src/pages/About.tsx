@@ -166,7 +166,7 @@ export default function AboutPage() {
       <section className="py-24 px-6 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-10 text-center">
-            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">The Difference</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">The Difference</p>
             <h2 className="text-4xl font-black tracking-tight">JobexCV vs Traditional Search</h2>
           </motion.div>
           <motion.div
