@@ -23,7 +23,7 @@ export default function ContactPage() {
       <section className="pt-[120px] pb-[100px]">
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex justify-center mb-10">
-            <img alt="Contact Us" className="max-w-md w-full h-auto" src="/lovable-uploads/b362d2c7-199c-4841-9bc3-f2ed26a2f886.jpg" />
+            <img alt="Contact Us" className="max-w-md w-full h-auto" src="/lovable-uploads/5a512c1f-86af-45ce-a0c4-725b04e859ca.png" />
           </div>
           <ContactCard
             title="Get in touch"
