@@ -23,38 +23,38 @@ export default function ContactPage() {
       <section className="pt-[120px] pb-[100px]">
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex justify-center mb-10">
-            <img src={contactHero} alt="Contact Us" className="max-w-md w-full h-auto" />
+            <img alt="Contact Us" className="max-w-md w-full h-auto" src="/lovable-uploads/b362d2c7-199c-4841-9bc3-f2ed26a2f886.jpg" />
           </div>
           <ContactCard
             title="Get in touch"
             description="Have a question, feedback, or want to partner with us? We'd love to hear from you. Fill out the form and we'll get back to you within 24 hours."
             contactInfo={[
-              {
-                icon: MailIcon,
-                label: "Email",
-                value: "hello@jobexcv.ai",
-              },
-              {
-                icon: MessageCircleIcon,
-                label: "Discord",
-                value: "discord.gg/FXkNtWPG3B",
-              },
-              {
-                icon: TwitterIcon,
-                label: "Twitter",
-                value: "@jobexcvai",
-                className: "col-span-2",
-              },
-            ]}
-          >
-            {submitted ? (
-              <div className="text-center py-12 w-full">
+            {
+              icon: MailIcon,
+              label: "Email",
+              value: "hello@jobexcv.ai"
+            },
+            {
+              icon: MessageCircleIcon,
+              label: "Discord",
+              value: "discord.gg/FXkNtWPG3B"
+            },
+            {
+              icon: TwitterIcon,
+              label: "Twitter",
+              value: "@jobexcvai",
+              className: "col-span-2"
+            }]
+            }>
+
+            {submitted ?
+            <div className="text-center py-12 w-full">
                 <div className="text-5xl mb-4">✅</div>
                 <h3 className="text-2xl font-bold mb-2">Message sent!</h3>
                 <p className="text-muted-foreground">We'll get back to you within 24 hours.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="w-full space-y-4">
+              </div> :
+
+            <form onSubmit={handleSubmit} className="w-full space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-2">
                     <Label>First Name</Label>
@@ -81,11 +81,11 @@ export default function ContactPage() {
                   Send Message
                 </Button>
               </form>
-            )}
+            }
           </ContactCard>
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
