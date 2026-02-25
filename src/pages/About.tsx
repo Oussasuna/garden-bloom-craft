@@ -211,7 +211,7 @@ export default function AboutPage() {
       {/* ── VALUES ── */}
       <section className="max-w-5xl mx-auto px-6 py-24">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-12 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">What Drives Us</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">What Drives Us</p>
           <h2 className="text-4xl font-black tracking-tight">Our Values</h2>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-5">
