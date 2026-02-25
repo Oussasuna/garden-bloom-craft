@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
+import aboutTeamImg from "@/assets/about-team.png";
 
 function useCounter(end: number, started: boolean) {
   const [count, setCount] = useState(0);
@@ -145,18 +146,21 @@ export default function AboutPage() {
             Getting You Closer To<br />Your Dream Job
           </h2>
         </motion.div>
-        <motion.div
+      <motion.div
           variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1}
-          className="space-y-5 text-gray-500 leading-relaxed text-base pt-1"
+          className="space-y-5 pt-1"
         >
-          <p>
-            The only thing we want to do is bring you closer to your perfect opportunity —
-            without spending your full day submitting forms and copy-pasting.
-          </p>
-          <p>
-            We give the power back to job seekers. Start from scratch or upload your existing CV
-            and let our AI handle the heavy lifting.
-          </p>
+          <div className="space-y-5 text-gray-500 leading-relaxed text-base">
+            <p>
+              The only thing we want to do is bring you closer to your perfect opportunity —
+              without spending your full day submitting forms and copy-pasting.
+            </p>
+            <p>
+              We give the power back to job seekers. Start from scratch or upload your existing CV
+              and let our AI handle the heavy lifting.
+            </p>
+          </div>
+          <img src={aboutTeamImg} alt="Team collaborating on CV building" className="w-full rounded-2xl mt-6" />
         </motion.div>
       </section>
 
