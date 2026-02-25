@@ -7,6 +7,7 @@ import {
 "lucide-react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
+import aboutHeroIllustration from "@/assets/about-hero-illustration.png";
 
 function useCounter(end: number, started: boolean) {
   const [count, setCount] = useState(0);
@@ -86,42 +87,51 @@ export default function AboutPage() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="max-w-3xl mx-auto px-6 pt-28 pb-20 text-center">
-        <motion.p
-          variants={fadeUp} initial="hidden" animate="visible"
-          className="text-xs font-bold uppercase tracking-widest text-accent mb-4">
-
-          About Us
-        </motion.p>
-        <motion.h1
-          variants={fadeUp} initial="hidden" animate="visible" custom={1}
-          className="text-5xl md:text-6xl font-black tracking-tight leading-[1.05] mb-6">
-
-          Learn more about JobexCV
-        </motion.h1>
-        <motion.div
-          variants={fadeUp} initial="hidden" animate="visible" custom={2}
-          className="space-y-4 text-gray-500 text-lg leading-relaxed">
-
-          <p>JobexCV is the first AI platform that completely automates the job search.</p>
-          <p>
-            We started from a simple frustration — spending hours filling forms that lead nowhere.
-            So we built a smarter way: upload your CV, set your preferences, and let AI do the rest.
-          </p>
-          <p>
-            Today we help thousands of job seekers worldwide find jobs faster, with less stress
-            and more confidence.
-          </p>
-        </motion.div>
-        <motion.a
-          variants={fadeUp} initial="hidden" animate="visible" custom={3}
-          href="https://app.jobexcv.ai"
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.97 }}
-          className="inline-flex items-center gap-2 mt-10 bg-black text-white font-bold px-7 py-3.5 rounded-full text-sm hover:bg-gray-900 transition-colors duration-200">
-
-          Get started free <ArrowRight className="w-4 h-4" />
-        </motion.a>
+      <section className="max-w-5xl mx-auto px-6 pt-28 pb-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <motion.p
+              variants={fadeUp} initial="hidden" animate="visible"
+              className="text-xs font-bold uppercase tracking-widest text-accent mb-4">
+              About Us
+            </motion.p>
+            <motion.h1
+              variants={fadeUp} initial="hidden" animate="visible" custom={1}
+              className="text-5xl md:text-6xl font-black tracking-tight leading-[1.05] mb-6">
+              Learn more about JobexCV
+            </motion.h1>
+            <motion.div
+              variants={fadeUp} initial="hidden" animate="visible" custom={2}
+              className="space-y-4 text-gray-500 text-lg leading-relaxed">
+              <p>JobexCV is the first AI platform that completely automates the job search.</p>
+              <p>
+                We started from a simple frustration — spending hours filling forms that lead nowhere.
+                So we built a smarter way: upload your CV, set your preferences, and let AI do the rest.
+              </p>
+              <p>
+                Today we help thousands of job seekers worldwide find jobs faster, with less stress
+                and more confidence.
+              </p>
+            </motion.div>
+            <motion.a
+              variants={fadeUp} initial="hidden" animate="visible" custom={3}
+              href="https://app.jobexcv.ai"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex items-center gap-2 mt-10 bg-black text-white font-bold px-7 py-3.5 rounded-full text-sm hover:bg-gray-900 transition-colors duration-200">
+              Get started free <ArrowRight className="w-4 h-4" />
+            </motion.a>
+          </div>
+          <motion.div
+            variants={fadeUp} initial="hidden" animate="visible" custom={2}
+            className="flex items-center justify-center">
+            <img
+              src={aboutHeroIllustration}
+              alt="Team collaborating around a computer screen"
+              className="w-full max-w-md rounded-2xl"
+            />
+          </motion.div>
+        </div>
       </section>
 
       <hr className="border-gray-100 max-w-5xl mx-auto" />
