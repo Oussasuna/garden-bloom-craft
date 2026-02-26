@@ -1,6 +1,8 @@
 import React from 'react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const ValueProps = () => {
+  const { t } = useI18n();
   return (
     <section className="bg-white py-20 md:py-28 overflow-hidden">
       <div className="container max-w-[1200px] mx-auto px-6">
