@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import { Check, ChevronRight, CreditCard, Crown, ExternalLink, Heart, Shield, ShoppingCart, Stars, Zap, Sparkles } from "lucide-react";
 import { SinglePricingCard, type Testimonial } from "@/components/ui/single-pricing-card";
+import { Switch } from "@/components/ui/switch";
+import { Badge } from "@/components/ui/badge";
+
+const MONTHLY_PRICE = 35;
+const QUARTERLY_DISCOUNT = 0.15;
+const QUARTERLY_TOTAL = parseFloat((MONTHLY_PRICE * 3 * (1 - QUARTERLY_DISCOUNT)).toFixed(2)); // 89.25
+const QUARTERLY_MONTHLY_EQ = parseFloat((QUARTERLY_TOTAL / 3).toFixed(2)); // 29.75
 
 export default function PricingPage() {
+  const [isQuarterly, setIsQuarterly] = useState(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const billing = params.get("billing");
+      if (billing === "3months") return true;
+      if (billing === "monthly") return false;
+      return localStorage.getItem("pricing_billing_period") === "3months";
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const value = isQuarterly ? "3months" : "monthly";
+    localStorage.setItem("pricing_billing_period", value);
+    const url = new URL(window.location.href);
+    url.searchParams.set("billing", value);
+    window.history.replaceState({}, "", url.toString());
+  }, [isQuarterly]);
+
   const features = [
     "Unlimited AI resume tailorings",
     "Unlimited cover letters",
@@ -83,6 +109,16 @@ export default function PricingPage() {
     },
   ];
 
+  const currentPrice = isQuarterly
+    ? `$${QUARTERLY_TOTAL.toFixed(2)}`
+    : `$${MONTHLY_PRICE}`;
+  const currentPeriod = isQuarterly ? "/ 3 months" : "/mo";
+  const originalPrice = isQuarterly ? `$${(MONTHLY_PRICE * 3).toFixed(0)}` : "$70";
+  const discount = isQuarterly ? "15% OFF" : "50% OFF";
+  const checkoutUrl = isQuarterly
+    ? "https://app.jobexcv.ai?billing=3months"
+    : "https://app.jobexcv.ai";
+
   return (
     <div className="bg-background min-h-screen">
       <Navbar />
@@ -99,20 +135,53 @@ export default function PricingPage() {
             <p className="text-[18px] text-muted-foreground max-w-[600px] mx-auto">
               Everything you need to land your dream job with AI-powered tools
             </p>
+
+            {/* Billing Toggle */}
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <button
+                onClick={() => setIsQuarterly(false)}
+                className={`text-[15px] font-semibold transition-colors cursor-pointer ${
+                  !isQuarterly ? "text-foreground" : "text-muted-foreground"
+                }`}
+              >
+                Monthly
+              </button>
+              <Switch
+                checked={isQuarterly}
+                onCheckedChange={setIsQuarterly}
+                className="data-[state=checked]:bg-accent data-[state=unchecked]:bg-input"
+                aria-label="Toggle billing period"
+              />
+              <button
+                onClick={() => setIsQuarterly(true)}
+                className={`text-[15px] font-semibold transition-colors cursor-pointer ${
+                  isQuarterly ? "text-foreground" : "text-muted-foreground"
+                }`}
+              >
+                3 Months
+              </button>
+              <Badge className="bg-green-500 text-white hover:bg-green-600 border-transparent text-xs px-2.5 py-0.5">
+                Save 15%
+              </Badge>
+            </div>
           </div>
 
           <SinglePricingCard
             badge={{ icon: Sparkles, text: "Most Popular" }}
             title="Pro Plan"
-            subtitle="For serious job seekers who want to maximise their chances."
+            subtitle={
+              isQuarterly
+                ? "For serious job seekers who want to maximise their chances."
+                : "For serious job seekers who want to maximise their chances."
+            }
             price={{
-              current: "$35/mo",
-              original: "$70/mo",
-              discount: "50% OFF",
+              current: `${currentPrice}${currentPeriod}`,
+              original: `${originalPrice}${currentPeriod}`,
+              discount,
             }}
             benefits={[
-              { text: "Cancel anytime, no long-term contracts", icon: Shield },
-              { text: "Instant access to all AI features", icon: Zap },
+              { text: isQuarterly ? "Billed every 3 months" : "Cancel anytime, no long-term contracts", icon: Shield },
+              { text: isQuarterly ? `Equivalent to $${QUARTERLY_MONTHLY_EQ.toFixed(2)}/mo` : "Instant access to all AI features", icon: Zap },
               { text: "Loved by 10,000+ job seekers", icon: Heart },
             ]}
             features={features}
@@ -122,7 +191,7 @@ export default function PricingPage() {
             primaryButton={{
               text: "Get Started Now",
               icon: ShoppingCart,
-              href: "https://app.jobexcv.ai",
+              href: checkoutUrl,
               chevronIcon: ChevronRight,
             }}
             secondaryButton={{
