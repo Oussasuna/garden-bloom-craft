@@ -80,7 +80,7 @@ const FAQSection: React.FC = () => {
               <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="px-6 md:px-8 pb-6 md:pb-8">
                   <div className="text-[15px] md:text-[16px] leading-[1.7] text-[#666666] whitespace-pre-line">
-                    {item.answer}
+                    {t(item.answer)}
                   </div>
                 </div>
               </div>
