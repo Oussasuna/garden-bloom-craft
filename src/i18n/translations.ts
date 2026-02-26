@@ -183,6 +183,7 @@ const es: Record<string, string> = {
   "How to get started?": "¿Cómo empezar?",
   "Interested? Here is how to get started.": "¿Interesado? Así es cómo empezar.",
   "Step 1:\nConfirm the details": "Paso 1:\nConfirma los detalles",
+  "Confirm the details": "Confirma los detalles",
   "Start by filling the enquiry form, our team will reach out and to understand your needs to determine the best plan.": "Comienza llenando el formulario de consulta, nuestro equipo se comunicará contigo para entender tus necesidades.",
   "Step 2:\nSet up in two weeks": "Paso 2:\nConfiguración en dos semanas",
   "Based on your needs and the scale, we will work with your team and set you up in as fast as 2 weeks.": "Según tus necesidades y escala, trabajaremos con tu equipo y te configuraremos en 2 semanas.",
