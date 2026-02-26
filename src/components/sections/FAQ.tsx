@@ -46,6 +46,7 @@ const faqItems = [
 
 const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t } = useI18n();
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
