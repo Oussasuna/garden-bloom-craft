@@ -15,7 +15,7 @@ const PreFooterCTA = () => {
             href="https://app.jobexcv.ai"
             className="inline-flex items-center justify-center bg-[#111111] text-white px-8 py-3 rounded-full font-semibold text-base transition-all duration-200 hover:opacity-90 active:scale-95 shadow-sm"
           >
-            Get Started Now
+            {t("Get Started Now")}
           </a>
         </div>
 

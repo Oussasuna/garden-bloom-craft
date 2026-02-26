@@ -1,5 +1,6 @@
 import React from 'react';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
+import { useI18n } from '@/contexts/I18nContext';
 
 const TRUSTED_LOGOS = [
   { src: "https://cdn.prod.website-files.com/67065b18171e78a558433e90/6712068c6a308945356266ed_14.avif", alt: "HKSTP logo" },
@@ -12,10 +13,11 @@ const TRUSTED_LOGOS = [
 ];
 
 const TrustedBy: React.FC = () => {
+  const { t } = useI18n();
   return (
     <section className="py-10 w-full bg-white">
       <p className="text-center text-[14px] text-[#666666] font-medium tracking-[0.05em] mb-6">
-        Trusted around the world
+        {t("Trusted around the world")}
       </p>
       <div
         className="overflow-hidden"
