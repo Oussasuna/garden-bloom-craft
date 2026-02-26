@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Menu, X, LogOut } from "lucide-react";
+import { ChevronDown, Menu, X, LogOut, Globe } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import AuthModal from "@/components/AuthModal";
@@ -52,6 +52,22 @@ const navItems = [
 
 }];
 
+const languages = [
+  { code: "EN", name: "English" },
+  { code: "FR", name: "French" },
+  { code: "ES", name: "Spanish" },
+  { code: "AR", name: "Arabic" },
+  { code: "DE", name: "German" },
+  { code: "IT", name: "Italian" },
+  { code: "PT", name: "Portuguese" },
+  { code: "NL", name: "Dutch" },
+  { code: "TR", name: "Turkish" },
+  { code: "RU", name: "Russian" },
+  { code: "JA", name: "Japanese" },
+  { code: "ZH", name: "Mandarin Chinese" },
+  { code: "KO", name: "Korean" },
+  { code: "HI", name: "Hindi" },
+];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -59,6 +75,9 @@ const Navbar = () => {
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState<"signin" | "signup">("signup");
   const [activeNav, setActiveNav] = useState<string | null>(null);
+  const [selectedLang, setSelectedLang] = useState("EN");
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
 
@@ -66,6 +85,16 @@ const Navbar = () => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -164,6 +193,40 @@ const Navbar = () => {
 
         {/* CTA / User Button */}
         <div className="hidden lg:flex items-center gap-3">
+          {/* Language Switcher */}
+          <div ref={langRef} className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center gap-1.5 rounded-full border border-gray-200 p-2 hover:bg-gray-50 transition-colors"
+            >
+              <Globe size={18} className="text-foreground" />
+              <span className="text-[13px] font-medium text-foreground">{selectedLang}</span>
+            </button>
+            <AnimatePresence>
+              {langOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.18 }}
+                  className="absolute right-0 top-full mt-2 w-[200px] bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50 max-h-[320px] overflow-y-auto"
+                >
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => { setSelectedLang(lang.code); setLangOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-[14px] hover:bg-gray-50 transition-colors ${
+                        selectedLang === lang.code ? "font-bold text-black" : "text-gray-600"
+                      }`}
+                    >
+                      {lang.name}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           {user ? (
             <>
               <span className="text-[14px] font-medium text-[#333] truncate max-w-[150px]">
@@ -195,10 +258,44 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
-        <button className="lg:hidden p-2 text-black" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: Globe + Menu Button */}
+        <div className="lg:hidden flex items-center gap-2">
+          <div ref={langRef} className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center gap-1 rounded-full border border-gray-200 p-2 hover:bg-gray-50 transition-colors"
+            >
+              <Globe size={16} className="text-foreground" />
+              <span className="text-[12px] font-medium text-foreground">{selectedLang}</span>
+            </button>
+            <AnimatePresence>
+              {langOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.18 }}
+                  className="absolute right-0 top-full mt-2 w-[180px] bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50 max-h-[280px] overflow-y-auto"
+                >
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => { setSelectedLang(lang.code); setLangOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-[14px] hover:bg-gray-50 transition-colors ${
+                        selectedLang === lang.code ? "font-bold text-black" : "text-gray-600"
+                      }`}
+                    >
+                      {lang.name}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <button className="p-2 text-black" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
