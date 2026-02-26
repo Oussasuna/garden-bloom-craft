@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X, LogOut, Globe } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
+import { useI18n, languages } from "@/contexts/I18nContext";
 import AuthModal from "@/components/AuthModal";
 
 const navItems = [
