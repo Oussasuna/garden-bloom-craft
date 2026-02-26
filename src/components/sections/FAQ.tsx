@@ -69,7 +69,7 @@ const FAQSection: React.FC = () => {
                 className="w-full flex items-center justify-between p-6 md:p-8 text-left cursor-pointer"
               >
                 <h3 className="text-[17px] md:text-[19px] font-bold text-black pr-8 leading-[1.4]">
-                  {item.question}
+                  {t(item.question)}
                 </h3>
                 <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-black flex items-center justify-center transition-transform duration-300 ${openIndex === index ? 'rotate-45' : ''}`}>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
