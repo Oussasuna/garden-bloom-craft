@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import heroVideo from '@/assets/hero-video.mp4';
 
 
