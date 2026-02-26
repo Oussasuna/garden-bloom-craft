@@ -90,7 +90,7 @@ export default function AboutPage() {
       <section className="max-w-5xl mx-auto px-6 pt-28 pb-20">
         <motion.p
           variants={fadeUp} initial="hidden" animate="visible"
-          className="text-xs font-bold uppercase tracking-widest text-accent mb-8 text-center">
+          className="text-xs font-bold uppercase tracking-widest text-accent mb-8 text-right">
           About Us
         </motion.p>
         <div className="grid md:grid-cols-2 gap-12 items-center">
