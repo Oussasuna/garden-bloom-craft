@@ -114,6 +114,7 @@ export default function PricingPage() {
     : `$${MONTHLY_PRICE}`;
   const currentPeriod = isQuarterly ? "/ 3 months" : "/mo";
   const originalPrice = isQuarterly ? `$${(MONTHLY_PRICE * 3).toFixed(0)}` : "$70";
+  const originalPeriod = isQuarterly ? "/ 3 months" : "/mo";
   const discount = isQuarterly ? "15% OFF" : "50% OFF";
   const checkoutUrl = isQuarterly
     ? "https://app.jobexcv.ai?billing=3months"
@@ -175,8 +176,10 @@ export default function PricingPage() {
                 : "For serious job seekers who want to maximise their chances."
             }
             price={{
-              current: `${currentPrice}${currentPeriod}`,
-              original: `${originalPrice}${currentPeriod}`,
+              current: currentPrice,
+              period: currentPeriod,
+              original: originalPrice,
+              originalPeriod: originalPeriod,
               discount,
             }}
             benefits={[
