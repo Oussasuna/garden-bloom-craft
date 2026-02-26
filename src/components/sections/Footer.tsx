@@ -86,11 +86,11 @@ const Footer = () => {
             <div className="flex flex-col space-y-3">
               {resources.map((item) =>
               <Link key={item.name} to={item.href} className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
-                  {item.name}
+                  {t(item.name)}
                 </Link>
               )}
               <span className="text-[#999999] text-[14px] cursor-default">
-                JobExCV Ambassador Program (Coming soon)
+                {t("JobExCV Ambassador Program (Coming soon)")}
               </span>
             </div>
           </div>
