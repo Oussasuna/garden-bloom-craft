@@ -220,15 +220,26 @@ function SinglePricingCardContent({
           <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">{title}</h3>
           <p className="mt-2 text-muted-foreground text-base">{subtitle}</p>
 
-          <div className="mt-6 flex items-baseline gap-2">
-            <span className="text-5xl font-extrabold tracking-tight text-foreground">{price.current}</span>
-            {price.original && (
-              <span className="text-xl text-muted-foreground line-through">{price.original}</span>
-            )}
-            {price.discount && (
-              <Badge className={price.discountBadgeClassName || "bg-green-500/10 text-green-600 border-green-500/20 hover:bg-green-500/20"}>
-                {price.discount}
-              </Badge>
+          <div className="mt-6 space-y-2">
+            <div className="flex items-baseline gap-1 flex-nowrap whitespace-nowrap">
+              <span className="text-5xl font-extrabold tracking-tight text-foreground">{price.current}</span>
+              {price.period && (
+                <span className="text-xl text-muted-foreground font-medium">{price.period}</span>
+              )}
+            </div>
+            {(price.original || price.discount) && (
+              <div className="flex items-center gap-3">
+                {price.original && (
+                  <span className="text-base text-muted-foreground line-through opacity-60 whitespace-nowrap">
+                    {price.original}{price.originalPeriod ? ` ${price.originalPeriod}` : ""}
+                  </span>
+                )}
+                {price.discount && (
+                  <Badge className={price.discountBadgeClassName || "bg-green-500/10 text-green-600 border-green-500/20 hover:bg-green-500/20"}>
+                    {price.discount}
+                  </Badge>
+                )}
+              </div>
             )}
           </div>
 
