@@ -189,6 +189,7 @@ const es: Record<string, string> = {
   "Set up in two weeks": "Configuración en dos semanas",
   "Based on your needs and the scale, we will work with your team and set you up in as fast as 2 weeks.": "Según tus necesidades y escala, trabajaremos con tu equipo y te configuraremos en 2 semanas.",
   "Step 3:\nWe provide training": "Paso 3:\nProporcionamos capacitación",
+  "We provide training": "Proporcionamos capacitación",
   "We provide training for your staff to ensure smooth usage for both your students and your team.": "Proporcionamos capacitación para tu personal para garantizar un uso fluido para tus estudiantes y tu equipo.",
   "Leave us a message today!": "¡Déjanos un mensaje hoy!",
   // AcademiaHero
