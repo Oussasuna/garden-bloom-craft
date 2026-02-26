@@ -193,6 +193,40 @@ const Navbar = () => {
 
         {/* CTA / User Button */}
         <div className="hidden lg:flex items-center gap-3">
+          {/* Language Switcher */}
+          <div ref={langRef} className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center gap-1.5 rounded-full border border-gray-200 p-2 hover:bg-gray-50 transition-colors"
+            >
+              <Globe size={18} className="text-foreground" />
+              <span className="text-[13px] font-medium text-foreground">{selectedLang}</span>
+            </button>
+            <AnimatePresence>
+              {langOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.18 }}
+                  className="absolute right-0 top-full mt-2 w-[200px] bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50 max-h-[320px] overflow-y-auto"
+                >
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => { setSelectedLang(lang.code); setLangOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-[14px] hover:bg-gray-50 transition-colors ${
+                        selectedLang === lang.code ? "font-bold text-black" : "text-gray-600"
+                      }`}
+                    >
+                      {lang.name}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           {user ? (
             <>
               <span className="text-[14px] font-medium text-[#333] truncate max-w-[150px]">
