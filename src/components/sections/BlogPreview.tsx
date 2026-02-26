@@ -1,4 +1,5 @@
 import React from 'react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const blogPosts = [
   {
@@ -22,15 +23,16 @@ const blogPosts = [
 ];
 
 const BlogPreview = () => {
+  const { t } = useI18n();
   return (
     <section className="py-[80px] md:py-[120px] bg-white">
       <div className="container mx-auto px-6 max-w-[1240px]">
         <div className="text-center mb-12">
           <p className="text-[#00A3FF] text-[14px] font-bold mb-2 tracking-wide">
-            While you are here ...
+            {t("While you are here ...")}
           </p>
           <h2 className="text-[32px] md:text-[42px] font-bold text-black leading-[1.2]">
-            Check out our blogs.
+            {t("Check out our blogs.")}
           </h2>
         </div>
 
@@ -53,7 +55,7 @@ const BlogPreview = () => {
 
               <div className="p-6 pt-4 flex flex-col flex-grow">
                 <span className="text-[#00A3FF] text-[14px] font-bold mb-2">
-                  {post.category}
+                  {t(post.category)}
                 </span>
                 <h3 className="text-[18px] md:text-[20px] font-bold text-black leading-tight group-hover:text-[#333] transition-colors line-clamp-3">
                   {post.title}
@@ -65,7 +67,7 @@ const BlogPreview = () => {
 
         <div className="text-center">
           <a href="/blog" className="text-[#00A3FF] text-[16px] font-medium hover:underline transition-all">
-            See more
+            {t("See more")}
           </a>
         </div>
       </div>

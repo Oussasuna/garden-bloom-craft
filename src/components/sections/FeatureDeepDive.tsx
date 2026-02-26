@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useI18n } from '@/contexts/I18nContext';
+
 const features = [
   {
     id: 'ai-resume',
@@ -68,6 +70,7 @@ const features = [
 ];
 
 export default function FeatureDeepDive() {
+  const { t } = useI18n();
   return (
     <section className="py-[80px] md:py-[100px] bg-white">
       <div className="container mx-auto px-6 max-w-[1200px]">
@@ -86,17 +89,17 @@ export default function FeatureDeepDive() {
                 <div className="flex-1 w-full">
                   <div className="text-[13px] font-bold mb-3 flex items-center gap-2" style={{ color: feature.badgeColor }}>
                     <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: feature.badgeColor }} />
-                    {feature.badge}
+                    {t(feature.badge)}
                   </div>
                   <h3 className="text-[28px] md:text-[32px] font-extrabold text-[#1a1a1a] leading-[1.2] mb-4">
-                    {feature.title}
+                    {t(feature.title)}
                   </h3>
-                  <p className="text-[#666666] text-[17px] leading-[1.6] mb-6">{feature.description}</p>
+                  <p className="text-[#666666] text-[17px] leading-[1.6] mb-6">{t(feature.description)}</p>
                   <ul className="space-y-3 mb-8">
                     {feature.bullets.map((bullet, i) => (
                       <li key={i} className="flex items-start gap-3 text-[15px] font-medium text-[#1a1a1a]">
                         <span className="text-black mt-0.5 flex-shrink-0">✦</span>
-                        {bullet}
+                        {t(bullet)}
                       </li>
                     ))}
                   </ul>
@@ -106,7 +109,7 @@ export default function FeatureDeepDive() {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
                   >
-                    {feature.cta}
+                    {t(feature.cta)}
                   </motion.a>
                 </div>
                 <motion.div

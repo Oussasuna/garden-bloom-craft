@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import { useI18n } from '@/contexts/I18nContext';
 
 interface Testimonial {
   text: string;
@@ -123,17 +124,18 @@ const TestimonialsColumn = ({
 };
 
 export function TestimonialsSection() {
+  const { t } = useI18n();
   return (
     <div className="flex flex-col items-center">
       <div className="text-center mb-12">
         <p className="text-[#0099ff] text-[14px] font-semibold tracking-wide uppercase mb-3">
-          Testimonials
+          {t("Testimonials")}
         </p>
         <h2 className="text-[36px] lg:text-[42px] font-extrabold text-[#1a1a1a] mb-4">
-          What our users say
+          {t("What our users say")}
         </h2>
         <p className="text-[16px] text-[#666666] max-w-[600px] mx-auto">
-          Discover how thousands of job seekers streamline their applications with JobExCV.
+          {t("Discover how thousands of job seekers streamline their applications with JobExCV.")}
         </p>
       </div>
 

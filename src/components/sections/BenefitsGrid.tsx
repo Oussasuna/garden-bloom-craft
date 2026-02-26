@@ -1,6 +1,8 @@
 import React from 'react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const BenefitsGrid = () => {
+  const { t } = useI18n();
   const benefits = [
     {
       title: "Save time & reduce stress",
@@ -26,20 +28,20 @@ const BenefitsGrid = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
           <div className="flex flex-col justify-start">
             <p className="text-[#00a3ff] text-[14px] font-bold mb-4 tracking-normal">
-              Why use JobExCV?
+              {t("Why use JobExCV?")}
             </p>
             <h2 className="text-[32px] md:text-[42px] leading-[1.2] font-bold text-black mb-6 max-w-[500px]">
-              Maximise student employability. Minimise career service workload.
+              {t("Maximise student employability. Minimise career service workload.")}
             </h2>
             <p className="text-[#666666] text-[16px] md:text-[18px] leading-[1.6] max-w-[540px] mb-10">
-              With how competitive the job market is nowadays, landing a job is no longer just about who you are, but also how you apply. JobExCV assists your career service team by providing high quality opportunities and applications automations for students 24/7.
+              {t("With how competitive the job market is nowadays, landing a job is no longer just about who you are, but also how you apply. JobExCV assists your career service team by providing high quality opportunities and applications automations for students 24/7.")}
             </p>
             <div className="hidden lg:block pt-4">
               <a
                 href="https://forms.gle/iwthRUZE75ZYKdge8"
                 className="inline-flex items-center justify-center px-8 py-3 bg-[#111111] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
               >
-                Boost results today
+                {t("Boost results today")}
               </a>
             </div>
           </div>
@@ -55,10 +57,10 @@ const BenefitsGrid = () => {
                   />
                 </div>
                 <h3 className="text-[20px] font-bold text-black mb-3 leading-[1.3] transition-transform duration-200 ease-out group-hover:translate-x-[6px]">
-                  {benefit.title}
+                  {t(benefit.title)}
                 </h3>
                 <p className="text-[#666666] text-[15px] leading-[1.6]">
-                  {benefit.description}
+                  {t(benefit.description)}
                 </p>
               </div>
             ))}
@@ -69,7 +71,7 @@ const BenefitsGrid = () => {
               href="https://forms.gle/iwthRUZE75ZYKdge8"
               className="inline-flex items-center justify-center w-full px-8 py-4 bg-[#111111] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
             >
-              Boost results today
+              {t("Boost results today")}
             </a>
           </div>
         </div>
