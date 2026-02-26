@@ -108,7 +108,7 @@ export default function PricingPage() {
             price={{
               current: "$35/mo",
               original: "$49/mo",
-              discount: "60% OFF",
+              discount: "29% OFF",
             }}
             benefits={[
               { text: "Cancel anytime, no long-term contracts", icon: Shield },
