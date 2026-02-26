@@ -258,10 +258,44 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
-        <button className="lg:hidden p-2 text-black" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: Globe + Menu Button */}
+        <div className="lg:hidden flex items-center gap-2">
+          <div ref={langRef} className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center gap-1 rounded-full border border-gray-200 p-2 hover:bg-gray-50 transition-colors"
+            >
+              <Globe size={16} className="text-foreground" />
+              <span className="text-[12px] font-medium text-foreground">{selectedLang}</span>
+            </button>
+            <AnimatePresence>
+              {langOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.18 }}
+                  className="absolute right-0 top-full mt-2 w-[180px] bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50 max-h-[280px] overflow-y-auto"
+                >
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => { setSelectedLang(lang.code); setLangOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-[14px] hover:bg-gray-50 transition-colors ${
+                        selectedLang === lang.code ? "font-bold text-black" : "text-gray-600"
+                      }`}
+                    >
+                      {lang.name}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <button className="p-2 text-black" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
