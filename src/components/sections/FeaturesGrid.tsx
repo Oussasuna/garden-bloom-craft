@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useI18n } from '@/contexts/I18nContext';
 import {
   IconRocket,
   IconClick,
