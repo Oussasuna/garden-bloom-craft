@@ -59,7 +59,7 @@ const HowItWorks = () => {
 
             className="bg-black text-white text-[16px] font-semibold px-8 py-4 rounded-full transition-transform duration-200 hover:scale-[1.05] active:scale-[0.98]" href="https://preview--petal-prime.lovable.app/">
 
-            That&apos;s it! Give it a go!
+            {t("That's it! Give it a go!")}
           </a>
         </div>
       </div>
