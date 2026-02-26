@@ -57,20 +57,20 @@ const HeroSection = () => {
             {/* Left column - Text */}
             <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
               <p className="text-[#00A3FF] font-bold text-[14px] mb-6 tracking-tight">
-                #1 AI-Powered Career Platform
+                {t("#1 AI-Powered Career Platform")}
               </p>
               <h1 className="text-[36px] md:text-[56px] font-[800] leading-[1.1] text-black mb-6 tracking-[-0.02em]">
-                Land your dream job with AI that automates your entire job search.
+                {t("Land your dream job with AI that automates your entire job search.")}
               </h1>
               <p className="text-[16px] md:text-[18px] text-[#666666] leading-[1.6] max-w-[700px] mb-8">
-                JobexCV automates your entire job search  from building the perfect resume to applying to top companies worldwide.
+                {t("JobexCV automates your entire job search  from building the perfect resume to applying to top companies worldwide.")}
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
                 <a className="bg-[#111111] text-white rounded-full font-semibold text-[16px] hover:opacity-90 transition-opacity py-[18px] px-[10px] my-0 mx-0" href="https://preview--petal-prime.lovable.app/">
-                  Start Getting Hired Today
+                  {t("Start Getting Hired Today")}
                 </a>
                 <a href="#" className="text-[#0099ff] text-[14px] font-medium hover:underline transition-colors">
-                  Looking for university partnerships? Click here
+                  {t("Looking for university partnerships? Click here")}
                 </a>
               </div>
             </div>
