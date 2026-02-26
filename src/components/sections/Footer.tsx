@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Features</h4>
+            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">{t("Features")}</h4>
             <div className="flex flex-col space-y-3">
               {features.map((item) =>
               <Link key={item.name} to={item.href} className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
