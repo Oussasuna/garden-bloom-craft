@@ -97,7 +97,7 @@ const HeroSection = () => {
       {/* Company logos bar */}
       <div className="w-full flex flex-col justify-center items-center text-center pb-12 border-b border-gray-100">
         <p className="text-center text-[13px] font-medium text-[#666666]/60 mb-8 tracking-wider">
-          Users landed roles at
+          {t("Users landed roles at")}
         </p>
         <div className="w-full flex justify-center gap-[60px] flex-wrap px-6">
             {companyLogos.map((logo, i) => (
