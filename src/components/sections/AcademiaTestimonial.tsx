@@ -1,4 +1,5 @@
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { useI18n } from "@/contexts/I18nContext";
 
 const testimonials = [
   {
@@ -20,7 +21,7 @@ const testimonials = [
     src: "/lovable-uploads/graduate4.png",
   },
   {
-    quote: "As an international student, finding jobs was overwhelming. JobexCV simplified everything and helped me stand out to employers worldwide.",
+    quote: "As an international student, finding jobs was overwhelming. JobExCV simplified everything and helped me stand out to employers worldwide.",
     name: "Carlos Rivera",
     designation: "MBA Student — CityU Hong Kong",
     src: "/lovable-uploads/graduate5.png",
@@ -34,10 +35,11 @@ const testimonials = [
 ];
 
 export default function AcademiaTestimonial() {
+  const { t } = useI18n();
   return (
     <section className="bg-white py-12 md:py-16">
-      <p className="text-center text-sm text-blue-500 font-medium mb-2">Student Success Stories</p>
-      <h2 className="text-center text-3xl font-bold mb-0">What our students say</h2>
+      <p className="text-center text-sm text-blue-500 font-medium mb-2">{t("Student Success Stories")}</p>
+      <h2 className="text-center text-3xl font-bold mb-0">{t("What our students say")}</h2>
       <AnimatedTestimonials testimonials={testimonials} autoplay={true} className="py-8" />
     </section>
   );

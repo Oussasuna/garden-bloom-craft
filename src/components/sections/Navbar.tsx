@@ -62,7 +62,7 @@ const Navbar = () => {
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
   const { user, signOut } = useAuth();
-  const { lang: selectedLang, setLang: setSelectedLang } = useI18n();
+  const { lang: selectedLang, setLang: setSelectedLang, t } = useI18n();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -93,10 +93,8 @@ const Navbar = () => {
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <img
-
             alt="JobExCV logo"
             className="h-[43px] w-auto object-contain rounded-xl" src="/lovable-uploads/f78ef4c0-77ab-4a45-8304-3d8b9b369e18.png" />
-
         </a>
 
         {/* Desktop Navigation */}
@@ -122,7 +120,7 @@ const Navbar = () => {
               )}
               {item.dropdown ?
             <div className="flex items-center px-2.5 py-1.5 cursor-pointer rounded-full transition-colors">
-                  <span className="text-[14px] font-medium text-[#050505] mr-1">{item.name}</span>
+                  <span className="text-[14px] font-medium text-[#050505] mr-1">{t(item.name)}</span>
                   <ChevronDown className="w-4 h-4 text-[#050505] transition-transform duration-200 group-hover:rotate-180" />
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className={`bg-white rounded-2xl shadow-xl border border-gray-100 p-2 ${
@@ -141,7 +139,7 @@ const Navbar = () => {
                           <div className="grid grid-cols-2 gap-0">
                             {item.dropdown.map((sub, sIdx) =>
                       <Link key={sIdx} to={sub.href} className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-black rounded-xl transition-colors whitespace-nowrap">
-                                {sub.name}
+                                {t(sub.name)}
                               </Link>
                       )}
                           </div>
@@ -149,7 +147,7 @@ const Navbar = () => {
                     <>
                               <div className="border-t border-gray-100 mx-2" />
                               <span className="block px-4 py-3 text-[14px] text-gray-400 rounded-xl whitespace-nowrap cursor-default">
-                                {item.bottomItem.name}
+                                {t(item.bottomItem.name)}
                               </span>
                             </>
                     }
@@ -158,7 +156,7 @@ const Navbar = () => {
                   <div className={(item.dropdown?.length ?? 0) > 6 ? 'grid grid-cols-2 gap-0' : ''}>
                           {item.dropdown.map((sub, sIdx) =>
                     <Link key={sIdx} to={sub.href} className="block px-4 py-3 text-[14px] text-gray-700 hover:bg-gray-50 hover:text-black rounded-xl transition-colors whitespace-nowrap">
-                              {sub.name}
+                              {t(sub.name)}
                             </Link>
                     )}
                         </div>
@@ -168,7 +166,7 @@ const Navbar = () => {
                 </div> :
 
             <Link to={item.href} className="px-3 py-1.5 text-[14px] font-medium transition-colors rounded-full text-[#333333]">
-                  {item.name}
+                  {t(item.name)}
                 </Link>
             }
             </div>
@@ -221,7 +219,7 @@ const Navbar = () => {
                 className="flex items-center gap-1.5 text-[14px] font-medium text-[#555] hover:text-black transition-colors"
               >
                 <LogOut size={16} />
-                Log out
+                {t("Log out")}
               </button>
             </>
           ) : (
@@ -230,13 +228,13 @@ const Navbar = () => {
                 onClick={() => { setAuthMode("signin"); setAuthOpen(true); }}
                 className="border border-gray-300 rounded-full px-5 py-2.5 text-[14px] font-medium hover:bg-gray-50 transition-colors"
               >
-                Login
+                {t("Login")}
               </button>
               <button
                 onClick={() => { setAuthMode("signup"); setAuthOpen(true); }}
                 className="bg-[#111111] text-white px-5 py-2.5 rounded-full text-[14px] font-semibold hover:opacity-90 transition-opacity"
               >
-                Sign Up
+                {t("Sign Up")}
               </button>
             </>
           )}
@@ -288,14 +286,14 @@ const Navbar = () => {
           <div className="flex flex-col p-4 space-y-4">
             {navItems.map((item, idx) =>
           <div key={idx} className="flex flex-col">
-                <div className="font-semibold text-gray-900 py-2 border-b border-gray-50">{item.name}</div>
+                <div className="font-semibold text-gray-900 py-2 border-b border-gray-50">{t(item.name)}</div>
                 {item.dropdown && !item.isSocial &&
             <div className="pl-4 flex flex-col space-y-2 mt-2">
                     {item.dropdown.map((sub, sIdx) =>
-              <Link key={sIdx} to={sub.href} className="text-[14px] text-gray-600 py-1" onClick={() => setMobileMenuOpen(false)}>{sub.name}</Link>
+              <Link key={sIdx} to={sub.href} className="text-[14px] text-gray-600 py-1" onClick={() => setMobileMenuOpen(false)}>{t(sub.name)}</Link>
               )}
                     {item.bottomItem &&
-              <a href={item.bottomItem.href} className="text-[14px] text-gray-600 py-1">{item.bottomItem.name}</a>
+              <a href={item.bottomItem.href} className="text-[14px] text-gray-600 py-1">{t(item.bottomItem.name)}</a>
               }
                   </div>
             }
@@ -312,15 +310,15 @@ const Navbar = () => {
           )}
             {user ? (
               <button onClick={() => { signOut(); setMobileMenuOpen(false); }} className="bg-[#111111] text-white w-full py-4 rounded-xl text-center font-bold text-[16px]">
-                Log out
+                {t("Log out")}
               </button>
             ) : (
               <>
                 <button onClick={() => { setAuthMode("signin"); setAuthOpen(true); setMobileMenuOpen(false); }} className="w-full py-4 rounded-xl text-center font-bold text-[16px] border border-gray-300">
-                  Login
+                  {t("Login")}
                 </button>
                 <button onClick={() => { setAuthMode("signup"); setAuthOpen(true); setMobileMenuOpen(false); }} className="bg-[#111111] text-white w-full py-4 rounded-xl text-center font-bold text-[16px]">
-                  Sign Up
+                  {t("Sign Up")}
                 </button>
               </>
             )}

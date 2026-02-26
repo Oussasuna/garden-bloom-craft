@@ -1,4 +1,5 @@
 import React from 'react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const features = [
   { title: 'AI auto add job', description: 'Tell AI the job you want to apply to (or search on JobExCV), AI does the rest.', image: 'https://cdn.prod.website-files.com/67065b18171e78a558433e90/6909cee02cee4c3dfd8d0d18_Untitled%20presentation%20(2).png' },
@@ -16,18 +17,19 @@ const features = [
 ];
 
 export default function AcademiaFeaturesGrid() {
+  const { t } = useI18n();
   return (
     <section className="bg-white pt-[80px] lg:pt-[120px] pb-[20px] px-6">
       <div className="max-w-[1200px] mx-auto">
         <div className="mb-[64px]">
           <span className="text-[#00A3FF] font-bold text-[14px] leading-[1.4] mb-3 block">
-            Features
+            {t("Features")}
           </span>
           <h2 className="text-[32px] md:text-[42px] font-bold leading-[1.2] tracking-[-0.02em] text-[#000000] mb-6">
-            Everything your students need to succeed.
+            {t("Everything your students need to succeed.")}
           </h2>
           <p className="text-[#666666] text-[18px] md:text-[20px] leading-[1.6] max-w-[800px]">
-            JobExCV supercharges your students' career success with industry know-hows and end-to-end automations for every step on their job hunt journey, from search to offer.
+            {t("JobExCV supercharges your students' career success with industry know-hows and end-to-end automations for every step on their job hunt journey, from search to offer.")}
           </p>
         </div>
 
@@ -35,7 +37,7 @@ export default function AcademiaFeaturesGrid() {
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col group">
               <h3 className="text-[18px] font-bold leading-[1.4] text-[#000000] mb-5">
-                {feature.title}
+                {t(feature.title)}
               </h3>
               <div className="relative mb-5 overflow-hidden rounded-[16px] border border-[#E5E7EB] shadow-sm transition-transform duration-300 hover:scale-[1.02]">
                 <img
@@ -46,7 +48,7 @@ export default function AcademiaFeaturesGrid() {
                 />
               </div>
               <p className="text-[#666666] text-[16px] leading-[1.5]">
-                {feature.description}
+                {t(feature.description)}
               </p>
             </div>
           ))}
@@ -57,7 +59,7 @@ export default function AcademiaFeaturesGrid() {
             href="https://forms.gle/iwthRUZE75ZYKdge8"
             className="inline-flex items-center justify-center bg-[#111111] text-white px-[32px] py-[14px] rounded-full font-semibold text-[16px] transition-opacity hover:opacity-90"
           >
-            Give us a call
+            {t("Give us a call")}
           </a>
         </div>
       </div>

@@ -1,16 +1,18 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const GetStartedSteps: React.FC = () => {
+  const { t } = useI18n();
   return (
     <section className="py-[80px] md:py-[120px] bg-white w-full overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1200px]">
         <div className="text-center mb-16">
           <p className="mb-4 text-[#00a3ff] font-bold text-[14px] tracking-wide">
-            How to get started?
+            {t("How to get started?")}
           </p>
           <h2 className="text-[#000000] text-[36px] md:text-[42px] font-bold leading-[1.2] tracking-[-0.02em]">
-            Interested? Here is how to get started.
+            {t("Interested? Here is how to get started.")}
           </h2>
         </div>
 
@@ -22,10 +24,10 @@ const GetStartedSteps: React.FC = () => {
               </div>
             </div>
             <h3 className="text-[#000000] text-xl font-bold mb-4">
-              Step 1:<br />Confirm the details
+              {t("Step 1:")}<br />{t("Confirm the details")}
             </h3>
             <p className="text-[#666666] text-[16px] leading-[1.5] max-w-[280px]">
-              Start by filling the enquiry form, our team will reach out and to understand your needs to determine the best plan.
+              {t("Start by filling the enquiry form, our team will reach out and to understand your needs to determine the best plan.")}
             </p>
           </div>
 
@@ -37,10 +39,10 @@ const GetStartedSteps: React.FC = () => {
               </svg>
             </div>
             <h3 className="text-[#000000] text-xl font-bold mb-4">
-              Step 2:<br />Set up in two weeks
+              {t("Step 2:")}<br />{t("Set up in two weeks")}
             </h3>
             <p className="text-[#666666] text-[16px] leading-[1.5] max-w-[280px]">
-              Based on your needs and the scale, we will work with your team and set you up in as fast as 2 weeks.
+              {t("Based on your needs and the scale, we will work with your team and set you up in as fast as 2 weeks.")}
             </p>
           </div>
 
@@ -53,10 +55,10 @@ const GetStartedSteps: React.FC = () => {
               </svg>
             </div>
             <h3 className="text-[#000000] text-xl font-bold mb-4">
-              Step 3:<br />We provide training
+              {t("Step 3:")}<br />{t("We provide training")}
             </h3>
             <p className="text-[#666666] text-[16px] leading-[1.5] max-w-[280px]">
-              We provide training for your staff to ensure smooth usage for both your students and your team.
+              {t("We provide training for your staff to ensure smooth usage for both your students and your team.")}
             </p>
           </div>
         </div>
@@ -66,7 +68,7 @@ const GetStartedSteps: React.FC = () => {
             href="https://forms.gle/iwthRUZE75ZYKdge8"
             className="bg-[#111111] text-white px-8 py-3 rounded-full font-bold text-[15px] hover:opacity-90 transition-opacity whitespace-nowrap"
           >
-            Leave us a message today!
+            {t("Leave us a message today!")}
           </a>
         </div>
       </div>
