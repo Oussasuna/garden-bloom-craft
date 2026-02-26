@@ -75,7 +75,7 @@ const Footer = () => {
             <div className="flex flex-col space-y-3">
               {features.map((item) =>
               <Link key={item.name} to={item.href} className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
-                  {item.name}
+                  {t(item.name)}
                 </Link>
               )}
             </div>
