@@ -39,7 +39,9 @@ export interface SinglePricingCardProps {
 
   price: {
     current: string
+    period?: string
     original?: string
+    originalPeriod?: string
     discount?: string
     discountBadgeClassName?: string
   }
