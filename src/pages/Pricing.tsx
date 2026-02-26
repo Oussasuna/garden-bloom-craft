@@ -176,8 +176,10 @@ export default function PricingPage() {
                 : "For serious job seekers who want to maximise their chances."
             }
             price={{
-              current: `${currentPrice}${currentPeriod}`,
-              original: `${originalPrice}${currentPeriod}`,
+              current: currentPrice,
+              period: currentPeriod,
+              original: originalPrice,
+              originalPeriod: originalPeriod,
               discount,
             }}
             benefits={[
