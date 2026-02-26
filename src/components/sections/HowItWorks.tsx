@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useI18n } from '@/contexts/I18nContext';
 const steps = [
 {
   id: 'step-1',
@@ -25,15 +25,16 @@ const steps = [
 
 
 const HowItWorks = () => {
+  const { t } = useI18n();
   return (
     <section className="bg-white py-[80px] md:py-[100px]">
       <div className="container mx-auto px-6 max-w-[1200px] flex flex-col items-center">
         <div className="text-center mb-12">
           <p className="text-[#0099ff] text-[14px] font-semibold tracking-wide uppercase mb-2">
-            How it works?
+            {t("How it works?")}
           </p>
           <h2 className="text-[#1a1a1a] text-[42px] font-bold leading-[1.2] tracking-[-0.02em]">
-            Perfect applications in one click.
+            {t("Perfect applications in one click.")}
           </h2>
         </div>
 
@@ -44,10 +45,10 @@ const HowItWorks = () => {
                 <img src={step.icon} alt={step.title} className="h-full w-auto object-contain" />
               </div>
               <h3 className="text-[#1a1a1a] text-[24px] font-bold leading-[1.2] mb-4">
-                {step.number} <br /> {step.title}
+                {t(step.number)} <br /> {t(step.title)}
               </h3>
               <p className="text-[#666666] text-[18px] font-normal leading-[1.6]">
-                {step.description}
+                {t(step.description)}
               </p>
             </div>
           )}
@@ -58,7 +59,7 @@ const HowItWorks = () => {
 
             className="bg-black text-white text-[16px] font-semibold px-8 py-4 rounded-full transition-transform duration-200 hover:scale-[1.05] active:scale-[0.98]" href="https://preview--petal-prime.lovable.app/">
 
-            That&apos;s it! Give it a go!
+            {t("That's it! Give it a go!")}
           </a>
         </div>
       </div>

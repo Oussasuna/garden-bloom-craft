@@ -1,6 +1,8 @@
 import React from 'react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const ValueProps = () => {
+  const { t } = useI18n();
   return (
     <section className="bg-white py-20 md:py-28 overflow-hidden">
       <div className="container max-w-[1200px] mx-auto px-6">
@@ -29,23 +31,23 @@ const ValueProps = () => {
 
                 </div>
                 <h2 className="text-[22px] md:text-[28px] font-bold leading-[1.3] text-black tracking-tight">
-                  Struggling with job hunt? We use AI maximise your job application success rate and minimise the time and effort you need to spend doing it.
+                  {t("Struggling with job hunt? We use AI maximise your job application success rate and minimise the time and effort you need to spend doing it.")}
                 </h2>
               </div>
 
               {/* Metrics Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-[#e5e7eb] pt-8">
                 <div className="pl-5 border-l-2 border-[#e5e7eb]">
-                  <h3 className="text-[32px] md:text-[36px] font-extrabold text-black leading-none mb-1">1 click</h3>
-                  <p className="text-[#666666] text-[14px] md:text-[15px]">AI resume builder</p>
+                  <h3 className="text-[32px] md:text-[36px] font-extrabold text-black leading-none mb-1">{t("1 click")}</h3>
+                  <p className="text-[#666666] text-[14px] md:text-[15px]">{t("AI resume builder")}</p>
                 </div>
                 <div className="pl-5 border-l-2 border-[#e5e7eb]">
-                  <h3 className="text-[32px] md:text-[36px] font-extrabold text-black leading-none mb-1">1 minute</h3>
-                  <p className="text-[#666666] text-[14px] md:text-[15px]">per job application</p>
+                  <h3 className="text-[32px] md:text-[36px] font-extrabold text-black leading-none mb-1">{t("1 minute")}</h3>
+                  <p className="text-[#666666] text-[14px] md:text-[15px]">{t("per job application")}</p>
                 </div>
                 <div className="pl-5 border-l-2 border-[#e5e7eb]">
                   <h3 className="text-[32px] md:text-[36px] font-extrabold text-black leading-none mb-1">10X</h3>
-                  <p className="text-[#666666] text-[14px] md:text-[15px]">your interview rate</p>
+                  <p className="text-[#666666] text-[14px] md:text-[15px]">{t("your interview rate")}</p>
                 </div>
               </div>
             </div>

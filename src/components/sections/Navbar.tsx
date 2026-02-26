@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X, LogOut, Globe } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
+import { useI18n, languages } from "@/contexts/I18nContext";
 import AuthModal from "@/components/AuthModal";
 
 const navItems = [
@@ -52,33 +53,16 @@ const navItems = [
 
 }];
 
-const languages = [
-  { code: "EN", name: "English" },
-  { code: "FR", name: "French" },
-  { code: "ES", name: "Spanish" },
-  { code: "AR", name: "Arabic" },
-  { code: "DE", name: "German" },
-  { code: "IT", name: "Italian" },
-  { code: "PT", name: "Portuguese" },
-  { code: "NL", name: "Dutch" },
-  { code: "TR", name: "Turkish" },
-  { code: "RU", name: "Russian" },
-  { code: "JA", name: "Japanese" },
-  { code: "ZH", name: "Mandarin Chinese" },
-  { code: "KO", name: "Korean" },
-  { code: "HI", name: "Hindi" },
-];
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState<"signin" | "signup">("signup");
   const [activeNav, setActiveNav] = useState<string | null>(null);
-  const [selectedLang, setSelectedLang] = useState("EN");
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
   const { user, signOut } = useAuth();
+  const { lang: selectedLang, setLang: setSelectedLang } = useI18n();
   const navigate = useNavigate();
 
   useEffect(() => {

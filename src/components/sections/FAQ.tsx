@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const faqItems = [
   {
@@ -45,6 +46,7 @@ const faqItems = [
 
 const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t } = useI18n();
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -54,7 +56,7 @@ const FAQSection: React.FC = () => {
     <section className="bg-[#f8f7f5] py-[80px] md:py-[120px]">
       <div className="container mx-auto max-w-[1200px] px-6">
         <h2 className="text-[32px] md:text-[42px] font-bold text-black mb-12 text-center">
-          Frequently Asked Questions
+          {t("Frequently Asked Questions")}
         </h2>
         <div className="flex flex-col gap-4">
           {faqItems.map((item, index) => (
@@ -67,7 +69,7 @@ const FAQSection: React.FC = () => {
                 className="w-full flex items-center justify-between p-6 md:p-8 text-left cursor-pointer"
               >
                 <h3 className="text-[17px] md:text-[19px] font-bold text-black pr-8 leading-[1.4]">
-                  {item.question}
+                  {t(item.question)}
                 </h3>
                 <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-black flex items-center justify-center transition-transform duration-300 ${openIndex === index ? 'rotate-45' : ''}`}>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -78,7 +80,7 @@ const FAQSection: React.FC = () => {
               <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="px-6 md:px-8 pb-6 md:pb-8">
                   <div className="text-[15px] md:text-[16px] leading-[1.7] text-[#666666] whitespace-pre-line">
-                    {item.answer}
+                    {t(item.answer)}
                   </div>
                 </div>
               </div>

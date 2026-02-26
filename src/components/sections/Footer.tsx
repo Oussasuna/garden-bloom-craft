@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Instagram, Youtube } from 'lucide-react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const features = [
 { name: "Auto Apply", href: "/features/auto-apply" },
@@ -35,18 +36,19 @@ const socials = [
 
 
 const Footer = () => {
+  const { t } = useI18n();
   return (
     <footer className="w-full bg-white flex flex-col items-center">
       {/* Top CTA Section */}
       <section className="w-full pt-[80px] pb-[40px] px-6 text-center">
         <h2 className="text-[42px] font-extrabold text-[#1a1a1a] mb-6 tracking-tight">
-          Your success begins here.
+          {t("Your success begins here.")}
         </h2>
         <div className="flex justify-center mb-12">
           <a
             href="https://app.jobexcv.ai"
             className="bg-[#1a1a1a] text-white px-8 py-[14px] rounded-full font-semibold text-[16px] hover:opacity-90 transition-all">
-            Get Started Now
+            {t("Get Started Now")}
           </a>
         </div>
         
@@ -69,32 +71,32 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Features</h4>
+            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">{t("Features")}</h4>
             <div className="flex flex-col space-y-3">
               {features.map((item) =>
               <Link key={item.name} to={item.href} className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
-                  {item.name}
+                  {t(item.name)}
                 </Link>
               )}
             </div>
           </div>
 
           <div className="flex flex-col">
-            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Resources</h4>
+            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">{t("Resources")}</h4>
             <div className="flex flex-col space-y-3">
               {resources.map((item) =>
               <Link key={item.name} to={item.href} className="text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
-                  {item.name}
+                  {t(item.name)}
                 </Link>
               )}
               <span className="text-[#999999] text-[14px] cursor-default">
-                JobExCV Ambassador Program (Coming soon)
+                {t("JobExCV Ambassador Program (Coming soon)")}
               </span>
             </div>
           </div>
 
           <div className="flex flex-col">
-            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Follow us</h4>
+            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">{t("Follow us")}</h4>
             <div className="flex flex-col space-y-4">
               {socials.map((item) =>
               <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
@@ -109,7 +111,7 @@ const Footer = () => {
 
       <div className="w-full border-t border-[#e5e5e5] py-6 text-center">
         <p className="text-[#666666] text-[12px]">
-          © 2025 JobexCV. All rights reserved.
+          {t("© 2025 JobexCV. All rights reserved.")}
         </p>
       </div>
     </footer>);
