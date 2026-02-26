@@ -31,10 +31,10 @@ const HowItWorks = () => {
       <div className="container mx-auto px-6 max-w-[1200px] flex flex-col items-center">
         <div className="text-center mb-12">
           <p className="text-[#0099ff] text-[14px] font-semibold tracking-wide uppercase mb-2">
-            How it works?
+            {t("How it works?")}
           </p>
           <h2 className="text-[#1a1a1a] text-[42px] font-bold leading-[1.2] tracking-[-0.02em]">
-            Perfect applications in one click.
+            {t("Perfect applications in one click.")}
           </h2>
         </div>
 
