@@ -1,6 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const slideInLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const slideInRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
 
 function BrowserMockup({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
@@ -96,7 +122,12 @@ export default function JobMatchingPage() {
       <section className="relative pt-[120px] pb-0 overflow-hidden bg-white">
         <div className="max-w-[1200px] mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-[60px]">
-            <div className="w-full lg:w-1/2">
+            <motion.div
+              className="w-full lg:w-1/2"
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
+            >
               <div className="max-w-[560px]">
                 <h1 className="text-[28px] md:text-[40px] font-extrabold text-black leading-[1.15] mb-5 tracking-[-0.02em]">
                   The most advanced Job Matching Platform to help you get a job
@@ -111,16 +142,27 @@ export default function JobMatchingPage() {
                   or Talk to our team
                 </a>
               </div>
-            </div>
-            <div className="w-full lg:w-1/2 flex items-center justify-center">
+            </motion.div>
+            <motion.div
+              className="w-full lg:w-1/2 flex items-center justify-center"
+              initial="hidden"
+              animate="visible"
+              variants={slideInRight}
+            >
               <HeroJobCard />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Help clients section */}
-      <section className="py-[100px] bg-white">
+      <motion.section
+        className="py-[100px] bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeUp}
+      >
         <div className="max-w-[1200px] mx-auto px-6 text-center">
           <h2 className="text-[36px] md:text-[42px] font-extrabold text-black mb-4 tracking-[-0.02em]">
             Help your clients <span className="text-[#555555]">accelerate their job search</span>
@@ -128,45 +170,70 @@ export default function JobMatchingPage() {
           <p className="text-[#555555] text-[18px] max-w-[800px] mx-auto mb-10 leading-[1.6]">
             With JobExCV Recruiters and Agencies can help individuals accelerate their job search results getting more interviews and optimize their CV. Check below the features that make JobExCV stand out!
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-[600px] mx-auto">
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-[600px] mx-auto"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {tabs.map((tab) => (
-              <div
+              <motion.div
                 key={tab.label}
+                variants={fadeUp}
                 className={`rounded-[8px] px-4 py-3 text-[13px] font-medium border transition-colors ${
                   tab.active ? "bg-black text-white border-black" : "bg-white text-[#555555] border-[#E2E8F0] hover:border-black"
                 }`}
               >
                 {tab.label}
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* How it works */}
-      <section className="py-[100px] bg-white">
+      <motion.section
+        className="py-[100px] bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeUp}
+      >
         <div className="max-w-[1200px] mx-auto px-6">
           <h2 className="text-[36px] md:text-[42px] font-extrabold text-black text-center mb-10 tracking-[-0.02em]">
             Here Is How JobExCV For Bootcamps Works
           </h2>
-          <div className="space-y-0 text-black max-w-[800px] mx-auto">
+          <motion.div
+            className="space-y-0 text-black max-w-[800px] mx-auto"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {[
               "Identify new companies that are a good match with your existing pool of candidates (We automate the process of collecting jobs, filtering those, matching the job positions with the candidates' CVs and hide the contact details from your client CVs automatically and thus provide a great way for you to prioritise which companies to contact and doing this automatically without having to manually collect jobs and contact companies)",
               "Engage and manage the job search process of your existing pool of candidates (Our platform gives you a streamlined process to leverage all your talent candidates with the possibility to have a white labeled version with your own logo and brand. Feel free to contact us to learn more)",
             ].map((text, i) => (
-              <div key={i} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
+              <motion.div key={i} variants={fadeUp} className="flex items-start gap-4 py-4 border-t border-[#E2E8F0]">
                 <span className="text-[16px] font-medium text-[#555555] underline whitespace-nowrap pt-1">0{i + 1}</span>
                 <span className="text-[18px] font-medium">{text}</span>
-              </div>
+              </motion.div>
             ))}
-          </div>
-          <div className="text-center mt-10">
+          </motion.div>
+          <motion.div
+            className="text-center mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
             <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-black text-white px-8 py-[14px] rounded-[8px] font-semibold text-[18px] transition-all hover:opacity-90">
               Book a call with us
             </a>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Feature deep-dive sections */}
       <section className="py-[80px] md:py-[100px] bg-white">
@@ -177,7 +244,13 @@ export default function JobMatchingPage() {
                 key={i}
                 className={`flex flex-col ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-12`}
               >
-                <div className="flex-1">
+                <motion.div
+                  className="flex-1"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  variants={i % 2 === 1 ? slideInRight : slideInLeft}
+                >
                   {feature.subtitle && (
                     <p className="text-[14px] text-[#555555] mb-2">{feature.subtitle}</p>
                   )}
@@ -193,8 +266,14 @@ export default function JobMatchingPage() {
                   >
                     Start today
                   </a>
-                </div>
-                <div className="flex-1">
+                </motion.div>
+                <motion.div
+                  className="flex-1"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  variants={i % 2 === 1 ? slideInLeft : slideInRight}
+                >
                   <BrowserMockup>
                     <div className="bg-[#f9f9f7] p-8 flex items-center justify-center min-h-[220px]">
                       <div className="text-center text-[#aaa] text-sm">
@@ -206,7 +285,7 @@ export default function JobMatchingPage() {
                       </div>
                     </div>
                   </BrowserMockup>
-                </div>
+                </motion.div>
               </div>
             ))}
           </div>
@@ -214,7 +293,13 @@ export default function JobMatchingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-[80px] bg-black text-white text-center">
+      <motion.section
+        className="py-[80px] bg-black text-white text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        variants={fadeUp}
+      >
         <div className="max-w-[700px] mx-auto px-6">
           <h2 className="text-[36px] md:text-[48px] font-extrabold mb-6">
             JobExCV Helps You find a job faster
@@ -227,7 +312,7 @@ export default function JobMatchingPage() {
             Get Started Free
           </a>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>
