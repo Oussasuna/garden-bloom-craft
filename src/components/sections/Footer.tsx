@@ -36,18 +36,19 @@ const socials = [
 
 
 const Footer = () => {
+  const { t } = useI18n();
   return (
     <footer className="w-full bg-white flex flex-col items-center">
       {/* Top CTA Section */}
       <section className="w-full pt-[80px] pb-[40px] px-6 text-center">
         <h2 className="text-[42px] font-extrabold text-[#1a1a1a] mb-6 tracking-tight">
-          Your success begins here.
+          {t("Your success begins here.")}
         </h2>
         <div className="flex justify-center mb-12">
           <a
             href="https://app.jobexcv.ai"
             className="bg-[#1a1a1a] text-white px-8 py-[14px] rounded-full font-semibold text-[16px] hover:opacity-90 transition-all">
-            Get Started Now
+            {t("Get Started Now")}
           </a>
         </div>
         
