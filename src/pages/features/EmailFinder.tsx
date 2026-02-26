@@ -273,52 +273,6 @@ export default function EmailFinderPage() {
         </div>
       </motion.section>
 
-      {/* 5) DARK CTA BAND */}
-      <motion.section
-        className="py-[80px] md:py-[100px] bg-[hsl(220,20%,16%)] text-primary-foreground text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeUp}
-      >
-        <div className="max-w-[660px] mx-auto px-6">
-          <h2 className="text-[34px] md:text-[44px] font-extrabold mb-6 leading-[1.1]">
-            Still not convinced? Start with a free account.
-          </h2>
-          <p className="text-[17px] text-white/65 mb-8 leading-[1.65]">
-            JobExCV users get 50% more interviews on average and save 10 hours every week. Start automating your job search today.
-          </p>
-          <a
-            href="https://app.jobexcv.ai"
-            className="inline-block bg-card text-foreground px-8 py-4 rounded-full font-bold text-[15px] hover:opacity-90 transition-all"
-          >
-            Start Free Trial
-          </a>
-          <p className="text-white/40 text-[13px] mt-4">No credit card required</p>
-        </div>
-      </motion.section>
-
-      {/* 6) BOTTOM CTA */}
-      <motion.section
-        className="py-[80px] bg-background text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeUp}
-      >
-        <div className="max-w-[660px] mx-auto px-6">
-          <h2 className="text-[34px] md:text-[44px] font-extrabold text-foreground mb-6 leading-[1.1]">
-            JobExCV Helps <span className="text-accent">You</span> Find A Job Faster
-          </h2>
-          <a
-            href="https://app.jobexcv.ai"
-            className="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-4 rounded-full font-bold text-[15px] hover:opacity-90 transition-all gap-2"
-          >
-            Join the JobExCV community →
-          </a>
-        </div>
-      </motion.section>
-
       <Footer />
     </div>
   );
