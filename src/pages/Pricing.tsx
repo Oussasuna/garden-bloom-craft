@@ -1,127 +1,145 @@
 import React from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
-
-const pricingPlans = [
-  {
-    name: "Free",
-    price: "0",
-    period: "forever",
-    description: "Perfect for getting started with AI job hunting.",
-    cta: "Get Started Free",
-    ctaStyle: "border border-black text-black hover:bg-black hover:text-white",
-    features: [
-      "5 AI resume tailorings per month",
-      "5 cover letters per month",
-      "Basic job application tracker",
-      "Job match score",
-      "1 active job search loop",
-    ],
-    highlight: false,
-  },
-  {
-    name: "Pro",
-    price: "19",
-    period: "per month",
-    description: "For serious job seekers who want to maximise their chances.",
-    cta: "Start Pro",
-    ctaStyle: "bg-black text-white hover:opacity-90",
-    features: [
-      "Unlimited AI resume tailorings",
-      "Unlimited cover letters",
-      "Advanced job application tracker",
-      "Full job match analysis",
-      "5 active job search loops",
-      "AI interview preparation",
-      "Dynamic outreach emails",
-      "AI question answering",
-      "LinkedIn Auto Apply extension",
-    ],
-    highlight: true,
-    badge: "Most Popular",
-  },
-  {
-    name: "Enterprise",
-    price: "49",
-    period: "per month",
-    description: "For power users and universities who want everything.",
-    cta: "Contact Sales",
-    ctaStyle: "border border-black text-black hover:bg-black hover:text-white",
-    features: [
-      "Everything in Pro",
-      "Auto Apply (hands-free applications)",
-      "Unlimited job search loops",
-      "Priority support",
-      "Email finder",
-      "Advanced analytics",
-      "Custom integrations",
-      "University / team licenses",
-    ],
-    highlight: false,
-  },
-];
+import { Check, ChevronRight, CreditCard, Crown, ExternalLink, Heart, Shield, ShoppingCart, Stars, Zap, Sparkles } from "lucide-react";
+import { SinglePricingCard, type Testimonial } from "@/components/ui/single-pricing-card";
 
 export default function PricingPage() {
+  const features = [
+    "Unlimited AI resume tailorings",
+    "Unlimited cover letters",
+    "Advanced job application tracker",
+    "Full job match analysis",
+    "5 active job search loops",
+    "AI interview preparation",
+    "Dynamic outreach emails",
+    "AI question answering",
+    "LinkedIn Auto Apply extension",
+    "Email finder",
+    "Priority support",
+    "Advanced analytics",
+  ].map((text) => ({ text }));
+
+  const testimonials: Testimonial[] = [
+    {
+      id: 1,
+      name: "Sarah",
+      role: "Product Manager",
+      company: "Google",
+      content:
+        "Tried chatgpt for weeks and got zero interviews... JobExCV got me 3 callbacks in the first month. Actually sounds like me and takes 2 mins. Worth every penny!",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
+    },
+    {
+      id: 2,
+      name: "Michael",
+      role: "Business Analyst",
+      company: "PwC",
+      content:
+        "Been using JobExCV for the past month and wow... applied to 40 jobs already and got 4 interviews! Usually I'd spend forever tweaking each resume but this does it so much better.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150",
+    },
+    {
+      id: 3,
+      name: "Emily Chen",
+      role: "Software Engineer",
+      company: "Meta",
+      content:
+        "The AI-powered resume tailoring is incredible. Each application feels personal and targeted. Got my dream job within 3 weeks!",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150",
+    },
+    {
+      id: 4,
+      name: "James Wilson",
+      role: "Data Analyst",
+      company: "Deloitte",
+      content:
+        "As a career changer, JobExCV helped me highlight transferable skills I didn't even know I had. Landed 5 interviews in my first week.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150",
+    },
+    {
+      id: 5,
+      name: "Priya Sharma",
+      role: "Marketing Manager",
+      company: "HubSpot",
+      content:
+        "The auto-apply feature saved me 20+ hours a week. I went from applying to 5 jobs a day to 50, with better results.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150",
+    },
+    {
+      id: 6,
+      name: "Rachel Thompson",
+      role: "Consultant",
+      company: "McKinsey",
+      content:
+        "From resume building to interview prep, JobExCV is the complete package. Couldn't have landed my role without it.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150",
+    },
+  ];
+
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-background min-h-screen">
       <Navbar />
       <section className="pt-[120px] pb-[80px]">
-        <div className="max-w-[1200px] mx-auto px-6 text-center">
-          <p className="text-[#0099ff] text-[14px] font-semibold uppercase tracking-wide mb-4">Pricing</p>
-          <h1 className="text-[42px] md:text-[56px] font-extrabold text-black mb-6 tracking-[-0.02em]">
-            Simple, transparent pricing
-          </h1>
-          <p className="text-[18px] text-[#666666] mb-16 max-w-[600px] mx-auto">
-            Start free, upgrade when you need more. Cancel anytime.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            {pricingPlans.map((plan) => (
-              <div
-                key={plan.name}
-                className={`rounded-[24px] p-8 text-left relative ${
-                  plan.highlight
-                    ? "bg-black text-white shadow-[0_20px_60px_rgba(0,0,0,0.2)]"
-                    : "bg-[#f9f9f7] border border-[#e5e7eb]"
-                }`}
-              >
-                {plan.badge && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-[#0099ff] text-white text-[12px] font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
-                      {plan.badge}
-                    </span>
-                  </div>
-                )}
-                <h3 className={`text-[20px] font-bold mb-2 ${plan.highlight ? 'text-white' : 'text-black'}`}>{plan.name}</h3>
-                <div className="flex items-end gap-1 mb-2">
-                  <span className={`text-[48px] font-extrabold leading-none ${plan.highlight ? 'text-white' : 'text-black'}`}>${plan.price}</span>
-                  <span className={`text-[16px] mb-2 ${plan.highlight ? 'text-white/60' : 'text-[#666]'}`}>/{plan.period}</span>
-                </div>
-                <p className={`text-[14px] mb-8 ${plan.highlight ? 'text-white/70' : 'text-[#666666]'}`}>{plan.description}</p>
-                <a
-                  href="https://app.jobexcv.ai"
-                  className={`block w-full text-center py-3.5 rounded-full font-semibold text-[15px] transition-all mb-8 ${plan.ctaStyle}`}
-                >
-                  {plan.cta}
-                </a>
-                <ul className="space-y-3">
-                  {plan.features.map((f, i) => (
-                    <li key={i} className={`flex items-start gap-3 text-[14px] ${plan.highlight ? 'text-white/80' : 'text-[#444]'}`}>
-                      <span className={`mt-0.5 flex-shrink-0 ${plan.highlight ? 'text-[#4ADE80]' : 'text-[#22C55E]'}`}>✓</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+              <Crown className="h-4 w-4" />
+              Simple Pricing
+            </div>
+            <h1 className="text-[42px] md:text-[56px] font-extrabold text-foreground mb-4 tracking-[-0.02em]">
+              One plan, endless possibilities
+            </h1>
+            <p className="text-[18px] text-muted-foreground max-w-[600px] mx-auto">
+              Everything you need to land your dream job with AI-powered tools
+            </p>
           </div>
+
+          <SinglePricingCard
+            badge={{ icon: Sparkles, text: "Most Popular" }}
+            title="Pro Plan"
+            subtitle="For serious job seekers who want to maximise their chances."
+            price={{
+              current: "$19/mo",
+              original: "$49/mo",
+              discount: "60% OFF",
+            }}
+            benefits={[
+              { text: "Cancel anytime, no long-term contracts", icon: Shield },
+              { text: "Instant access to all AI features", icon: Zap },
+              { text: "Loved by 10,000+ job seekers", icon: Heart },
+            ]}
+            features={features}
+            featuresIcon={Check}
+            featuresTitle="Everything Included"
+            featuresBadge={{ icon: Stars, text: "Full Access" }}
+            primaryButton={{
+              text: "Get Started Now",
+              icon: ShoppingCart,
+              href: "https://app.jobexcv.ai",
+              chevronIcon: ChevronRight,
+            }}
+            secondaryButton={{
+              text: "Try Free Plan",
+              icon: ExternalLink,
+              href: "https://app.jobexcv.ai",
+            }}
+            testimonials={testimonials}
+            maxWidth="max-w-3xl"
+          />
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-[80px] bg-[#f8f7f5]">
+      <section className="py-[80px] bg-muted/30">
         <div className="max-w-[800px] mx-auto px-6 text-center">
-          <h2 className="text-[36px] font-extrabold text-black mb-12">Pricing FAQs</h2>
+          <h2 className="text-[36px] font-extrabold text-foreground mb-12">Pricing FAQs</h2>
           <div className="space-y-6 text-left">
             {[
               { q: "Can I cancel anytime?", a: "Yes! There are no long-term contracts. Cancel anytime from your account settings." },
@@ -129,9 +147,9 @@ export default function PricingPage() {
               { q: "Do you offer student discounts?", a: "Yes! We offer special discounts for students. Visit our Discounts page or contact us for details." },
               { q: "What payment methods do you accept?", a: "We accept all major credit cards, PayPal, and bank transfers for enterprise accounts." },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-[16px] p-6 border border-[#e5e7eb]">
-                <h4 className="text-[17px] font-bold text-black mb-2">{item.q}</h4>
-                <p className="text-[15px] text-[#666666] leading-[1.6]">{item.a}</p>
+              <div key={i} className="bg-card rounded-[16px] p-6 border border-border">
+                <h4 className="text-[17px] font-bold text-foreground mb-2">{item.q}</h4>
+                <p className="text-[15px] text-muted-foreground leading-[1.6]">{item.a}</p>
               </div>
             ))}
           </div>
