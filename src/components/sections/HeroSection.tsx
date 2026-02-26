@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import heroVideo from '@/assets/hero-video.mp4';
+import { useI18n } from '@/contexts/I18nContext';
 
 
 const companyLogos = [
