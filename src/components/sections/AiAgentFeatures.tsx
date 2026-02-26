@@ -12,6 +12,7 @@ const tags = [
 ];
 
 const AiAgentFeatures = () => {
+  const { t } = useI18n();
   return (
     <section className="bg-white py-[80px] md:py-[100px]">
       <div className="container mx-auto max-w-[1200px] px-6">
@@ -22,13 +23,13 @@ const AiAgentFeatures = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <p className="text-[#0099FF] text-[14px] font-semibold mb-4 tracking-tight">Simply brilliant.</p>
+          <p className="text-[#0099FF] text-[14px] font-semibold mb-4 tracking-tight">{t("Simply brilliant.")}</p>
           <h2 className="text-[32px] md:text-[42px] font-extrabold text-[#1A1A1A] leading-[1.2] mb-6 max-w-[800px]">
-            More than a resume builder. <br className="hidden md:block" />
-            An AI Job Hunt Agent.
+            {t("More than a resume builder. ")}<br className="hidden md:block" />
+            {t("An AI Job Hunt Agent.")}
           </h2>
           <p className="text-[#666666] text-[18px] leading-[1.6] max-w-[700px]">
-            JobExCV is the most intelligent AI in the market that automates every step of your application while giving you personalised insights to maximise your chances with minimal effort.
+            {t("JobExCV is the most intelligent AI in the market that automates every step of your application while giving you personalised insights to maximise your chances with minimal effort.")}
           </p>
         </motion.div>
 
