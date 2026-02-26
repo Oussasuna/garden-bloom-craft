@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Instagram, Youtube } from 'lucide-react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const features = [
 { name: "Auto Apply", href: "/features/auto-apply" },
