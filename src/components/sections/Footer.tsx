@@ -111,7 +111,7 @@ const Footer = () => {
 
       <div className="w-full border-t border-[#e5e5e5] py-6 text-center">
         <p className="text-[#666666] text-[12px]">
-          © 2025 JobexCV. All rights reserved.
+          {t("© 2025 JobexCV. All rights reserved.")}
         </p>
       </div>
     </footer>);
