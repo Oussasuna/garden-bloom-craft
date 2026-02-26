@@ -16,6 +16,7 @@ const companyLogos = [
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const { t } = useI18n();
 
   useEffect(() => {
     const video = videoRef.current;
