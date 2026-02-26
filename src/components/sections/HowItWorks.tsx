@@ -45,10 +45,10 @@ const HowItWorks = () => {
                 <img src={step.icon} alt={step.title} className="h-full w-auto object-contain" />
               </div>
               <h3 className="text-[#1a1a1a] text-[24px] font-bold leading-[1.2] mb-4">
-                {step.number} <br /> {step.title}
+                {t(step.number)} <br /> {t(step.title)}
               </h3>
               <p className="text-[#666666] text-[18px] font-normal leading-[1.6]">
-                {step.description}
+                {t(step.description)}
               </p>
             </div>
           )}
