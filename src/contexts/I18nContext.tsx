@@ -73,22 +73,32 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
     localStorage.setItem("i18n_lang", newLang);
   }, []);
 
+  const langRef2 = useRef(lang);
+  langRef2.current = lang;
+
+  const cacheRef = useRef(cache);
+  cacheRef.current = cache;
+
   const flushBatch = useCallback(async () => {
-    if (lang === "EN" || pendingTexts.current.size === 0) return;
+    const currentLang = langRef2.current;
+    if (currentLang === "EN" || pendingTexts.current.size === 0) return;
 
     const textsToTranslate = Array.from(pendingTexts.current).slice(0, MAX_BATCH_SIZE);
     pendingTexts.current.clear();
 
-    // Skip already in-flight
-    const filtered = textsToTranslate.filter((t) => !inflightRef.current.has(`${lang}:${t}`));
+    // Skip already cached or in-flight
+    const filtered = textsToTranslate.filter(
+      (t) => !inflightRef.current.has(`${currentLang}:${t}`) && !cacheRef.current[currentLang]?.[t]
+    );
     if (filtered.length === 0) return;
 
-    filtered.forEach((t) => inflightRef.current.add(`${lang}:${t}`));
+    filtered.forEach((t) => inflightRef.current.add(`${currentLang}:${t}`));
     setIsTranslating(true);
 
     try {
+      console.log(`[i18n] Translating ${filtered.length} texts to ${currentLang}`);
       const { data, error } = await supabase.functions.invoke("translate", {
-        body: { texts: filtered, targetLang: lang },
+        body: { texts: filtered, targetLang: currentLang },
       });
 
       if (error) {
@@ -100,21 +110,21 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const translations: string[] = data?.translations || filtered;
 
       setCache((prev) => {
-        const langCache = { ...(prev[lang] || {}) };
+        const langCache = { ...(prev[currentLang] || {}) };
         filtered.forEach((original, i) => {
           langCache[original] = translations[i] || original;
         });
-        const newCache = { ...prev, [lang]: langCache };
+        const newCache = { ...prev, [currentLang]: langCache };
         saveCache(newCache);
         return newCache;
       });
     } catch (e) {
       console.error("Translation request failed:", e);
     } finally {
-      filtered.forEach((t) => inflightRef.current.delete(`${lang}:${t}`));
+      filtered.forEach((t) => inflightRef.current.delete(`${currentLang}:${t}`));
       setIsTranslating(false);
     }
-  }, [lang]);
+  }, []);
 
   const t = useCallback(
     (text: string): string => {
