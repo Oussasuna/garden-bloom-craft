@@ -107,8 +107,8 @@ export default function PricingPage() {
             subtitle="For serious job seekers who want to maximise their chances."
             price={{
               current: "$35/mo",
-              original: "$49/mo",
-              discount: "29% OFF",
+              original: "$70/mo",
+              discount: "50% OFF",
             }}
             benefits={[
               { text: "Cancel anytime, no long-term contracts", icon: Shield },
