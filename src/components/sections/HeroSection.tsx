@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import heroVideo from '@/assets/hero-video.mp4';
 
 
@@ -14,6 +14,39 @@ const companyLogos = [
 
 
 const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const playVideo = () => {
+      video.play().catch(() => {});
+    };
+
+    // Resume on visibility change (tab switch / refresh)
+    const handleVisibility = () => {
+      if (document.visibilityState === 'visible') playVideo();
+    };
+
+    // Resume when scrolled back into view
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) playVideo();
+      },
+      { threshold: 0.1 }
+    );
+
+    document.addEventListener('visibilitychange', handleVisibility);
+    observer.observe(video);
+    playVideo();
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibility);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section className="bg-white overflow-hidden">
       <div className="pt-[120px] pb-[40px] md:pt-[140px] md:pb-[60px]">
@@ -44,6 +77,7 @@ const HeroSection = () => {
             <div className="flex-1 flex justify-center md:justify-end">
               <div className="w-full max-w-[550px] overflow-hidden">
                 <video
+                  ref={videoRef}
                   autoPlay
                   loop
                   muted
