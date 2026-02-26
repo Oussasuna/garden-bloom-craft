@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useI18n } from '@/contexts/I18nContext';
 
 const tags = [
   { label: 'AI Resume Builder', bg: '#E8F4FD', color: '#0099FF', border: '#B8DFFB' },
@@ -11,6 +12,7 @@ const tags = [
 ];
 
 const AiAgentFeatures = () => {
+  const { t } = useI18n();
   return (
     <section className="bg-white py-[80px] md:py-[100px]">
       <div className="container mx-auto max-w-[1200px] px-6">
@@ -21,13 +23,13 @@ const AiAgentFeatures = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <p className="text-[#0099FF] text-[14px] font-semibold mb-4 tracking-tight">Simply brilliant.</p>
+          <p className="text-[#0099FF] text-[14px] font-semibold mb-4 tracking-tight">{t("Simply brilliant.")}</p>
           <h2 className="text-[32px] md:text-[42px] font-extrabold text-[#1A1A1A] leading-[1.2] mb-6 max-w-[800px]">
-            More than a resume builder. <br className="hidden md:block" />
-            An AI Job Hunt Agent.
+            {t("More than a resume builder. ")}<br className="hidden md:block" />
+            {t("An AI Job Hunt Agent.")}
           </h2>
           <p className="text-[#666666] text-[18px] leading-[1.6] max-w-[700px]">
-            JobExCV is the most intelligent AI in the market that automates every step of your application while giving you personalised insights to maximise your chances with minimal effort.
+            {t("JobExCV is the most intelligent AI in the market that automates every step of your application while giving you personalised insights to maximise your chances with minimal effort.")}
           </p>
         </motion.div>
 
@@ -42,9 +44,9 @@ const AiAgentFeatures = () => {
           >
             <div>
               <div className="mb-8">
-                <h3 className="text-[24px] font-bold text-[#1A1A1A] mb-4">End-to-End Solution.</h3>
+                <h3 className="text-[24px] font-bold text-[#1A1A1A] mb-4">{t("End-to-End Solution.")}</h3>
                 <p className="text-[#666666] text-[18px] leading-[1.6] mb-8">
-                  Prepares everything you possibly need with your job application in a one-click streamline experience.
+                  {t("Prepares everything you possibly need with your job application in a one-click streamline experience.")}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-10">
                   {tags.map((tag, i) => (
@@ -57,7 +59,7 @@ const AiAgentFeatures = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, ease: 'easeOut', delay: 0.3 + i * 0.1 }}
                     >
-                      {tag.label}
+                      {t(tag.label)}
                     </motion.span>
                   ))}
                 </div>
@@ -74,9 +76,9 @@ const AiAgentFeatures = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
             >
-              <h3 className="text-[22px] font-bold text-[#1A1A1A] mb-3">As Thoughtful As A Human.</h3>
+              <h3 className="text-[22px] font-bold text-[#1A1A1A] mb-3">{t("As Thoughtful As A Human.")}</h3>
               <p className="text-[#666666] text-[16px] leading-[1.6]">
-                JobExCV gives you human-level analysis and feedback, and guide that catches what you missed for perfect applications.
+                {t("JobExCV gives you human-level analysis and feedback, and guide that catches what you missed for perfect applications.")}
               </p>
             </motion.div>
             <motion.div
@@ -86,9 +88,9 @@ const AiAgentFeatures = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.25 }}
             >
-              <h3 className="text-[22px] font-bold text-[#1A1A1A] mb-3">Perfectly Tailored, Every Time.</h3>
+              <h3 className="text-[22px] font-bold text-[#1A1A1A] mb-3">{t("Perfectly Tailored, Every Time.")}</h3>
               <p className="text-[#666666] text-[16px] leading-[1.6]">
-                Analyzes each job and highlights your most relevant experiences that perfectly match what employers want.
+                {t("Analyzes each job and highlights your most relevant experiences that perfectly match what employers want.")}
               </p>
             </motion.div>
           </div>

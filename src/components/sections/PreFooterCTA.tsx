@@ -1,11 +1,13 @@
 import React from 'react';
+import { useI18n } from '@/contexts/I18nContext';
 
 const PreFooterCTA = () => {
+  const { t } = useI18n();
   return (
     <section className="bg-white pt-[120px] pb-0 overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1200px] flex flex-col items-center">
         <h2 className="text-[32px] md:text-[42px] font-bold text-black text-center mb-8 tracking-tight">
-          Your students deserve the best future.
+          {t("Your students deserve the best future.")}
         </h2>
 
         <div className="mb-16">
@@ -13,7 +15,7 @@ const PreFooterCTA = () => {
             href="https://app.jobexcv.ai"
             className="inline-flex items-center justify-center bg-[#111111] text-white px-8 py-3 rounded-full font-semibold text-base transition-all duration-200 hover:opacity-90 active:scale-95 shadow-sm"
           >
-            Get Started Now
+            {t("Get Started Now")}
           </a>
         </div>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useI18n } from '@/contexts/I18nContext';
 import {
   IconRocket,
   IconClick,
@@ -39,13 +40,14 @@ const features = [
 ];
 
 export default function FeaturesGrid() {
+  const { t } = useI18n();
   return (
     <section className="bg-white py-[80px] lg:py-[120px] px-6">
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16">
-          <p className="text-[#0099ff] text-[14px] font-semibold tracking-wide uppercase mb-3">Features</p>
+          <p className="text-[#0099ff] text-[14px] font-semibold tracking-wide uppercase mb-3">{t("Features")}</p>
           <h2 className="text-[32px] md:text-[42px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#1a1a1a] mb-4">
-            Everything you need to land your dream job.
+            {t("Everything you need to land your dream job.")}
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
@@ -60,11 +62,11 @@ export default function FeaturesGrid() {
                   <Icon size={32} stroke={1.5} className="text-[#1a1a1a]" />
                 </div>
                 <h3 className="text-[16px] font-bold leading-[1.3] text-[#1a1a1a] mb-2 transition-transform duration-200 ease-out group-hover:translate-x-[6px]">
-                  {feature.title}
+                  {t(feature.title)}
                 </h3>
-                <p className="text-[#666666] text-[14px] leading-[1.5] mb-4">{feature.description}</p>
+                <p className="text-[#666666] text-[14px] leading-[1.5] mb-4">{t(feature.description)}</p>
                 <Link to={feature.href} className="text-[#0099ff] text-[13px] font-semibold hover:underline">
-                  Learn more
+                  {t("Learn more")}
                 </Link>
               </div>
             );
@@ -72,7 +74,7 @@ export default function FeaturesGrid() {
         </div>
         <div className="mt-16 flex justify-center">
           <a href="https://app.jobexcv.ai" className="inline-flex items-center justify-center bg-[#111111] text-white px-8 py-[14px] rounded-full font-semibold text-[16px] transition-opacity hover:opacity-90">
-            Get Started Today
+            {t("Get Started Today")}
           </a>
         </div>
       </div>
