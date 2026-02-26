@@ -106,7 +106,7 @@ export default function PricingPage() {
             title="Pro Plan"
             subtitle="For serious job seekers who want to maximise their chances."
             price={{
-              current: "$19/mo",
+              current: "$35/mo",
               original: "$49/mo",
               discount: "60% OFF",
             }}
