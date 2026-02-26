@@ -139,7 +139,7 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
         pendingTexts.current.add(text);
 
         if (batchTimer.current) clearTimeout(batchTimer.current);
-        batchTimer.current = setTimeout(flushBatch, BATCH_DELAY);
+        batchTimer.current = setTimeout(() => flushBatch(), BATCH_DELAY);
       }
 
       return text; // Return original until translation arrives
@@ -147,11 +147,13 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
     [lang, cache, flushBatch]
   );
 
-  // When language changes, trigger translation of any pending texts
+  // When language changes, collect texts from re-render then flush
   useEffect(() => {
     if (lang !== "EN") {
-      // Re-render will cause t() calls which queue texts
-      const timer = setTimeout(flushBatch, BATCH_DELAY + 50);
+      const timer = setTimeout(() => {
+        console.log(`[i18n] Language changed to ${lang}, pending: ${pendingTexts.current.size}`);
+        flushBatch();
+      }, BATCH_DELAY + 100);
       return () => clearTimeout(timer);
     }
   }, [lang, flushBatch]);
