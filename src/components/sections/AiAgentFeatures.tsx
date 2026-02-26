@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useI18n } from '@/contexts/I18nContext';
 
 const tags = [
   { label: 'AI Resume Builder', bg: '#E8F4FD', color: '#0099FF', border: '#B8DFFB' },
