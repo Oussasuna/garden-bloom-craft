@@ -25,6 +25,7 @@ const steps = [
 
 
 const HowItWorks = () => {
+  const { t } = useI18n();
   return (
     <section className="bg-white py-[80px] md:py-[100px]">
       <div className="container mx-auto px-6 max-w-[1200px] flex flex-col items-center">
