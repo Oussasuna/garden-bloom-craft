@@ -56,7 +56,7 @@ const FAQSection: React.FC = () => {
     <section className="bg-[#f8f7f5] py-[80px] md:py-[120px]">
       <div className="container mx-auto max-w-[1200px] px-6">
         <h2 className="text-[32px] md:text-[42px] font-bold text-black mb-12 text-center">
-          Frequently Asked Questions
+          {t("Frequently Asked Questions")}
         </h2>
         <div className="flex flex-col gap-4">
           {faqItems.map((item, index) => (
