@@ -77,6 +77,7 @@ const HeroSection = () => {
             <div className="flex-1 flex justify-center md:justify-end">
               <div className="w-full max-w-[550px] overflow-hidden">
                 <video
+                  ref={videoRef}
                   autoPlay
                   loop
                   muted
