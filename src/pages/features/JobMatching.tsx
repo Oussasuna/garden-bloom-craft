@@ -166,33 +166,33 @@ export default function JobMatchingPage() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}>
 
-        <div className="max-w-[1200px] mx-auto px-6 text-center">
-          <h2 className="text-[36px] md:text-[42px] font-extrabold text-black mb-4 tracking-[-0.02em]">
-            Help your clients <span className="text-[#555555]">accelerate their job search</span>
-          </h2>
-          <p className="text-[#555555] text-[18px] max-w-[800px] mx-auto mb-10 leading-[1.6]">
-            With JobExCV Recruiters and Agencies can help individuals accelerate their job search results getting more interviews and optimize their CV. Check below the features that make JobExCV stand out!
-          </p>
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-[600px] mx-auto"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}>
+        
 
-            {tabs.map((tab) =>
-            <motion.div
-              key={tab.label}
-              variants={fadeUp}
-              className={`rounded-[8px] px-4 py-3 text-[13px] font-medium border transition-colors ${
-              tab.active ? "bg-black text-white border-black" : "bg-white text-[#555555] border-[#E2E8F0] hover:border-black"}`
-              }>
 
-                {tab.label}
-              </motion.div>
-            )}
-          </motion.div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </motion.section>
 
       {/* How it works */}
