@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">Follow us</h4>
+            <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#1a1a1a] mb-6">{t("Follow us")}</h4>
             <div className="flex flex-col space-y-4">
               {socials.map((item) =>
               <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#666666] text-[14px] hover:text-[#0099ff] transition-colors">
