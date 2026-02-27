@@ -823,8 +823,6 @@ const zh: Record<string, string> = {
   "Save 15%": "节省15%",
   "Pro Plan": "专业版",
   "Most Popular": "最受欢迎",
-  "Everything Included": "全部包含",
-  "Full Access": "完全访问",
   "Try Free Plan": "试用免费版",
   "Everything you need to land your dream job with AI-powered tools": "AI工具助你获得理想工作所需的一切",
   "For serious job seekers who want to maximise their chances.": "为想要最大化机会的认真求职者而设。",
