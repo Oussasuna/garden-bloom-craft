@@ -438,8 +438,6 @@ const ar: Record<string, string> = {
   "Save 15%": "وفر 15%",
   "Pro Plan": "الخطة الاحترافية",
   "Most Popular": "الأكثر شعبية",
-  "Everything Included": "كل شيء متضمن",
-  "Full Access": "وصول كامل",
   "Try Free Plan": "جرب الخطة المجانية",
   "Everything you need to land your dream job with AI-powered tools": "كل ما تحتاجه للحصول على وظيفة أحلامك بأدوات الذكاء الاصطناعي",
   "For serious job seekers who want to maximise their chances.": "للباحثين عن عمل الجادين الذين يريدون تعظيم فرصهم.",
