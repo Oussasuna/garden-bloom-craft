@@ -1049,8 +1049,6 @@ const ko: Record<string, string> = {
   "Instant access to all AI features": "모든 AI 기능에 즉시 접근",
   "Loved by 10,000+ job seekers": "10,000명 이상의 구직자가 사랑",
   "Equivalent to": "동등한",
-  "Get Started Now": "지금 시작하기",
-  "Get in touch": "연락하기",
   "First Name": "이름",
   "Last Name": "성",
   "Email": "이메일",
