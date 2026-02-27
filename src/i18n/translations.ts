@@ -1012,8 +1012,6 @@ const ko: Record<string, string> = {
   "Save 15%": "15% 절약",
   "Pro Plan": "프로 플랜",
   "Most Popular": "가장 인기",
-  "Everything Included": "모든 것 포함",
-  "Full Access": "전체 접근",
   "Try Free Plan": "무료 플랜 체험",
   "Everything you need to land your dream job with AI-powered tools": "AI 도구로 꿈의 직장을 얻는 데 필요한 모든 것",
   "For serious job seekers who want to maximise their chances.": "기회를 극대화하려는 진지한 구직자를 위해.",
