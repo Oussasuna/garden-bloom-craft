@@ -1522,8 +1522,6 @@ const ru: Record<string, string> = {
   "Instant access to all AI features": "Мгновенный доступ ко всем функциям ИИ",
   "Loved by 10,000+ job seekers": "Любим 10 000+ соискателями",
   "Equivalent to": "Эквивалент",
-  "Get Started Now": "Начать сейчас",
-  "Get in touch": "Свяжитесь с нами",
   "First Name": "Имя",
   "Last Name": "Фамилия",
   "Email": "Электронная почта",
