@@ -197,11 +197,6 @@ export default function PricingPage() {
               href: checkoutUrl,
               chevronIcon: ChevronRight,
             }}
-            secondaryButton={{
-              text: "Try Free Plan",
-              icon: ExternalLink,
-              href: "https://app.jobexcv.ai",
-            }}
             testimonials={testimonials}
             maxWidth="max-w-3xl"
           />
