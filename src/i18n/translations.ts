@@ -308,6 +308,7 @@ const es: Record<string, string> = {
   "Cancel anytime, no long-term contracts": "Cancela cuando quieras, sin contratos",
   "Instant access to all AI features": "Acceso instantáneo a todas las funciones IA",
   "Loved by 10,000+ job seekers": "Amado por más de 10,000 buscadores",
+  "Equivalent to": "Equivalente a",
   // Contact
   "Get in touch": "Ponte en contacto",
   "Have a question, feedback, or want to partner with us? We'd love to hear from you. Fill out the form and we'll get back to you within 24 hours.": "¿Tienes una pregunta, comentario o quieres asociarte con nosotros? Nos encantaría saber de ti. Completa el formulario y te responderemos en 24 horas.",
