@@ -858,8 +858,6 @@ const zh: Record<string, string> = {
   "Instant access to all AI features": "即时访问所有AI功能",
   "Loved by 10,000+ job seekers": "深受10,000+求职者喜爱",
   "Equivalent to": "相当于",
-  "Get Started Now": "立即开始",
-  "Get in touch": "联系我们",
   "First Name": "名",
   "Last Name": "姓",
   "Email": "邮箱",
