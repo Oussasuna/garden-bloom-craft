@@ -1209,8 +1209,6 @@ const pt: Record<string, string> = {
   "Instant access to all AI features": "Acesso instantâneo a todos os recursos IA",
   "Loved by 10,000+ job seekers": "Amado por mais de 10.000 candidatos",
   "Equivalent to": "Equivalente a",
-  "Get Started Now": "Comece Agora",
-  "Get in touch": "Entre em contato",
   "First Name": "Nome",
   "Last Name": "Sobrenome",
   "Email": "E-mail",
