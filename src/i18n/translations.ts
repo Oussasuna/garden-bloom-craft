@@ -1366,8 +1366,6 @@ const tr: Record<string, string> = {
   "Instant access to all AI features": "Tüm AI özelliklerine anında erişim",
   "Loved by 10,000+ job seekers": "10.000+ iş arayan tarafından seviliyor",
   "Equivalent to": "Eşdeğer",
-  "Get Started Now": "Şimdi Başlayın",
-  "Get in touch": "İletişime Geçin",
   "First Name": "Ad",
   "Last Name": "Soyad",
   "Email": "E-posta",
