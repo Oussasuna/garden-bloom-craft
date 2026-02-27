@@ -469,8 +469,6 @@ const ar: Record<string, string> = {
   "Instant access to all AI features": "وصول فوري لجميع ميزات الذكاء الاصطناعي",
   "Loved by 10,000+ job seekers": "محبوب من أكثر من 10,000 باحث عن عمل",
   "Equivalent to": "ما يعادل",
-  "Get Started Now": "ابدأ الآن",
-  "Get in touch": "تواصل معنا",
   "First Name": "الاسم الأول",
   "Last Name": "اسم العائلة",
   "Email": "البريد الإلكتروني",
