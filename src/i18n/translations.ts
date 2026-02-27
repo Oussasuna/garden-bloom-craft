@@ -632,8 +632,6 @@ const fr: Record<string, string> = {
   "Save 15%": "Économisez 15%",
   "Pro Plan": "Plan Pro",
   "Most Popular": "Le Plus Populaire",
-  "Everything Included": "Tout Inclus",
-  "Full Access": "Accès Complet",
   "Try Free Plan": "Essayer le Plan Gratuit",
   "Everything you need to land your dream job with AI-powered tools": "Tout ce dont vous avez besoin pour décrocher votre emploi rêvé avec des outils IA",
   "For serious job seekers who want to maximise their chances.": "Pour les chercheurs d'emploi sérieux qui veulent maximiser leurs chances.",
