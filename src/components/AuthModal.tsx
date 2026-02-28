@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { useToast } from "@/hooks/use-toast";
 import { X, Eye, EyeOff, RefreshCw } from "lucide-react";
+import { useI18n } from "@/contexts/I18nContext";
 import MultiStepSignup from "./MultiStepSignup";
 
 interface AuthModalProps {
@@ -61,6 +62,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
   const [selectedUniversity, setSelectedUniversity] = useState("");
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
+  const { t } = useI18n();
 
   if (!isOpen) return null;
 
@@ -74,7 +76,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
     try {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
-      toast({ title: "Welcome back!" });
+      toast({ title: t("Welcome back!") });
       onClose();
     } catch (error: any) {
       toast({ title: "Error", description: error.message, variant: "destructive" });
@@ -118,15 +120,15 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
 
         {isUniversityMode ? (
           <div className="flex flex-col items-center">
-            <h2 className="text-2xl font-bold text-[#0f0f0f] mb-1">JobExCV Academia</h2>
-            <p className="text-[15px] text-gray-500 mb-6">Sign in and supercharge your career.</p>
+            <h2 className="text-2xl font-bold text-[#0f0f0f] mb-1">{t("JobExCV Academia")}</h2>
+            <p className="text-[15px] text-gray-500 mb-6">{t("Sign in and supercharge your career.")}</p>
 
             <select
               value={selectedUniversity}
               onChange={(e) => setSelectedUniversity(e.target.value)}
               className="w-full px-4 py-3 border border-gray-200 rounded-full text-[15px] outline-none mb-4 bg-white appearance-none cursor-pointer text-gray-500 focus:border-gray-400 transition-colors"
             >
-              <option value="" disabled>Select your organization</option>
+              <option value="" disabled>{t("Select your organization")}</option>
               {universities.map((u) => (
                 <option key={u} value={u}>{u}</option>
               ))}
@@ -136,7 +138,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
               disabled={!selectedUniversity || loading}
               className="w-full py-3 rounded-full text-white font-semibold text-[15px] bg-[#888] hover:bg-[#666] transition-colors disabled:opacity-50 mb-4"
             >
-              Continue
+              {t("Continue")}
             </button>
 
             <button
@@ -144,34 +146,33 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
               className="w-full py-3 border border-gray-200 rounded-full bg-white cursor-pointer text-[13px] text-gray-500 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
             >
               <RefreshCw size={14} />
-              Click for public version
+              {t("Click for public version")}
             </button>
           </div>
         ) : (
           <div className="flex flex-col items-center">
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-1">
-              {mode === "signup" ? "Create an account" : "Welcome back!"}
+              {mode === "signup" ? t("Create an account") : t("Welcome back!")}
             </h2>
             <p className="text-[15px] text-gray-500 mb-6">
               {mode === "signup"
-                ? "Join JobExCV and supercharge your career."
-                : "Sign in to JobExCV and supercharge your career."}
+                ? t("Join JobExCV and supercharge your career.")
+                : t("Sign in to JobExCV and supercharge your career.")}
             </p>
 
-            {/* Google button always on top */}
             <button
               onClick={handleGoogleAuth}
               disabled={loading}
               className="w-full py-3 rounded-full border border-gray-200 text-[15px] font-medium flex items-center justify-center gap-3 hover:bg-gray-50 transition-colors disabled:opacity-50"
             >
               <GoogleIcon />
-              {mode === "signup" ? "Sign up with Google" : "Sign in with Google"}
+              {mode === "signup" ? t("Sign up with Google") : t("Sign in with Google")}
             </button>
 
             <div className="flex items-center w-full my-4">
               <div className="flex-1 h-px bg-gray-200" />
               <span className="px-4 text-[13px] text-gray-400">
-                {mode === "signup" ? "or continue with email" : "or"}
+                {mode === "signup" ? t("or continue with email") : t("or")}
               </span>
               <div className="flex-1 h-px bg-gray-200" />
             </div>
@@ -180,7 +181,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
               <form onSubmit={handleSignIn} className="w-full">
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={t("Enter your email")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -189,7 +190,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
                 <div className="relative mb-4">
                   <input
                     type={showPassword ? "text" : "password"}
-                    placeholder="Enter your password"
+                    placeholder={t("Enter your password")}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
@@ -208,7 +209,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
                   disabled={loading}
                   className="w-full py-3 rounded-full bg-[#111] text-white font-semibold text-[15px] hover:bg-[#333] transition-colors disabled:opacity-50"
                 >
-                  {loading ? "Signing in..." : "Sign In"}
+                  {loading ? t("Signing in...") : t("Sign In")}
                 </button>
               </form>
             ) : (
@@ -216,18 +217,18 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
             )}
 
             <p className="text-[12px] text-gray-400 mt-3 mb-2 text-center leading-relaxed">
-              By continuing, you agree to JobExCV's{" "}
-              <a href="#" className="underline">Terms of Service</a> and acknowledge you've read our{" "}
-              <a href="#" className="underline">Privacy Policy</a>.
+              {t("By continuing, you agree to JobExCV's")}{" "}
+              <a href="#" className="underline">{t("Terms & Conditions")}</a> {t("and acknowledge you've read our")}{" "}
+              <a href="#" className="underline">{t("Privacy Policy")}</a>.
             </p>
 
             <p className="text-[15px] text-gray-700 mt-2 mb-4">
-              {mode === "signup" ? "Already have an account? " : "New to JobExCV? "}
+              {mode === "signup" ? t("Already have an account? ") : t("New to JobExCV? ")}
               <button
                 onClick={() => setMode(mode === "signup" ? "signin" : "signup")}
                 className="font-bold text-[#0f0f0f] hover:underline"
               >
-                {mode === "signup" ? "Sign in" : "Sign up"}
+                {mode === "signup" ? t("Sign in") : t("Sign Up")}
               </button>
             </p>
 
@@ -236,7 +237,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
               className="w-full py-3 border border-gray-200 rounded-full bg-white cursor-pointer text-[13px] text-gray-500 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
             >
               <RefreshCw size={14} />
-              Click for university/organization version
+              {t("Click for university/organization version")}
             </button>
           </div>
         )}
