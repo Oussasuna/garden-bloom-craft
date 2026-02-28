@@ -68,23 +68,6 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
     if (e.target === e.currentTarget) onClose();
   };
 
-  const handleSignUp = async () => {
-    setLoading(true);
-    try {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password: "",
-        options: { emailRedirectTo: window.location.origin }
-      });
-      if (error) throw error;
-      toast({ title: "Check your email", description: "We sent you a signup link." });
-    } catch (error: any) {
-      toast({ title: "Error", description: error.message, variant: "destructive" });
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
