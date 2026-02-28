@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { useToast } from "@/hooks/use-toast";
 import { X, Eye, EyeOff, RefreshCw } from "lucide-react";
+import MultiStepSignup from "./MultiStepSignup";
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -65,23 +66,6 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) onClose();
-  };
-
-  const handleSignUp = async () => {
-    setLoading(true);
-    try {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password: "",
-        options: { emailRedirectTo: window.location.origin }
-      });
-      if (error) throw error;
-      toast({ title: "Check your email", description: "We sent you a signup link." });
-    } catch (error: any) {
-      toast({ title: "Error", description: error.message, variant: "destructive" });
-    } finally {
-      setLoading(false);
-    }
   };
 
   const handleSignIn = async (e: React.FormEvent) => {
@@ -174,6 +158,24 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
                 : "Sign in to JobExCV and supercharge your career."}
             </p>
 
+            {/* Google button always on top */}
+            <button
+              onClick={handleGoogleAuth}
+              disabled={loading}
+              className="w-full py-3 rounded-full border border-gray-200 text-[15px] font-medium flex items-center justify-center gap-3 hover:bg-gray-50 transition-colors disabled:opacity-50"
+            >
+              <GoogleIcon />
+              {mode === "signup" ? "Sign up with Google" : "Sign in with Google"}
+            </button>
+
+            <div className="flex items-center w-full my-4">
+              <div className="flex-1 h-px bg-gray-200" />
+              <span className="px-4 text-[13px] text-gray-400">
+                {mode === "signup" ? "or continue with email" : "or"}
+              </span>
+              <div className="flex-1 h-px bg-gray-200" />
+            </div>
+
             {mode === "signin" ? (
               <form onSubmit={handleSignIn} className="w-full">
                 <input
@@ -210,37 +212,16 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
                 </button>
               </form>
             ) : (
-              <button
-                onClick={handleSignUp}
-                disabled={loading}
-                className="w-full py-3 rounded-full border border-gray-200 text-[15px] font-medium hover:bg-gray-50 transition-colors disabled:opacity-50"
-              >
-                Sign up with Email
-              </button>
+              <MultiStepSignup onComplete={onClose} />
             )}
 
-            <p className="text-[12px] text-gray-400 mt-3 mb-4 text-center leading-relaxed">
+            <p className="text-[12px] text-gray-400 mt-3 mb-2 text-center leading-relaxed">
               By continuing, you agree to JobExCV's{" "}
               <a href="#" className="underline">Terms of Service</a> and acknowledge you've read our{" "}
               <a href="#" className="underline">Privacy Policy</a>.
             </p>
 
-            <div className="flex items-center w-full mb-4">
-              <div className="flex-1 h-px bg-gray-200" />
-              <span className="px-4 text-[13px] text-gray-400">or</span>
-              <div className="flex-1 h-px bg-gray-200" />
-            </div>
-
-            <button
-              onClick={handleGoogleAuth}
-              disabled={loading}
-              className="w-full py-3 rounded-full border border-gray-200 text-[15px] font-medium flex items-center justify-center gap-3 hover:bg-gray-50 transition-colors disabled:opacity-50"
-            >
-              <GoogleIcon />
-              {mode === "signup" ? "Sign up with Google" : "Sign in with Google"}
-            </button>
-
-            <p className="text-[15px] text-gray-700 mt-4 mb-4">
+            <p className="text-[15px] text-gray-700 mt-2 mb-4">
               {mode === "signup" ? "Already have an account? " : "New to JobExCV? "}
               <button
                 onClick={() => setMode(mode === "signup" ? "signin" : "signup")}
