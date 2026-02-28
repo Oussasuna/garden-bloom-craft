@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { useToast } from "@/hooks/use-toast";
 import { X, Eye, EyeOff, RefreshCw } from "lucide-react";
+import MultiStepSignup from "./MultiStepSignup";
 
 interface AuthModalProps {
   isOpen: boolean;
