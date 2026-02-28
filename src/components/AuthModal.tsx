@@ -211,13 +211,7 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
                 </button>
               </form>
             ) : (
-              <button
-                onClick={handleSignUp}
-                disabled={loading}
-                className="w-full py-3 rounded-full border border-gray-200 text-[15px] font-medium hover:bg-gray-50 transition-colors disabled:opacity-50"
-              >
-                Sign up with Email
-              </button>
+              <MultiStepSignup onComplete={onClose} />
             )}
 
             <p className="text-[12px] text-gray-400 mt-3 mb-4 text-center leading-relaxed">
