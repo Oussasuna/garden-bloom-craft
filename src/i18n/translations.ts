@@ -399,6 +399,16 @@ const es: Record<string, string> = {
   "Select your organization": "Selecciona tu organización",
   "Continue": "Continuar",
   "Click for public version": "Clic para versión pública",
+  "Basic Plan": "Plan Básico",
+  "Perfect to get started and explore JobExCV": "Perfecto para empezar y explorar JobExCV",
+  "Up to 1 job search loop per month": "Hasta 1 búsqueda de empleo por mes",
+  "Up to 10 applications or emails per month": "Hasta 10 candidaturas o emails por mes",
+  "3 job sites included": "3 sitios de empleo incluidos",
+  "Low priority applications": "Candidaturas de baja prioridad",
+  "Chrome extension access": "Acceso a extensión Chrome",
+  "Up to 2 AI CV checks": "Hasta 2 verificaciones de CV con IA",
+  "Recent Graduate": "Recién Graduada",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "¡JobExCV me ayudó a conseguir mi primer trabajo en solo 2 semanas! El plan gratuito fue más que suficiente para empezar.",
 };
 
 const ar: Record<string, string> = {
@@ -657,6 +667,16 @@ const ar: Record<string, string> = {
   "Select your organization": "اختر مؤسستك",
   "Continue": "متابعة",
   "Click for public version": "انقر للنسخة العامة",
+  "Basic Plan": "الخطة الأساسية",
+  "Perfect to get started and explore JobExCV": "مثالية للبدء واستكشاف JobExCV",
+  "Up to 1 job search loop per month": "حتى بحث وظيفي واحد شهرياً",
+  "Up to 10 applications or emails per month": "حتى 10 طلبات أو رسائل شهرياً",
+  "3 job sites included": "3 مواقع توظيف مشمولة",
+  "Low priority applications": "طلبات ذات أولوية منخفضة",
+  "Chrome extension access": "الوصول لإضافة كروم",
+  "Up to 2 AI CV checks": "حتى فحصين للسيرة الذاتية بالذكاء الاصطناعي",
+  "Recent Graduate": "خريجة حديثة",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "ساعدني JobExCV في الحصول على وظيفتي الأولى في أسبوعين فقط! الخطة المجانية كانت أكثر من كافية للبدء.",
 };
 
 const fr: Record<string, string> = {
@@ -909,6 +929,16 @@ const fr: Record<string, string> = {
   "Select your organization": "Sélectionnez votre organisation",
   "Continue": "Continuer",
   "Click for public version": "Cliquez pour la version publique",
+  "Basic Plan": "Plan Basique",
+  "Perfect to get started and explore JobExCV": "Parfait pour commencer et explorer JobExCV",
+  "Up to 1 job search loop per month": "Jusqu'à 1 recherche d'emploi par mois",
+  "Up to 10 applications or emails per month": "Jusqu'à 10 candidatures ou emails par mois",
+  "3 job sites included": "3 sites d'emploi inclus",
+  "Low priority applications": "Candidatures à basse priorité",
+  "Chrome extension access": "Accès à l'extension Chrome",
+  "Up to 2 AI CV checks": "Jusqu'à 2 vérifications de CV par IA",
+  "Recent Graduate": "Jeune Diplômée",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV m'a aidée à décrocher mon premier emploi en seulement 2 semaines ! Le plan gratuit était largement suffisant pour commencer.",
 };
 
 const zh: Record<string, string> = {
@@ -1160,6 +1190,16 @@ const zh: Record<string, string> = {
   "Select your organization": "选择您的机构",
   "Continue": "继续",
   "Click for public version": "点击查看公共版本",
+  "Basic Plan": "基础计划",
+  "Perfect to get started and explore JobExCV": "非常适合开始体验 JobExCV",
+  "Up to 1 job search loop per month": "每月最多1次职位搜索",
+  "Up to 10 applications or emails per month": "每月最多10次申请或邮件",
+  "3 job sites included": "包含3个招聘网站",
+  "Low priority applications": "低优先级申请",
+  "Chrome extension access": "Chrome扩展访问",
+  "Up to 2 AI CV checks": "最多2次AI简历检查",
+  "Recent Graduate": "应届毕业生",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV帮我在短短2周内找到了第一份工作！免费计划完全足够入门。",
 };
 
 const ko: Record<string, string> = {
@@ -1410,6 +1450,16 @@ const ko: Record<string, string> = {
   "Select your organization": "기관 선택",
   "Continue": "계속",
   "Click for public version": "일반 버전 클릭",
+  "Basic Plan": "기본 플랜",
+  "Perfect to get started and explore JobExCV": "JobExCV를 시작하고 탐색하기에 완벽합니다",
+  "Up to 1 job search loop per month": "월 최대 1회 구직 검색",
+  "Up to 10 applications or emails per month": "월 최대 10건 지원 또는 이메일",
+  "3 job sites included": "3개 채용 사이트 포함",
+  "Low priority applications": "낮은 우선순위 지원",
+  "Chrome extension access": "Chrome 확장 프로그램 접근",
+  "Up to 2 AI CV checks": "최대 2회 AI 이력서 검사",
+  "Recent Graduate": "신입 졸업생",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV 덕분에 2주 만에 첫 직장을 구했어요! 무료 플랜만으로도 시작하기에 충분했습니다.",
 };
 
 const pt: Record<string, string> = {
@@ -1628,6 +1678,16 @@ const pt: Record<string, string> = {
   "Select your organization": "Selecione sua organização",
   "Continue": "Continuar",
   "Click for public version": "Clique para versão pública",
+  "Basic Plan": "Plano Básico",
+  "Perfect to get started and explore JobExCV": "Perfeito para começar e explorar o JobExCV",
+  "Up to 1 job search loop per month": "Até 1 busca de emprego por mês",
+  "Up to 10 applications or emails per month": "Até 10 candidaturas ou emails por mês",
+  "3 job sites included": "3 sites de emprego incluídos",
+  "Low priority applications": "Candidaturas de baixa prioridade",
+  "Chrome extension access": "Acesso à extensão Chrome",
+  "Up to 2 AI CV checks": "Até 2 verificações de CV com IA",
+  "Recent Graduate": "Recém-Formada",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "O JobExCV me ajudou a conseguir meu primeiro emprego em apenas 2 semanas! O plano gratuito foi mais do que suficiente para começar.",
 };
 
 const tr: Record<string, string> = {
@@ -1845,6 +1905,16 @@ const tr: Record<string, string> = {
   "Select your organization": "Kurumunuzu seçin",
   "Continue": "Devam",
   "Click for public version": "Genel sürüm için tıklayın",
+  "Basic Plan": "Temel Plan",
+  "Perfect to get started and explore JobExCV": "JobExCV'yi keşfetmek için mükemmel başlangıç",
+  "Up to 1 job search loop per month": "Ayda en fazla 1 iş arama döngüsü",
+  "Up to 10 applications or emails per month": "Ayda en fazla 10 başvuru veya e-posta",
+  "3 job sites included": "3 iş sitesi dahil",
+  "Low priority applications": "Düşük öncelikli başvurular",
+  "Chrome extension access": "Chrome uzantısı erişimi",
+  "Up to 2 AI CV checks": "En fazla 2 AI CV kontrolü",
+  "Recent Graduate": "Yeni Mezun",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV sadece 2 haftada ilk işimi bulmamda yardımcı oldu! Ücretsiz plan başlamak için fazlasıyla yeterliydi.",
 };
 
 const ru: Record<string, string> = {
@@ -2062,6 +2132,16 @@ const ru: Record<string, string> = {
   "Select your organization": "Выберите организацию",
   "Continue": "Продолжить",
   "Click for public version": "Нажмите для публичной версии",
+  "Basic Plan": "Базовый план",
+  "Perfect to get started and explore JobExCV": "Идеально для начала и знакомства с JobExCV",
+  "Up to 1 job search loop per month": "До 1 цикла поиска работы в месяц",
+  "Up to 10 applications or emails per month": "До 10 заявок или писем в месяц",
+  "3 job sites included": "3 сайта вакансий включены",
+  "Low priority applications": "Заявки с низким приоритетом",
+  "Chrome extension access": "Доступ к расширению Chrome",
+  "Up to 2 AI CV checks": "До 2 проверок резюме с ИИ",
+  "Recent Graduate": "Недавняя выпускница",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV помог мне найти первую работу всего за 2 недели! Бесплатного плана было более чем достаточно для начала.",
 };
 
 export const translations: Record<string, Record<string, string>> = {
