@@ -314,8 +314,13 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-[80px] bg-background">
+      <motion.section
+        className="py-[80px] bg-background"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="max-w-[800px] mx-auto px-6 text-center">
           <h2 className="text-[32px] font-extrabold text-foreground mb-10">{t("Pricing FAQs")}</h2>
           <div className="space-y-4 text-left">
