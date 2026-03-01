@@ -1448,8 +1448,6 @@ const ko: Record<string, string> = {
   "Click for public version": "일반 버전 클릭",
   "Basic Plan": "기본 플랜",
   "Perfect to get started and explore JobExCV": "JobExCV를 시작하고 탐색하기에 완벽합니다",
-  "Free": "무료",
-  "Get Started Free": "무료로 시작하기",
   "Up to 1 job search loop per month": "월 최대 1회 구직 검색",
   "Up to 10 applications or emails per month": "월 최대 10건 지원 또는 이메일",
   "3 job sites included": "3개 채용 사이트 포함",
