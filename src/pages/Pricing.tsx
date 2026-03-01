@@ -122,7 +122,7 @@ export default function PricingPage() {
     <div className="bg-background min-h-screen">
       <Navbar />
       <section className="pt-[120px] pb-[80px]">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-medium mb-6">
               <Crown className="h-4 w-4" />
