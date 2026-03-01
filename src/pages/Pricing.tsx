@@ -146,12 +146,7 @@ export default function PricingPage() {
           </div>
 
           {/* Cards Grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {/* BASIC PLAN */}
             <div className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1" style={{ borderColor: "#e4e4e7" }}>
               <span className="text-[14px] font-bold uppercase tracking-[0.1em] text-muted-foreground">
@@ -250,15 +245,10 @@ export default function PricingPage() {
                 {t("Contact Sales")}
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Testimonials Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             {testimonials.map((t_item, i) => (
               <div
                 key={i}
@@ -292,7 +282,7 @@ export default function PricingPage() {
                 </p>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
