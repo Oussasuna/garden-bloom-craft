@@ -969,6 +969,21 @@ const fr: Record<string, string> = {
   "Up to 2 AI CV checks": "Jusqu'à 2 vérifications de CV par IA",
   "Recent Graduate": "Jeune Diplômée",
   "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV m'a aidée à décrocher mon premier emploi en seulement 2 semaines ! Le plan gratuit était largement suffisant pour commencer.",
+  "Enterprise": "Entreprise",
+  "Custom": "Sur mesure",
+  "For teams and organizations who need advanced features.": "Pour les équipes et organisations qui ont besoin de fonctionnalités avancées.",
+  "Contact Sales": "Contacter les Ventes",
+  "Everything in Pro": "Tout dans Pro",
+  "Unlimited job search loops": "Recherches d'emploi illimitées",
+  "Dedicated account manager": "Gestionnaire de compte dédié",
+  "Custom integrations": "Intégrations personnalisées",
+  "Team management dashboard": "Tableau de bord de gestion d'équipe",
+  "Custom analytics & reports": "Analyses et rapports personnalisés",
+  "API access": "Accès API",
+  "Onboarding & training": "Intégration et formation",
+  "mo": "mois",
+  "OFF": "DE RÉDUCTION",
+  "3 months": "3 mois",
 };
 
 const zh: Record<string, string> = {
