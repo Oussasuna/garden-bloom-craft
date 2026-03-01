@@ -1688,6 +1688,18 @@ const pt: Record<string, string> = {
   "Select your organization": "Selecione sua organização",
   "Continue": "Continuar",
   "Click for public version": "Clique para versão pública",
+  "Basic Plan": "Plano Básico",
+  "Perfect to get started and explore JobExCV": "Perfeito para começar e explorar o JobExCV",
+  "Free": "Grátis",
+  "Get Started Free": "Começar Grátis",
+  "Up to 1 job search loop per month": "Até 1 busca de emprego por mês",
+  "Up to 10 applications or emails per month": "Até 10 candidaturas ou emails por mês",
+  "3 job sites included": "3 sites de emprego incluídos",
+  "Low priority applications": "Candidaturas de baixa prioridade",
+  "Chrome extension access": "Acesso à extensão Chrome",
+  "Up to 2 AI CV checks": "Até 2 verificações de CV com IA",
+  "Recent Graduate": "Recém-Formada",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "O JobExCV me ajudou a conseguir meu primeiro emprego em apenas 2 semanas! O plano gratuito foi mais do que suficiente para começar.",
 };
 
 const tr: Record<string, string> = {
