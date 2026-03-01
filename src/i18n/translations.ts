@@ -668,6 +668,7 @@ const ar: Record<string, string> = {
   "Continue": "متابعة",
   "Click for public version": "انقر للنسخة العامة",
   "Basic Plan": "الخطة الأساسية",
+  "Perfect to get started and explore JobExCV": "مثالية للبدء واستكشاف JobExCV",
   "Up to 1 job search loop per month": "حتى بحث وظيفي واحد شهرياً",
   "Up to 10 applications or emails per month": "حتى 10 طلبات أو رسائل شهرياً",
   "3 job sites included": "3 مواقع توظيف مشمولة",
