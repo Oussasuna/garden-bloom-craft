@@ -101,7 +101,7 @@ export default function PricingPage() {
     <div className="bg-background min-h-screen">
       <Navbar />
 
-      <section ref={sectionRef} className="pt-[120px] pb-[80px]" style={{ backgroundColor: "#fafafa" }}>
+      <section className="pt-[120px] pb-[80px]" style={{ backgroundColor: "#fafafa" }}>
         <div className="max-w-[1200px] mx-auto px-6">
           {/* Header */}
           <motion.div
