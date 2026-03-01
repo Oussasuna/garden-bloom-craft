@@ -67,7 +67,7 @@ export default function PricingPage() {
     window.history.replaceState({}, "", url.toString());
   }, [isQuarterly]);
 
-  const currentPrice = isQuarterly ? `$${QUARTERLY_TOTAL.toFixed(2)}` : `$${MONTHLY_PRICE}`;
+  const currentPrice = isQuarterly ? `$${Math.round(QUARTERLY_TOTAL)}` : `$${MONTHLY_PRICE}`;
   const currentPeriod = isQuarterly ? `/ ${t("3 months")}` : `/${t("mo")}`;
   const originalPrice = isQuarterly ? `$${(MONTHLY_PRICE * 3).toFixed(0)}` : "$70";
   const discount = isQuarterly ? `15% ${t("OFF")}` : `50% ${t("OFF")}`;
