@@ -1245,6 +1245,21 @@ const zh: Record<string, string> = {
   "Up to 2 AI CV checks": "最多2次AI简历检查",
   "Recent Graduate": "应届毕业生",
   "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV帮我在短短2周内找到了第一份工作！免费计划完全足够入门。",
+  "Enterprise": "企业版",
+  "Custom": "定制",
+  "For teams and organizations who need advanced features.": "适合需要高级功能的团队和组织。",
+  "Contact Sales": "联系销售",
+  "Everything in Pro": "Pro的所有功能",
+  "Unlimited job search loops": "无限职位搜索",
+  "Dedicated account manager": "专属客户经理",
+  "Custom integrations": "自定义集成",
+  "Team management dashboard": "团队管理仪表板",
+  "Custom analytics & reports": "自定义分析和报告",
+  "API access": "API访问",
+  "Onboarding & training": "入职培训",
+  "mo": "月",
+  "OFF": "折扣",
+  "3 months": "3个月",
 };
 
 const ko: Record<string, string> = {
