@@ -1676,8 +1676,6 @@ const pt: Record<string, string> = {
   "Click for public version": "Clique para versão pública",
   "Basic Plan": "Plano Básico",
   "Perfect to get started and explore JobExCV": "Perfeito para começar e explorar o JobExCV",
-  "Free": "Grátis",
-  "Get Started Free": "Começar Grátis",
   "Up to 1 job search loop per month": "Até 1 busca de emprego por mês",
   "Up to 10 applications or emails per month": "Até 10 candidaturas ou emails por mês",
   "3 job sites included": "3 sites de emprego incluídos",
