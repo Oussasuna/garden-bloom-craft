@@ -165,35 +165,38 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <SinglePricingCard
-            badge={{ icon: Sparkles, text: t("Most Popular") }}
-            title={t("Pro Plan")}
-            subtitle={t("For serious job seekers who want to maximise their chances.")}
-            price={{
-              current: currentPrice,
-              period: currentPeriod,
-              original: originalPrice,
-              originalPeriod: originalPeriod,
-              discount,
-            }}
-            benefits={[
-              { text: isQuarterly ? t("Billed every 3 months") : t("Cancel anytime, no long-term contracts"), icon: Shield },
-              { text: isQuarterly ? `${t("Equivalent to")} $${QUARTERLY_MONTHLY_EQ.toFixed(2)}/mo` : t("Instant access to all AI features"), icon: Zap },
-              { text: t("Loved by 10,000+ job seekers"), icon: Heart },
-            ]}
-            features={features}
-            featuresIcon={Check}
-            featuresTitle={t("Everything Included")}
-            featuresBadge={{ icon: Stars, text: t("Full Access") }}
-            primaryButton={{
-              text: t("Get Started Now"),
-              icon: ShoppingCart,
-              href: checkoutUrl,
-              chevronIcon: ChevronRight,
-            }}
-            testimonials={testimonials}
-            maxWidth="max-w-3xl"
-          />
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 items-stretch">
+            <BasicPricingCard />
+            <SinglePricingCard
+              badge={{ icon: Sparkles, text: t("Most Popular") }}
+              title={t("Pro Plan")}
+              subtitle={t("For serious job seekers who want to maximise their chances.")}
+              price={{
+                current: currentPrice,
+                period: currentPeriod,
+                original: originalPrice,
+                originalPeriod: originalPeriod,
+                discount,
+              }}
+              benefits={[
+                { text: isQuarterly ? t("Billed every 3 months") : t("Cancel anytime, no long-term contracts"), icon: Shield },
+                { text: isQuarterly ? `${t("Equivalent to")} $${QUARTERLY_MONTHLY_EQ.toFixed(2)}/mo` : t("Instant access to all AI features"), icon: Zap },
+                { text: t("Loved by 10,000+ job seekers"), icon: Heart },
+              ]}
+              features={features}
+              featuresIcon={Check}
+              featuresTitle={t("Everything Included")}
+              featuresBadge={{ icon: Stars, text: t("Full Access") }}
+              primaryButton={{
+                text: t("Get Started Now"),
+                icon: ShoppingCart,
+                href: checkoutUrl,
+                chevronIcon: ChevronRight,
+              }}
+              testimonials={testimonials}
+              maxWidth="w-full"
+            />
+          </div>
         </div>
       </section>
 
