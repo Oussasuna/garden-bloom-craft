@@ -1917,6 +1917,18 @@ const tr: Record<string, string> = {
   "Select your organization": "Kurumunuzu seçin",
   "Continue": "Devam",
   "Click for public version": "Genel sürüm için tıklayın",
+  "Basic Plan": "Temel Plan",
+  "Perfect to get started and explore JobExCV": "JobExCV'yi keşfetmek için mükemmel başlangıç",
+  "Free": "Ücretsiz",
+  "Get Started Free": "Ücretsiz Başla",
+  "Up to 1 job search loop per month": "Ayda en fazla 1 iş arama döngüsü",
+  "Up to 10 applications or emails per month": "Ayda en fazla 10 başvuru veya e-posta",
+  "3 job sites included": "3 iş sitesi dahil",
+  "Low priority applications": "Düşük öncelikli başvurular",
+  "Chrome extension access": "Chrome uzantısı erişimi",
+  "Up to 2 AI CV checks": "En fazla 2 AI CV kontrolü",
+  "Recent Graduate": "Yeni Mezun",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV sadece 2 haftada ilk işimi bulmamda yardımcı oldu! Ücretsiz plan başlamak için fazlasıyla yeterliydi.",
 };
 
 const ru: Record<string, string> = {
