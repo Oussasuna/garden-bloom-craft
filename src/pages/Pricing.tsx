@@ -308,7 +308,7 @@ export default function PricingPage() {
                 <p className="text-[13px] text-muted-foreground leading-relaxed">
                   {t_item.content}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
