@@ -401,8 +401,6 @@ const es: Record<string, string> = {
   "Click for public version": "Clic para versión pública",
   "Basic Plan": "Plan Básico",
   "Perfect to get started and explore JobExCV": "Perfecto para empezar y explorar JobExCV",
-  "Free": "Gratis",
-  "Get Started Free": "Comenzar Gratis",
   "Up to 1 job search loop per month": "Hasta 1 búsqueda de empleo por mes",
   "Up to 10 applications or emails per month": "Hasta 10 candidaturas o emails por mes",
   "3 job sites included": "3 sitios de empleo incluidos",
