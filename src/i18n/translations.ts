@@ -1593,6 +1593,8 @@ const pt: Record<string, string> = {
   "Terms & Conditions": "Termos e Condições",
   "I acknowledge the": "Eu reconheço a",
   "Privacy Policy": "Política de Privacidade",
+  "By continuing, you agree to JobExCV's": "Ao continuar, você concorda com os",
+  "and acknowledge you've read our": "e reconhece que leu nossa",
   "Create My Account": "Criar Minha Conta",
   "Creating account...": "Criando conta...",
   "Check your email": "Verifique seu e-mail",
