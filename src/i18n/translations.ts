@@ -1196,6 +1196,18 @@ const zh: Record<string, string> = {
   "Select your organization": "选择您的机构",
   "Continue": "继续",
   "Click for public version": "点击查看公共版本",
+  "Basic Plan": "基础计划",
+  "Perfect to get started and explore JobExCV": "非常适合开始体验 JobExCV",
+  "Free": "免费",
+  "Get Started Free": "免费开始",
+  "Up to 1 job search loop per month": "每月最多1次职位搜索",
+  "Up to 10 applications or emails per month": "每月最多10次申请或邮件",
+  "3 job sites included": "包含3个招聘网站",
+  "Low priority applications": "低优先级申请",
+  "Chrome extension access": "Chrome扩展访问",
+  "Up to 2 AI CV checks": "最多2次AI简历检查",
+  "Recent Graduate": "应届毕业生",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV帮我在短短2周内找到了第一份工作！免费计划完全足够入门。",
 };
 
 const ko: Record<string, string> = {
