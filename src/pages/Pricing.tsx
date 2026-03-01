@@ -233,7 +233,7 @@ export default function PricingPage() {
               >
                 {t("Get Started Now")}
               </a>
-            </div>
+            </motion.div>
 
             {/* ENTERPRISE / FULL ACCESS */}
             <div className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1" style={{ borderColor: "#e4e4e7" }}>
