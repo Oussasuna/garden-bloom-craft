@@ -17,13 +17,13 @@ const GetStartedSteps: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">
-          <div className="flex flex-col items-center text-center">
+          <div className="group flex flex-col items-center text-center border-l-2 border-l-transparent hover:border-l-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] rounded-2xl p-6 transition-all duration-200 ease-out cursor-default">
             <div className="mb-6 flex items-center justify-center">
               <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
                 <CheckCircle2 className="text-white w-7 h-7" />
               </div>
             </div>
-            <h3 className="text-[#000000] text-xl font-bold mb-4">
+            <h3 className="text-[#000000] text-xl font-bold mb-4 transition-transform duration-200 ease-out group-hover:translate-x-1.5">
               {t("Step 1:")}<br />{t("Confirm the details")}
             </h3>
             <p className="text-[#666666] text-[16px] leading-[1.5] max-w-[280px]">
