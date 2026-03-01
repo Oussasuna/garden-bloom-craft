@@ -218,7 +218,8 @@ export default function AuthModal({ isOpen, onClose, defaultMode = "signup" }: A
 
             <p className="text-[12px] text-gray-400 mt-3 mb-2 text-center leading-relaxed">
               {t("By continuing, you agree to JobExCV's")}{" "}
-              <a href="#" className="underline">{t("Terms & Conditions")}</a> {t("and acknowledge you've read our")}{" "}
+              <a href="#" className="underline">{t("Terms & Conditions")}</a>{" "}
+              {t("and acknowledge you've read our")}{" "}
               <a href="#" className="underline">{t("Privacy Policy")}</a>.
             </p>
 
