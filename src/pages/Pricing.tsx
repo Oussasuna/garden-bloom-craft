@@ -3,6 +3,7 @@ import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import { Check, Star } from "lucide-react";
 import { useI18n } from "@/contexts/I18nContext";
+import { motion } from "framer-motion";
 
 const MONTHLY_PRICE = 35;
 const QUARTERLY_DISCOUNT = 0.15;
