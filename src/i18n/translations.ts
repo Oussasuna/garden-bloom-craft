@@ -1188,8 +1188,6 @@ const zh: Record<string, string> = {
   "Click for public version": "点击查看公共版本",
   "Basic Plan": "基础计划",
   "Perfect to get started and explore JobExCV": "非常适合开始体验 JobExCV",
-  "Free": "免费",
-  "Get Started Free": "免费开始",
   "Up to 1 job search loop per month": "每月最多1次职位搜索",
   "Up to 10 applications or emails per month": "每月最多10次申请或邮件",
   "3 job sites included": "包含3个招聘网站",
