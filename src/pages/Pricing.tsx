@@ -337,7 +337,7 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>
