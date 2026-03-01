@@ -2005,6 +2005,21 @@ const tr: Record<string, string> = {
   "Up to 2 AI CV checks": "En fazla 2 AI CV kontrolü",
   "Recent Graduate": "Yeni Mezun",
   "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV sadece 2 haftada ilk işimi bulmamda yardımcı oldu! Ücretsiz plan başlamak için fazlasıyla yeterliydi.",
+  "Enterprise": "Kurumsal",
+  "Custom": "Özel",
+  "For teams and organizations who need advanced features.": "Gelişmiş özelliklere ihtiyaç duyan ekipler ve kuruluşlar için.",
+  "Contact Sales": "Satışla İletişime Geçin",
+  "Everything in Pro": "Pro'daki her şey",
+  "Unlimited job search loops": "Sınırsız iş arama döngüsü",
+  "Dedicated account manager": "Özel hesap yöneticisi",
+  "Custom integrations": "Özel entegrasyonlar",
+  "Team management dashboard": "Ekip yönetim paneli",
+  "Custom analytics & reports": "Özel analitik ve raporlar",
+  "API access": "API erişimi",
+  "Onboarding & training": "Oryantasyon ve eğitim",
+  "mo": "ay",
+  "OFF": "İNDİRİM",
+  "3 months": "3 ay",
 };
 
 const ru: Record<string, string> = {
