@@ -105,7 +105,13 @@ export default function PricingPage() {
       <section ref={sectionRef} className="pt-[120px] pb-[80px]" style={{ backgroundColor: "#fafafa" }}>
         <div className="max-w-[1200px] mx-auto px-6">
           {/* Header */}
-          <div className="text-center mb-14">
+          <motion.div
+            className="text-center mb-14"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+          >
             <h1 className="text-[40px] md:text-[52px] font-extrabold text-foreground mb-4 tracking-[-0.03em] leading-[1.1]">
               {t("One plan, endless possibilities")}
             </h1>
@@ -141,7 +147,7 @@ export default function PricingPage() {
                 {t("Save 15%")}
               </span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
