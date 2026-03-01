@@ -364,6 +364,8 @@ const es: Record<string, string> = {
   "Terms & Conditions": "Términos y Condiciones",
   "I acknowledge the": "Reconozco la",
   "Privacy Policy": "Política de Privacidad",
+  "By continuing, you agree to JobExCV's": "Al continuar, aceptas los",
+  "and acknowledge you've read our": "y reconoces que has leído nuestra",
   "Create My Account": "Crear Mi Cuenta",
   "Creating account...": "Creando cuenta...",
   "Check your email": "Revisa tu correo",
