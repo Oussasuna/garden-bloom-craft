@@ -287,7 +287,7 @@ export default function PricingPage() {
                 </p>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
