@@ -2247,6 +2247,21 @@ const ru: Record<string, string> = {
   "Up to 2 AI CV checks": "До 2 проверок резюме с ИИ",
   "Recent Graduate": "Недавняя выпускница",
   "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV помог мне найти первую работу всего за 2 недели! Бесплатного плана было более чем достаточно для начала.",
+  "Enterprise": "Корпоративный",
+  "Custom": "Индивидуально",
+  "For teams and organizations who need advanced features.": "Для команд и организаций, которым нужны расширенные функции.",
+  "Contact Sales": "Связаться с отделом продаж",
+  "Everything in Pro": "Всё из Pro",
+  "Unlimited job search loops": "Неограниченный поиск вакансий",
+  "Dedicated account manager": "Персональный менеджер",
+  "Custom integrations": "Пользовательские интеграции",
+  "Team management dashboard": "Панель управления командой",
+  "Custom analytics & reports": "Индивидуальная аналитика и отчёты",
+  "API access": "Доступ к API",
+  "Onboarding & training": "Адаптация и обучение",
+  "mo": "мес",
+  "OFF": "СКИДКА",
+  "3 months": "3 месяца",
 };
 
 export const translations: Record<string, Record<string, string>> = {
