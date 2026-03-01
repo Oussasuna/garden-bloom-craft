@@ -255,8 +255,9 @@ export default function PricingPage() {
           {/* Testimonials Row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10"
           >
             {testimonials.map((t_item, i) => (
