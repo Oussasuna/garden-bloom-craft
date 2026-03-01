@@ -1375,6 +1375,8 @@ const ko: Record<string, string> = {
   "Terms & Conditions": "이용약관",
   "I acknowledge the": "확인합니다",
   "Privacy Policy": "개인정보 처리방침",
+  "By continuing, you agree to JobExCV's": "계속하면 JobExCV의",
+  "and acknowledge you've read our": "에 동의하고 당사의",
   "Create My Account": "계정 만들기",
   "Creating account...": "계정 생성 중...",
   "Check your email": "이메일을 확인하세요",
