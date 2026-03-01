@@ -245,7 +245,7 @@ export default function PricingPage() {
                 {t("Contact Sales")}
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Testimonials Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
