@@ -2146,6 +2146,18 @@ const ru: Record<string, string> = {
   "Select your organization": "Выберите организацию",
   "Continue": "Продолжить",
   "Click for public version": "Нажмите для публичной версии",
+  "Basic Plan": "Базовый план",
+  "Perfect to get started and explore JobExCV": "Идеально для начала и знакомства с JobExCV",
+  "Free": "Бесплатно",
+  "Get Started Free": "Начать бесплатно",
+  "Up to 1 job search loop per month": "До 1 цикла поиска работы в месяц",
+  "Up to 10 applications or emails per month": "До 10 заявок или писем в месяц",
+  "3 job sites included": "3 сайта вакансий включены",
+  "Low priority applications": "Заявки с низким приоритетом",
+  "Chrome extension access": "Доступ к расширению Chrome",
+  "Up to 2 AI CV checks": "До 2 проверок резюме с ИИ",
+  "Recent Graduate": "Недавняя выпускница",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV помог мне найти первую работу всего за 2 недели! Бесплатного плана было более чем достаточно для начала.",
 };
 
 export const translations: Record<string, Record<string, string>> = {
