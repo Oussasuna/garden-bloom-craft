@@ -46,7 +46,7 @@ const GetStartedSteps: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-col items-center text-center">
+          <div className="group flex flex-col items-center text-center border-l-2 border-l-transparent hover:border-l-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] rounded-2xl p-6 transition-all duration-200 ease-out cursor-default">
             <div className="mb-6 flex items-center justify-center">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black">
                 <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" fill="currentColor" />
@@ -54,7 +54,7 @@ const GetStartedSteps: React.FC = () => {
                 <path d="M3 5h4" />
               </svg>
             </div>
-            <h3 className="text-[#000000] text-xl font-bold mb-4">
+            <h3 className="text-[#000000] text-xl font-bold mb-4 transition-transform duration-200 ease-out group-hover:translate-x-1.5">
               {t("Step 3:")}<br />{t("We provide training")}
             </h3>
             <p className="text-[#666666] text-[16px] leading-[1.5] max-w-[280px]">
