@@ -185,7 +185,7 @@ export default function PricingPage() {
               >
                 {t("Get Started Free")}
               </a>
-            </div>
+            </motion.div>
 
             {/* PRO PLAN */}
             <div className="group rounded-2xl p-8 flex flex-col bg-foreground text-background shadow-xl transition-all duration-200 hover:shadow-2xl relative">
