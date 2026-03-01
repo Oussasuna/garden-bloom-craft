@@ -274,10 +274,14 @@ export default function PricingPage() {
           {/* Testimonials Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             {testimonials.map((t_item, i) => (
-              <div
+              <motion.div
                 key={i}
                 className="rounded-xl p-6"
                 style={{ backgroundColor: "#f0f0f0" }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
               >
                 <div className="flex items-center gap-3 mb-3">
                   {t_item.avatar ? (
