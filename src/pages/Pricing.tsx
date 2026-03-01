@@ -188,7 +188,13 @@ export default function PricingPage() {
             </motion.div>
 
             {/* PRO PLAN */}
-            <div className="group rounded-2xl p-8 flex flex-col bg-foreground text-background shadow-xl transition-all duration-200 hover:shadow-2xl relative">
+            <motion.div
+              className="group rounded-2xl p-8 flex flex-col bg-foreground text-background shadow-xl transition-all duration-200 hover:shadow-2xl relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+            >
               {/* Most Popular Badge */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-foreground text-background border border-background/20 px-4 py-1.5 text-[12px] font-semibold shadow-lg">
