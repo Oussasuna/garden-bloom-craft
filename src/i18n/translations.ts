@@ -692,6 +692,21 @@ const ar: Record<string, string> = {
   "Up to 2 AI CV checks": "حتى فحصين للسيرة الذاتية بالذكاء الاصطناعي",
   "Recent Graduate": "خريجة حديثة",
   "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "ساعدني JobExCV في الحصول على وظيفتي الأولى في أسبوعين فقط! الخطة المجانية كانت أكثر من كافية للبدء.",
+  "Enterprise": "للشركات",
+  "Custom": "مخصص",
+  "For teams and organizations who need advanced features.": "للفرق والمؤسسات التي تحتاج ميزات متقدمة.",
+  "Contact Sales": "تواصل مع المبيعات",
+  "Everything in Pro": "كل ما في Pro",
+  "Unlimited job search loops": "بحث وظيفي غير محدود",
+  "Dedicated account manager": "مدير حساب مخصص",
+  "Custom integrations": "تكاملات مخصصة",
+  "Team management dashboard": "لوحة إدارة الفريق",
+  "Custom analytics & reports": "تحليلات وتقارير مخصصة",
+  "API access": "الوصول لواجهة API",
+  "Onboarding & training": "إعداد وتدريب",
+  "mo": "شهر",
+  "OFF": "خصم",
+  "3 months": "3 أشهر",
 };
 
 const fr: Record<string, string> = {
