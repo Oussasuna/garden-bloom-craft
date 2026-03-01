@@ -47,7 +47,6 @@ const enterpriseFeatures = [
 export default function PricingPage() {
   const { t } = useI18n();
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   const [isQuarterly, setIsQuarterly] = useState(() => {
     if (typeof window !== "undefined") {
