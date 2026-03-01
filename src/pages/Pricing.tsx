@@ -152,7 +152,14 @@ export default function PricingPage() {
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {/* BASIC PLAN */}
-            <div className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1" style={{ borderColor: "#e4e4e7" }}>
+            <motion.div
+              className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1"
+              style={{ borderColor: "#e4e4e7" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0 }}
+            >
               <span className="text-[14px] font-bold uppercase tracking-[0.1em] text-muted-foreground">
                 {t("Basic Plan")}
               </span>
