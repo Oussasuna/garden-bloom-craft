@@ -1520,6 +1520,21 @@ const ko: Record<string, string> = {
   "Up to 2 AI CV checks": "최대 2회 AI 이력서 검사",
   "Recent Graduate": "신입 졸업생",
   "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV 덕분에 2주 만에 첫 직장을 구했어요! 무료 플랜만으로도 시작하기에 충분했습니다.",
+  "Enterprise": "엔터프라이즈",
+  "Custom": "맞춤",
+  "For teams and organizations who need advanced features.": "고급 기능이 필요한 팀과 조직을 위한 플랜입니다.",
+  "Contact Sales": "영업팀 문의",
+  "Everything in Pro": "Pro의 모든 기능",
+  "Unlimited job search loops": "무제한 구직 검색",
+  "Dedicated account manager": "전담 계정 관리자",
+  "Custom integrations": "맞춤 통합",
+  "Team management dashboard": "팀 관리 대시보드",
+  "Custom analytics & reports": "맞춤 분석 및 보고서",
+  "API access": "API 접근",
+  "Onboarding & training": "온보딩 및 교육",
+  "mo": "월",
+  "OFF": "할인",
+  "3 months": "3개월",
 };
 
 const pt: Record<string, string> = {
