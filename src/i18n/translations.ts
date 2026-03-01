@@ -622,6 +622,8 @@ const ar: Record<string, string> = {
   "Terms & Conditions": "الشروط والأحكام",
   "I acknowledge the": "أقر بـ",
   "Privacy Policy": "سياسة الخصوصية",
+  "By continuing, you agree to JobExCV's": "بالمتابعة، فإنك توافق على",
+  "and acknowledge you've read our": "وتقر بأنك قد قرأت",
   "Create My Account": "إنشاء حسابي",
   "Creating account...": "جاري إنشاء الحساب...",
   "Check your email": "تحقق من بريدك الإلكتروني",
