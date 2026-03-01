@@ -1810,6 +1810,8 @@ const tr: Record<string, string> = {
   "Terms & Conditions": "Şartlar ve Koşullar",
   "I acknowledge the": "Onaylıyorum",
   "Privacy Policy": "Gizlilik Politikası",
+  "By continuing, you agree to JobExCV's": "Devam ederek JobExCV'nin",
+  "and acknowledge you've read our": "kabul eder ve okuduğunuzu onaylarsınız",
   "Create My Account": "Hesabımı Oluştur",
   "Creating account...": "Hesap oluşturuluyor...",
   "Check your email": "E-postanızı kontrol edin",
