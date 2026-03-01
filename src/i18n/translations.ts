@@ -1125,6 +1125,8 @@ const zh: Record<string, string> = {
   "Terms & Conditions": "条款和条件",
   "I acknowledge the": "我确认",
   "Privacy Policy": "隐私政策",
+  "By continuing, you agree to JobExCV's": "继续即表示您同意 JobExCV 的",
+  "and acknowledge you've read our": "并确认您已阅读我们的",
   "Create My Account": "创建我的账户",
   "Creating account...": "正在创建账户...",
   "Check your email": "请检查您的邮箱",
