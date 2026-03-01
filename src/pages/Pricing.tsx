@@ -236,7 +236,14 @@ export default function PricingPage() {
             </motion.div>
 
             {/* ENTERPRISE / FULL ACCESS */}
-            <div className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1" style={{ borderColor: "#e4e4e7" }}>
+            <motion.div
+              className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1"
+              style={{ borderColor: "#e4e4e7" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               <span className="text-[14px] font-bold uppercase tracking-[0.1em] text-muted-foreground">
                 {t("Enterprise")}
               </span>
