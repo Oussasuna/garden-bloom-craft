@@ -2130,8 +2130,6 @@ const ru: Record<string, string> = {
   "Click for public version": "Нажмите для публичной версии",
   "Basic Plan": "Базовый план",
   "Perfect to get started and explore JobExCV": "Идеально для начала и знакомства с JobExCV",
-  "Free": "Бесплатно",
-  "Get Started Free": "Начать бесплатно",
   "Up to 1 job search loop per month": "До 1 цикла поиска работы в месяц",
   "Up to 10 applications or emails per month": "До 10 заявок или писем в месяц",
   "3 job sites included": "3 сайта вакансий включены",
