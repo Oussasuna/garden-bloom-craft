@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import { Check, ChevronRight, CreditCard, Crown, ExternalLink, Heart, Shield, ShoppingCart, Stars, Zap, Sparkles } from "lucide-react";
+import BasicPricingCard from "@/components/sections/BasicPricingCard";
 import { SinglePricingCard, type Testimonial } from "@/components/ui/single-pricing-card";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
