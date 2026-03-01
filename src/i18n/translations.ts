@@ -1903,8 +1903,6 @@ const tr: Record<string, string> = {
   "Click for public version": "Genel sürüm için tıklayın",
   "Basic Plan": "Temel Plan",
   "Perfect to get started and explore JobExCV": "JobExCV'yi keşfetmek için mükemmel başlangıç",
-  "Free": "Ücretsiz",
-  "Get Started Free": "Ücretsiz Başla",
   "Up to 1 job search loop per month": "Ayda en fazla 1 iş arama döngüsü",
   "Up to 10 applications or emails per month": "Ayda en fazla 10 başvuru veya e-posta",
   "3 job sites included": "3 iş sitesi dahil",
