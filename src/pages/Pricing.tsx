@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import { Check, Star } from "lucide-react";
 import { useI18n } from "@/contexts/I18nContext";
+import { motion } from "framer-motion";
 
 const MONTHLY_PRICE = 35;
 const QUARTERLY_DISCOUNT = 0.15;
@@ -46,7 +47,6 @@ const enterpriseFeatures = [
 
 export default function PricingPage() {
   const { t } = useI18n();
-  const sectionRef = useRef(null);
 
   const [isQuarterly, setIsQuarterly] = useState(() => {
     if (typeof window !== "undefined") {
@@ -101,10 +101,16 @@ export default function PricingPage() {
     <div className="bg-background min-h-screen">
       <Navbar />
 
-      <section ref={sectionRef} className="pt-[120px] pb-[80px]" style={{ backgroundColor: "#fafafa" }}>
+      <section className="pt-[120px] pb-[80px]" style={{ backgroundColor: "#fafafa" }}>
         <div className="max-w-[1200px] mx-auto px-6">
           {/* Header */}
-          <div className="text-center mb-14">
+          <motion.div
+            className="text-center mb-14"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+          >
             <h1 className="text-[40px] md:text-[52px] font-extrabold text-foreground mb-4 tracking-[-0.03em] leading-[1.1]">
               {t("One plan, endless possibilities")}
             </h1>
@@ -140,12 +146,19 @@ export default function PricingPage() {
                 {t("Save 15%")}
               </span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {/* BASIC PLAN */}
-            <div className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1" style={{ borderColor: "#e4e4e7" }}>
+            <motion.div
+              className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1"
+              style={{ borderColor: "#e4e4e7" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0 }}
+            >
               <span className="text-[14px] font-bold uppercase tracking-[0.1em] text-muted-foreground">
                 {t("Basic Plan")}
               </span>
@@ -171,10 +184,16 @@ export default function PricingPage() {
               >
                 {t("Get Started Free")}
               </a>
-            </div>
+            </motion.div>
 
             {/* PRO PLAN */}
-            <div className="group rounded-2xl p-8 flex flex-col bg-foreground text-background shadow-xl transition-all duration-200 hover:shadow-2xl relative">
+            <motion.div
+              className="group rounded-2xl p-8 flex flex-col bg-foreground text-background shadow-xl transition-all duration-200 hover:shadow-2xl relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+            >
               {/* Most Popular Badge */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-foreground text-background border border-background/20 px-4 py-1.5 text-[12px] font-semibold shadow-lg">
@@ -213,10 +232,17 @@ export default function PricingPage() {
               >
                 {t("Get Started Now")}
               </a>
-            </div>
+            </motion.div>
 
             {/* ENTERPRISE / FULL ACCESS */}
-            <div className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1" style={{ borderColor: "#e4e4e7" }}>
+            <motion.div
+              className="group rounded-2xl p-8 flex flex-col bg-white border transition-all duration-200 hover:shadow-lg hover:-translate-y-1"
+              style={{ borderColor: "#e4e4e7" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               <span className="text-[14px] font-bold uppercase tracking-[0.1em] text-muted-foreground">
                 {t("Enterprise")}
               </span>
@@ -241,16 +267,20 @@ export default function PricingPage() {
               >
                 {t("Contact Sales")}
               </a>
-            </div>
+            </motion.div>
           </div>
 
           {/* Testimonials Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             {testimonials.map((t_item, i) => (
-              <div
+              <motion.div
                 key={i}
                 className="rounded-xl p-6"
                 style={{ backgroundColor: "#f0f0f0" }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
               >
                 <div className="flex items-center gap-3 mb-3">
                   {t_item.avatar ? (
@@ -277,14 +307,19 @@ export default function PricingPage() {
                 <p className="text-[13px] text-muted-foreground leading-relaxed">
                   {t_item.content}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-[80px] bg-background">
+      <motion.section
+        className="py-[80px] bg-background"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="max-w-[800px] mx-auto px-6 text-center">
           <h2 className="text-[32px] font-extrabold text-foreground mb-10">{t("Pricing FAQs")}</h2>
           <div className="space-y-4 text-left">
@@ -301,7 +336,7 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>
