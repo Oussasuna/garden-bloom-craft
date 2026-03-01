@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import { Check, Star } from "lucide-react";
 import { useI18n } from "@/contexts/I18nContext";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 const MONTHLY_PRICE = 35;
 const QUARTERLY_DISCOUNT = 0.15;
@@ -49,7 +47,6 @@ const enterpriseFeatures = [
 export default function PricingPage() {
   const { t } = useI18n();
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   const [isQuarterly, setIsQuarterly] = useState(() => {
     if (typeof window !== "undefined") {
