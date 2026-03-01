@@ -1763,6 +1763,21 @@ const pt: Record<string, string> = {
   "Up to 2 AI CV checks": "Até 2 verificações de CV com IA",
   "Recent Graduate": "Recém-Formada",
   "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "O JobExCV me ajudou a conseguir meu primeiro emprego em apenas 2 semanas! O plano gratuito foi mais do que suficiente para começar.",
+  "Enterprise": "Empresarial",
+  "Custom": "Personalizado",
+  "For teams and organizations who need advanced features.": "Para equipes e organizações que precisam de recursos avançados.",
+  "Contact Sales": "Falar com Vendas",
+  "Everything in Pro": "Tudo do Pro",
+  "Unlimited job search loops": "Buscas de emprego ilimitadas",
+  "Dedicated account manager": "Gerente de conta dedicado",
+  "Custom integrations": "Integrações personalizadas",
+  "Team management dashboard": "Painel de gestão de equipe",
+  "Custom analytics & reports": "Análises e relatórios personalizados",
+  "API access": "Acesso à API",
+  "Onboarding & training": "Integração e treinamento",
+  "mo": "mês",
+  "OFF": "DESC.",
+  "3 months": "3 meses",
 };
 
 const tr: Record<string, string> = {
