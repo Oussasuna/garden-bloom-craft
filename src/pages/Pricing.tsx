@@ -268,7 +268,7 @@ export default function PricingPage() {
               >
                 {t("Contact Sales")}
               </a>
-            </div>
+            </motion.div>
           </div>
 
           {/* Testimonials Row */}
