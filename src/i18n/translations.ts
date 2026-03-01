@@ -1458,6 +1458,18 @@ const ko: Record<string, string> = {
   "Select your organization": "기관 선택",
   "Continue": "계속",
   "Click for public version": "일반 버전 클릭",
+  "Basic Plan": "기본 플랜",
+  "Perfect to get started and explore JobExCV": "JobExCV를 시작하고 탐색하기에 완벽합니다",
+  "Free": "무료",
+  "Get Started Free": "무료로 시작하기",
+  "Up to 1 job search loop per month": "월 최대 1회 구직 검색",
+  "Up to 10 applications or emails per month": "월 최대 10건 지원 또는 이메일",
+  "3 job sites included": "3개 채용 사이트 포함",
+  "Low priority applications": "낮은 우선순위 지원",
+  "Chrome extension access": "Chrome 확장 프로그램 접근",
+  "Up to 2 AI CV checks": "최대 2회 AI 이력서 검사",
+  "Recent Graduate": "신입 졸업생",
+  "JobExCV helped me land my first job in just 2 weeks! The free plan was more than enough to get started.": "JobExCV 덕분에 2주 만에 첫 직장을 구했어요! 무료 플랜만으로도 시작하기에 충분했습니다.",
 };
 
 const pt: Record<string, string> = {
