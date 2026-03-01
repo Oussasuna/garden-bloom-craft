@@ -2027,6 +2027,8 @@ const ru: Record<string, string> = {
   "Terms & Conditions": "Условия использования",
   "I acknowledge the": "Я подтверждаю",
   "Privacy Policy": "Политика конфиденциальности",
+  "By continuing, you agree to JobExCV's": "Продолжая, вы соглашаетесь с",
+  "and acknowledge you've read our": "и подтверждаете, что ознакомились с нашей",
   "Create My Account": "Создать аккаунт",
   "Creating account...": "Создание аккаунта...",
   "Check your email": "Проверьте почту",
