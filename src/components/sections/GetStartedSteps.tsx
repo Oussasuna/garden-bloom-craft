@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import { useI18n } from '@/contexts/I18nContext';
+import { motion } from 'framer-motion';
 
 const GetStartedSteps: React.FC = () => {
   const { t } = useI18n();
@@ -17,7 +18,7 @@ const GetStartedSteps: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">
-          <div className="group flex flex-col items-center text-center border-l-2 border-l-transparent hover:border-l-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] rounded-2xl p-6 transition-all duration-200 ease-out cursor-default">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, ease: "easeOut" }} className="group flex flex-col items-center text-center border-l-2 border-l-transparent hover:border-l-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] rounded-2xl p-6 transition-all duration-200 ease-out cursor-default">
             <div className="mb-6 flex items-center justify-center">
               <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
                 <CheckCircle2 className="text-white w-7 h-7" />
@@ -29,9 +30,9 @@ const GetStartedSteps: React.FC = () => {
             <p className="text-[#666666] text-[16px] leading-[1.5] max-w-[280px]">
               {t("Start by filling the enquiry form, our team will reach out and to understand your needs to determine the best plan.")}
             </p>
-          </div>
+          </motion.div>
 
-          <div className="group flex flex-col items-center text-center border-l-2 border-l-transparent hover:border-l-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] rounded-2xl p-6 transition-all duration-200 ease-out cursor-default">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }} className="group flex flex-col items-center text-center border-l-2 border-l-transparent hover:border-l-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] rounded-2xl p-6 transition-all duration-200 ease-out cursor-default">
             <div className="mb-6 flex items-center justify-center">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black">
                 <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="currentColor" />
@@ -44,9 +45,9 @@ const GetStartedSteps: React.FC = () => {
             <p className="text-[#666666] text-[16px] leading-[1.5] max-w-[280px]">
               {t("Based on your needs and the scale, we will work with your team and set you up in as fast as 2 weeks.")}
             </p>
-          </div>
+          </motion.div>
 
-          <div className="group flex flex-col items-center text-center border-l-2 border-l-transparent hover:border-l-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] rounded-2xl p-6 transition-all duration-200 ease-out cursor-default">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }} className="group flex flex-col items-center text-center border-l-2 border-l-transparent hover:border-l-[#3b82f6] hover:bg-blue-50 hover:shadow-md hover:scale-[1.02] rounded-2xl p-6 transition-all duration-200 ease-out cursor-default">
             <div className="mb-6 flex items-center justify-center">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black">
                 <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" fill="currentColor" />
@@ -60,7 +61,7 @@ const GetStartedSteps: React.FC = () => {
             <p className="text-[#666666] text-[16px] leading-[1.5] max-w-[280px]">
               {t("We provide training for your staff to ensure smooth usage for both your students and your team.")}
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex justify-center">
